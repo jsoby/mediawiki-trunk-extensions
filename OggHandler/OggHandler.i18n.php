@@ -1419,14 +1419,19 @@ $messages['gsw'] = array(
 
 /** Gujarati (ગુજરાતી)
  * @author KartikMistry
+ * @author Sushant savla
  */
 $messages['gu'] = array(
+	'ogg-long-error' => 'અજ્ઞાત ogg ફાઇલ : $1',
 	'ogg-play' => 'ચાલુ કરો',
 	'ogg-pause' => 'ઊભું રાખો',
 	'ogg-stop' => 'બંધ કરો',
 	'ogg-play-video' => 'વિડીઓ ચલાવો',
 	'ogg-play-sound' => 'ધ્વનિ ચલાવો',
+	'ogg-player-videoElement' => 'મૂળભૂત બ્રાઉઝર આધાર',
 	'ogg-player-oggPlugin' => 'બ્રાઉઝર પ્લગઈન',
+	'ogg-player-thumbnail' => 'માત્ર સ્થિત ચિત્ર જ',
+	'ogg-player-selected' => '(પસંદ કરેલ)',
 	'ogg-more' => 'વધુ...',
 	'ogg-dismiss' => 'બંધ કરો',
 	'ogg-download' => 'ફાઈલ ડાઉનલોડ કરો',

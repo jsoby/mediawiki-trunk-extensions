@@ -496,10 +496,11 @@ $messages['stq'] = array(
 
 /** Swedish (Svenska)
  * @author M.M.S.
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'purge' => 'rensa',
-	'purge-desc' => 'Lägger till en flik för rensning på alla vanliga sidor, och slår av rensning för anonyma användare, vilket gör att cachen kan uppdateras snabbare',
+	'purge-desc' => 'Lägger till en flik för rensning på alla vanliga sidor, vilket gör att cachen kan rensas snabbare',
 );
 
 /** Thai (ไทย)

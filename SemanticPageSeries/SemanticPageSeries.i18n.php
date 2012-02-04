@@ -131,6 +131,7 @@ $messages['gl'] = array(
 	'semanticpageseries-desc' => 'Crear unha serie de páxinas a partir dun [https://www.mediawiki.org/wiki/Extension:Semantic_Forms formulario semántico]',
 	'spssuccesstitle' => 'Creando páxinas do tipo $1',
 	'spssuccess' => '{{PLURAL:$1|Vaise crear unha páxina.|Vanse crear $1 páxinas.}}',
+	'spssuccess-returntoorigin' => 'Volver a "$1"',
 	'spserror' => 'Houbo un erro',
 	'spserror-diffnotsupported' => 'As series de páxinas non soportan a acción de diferenzas.',
 	'spserror-previewnotsupported' => 'As series de páxinas non soportan a acción de vista previa.',
@@ -144,6 +145,12 @@ $messages['gl'] = array(
 $1',
 	'spserror-noiteratordata' => 'Non se atopou parámetro do iterador ningún nos datos enviados.',
 	'spserror-pagegenerationlimitexeeded' => 'Intentou xerar {{PLURAL:$1|unha páxina|$1 páxinas}}. Isto supera o límite {{PLURAL:$2|dunha páxina|de $2 páxinas}}.',
+	'spserror-date-startdatemissing' => 'Falta a data de inicio.',
+	'spserror-date-internalerror' => 'Houbo un erro ao crear as datas. Se cadra é porque algunha das datas ten un formato incorrecto.',
+	'spserror-count-startvaluemalformed' => 'O valor de inicio non é un número.',
+	'spserror-count-endvaluemalformed' => 'O valor de fin non é un número.',
+	'spserror-count-stepvaluemalformed' => 'O valor do paso non é un número.',
+	'spserror-count-digitsvaluemalformed' => 'O valor dos díxitos non é un número.',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
@@ -201,6 +208,16 @@ $1',
 	'spserror-count-endvaluemalformed' => 'Le valor de fin non es un numero.',
 	'spserror-count-stepvaluemalformed' => 'Le valor de incremento non es un numero.',
 	'spserror-count-digitsvaluemalformed' => 'Le valor de cifras non es un numero.',
+);
+
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'spssuccess-returntoorigin' => 'Zréck op $1',
+	'spserror' => 'Et ass e Feeler geschitt',
+	'spserror-formunknown' => 'De Formulaire "$1" gëtt et net.',
+	'spserror-date-startdatemissing' => 'Den Ufanksdatum feelt.',
 );
 
 /** Macedonian (Македонски)

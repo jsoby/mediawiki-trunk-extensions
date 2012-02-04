@@ -66,6 +66,13 @@ $messages['ia'] = array(
 	'previewfunctions-desc' => 'Un collection de functiones al analysator syntactic pro manipular le pagina durante le previsualisation',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'previewfunctions-desc' => "Eng Rei vu Parser-Fonctiounen fir d'Säite déi gekuckt ouni se ze späocheren ze manipuléieren",
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */

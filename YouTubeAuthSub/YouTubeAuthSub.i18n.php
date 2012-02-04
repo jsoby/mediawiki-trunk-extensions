@@ -3377,10 +3377,11 @@ Antos heula.',
  * @author M.M.S.
  * @author Najami
  * @author Sannab
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'youtubeauthsub' => 'Ladda upp en YouTube-video',
-	'youtubeauthsub-desc' => 'Tillåter användare att [[Special:YouTubeAuthSub|ladda upp videor]] på YouTube',
+	'youtubeauthsub-desc' => 'Tillåter användare att [[Special:YouTubeAuthSub|ladda upp videoklipp]] direkt på YouTube',
 	'youtubeauthsub_info' => 'För att ladda upp en video på YouTube för användning på en sida, fyll i följande information:',
 	'youtubeauthsub_title' => 'Titel',
 	'youtubeauthsub_description' => 'Beskrivning',

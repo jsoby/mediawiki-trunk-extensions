@@ -1213,6 +1213,7 @@ Druck uf eini go Statischtike iber si aaluege.',
  * @author KartikMistry
  */
 $messages['gu'] = array(
+	'prefstats' => 'પ્રાથમિકતા આંકડા',
 	'prefstats-xaxis' => 'અવધિ (કલાકો)',
 	'prefstats-factor-hour' => 'કલાક',
 	'prefstats-factor-sixhours' => 'છ કલાકો',

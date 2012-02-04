@@ -4795,6 +4795,7 @@ $messages['stq'] = array(
  * @author GameOn
  * @author Nghtwlkr
  * @author Skalman
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'fogg-wont-upload-to-server' => 'Obs: Din videofil kommer att kodas lokalt och inte laddas upp till någon server.',
@@ -4868,7 +4869,7 @@ Mer om <a href="http://en.wikipedia.org/wiki/Video_denoising">avbrusning</a>.',
 	'fogg-license-help' => 'Licensen på klippet (helst en Creative Commons URL).',
 	'fogg-contact-title' => 'Kontakt',
 	'fogg-contact-help' => 'Kontaktlänk',
-	'fogg-missing-webm-support' => 'Använd en [$1 WebM kompatibel] webbläsare för att förhandsgranska resultatet av WebM videor',
+	'fogg-missing-webm-support' => 'Använd en [$1 WebM-kompatibel] webbläsare för att förhandsgranska resultatet av WebM-videoklipp',
 	'fogg-gui-title' => 'Gör webbvideo',
 	'fogg-transcoding' => 'Kodar om videon till Ogg...',
 	'fogg-select_file' => 'Välj fil',

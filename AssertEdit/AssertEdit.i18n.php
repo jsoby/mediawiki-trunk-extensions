@@ -358,6 +358,8 @@ $messages['gsw'] = array(
  * @author Dsvyas
  */
 $messages['gu'] = array(
+	'assert_edit_title' => 'દાવો નિષ્ફળ',
+	'assertedit-desc' => 'બૉટ્સના વપરાશ માટે ફેરફાર દાવાઓ ઉમેરે છે.',
 	'assert_edit_message' => 'ચોક્કસ દાવો ($1) નિષ્ફળ.',
 );
 

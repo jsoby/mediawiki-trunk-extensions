@@ -10179,6 +10179,7 @@ $messages['su'] = array(
  * @author Per
  * @author Purodha
  * @author Rotsee
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'mv-desc' => '[http://metavid.org/wiki/MetaVidWiki_Software Video Metadata Editor & Media Sök]',
@@ -10243,7 +10244,7 @@ $messages['sv'] = array(
 	'mv_external_file' => 'Extern fil',
 	'mv_tool_search' => 'Sök',
 	'mv_tool_search_title' => 'Sök inom detta dataflöde',
-	'mv_search_transcripts_for' => 'Sök videor efter $1 (göm den här boxen)',
+	'mv_search_transcripts_for' => 'Sök i videoklipp efter $1 (dölj denna ruta)',
 	'mv_tool_navigate' => 'Navigera',
 	'mv_tool_navigate_title' => 'Navigera hela dataflödet',
 	'mv_tool_export' => 'Exportera',
@@ -10265,7 +10266,7 @@ $messages['sv'] = array(
 	'ht_en_desc' => 'Engelska transkriptioner. Denna överläggstypen är för uppläst text',
 	'anno_en' => 'Annoteringar och kategorier',
 	'anno_en_desc' => 'Engelska kategoriseringar och annoteringar.
-Denna överläggstyp kan användas för att kategorisera sektioner av videor eller till att lägga till annotationer som inte är uppläst text.',
+Detta överlägg kan användas för att kategorisera sektioner av videoklipp eller för att lägga till annotationer som inte är uppläst text.',
 	'thomas_en' => 'Officiell transkription',
 	'thomas_en_desc' => 'Officiell Thomas-transkription från regeringens THOMAS-inspelningstjänst.
 Källtid synkroniserad av C-SPANs c-spanarchives.org',

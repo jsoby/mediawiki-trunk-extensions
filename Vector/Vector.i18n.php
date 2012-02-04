@@ -753,9 +753,11 @@ Wänn Du aagmäldet bisch, chasch s Anzeige vu däre Warnig im „Tekscht-Ygab�
 
 /** Gujarati (ગુજરાતી)
  * @author KartikMistry
+ * @author Sushant savla
  */
 $messages['gu'] = array(
 	'vector-collapsiblenav-more' => 'વધુ ભાષાઓ',
+	'vector-simplesearch-search' => 'શોધો',
 );
 
 /** Manx (Gaelg)

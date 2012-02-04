@@ -261,6 +261,7 @@ $messages['lb'] = array(
 	'onlinestatusbar-away-time' => "Minutte bis Dir als 'net do' markéiert gitt:",
 	'onlinestatusbar-status-busy' => 'Beschäftegt',
 	'onlinestatusbar-status-away' => 'Net do',
+	'onlinestatusbar-status-uknown' => 'Status onbekannt',
 	'onlinestatusbar-status-hidden' => 'Verstoppt',
 );
 

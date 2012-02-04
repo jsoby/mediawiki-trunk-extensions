@@ -942,6 +942,7 @@ $messages['sr-el'] = array(
 
 /** Swedish (Svenska)
  * @author Najami
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'framedvideo_errors' => 'Flera fel har uppstått!',
@@ -958,7 +959,7 @@ $messages['sv'] = array(
 	'framedvideo_helppage' => 'Help:Video',
 	'framedvideo_error_see_help' => '[[{{MediaWiki:Framedvideo_helppage}}|Mer om syntax]].',
 	'framedvideo_error_height_and_width_required' => 'Videotypen "$1" behöver "height" och "width2" eller "width"-parametrarna.',
-	'framedvideo-desc' => 'Tillåter inkludering av videor från olika webbplatser genom att använda <code>&lt;video&gt;</code>-taggen',
+	'framedvideo-desc' => 'Tillåter inkludering av videoklipp från olika webbplatser genom att använda <code>&lt;video&gt;</code>-taggen',
 );
 
 /** Telugu (తెలుగు)
