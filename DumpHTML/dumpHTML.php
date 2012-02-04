@@ -24,7 +24,6 @@ php dumpHTML.php [options...]
 	--categories         only do category pages
 	--redirects          only do redirects
 	--special            only do miscellaneous stuff
-	--force-copy         copy commons instead of symlink, needed for Wikimedia
 	--interlang          allow interlanguage links
 	--image-snapshot     copy all images used to the destination directory
 	--compress           generate compressed version of the html pages
@@ -112,7 +111,6 @@ if ( $options['slice'] ) {
 
 $wgHTMLDump = new DumpHTML( array(
 	'dest' => $dest,
-	'forceCopy' => $options['force-copy'],
 	'alternateScriptPath' => $options['interlang'],
 	'interwiki' => $options['interlang'],
 	'skin' => $skin,

@@ -38,9 +38,6 @@ class DumpHTML {
 	# Relative path to image directory
 	var $imageRel = 'upload';
 
-	# Copy commons images instead of symlinking
-	var $forceCopy = false;
-
 	# Make a copy of all images encountered
 	var $makeSnapshot = false;
 
@@ -623,7 +620,10 @@ class DumpHTML {
 		}
 		echo "Initialising destination directory...\n";
 		if ( !$this->mkdir( "{$this->dest}/skins" ) ) {
-			throw new MWException( "Unable to create destination directory." );
+			throw new MWException( "Unable to create destination skin directory." );
+		}
+		if ( !$this->mkdir( "{$this->dest}/temp" ) ) {
+			throw new MWException( "Unable to create destination temp directory." );
 		}
 
 		file_put_contents( "{$this->dest}/dumpHTML.version", self::VERSION );
@@ -634,7 +634,7 @@ class DumpHTML {
 	}
 
 	/** Create a file repo group which is a proxy of an old one */
-	function newRepoGroup( $old ) {
+	function newRepoGroup( RepoGroup $old ) {
 		return new DumpHTML_ProxyRepoGroup( $this, $old );
 	}
 
@@ -881,14 +881,8 @@ ENDTEXT;
 		#print "Copying $sourceLoc to $destLoc\n";
 		if ( !$this->pathExists( $destLoc ) ) {
 			$this->mkdir( dirname( $destLoc ), 0755 );
-			if ( function_exists( 'symlink' ) && !$this->forceCopy ) {
-				if ( !symlink( $sourceLoc, $destLoc ) ) {
-					print "Warning: unable to create symlink at $destLoc\n";
-				}
-			} else {
-				if ( !copy( $sourceLoc, $destLoc ) ) {
-					print "Warning: unable to copy $sourceLoc to $destLoc\n";
-				}
+			if ( !copy( $sourceLoc, $destLoc ) ) {
+				print "Warning: unable to copy $sourceLoc to $destLoc\n";
 			}
 		}
 	}
@@ -910,7 +904,7 @@ ENDTEXT;
 	}
 
 	/**
-	 * Copy images (or create symlinks) from commons to a static directory.
+	 * Copy images from commons to a static directory.
 	 * This is necessary even if you intend to distribute all of commons, because
 	 * the directory contents is used to work out which image description pages
 	 * are needed.
@@ -1193,7 +1187,7 @@ ENDTEXT;
 class DumpHTML_ProxyRepoGroup extends RepoGroup {
 	var $dump, $backendRG;
 
-	function __construct( $dump, $backendRG ) {
+	function __construct( $dump, RepoGroup $backendRG ) {
 		$this->dump = $dump;
 		$this->backendRG = $backendRG;
 		$backendRG->initialiseRepos();
@@ -1225,7 +1219,7 @@ class DumpHTML_ProxyRepoGroup extends RepoGroup {
 }
 
 class DumpHTML_ProxyRepo {
-	function __construct( $backend, $dump, $directory, $url ) {
+	function __construct( FileRepo $backend, $dump, $directory, $url ) {
 		$this->backend = $backend;
 		$this->dump = $dump;
 		$this->directory = $directory;
@@ -1263,8 +1257,15 @@ class DumpHTML_ProxyRepo {
 			return;
 		}
 
+		$dest = "{$this->directory}/$rel";
 		if ( is_callable( array( $this->backend, 'getZonePath' ) ) ) {
-			$sourceBase = $this->backend->getZonePath( 'public' );
+			if ( strpos( $rel, "thumb/" ) === 0 ) { // XXX
+				$rel = substr( $rel, 6 ); // remove "thumb/"
+				$sourceBase = $this->backend->getZonePath( 'thumb' );
+				$dest = "{$this->directory}/thumb/$rel";
+			} else {
+				$sourceBase = $this->backend->getZonePath( 'public' );
+			}
 		} elseif ( is_callable( array( $this->backend, 'getZoneUrl' ) ) ) {
 			$sourceBase = false;
 			$sourceBaseUrl = $this->backend->getZoneUrl( 'public' );
@@ -1273,15 +1274,13 @@ class DumpHTML_ProxyRepo {
 			$sourceBaseUrl = false;
 		}
 
-		$dest = "{$this->directory}/$rel";
-
 		if ( $this->dump->pathExists( $dest ) ) {
 			return;
 		}
 
 		if ( $sourceBase !== false ) {
 			$source = "$sourceBase/$rel";
-			if ( !file_exists( $source ) ) {
+			if ( !$this->backend->fileExists( $source ) ) {
 				// Hopefully we'll get another go at it later
 				return;
 			}
@@ -1290,14 +1289,9 @@ class DumpHTML_ProxyRepo {
 			}
 
 			#$this->dump->debug( "Copying $source to $dest" );
-			if ( function_exists( 'symlink' ) && !$this->dump->forceCopy ) {
-				if ( !symlink( $source, $dest ) ) {
-					$this->dump->debug( "Warning: unable to create symlink at $dest" );
-				}
-			} else {
-				if ( !copy( $source, $dest ) ) {
-					$this->dump->debug( "Warning: unable to copy $source to $dest" );
-				}
+			$tmpFile = $this->backend->getLocalCopy( $source );
+			if ( !$tmpFile || !rename( $tmpFile->getPath(), $dest ) ) {
+				$this->dump->debug( "Warning: unable to copy $source to $dest" );
 			}
 		} elseif ( $sourceBaseUrl !== false ) {
 			$urlRel = implode( '/', array_map( 'rawurlencode', explode( '/', $rel ) ) );
@@ -1306,8 +1300,9 @@ class DumpHTML_ProxyRepo {
 			if ( $contents === false ) {
 				$this->dump->debug( "Unable to get contents of file from $sourceUrl" );
 			} else {
+				wfMkdirParents( dirname( $dest ) );
 				if ( !file_put_contents( $dest, $contents ) ) {
-					$this->debug( "Unable to write to $dest" );
+					$this->dump->debug( "Unable to write to $dest" );
 				}
 			}
 		} // else give up
@@ -1315,18 +1310,18 @@ class DumpHTML_ProxyRepo {
 }
 
 class DumpHTML_ProxyFile {
-	function __construct( $backend, $repo ) {
-		$this->backend = $backend;
+	function __construct( File $file, DumpHTML_ProxyRepo $repo ) {
+		$this->file = $file;
 		$this->repo = $repo;
 		$this->dump = $repo->dump;
 	}
 
 	function __call( $name, $args ) {
-		$callback = array( $this->backend, $name );
+		$callback = array( $this->file, $name );
 		if ( !is_callable( $callback ) ) {
 			throw new MWException( "Attempt to call invalid function LocalFile::$name\n" );
 		}
-		$result = call_user_func_array( array( $this->backend, $name ), $args );
+		$result = call_user_func_array( array( $this->file, $name ), $args );
 		if ( is_string( $result ) ) {
 			$result = $this->fixURL( $result );
 		} elseif ( $result instanceof MediaTransformOutput ) {
@@ -1336,7 +1331,7 @@ class DumpHTML_ProxyFile {
 	}
 
 	function getUrl() {
-		return $this->repo->url . '/' . $this->backend->getUrlRel();
+		return $this->repo->url . '/' . $this->file->getUrlRel();
 	}
 
 	public function getFullURL() {
@@ -1367,8 +1362,8 @@ class DumpHTML_ProxyFile {
 			return;
 		}
 
-		$source = $this->backend->getPath();
-		$dest = $this->repo->directory . '/' . $this->backend->getRel();
+		$source = $this->file->getPath();
+		$dest = $this->repo->directory . '/' . $this->file->getRel();
 
 		if ( $this->dump->pathExists( $dest ) ) {
 			return;
@@ -1376,13 +1371,14 @@ class DumpHTML_ProxyFile {
 
 		#$this->dump->debug ( "Copying $source to $dest\n" );
 		if ( $source === false ) {
-			$sourceUrl = $this->backend->getUrl();
+			$sourceUrl = $this->file->getUrl();
 			$contents = Http::get( $sourceUrl );
 			if ( $contents === false ) {
 				$this->dump->debug( "Unable to get contents of file from $sourceUrl" );
 			} else {
+				wfMkdirParents( dirname( $dest ) );
 				if ( !file_put_contents( $dest, $contents ) ) {
-					$this->debug( "Unable to write to $dest" );
+					$this->dump->debug( "Unable to write to $dest" );
 				}
 			}
 		} else {
@@ -1390,14 +1386,9 @@ class DumpHTML_ProxyFile {
 				$this->dump->mkdir( dirname( $dest ) );
 			}
 
-			if ( function_exists( 'symlink' ) && !$this->dump->forceCopy ) {
-				if ( !symlink( $source, $dest ) ) {
-					$this->dump->debug( "Warning: unable to create symlink at $dest" );
-				}
-			} else {
-				if ( !copy( $source, $dest ) ) {
-					$this->dump->debug( "Warning: unable to copy $source to $dest" );
-				}
+			$tmpFile = $this->repo->getLocalCopy( $source );
+			if ( !$tmpFile || !rename( $tmpFile->getPath(), $dest ) ) {
+				$this->dump->debug( "Warning: unable to copy $source to $dest" );
 			}
 		}
 	}

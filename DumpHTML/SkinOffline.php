@@ -47,7 +47,7 @@ class SkinOffline extends SkinTemplate {
 		return $sections;
 	}
 
-	function buildContentActionUrls() {
+	function buildContentActionUrls( $content_navigation ) {
 		global $wgHTMLDump;
 
 		$content_actions = array();
