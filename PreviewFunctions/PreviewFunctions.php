@@ -32,7 +32,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'PreviewFunctions',
 	'descriptionmsg' => 'previewfunctions-desc',
-	'version' => 1,
+	'version' => 2,
 	'url' => 'https://mediawiki.org/wiki/Extension:PreviewFunctions',
 	'author' => '[https://mediawiki.org/wiki/User:Bawolff Brian Wolff]',
 );

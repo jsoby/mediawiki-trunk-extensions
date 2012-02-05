@@ -7,7 +7,7 @@ class PreviewFunctions {
 	 */
 	public static function register( Parser $parser ) {
 		$parser->setFunctionHook( 'ifpreview', 'PreviewFunctions::ifPreview', Parser::SFH_OBJECT_ARGS );
-		$parser->setFunctionHook( 'previewwarning', 'PreviewFunctions::addWarning' );
+		$parser->setHook( 'previewwarning', 'PreviewFunctions::addWarning' );
 		return true;
 	}
 
@@ -21,32 +21,42 @@ class PreviewFunctions {
 		}
 	}
 
-	public static function addWarning( $parser, $warning ) {
+	/**
+	 * Syntax: <previewwarning>Warning here</previewwarning>
+	 * or: <previewwarning nodiv="true">Warning here</previewwarning>
+	 * or: {{#tag:previewwarning|warning here}}
+	 *
+	 * Tried to do this as a parserfunction, but just couldn't get
+	 * original wikitext back (even with PPFrame::RECOVER_ORIG )
+	 * so doing a tag hook.
+	 *
+	 * This could also potentially record images/links used, but i think its
+	 * better that it doesn't (undecided on that).
+	 */
+	public static function addWarning( $warning, $args, $parser, $frame ) {
 		if ( $warning === '' ) return '';
 
-		// Not 100% sure if doing this right.
 		// Note, EditPage.php parses such warnings
 		// (but with a different parser object)
 
-		// Even with something like PPFrame::RECOVER_ORIG - tag extensions are still expanded.
-
-		// Not doing:
-		// $warning = $parser->mStripState->unstripGeneral( $warning );
-		// Because double parses things that should be treated as html.
-
-		// Based on a line in CoreParserFunctions::displaytitle.
-		// Can't just substitute a <nowiki>$1</nowiki> and then unstripNoWiki, since that doesn't work
-		// for other extensions that put nowiki content (Since some like $wgRawHtml's <html> 
-		// would not like the tag escaping done by <nowiki>.
-		// I suppose I could look for the nowiki part of "UNIQ7d3e18c0572c78c3-nowiki-00000031-QINU"
-		// but thats super hacky. So just delete the strip items.
+		// To make it work when using {{#tag:...}} syntax. (or i suppose fail better...)
 		$warning = preg_replace( '/' . preg_quote( $parser->uniqPrefix(), '/' ) . '.*?'
                 	        . preg_quote( Parser::MARKER_SUFFIX, '/' ) . '/',
 			'',
 			$warning
 		);
 
-		$warning = Html::rawElement( 'div', array( 'class' => 'error mw-previewfunc-warning' ), $warning );
+
+		// Could do something complicated here to expand {{{1}}} but not anything else
+		// (aka new parser instance and then do Parser::preprocess on it, i think.
+		// Don't want to do Parser::recursivePreprocess as that does extensions too)
+		// but not doing that (at least for now).
+
+
+		if ( !isset( $args['nodiv'] ) ) {
+			$warning = Html::rawElement( 'div', array( 'class' => 'error mw-previewfunc-warning' ), $warning );
+		}
 		$parser->getOutput()->addWarning( $warning );
+		return '';
 	}
 }
