@@ -27,7 +27,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '0.946-beta 20120201' );
+define( 'MEDIAWIKI_OPENID_VERSION', '0.947-beta 20120205' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
