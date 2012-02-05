@@ -1211,10 +1211,12 @@ Druck uf eini go Statischtike iber si aaluege.',
 
 /** Gujarati (ગુજરાતી)
  * @author KartikMistry
+ * @author Sushant savla
  */
 $messages['gu'] = array(
 	'prefstats' => 'પ્રાથમિકતા આંકડા',
 	'prefstats-xaxis' => 'અવધિ (કલાકો)',
+	'prefstats-factors' => 'સંખ્યા પ્રતિ : $1',
 	'prefstats-factor-hour' => 'કલાક',
 	'prefstats-factor-sixhours' => 'છ કલાકો',
 	'prefstats-factor-day' => 'દિવસ',

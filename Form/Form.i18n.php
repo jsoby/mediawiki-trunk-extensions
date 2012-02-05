@@ -1225,6 +1225,13 @@ $messages['os'] = array(
 	'formsave' => 'Афтæ уæд',
 );
 
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'formsave' => 'Beilege',
+);
+
 /** Polish (Polski)
  * @author Derbeth
  * @author Leinad

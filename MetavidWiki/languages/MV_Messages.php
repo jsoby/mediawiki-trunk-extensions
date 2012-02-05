@@ -8224,8 +8224,9 @@ $messages['os'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
+	'mv_save_changes' => 'Enneringe beilege',
 	'mv_remove_reason' => 'Grund fers Lösche:',
-	'mv_upload_file' => 'Feil ufflaade',
+	'mv_upload_file' => 'Feil nuffdraage',
 	'mv_tool_search' => 'Uffgucke',
 	'mv_data_page_title' => '$1 fer $2 vun $3',
 	'mv_time_separator' => '$1 bis $2',

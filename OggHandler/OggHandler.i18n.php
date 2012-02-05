@@ -1422,6 +1422,12 @@ $messages['gsw'] = array(
  * @author Sushant savla
  */
 $messages['gu'] = array(
+	'ogg-short-audio' => 'Ogg $1 ધ્વનિ ફાઈલ, $2',
+	'ogg-short-video' => 'Ogg $1 વિડીઓ ફાઈલ, $2',
+	'ogg-short-general' => 'Ogg $1 મિડીઆ ફાઈલ, $2',
+	'ogg-long-audio' => 'Ogg $1 ધ્વનિ ફાઈલ, લંબાઈ $2, $3',
+	'ogg-long-video' => 'Ogg $1 વિડીઓ ફાઈલ, લંબાઈ $2, $4×$5 પિક્સેલ્સ, $3',
+	'ogg-long-general' => 'Ogg મિડીઆ ફાઈલ, લંબાઈ $2, $3',
 	'ogg-long-error' => 'અજ્ઞાત ogg ફાઇલ : $1',
 	'ogg-play' => 'ચાલુ કરો',
 	'ogg-pause' => 'ઊભું રાખો',

@@ -879,6 +879,13 @@ $messages['gsw'] = array(
 	'right-patroller' => 'Syte as Fäldhieter aaluege',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author Sushant savla
+ */
+$messages['gu'] = array(
+	'group-patroller' => 'પ્રહરીઓ',
+);
+
 /** Manx (Gaelg)
  * @author MacTire02
  */

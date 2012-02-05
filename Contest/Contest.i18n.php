@@ -1965,6 +1965,7 @@ $messages['es'] = array(
 	'contest-submission-current-submission' => 'Esta es la URL de tu envío, que podrás modificar hasta la fecha límite de la competición.',
 	'contest-submission-challenge' => "Actualmente estás participando en el reto ''$1''.",
 	'contest-submission-challenge-description' => "''' Reto actual: $1''' ''$2''",
+	'contest-submission-domains' => 'Las respuestas están restringidas a estos sitios:$1',
 );
 
 /** Estonian (Eesti)
@@ -4359,6 +4360,7 @@ $messages['lb'] = array(
 	'contest-contest-reminder-close' => 'Zoumaachen',
 	'contest-contest-reminder-failed' => "{{PLURAL:$1|Den Erënnerungs-Mail konnt|D'Erënnerungs-Maile konnten}} net geschéckt ginn.",
 	'contest-contest-reminder-subject' => 'Sujet:',
+	'contest-contestant-id' => 'Nummer',
 	'contest-contestant-challenge-name' => 'Numm vun der Erausfuerderung',
 	'contest-contestant-volunteer' => 'Fräiwëllegen',
 	'contest-contestant-wmf' => 'WMF',
@@ -4371,6 +4373,7 @@ $messages['lb'] = array(
 	'contest-contestant-header-contest' => 'Numm vum Concours',
 	'contest-contestant-header-challenge' => 'Numm vun der Erausfuerderung',
 	'contest-contestant-header-submission' => "Link op d'Äntwert",
+	'contest-contestant-header-wmf' => 'Un engem Posten bäi der WMF interesséiert',
 	'contest-contestant-header-rating' => 'Bewäertung',
 	'contest-contestant-header-comments' => 'Zuel vun de Bemierkungen',
 	'contest-contestant-comments' => 'Bemierkungen',
@@ -4389,6 +4392,7 @@ $messages['lb'] = array(
 	'contest-submission-finished' => 'Dëse Concours ass eriwwer. Merci datt Dir matgemaach hutt!',
 	'contest-submission-submission' => 'Link op Är Äntwert',
 	'contest-submission-invalid-url' => 'Dës URL entsprécht kengem vun den erlaabte Formaten.',
+	'contest-submission-challenge' => 'Dir maacht elo bäi der $1 Erausfuederung mat.',
 	'contest-submission-challenge-description' => "'''Aktuell Erausfuerderung: $1''' -- $2",
 );
 
@@ -5423,7 +5427,7 @@ $messages['or'] = array(
  */
 $messages['pdc'] = array(
 	'contest-special-edit' => 'Ennere',
-	'contest-special-delete' => 'Lesche',
+	'contest-special-delete' => 'Verwische',
 	'contest-contest-name' => 'Naame',
 	'contest-contest-days-ago' => '$1, vor $2 {{PLURAL:$2|Daag|Daag}}',
 	'contest-contest-days-left' => '$1, in $2 {{PLURAL:$2|Daag}}',
@@ -5434,6 +5438,7 @@ $messages['pdc'] = array(
 	'contest-contest-filter-wmf' => 'WMF',
 	'contest-contestant-no' => 'Nee',
 	'contest-contestant-yes' => 'Ya',
+	'contest-contestant-submit' => 'Enneringe beilege',
 );
 
 /** Polish (Polski)

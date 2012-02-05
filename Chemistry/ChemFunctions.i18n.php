@@ -831,6 +831,7 @@ $messages['ku-latn'] = array(
 $messages['lb'] = array(
 	'chemicalsources' => 'Chemesch Quellen',
 	'chemicalsource-desc' => 'Setzt den Tag <nowiki><chemform></nowiki> fir chemesch Formelen derbäi',
+	'chemicalsources-desc' => '[[Special:ChemicalSources|Spezialsäit]] fir chemesch Quellen',
 	'chemFunctions_ListPage' => 'Chemesch Quellen',
 	'chemFunctions_CAS' => 'CAS Nummer',
 	'chemFunctions_ATCCode' => 'ATCCode',

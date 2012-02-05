@@ -863,6 +863,7 @@ $messages['or'] = array(
 $messages['pdc'] = array(
 	'am-username' => 'Yuuser-Naame',
 	'am-email' => 'E-Poschd',
+	'nss-save-changes' => 'Enneringe beilege',
 );
 
 /** Polish (Polski)

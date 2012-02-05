@@ -508,6 +508,20 @@ $messages['nah'] = array(
 	'lua_error' => 'Ahcuallōtl pāmpan $1',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'lua_desc' => 'Utvider fortolkeren med støtte for innvevde blokker av [http://lua.org/ Lua]-kode',
+	'lua_error' => 'Feil på linje $1',
+	'lua_extension_notfound' => 'Lua-utvidelsen ikke konfigurert',
+	'lua_interp_notfound' => 'Lua-fortolker ikke funnet',
+	'lua_error_internal' => 'Intern feil',
+	'lua_overflow_recursion' => 'Rekursjonsgrense nådd',
+	'lua_overflow_loc' => 'Maksimalt antall linjer med kode nådd',
+	'lua_overflow_time' => 'Maksimal utførelsestid nådd',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -536,20 +550,6 @@ $messages['nn'] = array(
 	'lua_overflow_time' => 'Høgste utføringstid nådd',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'lua_desc' => 'Utvider fortolkeren med støtte for innvevde blokker av [http://lua.org/ Lua]-kode',
-	'lua_error' => 'Feil på linje $1',
-	'lua_extension_notfound' => 'Lua-utvidelsen ikke konfigurert',
-	'lua_interp_notfound' => 'Lua-fortolker ikke funnet',
-	'lua_error_internal' => 'Intern feil',
-	'lua_overflow_recursion' => 'Rekursjonsgrense nådd',
-	'lua_overflow_loc' => 'Maksimalt antall linjer med kode nådd',
-	'lua_overflow_time' => 'Maksimal utførelsestid nådd',
-);
-
 /** Occitan (Occitan)
  * @author Cedric31
  */
@@ -569,6 +569,13 @@ $messages['oc'] = array(
  */
 $messages['os'] = array(
 	'lua_error_internal' => 'Мидæг рæдыд',
+);
+
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'lua_error_internal' => 'Interner Fehler',
 );
 
 /** Polish (Polski)

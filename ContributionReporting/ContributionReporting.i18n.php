@@ -1548,6 +1548,7 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Aleator
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author DJ Nietzsche
  * @author Imre
@@ -1559,6 +1560,9 @@ $messages['eo'] = array(
 $messages['es'] = array(
 	'contributionreporting-desc' => 'Presentación de informes en directo de la recaudación de fondos Wikimedia',
 	'contributiontotal' => 'Contribución total',
+	'dailytotal' => 'Total diario',
+	'disablednotice' => 'Informe de contribuciones',
+	'disablednotice-disabled' => 'Esta página ha sido desactivada temporalmente. Inténtelo de nuevo más tarde.',
 	'contributionhistory' => 'Historial de contribuciones',
 	'contrib-hist-header' => 'Comentarios de benefactores de todo el mundo',
 	'contrib-hist-name' => 'Nombre',

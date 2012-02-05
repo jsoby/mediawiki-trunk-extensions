@@ -839,7 +839,7 @@ $messages['or'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
-	'wikitweet-delete' => 'lesche',
+	'wikitweet-delete' => 'verwische',
 );
 
 /** Polish (Polski)

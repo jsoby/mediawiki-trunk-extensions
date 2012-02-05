@@ -24,6 +24,13 @@ $messages['ast'] = array(
 	'previewfunctions-desc' => 'Un conxuntu de funciones analítiques pa manipular la páxina na vista previa',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
+$messages['br'] = array(
+	'previewfunctions-desc' => "Hollad arc'hwelioù an dielfenner evit embreger ar bajenn rakwelet",
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */

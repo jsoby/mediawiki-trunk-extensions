@@ -1380,6 +1380,7 @@ Fartu bone,
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Fitoschido
  * @author Imre
@@ -1390,6 +1391,10 @@ $messages['es'] = array(
 	'moodbar-trigger-feedback' => 'Comentarios acerca de la edición',
 	'moodbar-trigger-share' => 'Comparte tu experiencia',
 	'moodbar-trigger-editing' => 'Editar $1...',
+	'moodbar-weeks' => '{{PLURAL:$1|$1 semana|$1 semanas}}',
+	'moodbar-months' => '{{PLURAL:$1|$1 mes|$1 meses}}',
+	'moodbar-years' => '{{PLURAL:$1|$1 año|$1 años}}',
+	'moodbar-seconds' => 'menos de 1 minuto',
 	'moodbar-close' => '(cerrar)',
 	'moodbar-intro-feedback' => 'Editar $1 me hizo...',
 	'moodbar-intro-share' => 'Mi experiencia en $1 me hizo...',
@@ -1403,8 +1408,13 @@ $messages['es'] = array(
 	'moodbar-response-add' => 'Agregar una respuesta',
 	'moodbar-response-desc' => 'La respuesta hará referencia al comentario original. No hace falta firmarla.',
 	'moodbar-response-btn' => 'Enviar respuesta',
+	'moodbar-what-content' => 'Esta característica está diseñada para ayudar a la comunidad a entender la experiencia de las personas que editan este sitio.
+Para obtener más información, visite la $1 .',
+	'moodbar-what-link' => 'página de características',
+	'moodbar-privacy' => 'Al registrarse, usted acepta la transparencia según $1',
 	'moodbar-privacy-link' => 'términos',
 	'moodbar-privacy-link-title' => 'Condiciones de Uso',
+	'moodbar-fbd-link-title' => 'Comentarios',
 	'moodbar-disable-link' => 'No me interesa. Por favor, desactiven esta función.',
 	'moodbar-form-title' => 'Porque...',
 	'moodbar-form-note' => '140 caracteres máximo',

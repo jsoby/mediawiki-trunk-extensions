@@ -844,7 +844,7 @@ $messages['os'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
-	'inspectcache-delete' => 'Lesche',
+	'inspectcache-delete' => 'Verwische',
 	'inspectcache-list' => 'Lischt',
 );
 

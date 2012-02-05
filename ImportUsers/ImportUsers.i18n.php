@@ -1553,7 +1553,7 @@ $messages['os'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
-	'importusers-uploadfile' => 'Feil ufflaade',
+	'importusers-uploadfile' => 'Feil nuffdraage',
 	'importusers-log-summary-all' => 'All: $1',
 	'importusers-password' => 'Paesswatt',
 	'importusers-email' => 'E-Poschd',

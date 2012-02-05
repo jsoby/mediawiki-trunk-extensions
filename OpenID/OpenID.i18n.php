@@ -4593,7 +4593,7 @@ $messages['pdc'] = array(
 	'openidlanguage' => 'Schprooch',
 	'openidchooseusername' => 'Yuuser-Naame:',
 	'openidchoosepassword' => 'Paesswatt:',
-	'openid-urls-delete' => 'Lesche',
+	'openid-urls-delete' => 'Verwische',
 );
 
 /** Plautdietsch (Plautdietsch)

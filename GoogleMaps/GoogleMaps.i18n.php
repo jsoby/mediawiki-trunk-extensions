@@ -4492,6 +4492,7 @@ $wgGoogleMapsMessages['pdc'] = array(
 	'gm-yes' => 'Ya',
 	'gm-no' => 'Nee',
 	'gm-search' => 'Uffgucke',
+	'gm-save-path' => 'Beilege',
 	'gm-back' => 'zerrick',
 	'gm-kml-loading' => 'laade…',
 	'gm-earth' => 'Erd',

@@ -1062,10 +1062,13 @@ $messages['or'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
-	'collabwatchlisttools-delete' => 'Lesche',
+	'collabwatchlisttools-delete' => 'Verwische',
+	'collabwatchlistedit-users-raw-submit' => 'Beilege',
 	'collabwatchlistedit-raw-titles' => 'Abdeelinge:',
 	'collabwatchlistedit-users-raw-titles' => 'Yuuser:',
-	'collabwatchlistdelete-submit' => 'Lesche',
+	'collabwatchlistedit-tags-raw-submit' => 'Beilege',
+	'collabwatchlistdelete-submit' => 'Verwische',
+	'collabwatchlistedit-normal-submit' => 'Beilege',
 );
 
 /** Polish (Polski)

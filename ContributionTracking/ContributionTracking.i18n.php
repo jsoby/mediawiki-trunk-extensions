@@ -356,6 +356,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author MetalBrasil
  * @author Remember the dot
@@ -366,8 +367,8 @@ $messages['es'] = array(
 	'contrib-tracking-error' => 'Error',
 	'contrib-tracking-error-text' => 'Envío de formulario inválido',
 	'contrib-tracking-submitting' => 'Entregando al procesador de pagos...',
-	'contrib-tracking-continue' => 'Si usted no es automáticamente redirigido, haga click en el botón para completar su donación en Paypal.',
-	'contrib-tracking-redirect' => 'Usted será redirigido a PayPal para completar su donación.',
+	'contrib-tracking-continue' => 'Si no es redirigido automáticamente, haga clic en el botón para completar su donación.',
+	'contrib-tracking-redirect' => 'Usted será redirigido automáticamente para completar su donación.',
 	'contrib-tracking-button' => 'Continuar',
 	'contrib-tracking-item-name-onetime' => 'Donación única',
 	'contrib-tracking-item-name-recurring' => 'Donación mensual recurrente',
