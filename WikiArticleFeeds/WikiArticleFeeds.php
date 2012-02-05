@@ -2,7 +2,7 @@
 /**
  * WikiArticleFeeds.php - A MediaWiki extension for converting regular pages into feeds.
  * @author Jim R. Wilson
- * @version 0.6.6
+ * @version 0.6.7
  * @copyright Copyright (C) 2007 Jim R. Wilson
  * @license The MIT License - http://www.opensource.org/licenses/mit-license.php
  * -----------------------------------------------------------------------
@@ -112,7 +112,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
 	'name' => 'WikiArticleFeeds',
 	'author' => 'Jim Wilson (wilson.jim.r&lt;at&gt;gmail.com)',
-	'url' => 'http://jimbojw.com/wiki/index.php?title=WikiArticleFeeds',
+	'url' => '//www.mediawiki.org/wiki/Extension:WikiArticleFeeds',
 	'descriptionmsg' => 'wikiarticlefeeds-desc',
 	'version' => WIKIARTICLEFEEDS_VERSION
 );
