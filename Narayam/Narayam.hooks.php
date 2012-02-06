@@ -19,6 +19,22 @@ class NarayamHooks {
 		return true;
 	}
 
+	/**
+	 * ResourceLoaderTestModules hook handler.
+	 * @param $testModules: array of javascript testing modules. 'qunit' is fed using tests/qunit/QUnitTestResources.php.
+	 * @param $resourceLoader object
+	 * @return bool
+	 */
+	public static function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) { 
+		$testModules['qunit']['ext.narayam.tests'] = array(
+			'scripts' => array( 'tests/qunit/ext.narayam.tests.js' ),
+			'dependencies' => array( 'ext.narayam.core' ),
+			'localBasePath' => dirname( __FILE__ ),
+			'remoteExtPath' => 'Narayam',
+		);
+		return true;
+	}
+
 	/// Hook: ResourceLoaderGetConfigVars
 	public static function addConfig( &$vars ) {
 		global $wgNarayamRecentItemsLength, $wgNarayamEnabledByDefault;

@@ -171,6 +171,7 @@ $wgHooks['ResourceLoaderGetConfigVars'][] = 'NarayamHooks::addConfig';
 $wgHooks['MakeGlobalVariablesScript'][] = 'NarayamHooks::addVariables';
 $wgHooks['GetPreferences'][] = 'NarayamHooks::addPreference';
 $wgHooks['UserGetDefaultOptions'][] = 'NarayamHooks::addDefaultOptions';
+$wgHooks['ResourceLoaderTestModules'][] = 'NarayamHooks::addTestModules';
 
 // Autoloader
 $wgAutoloadClasses['NarayamHooks'] = $dir . '/Narayam.hooks.php';
