@@ -453,7 +453,7 @@ $messages['frp'] = array(
 	'ea-denied' => 'Pèrmission refusâ',
 	'ea-compose' => 'Composar lo contegnu',
 	'ea-show' => 'Vêre la lista de dèstinatèros',
-	'ea-from' => 'Èxpèdior :',
+	'ea-from' => 'De :',
 	'ea-to' => 'Dèstinatèro :',
 	'ea-cc' => 'Copia :',
 	'ea-send' => 'Mandar',
@@ -462,7 +462,7 @@ $messages['frp'] = array(
 	'ea-style' => 'Stilo :',
 	'ea-selectcss' => 'Vos pouede chouèsir una fôlye de stilo',
 	'ea-data' => 'Balyês',
-	'ea-allusers' => 'Tôs los utilisators',
+	'ea-allusers' => 'Tôs los usanciérs',
 );
 
 /** Galician (Galego)

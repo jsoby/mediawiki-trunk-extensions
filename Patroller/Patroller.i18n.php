@@ -638,7 +638,7 @@ $messages['es'] = array(
 	'patrol-stopped' => 'Has optado no marcar otra edición como verificada. $1',
 	'patrol-resume' => 'Haz click aquí para continuar.',
 	'group-patroller' => 'Patrulleros',
-	'group-patroller-member' => '{{GENDER:$1|patrullero}}',
+	'group-patroller-member' => '{{GENDER:$1|patrullero|patrullera}}',
 	'grouppage-patroller' => '{{ns:project}}:Verificador',
 	'right-patroller' => 'Verificar páginas',
 );
@@ -884,6 +884,7 @@ $messages['gsw'] = array(
  */
 $messages['gu'] = array(
 	'group-patroller' => 'પ્રહરીઓ',
+	'group-patroller-member' => '{{GENDER:$1|પ્રહરી}}',
 );
 
 /** Manx (Gaelg)

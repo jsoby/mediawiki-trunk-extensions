@@ -1215,6 +1215,7 @@ Druck uf eini go Statischtike iber si aaluege.',
  */
 $messages['gu'] = array(
 	'prefstats' => 'પ્રાથમિકતા આંકડા',
+	'prefstats-title' => 'પ્રાથમિકતા આંકડાઓ',
 	'prefstats-xaxis' => 'અવધિ (કલાકો)',
 	'prefstats-factors' => 'સંખ્યા પ્રતિ : $1',
 	'prefstats-factor-hour' => 'કલાક',
@@ -1223,6 +1224,9 @@ $messages['gu'] = array(
 	'prefstats-factor-week' => 'અઠવાડિયું',
 	'prefstats-factor-twoweeks' => 'બે અઠવાડિયાં',
 	'prefstats-factor-fourweeks' => 'ચાર અઠવાડિયાં',
+	'prefstats-factor-default' => 'મૂળભૂત પ્રમાણ પર પાછા જાવ',
+	'prefstats-legend-out' => 'બહાર નીકળવાનું પસંદ કર્યું',
+	'prefstats-legend-in' => 'અંદર આવવાનું પસંદ કર્યું',
 );
 
 /** Manx (Gaelg)

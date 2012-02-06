@@ -338,6 +338,13 @@ $messages['gsw'] = array(
 	'simpleantispam-desc' => 'Ergänzt Formular um e eifache Bot-Spamschutz',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author Sushant savla
+ */
+$messages['gu'] = array(
+	'simpleantispam' => 'તમારા ફેરફારને કારણે ઍન્ટી-સ્પૅમ કાર્યપ્રણાલી જાગ્રત થઈ',
+);
+
 /** Hebrew (עברית)
  * @author Rotem Liss
  */

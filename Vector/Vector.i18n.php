@@ -608,7 +608,7 @@ $messages['fa'] = array(
 	'vector-collapsiblenav-more' => 'زبان‌های بیشتر',
 	'vector-editwarning-warning' => 'خروج از این صفحه ممکن است باعث از دست رفتن هرچه نوشته‌اید شود.
 اگر شما با نام کاربری وارد شده‌اید می‌توانید این هشدار را در بخش «در حال ویرایش» ترجیحاتتان بیابید.',
-	'vector-editwarning-preference' => 'زمان خروج از صفحهٔ ویرایش در صورت داشتن ویرایش‌های‌ ذخیره‌نشده به من هشدار بده',
+	'vector-editwarning-preference' => 'زمان خروج از صفحهٔ ویرایش در صورت داشتن ویرایش‌های‌ ذخیره‌نشده به من هشدار داده شود',
 	'vector-simplesearch-search' => 'جستجو',
 	'vector-simplesearch-containing' => 'صفحه‌های دربردارنده...',
 	'vector-noexperiments-preference' => 'من را از ویژگی‌های آزمایشی مستثنی کن',
