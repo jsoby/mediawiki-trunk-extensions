@@ -39,6 +39,7 @@ $.narayam = new ( function() {
 	var shortcutKey = getShortCutKey();
 	// Number of recent input methods to be shown
 	var recentItemsLength = mw.config.get( 'wgNarayamRecentItemsLength' );
+
 	/* Private functions */
 
 	/**
@@ -48,7 +49,7 @@ $.narayam = new ( function() {
 	 * @param useExtended Whether to use the extended part of the scheme
 	 * @return Transliterated string, or str if no applicable transliteration found.
 	 */
-	function transliterate( str, keyBuffer, useExtended ) {
+	this.transliterate = function( str, keyBuffer, useExtended ) {
 		var rules = currentScheme.extended_keyboard && useExtended ?
 			currentScheme.rules_x : currentScheme.rules;
 		for ( var i = 0; i < rules.length; i++ ) {
@@ -80,7 +81,7 @@ $.narayam = new ( function() {
 	 * @param n Number of characters to go back from pos
 	 * @return Substring of str, at most n characters long, immediately preceding pos
 	 */
-	function lastNChars( str, pos, n ) {
+	this.lastNChars = function( str, pos, n ) {
 		if ( n === 0 ) {
 			return '';
 		} else if ( pos <= n ) {
@@ -97,7 +98,7 @@ $.narayam = new ( function() {
 	 * @param b String
 	 * @return Position at which a and b diverge, or -1 if a == b
 	 */
-	function firstDivergence( a, b ) {
+	this.firstDivergence = function( a, b ) {
 		var minLength = a.length < b.length ? a.length : b.length;
 		for ( var i = 0; i < minLength; i++ ) {
 			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
@@ -254,9 +255,9 @@ $.narayam = new ( function() {
 		// Get the last few characters before the one the user just typed,
 		// to provide context for the transliteration regexes.
 		// We need to append c because it hasn't been added to $this.val() yet
-		var input = lastNChars( $this.val(), startPos, currentScheme.lookbackLength ) + c;
+		var input = that.lastNChars( $this.val(), startPos, currentScheme.lookbackLength ) + c;
 		var keyBuffer = $this.data( 'narayamKeyBuffer' );
-		var replacement = transliterate( input, keyBuffer, e.altKey );
+		var replacement = that.transliterate( input, keyBuffer, e.altKey );
 
 		// Update the key buffer
 		keyBuffer += c;
@@ -272,7 +273,7 @@ $.narayam = new ( function() {
 		}
 		// Drop a common prefix, if any
 		// TODO: Profile this, see if it's any faster
-		var divergingPos = firstDivergence( input, replacement );
+		var divergingPos = that.firstDivergence( input, replacement );
 		input = input.substring( divergingPos );
 		replacement = replacement.substring( divergingPos );
 
@@ -375,6 +376,10 @@ $.narayam = new ( function() {
 		} else {
 			that.enable();
 		}
+	};
+
+	this.enabled = function() {
+		return enabled;
 	};
 
 	/**
