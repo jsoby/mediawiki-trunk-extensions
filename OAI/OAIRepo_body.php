@@ -578,18 +578,11 @@ class OAIRepo {
 	function fetchRecord( $pageid ) {
 		$db = $this->_db;
 
-		$tables = array( 'updates', 'page', 'revision', 'text' );
-		$fields = array( 'page_namespace', 'page_title', 'old_text', 'old_flags',
-				'rev_id', 'rev_deleted', 'rev_comment', 'rev_user',
-				'rev_user_text', 'rev_timestamp', 'page_restrictions',
-				'rev_minor_edit', 'page_is_redirect', 'up_sequence',
-				'page_id', 'up_timestamp', 'up_action', 'up_page',
-				'page_len', 'page_touched', 'page_counter', 'page_latest',);
+		$tables = $this->getTables();
+		$fields = $this->getFields();
 		$conds = array();
 		$options = array();
-		$join_conds = array( 'page' => array( 'LEFT JOIN', 'page_id=up_page' ),
-				'revision' => array( 'LEFT JOIN', 'page_latest=rev_id' ),
-				'text' => array( 'LEFT JOIN', 'rev_text_id=old_id' ) );
+		$join_conds = $this->getJoinConds();
 
 		$conds['up_page'] = $pageid;
 
@@ -602,22 +595,44 @@ class OAIRepo {
 					$options, $join_conds );
 	}
 
+	/**
+	 * @return array
+	 */
+	private function getFields() {
+		return array( 'page_namespace', 'page_title', 'old_text', 'old_flags',
+			'rev_id', 'rev_deleted', 'rev_comment', 'rev_user',
+			'rev_user_text', 'rev_timestamp', 'page_restrictions',
+			'rev_minor_edit', 'rev_len', 'page_is_redirect', 'up_sequence',
+			'page_id', 'up_timestamp', 'up_action', 'up_page',
+			'page_len', 'page_touched', 'page_counter', 'page_latest'
+		);
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getJoinConds() {
+		return array( 'page' => array( 'LEFT JOIN', 'page_id=up_page' ),
+			'revision' => array( 'LEFT JOIN', 'page_latest=rev_id' ),
+			'text' => array( 'LEFT JOIN', 'rev_text_id=old_id' )
+		);
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getTables() {
+		return array( 'updates', 'page', 'revision', 'text' );
+	}
+
 	function fetchRows( $from, $until, $chunk, $token = null ) {
 
 		$db = $this->_db;
-
-		$tables = array( 'updates', 'page', 'revision', 'text' );
-		$fields = array( 'page_namespace', 'page_title', 'old_text', 'old_flags',
-				'rev_id', 'rev_deleted', 'rev_comment', 'rev_user',
-				'rev_user_text', 'rev_timestamp', 'page_restrictions',
-				'rev_minor_edit', 'page_is_redirect', 'up_sequence',
-				'page_id', 'up_timestamp', 'up_action', 'up_page',
-				'page_len', 'page_touched', 'page_counter', 'page_latest',);
+		$tables = $this->getTables();
+		$fields = $this->getFields();
 		$conds = array();
 		$options = array();
-		$join_conds = array( 'page' => array( 'LEFT JOIN', 'page_id=up_page' ),
-				'revision' => array( 'LEFT JOIN', 'page_latest=rev_id' ),
-				'text' => array( 'LEFT JOIN', 'rev_text_id=old_id' ) );
+		$join_conds = $this->getJoinConds();
 
 		if( $token ) {
 			$conds[] = 'up_sequence>=' . $db->addQuotes( $token );
