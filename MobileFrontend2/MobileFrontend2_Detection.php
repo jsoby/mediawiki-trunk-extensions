@@ -47,7 +47,7 @@ class MobileFrontend2_Detection {
 	 *
 	 * @return bool
 	 */
-	private function enable() {
+	private static function enable() {
 		self::$enabled = true;
 		return true;
 	}
@@ -57,7 +57,7 @@ class MobileFrontend2_Detection {
 	 *
 	 * @return bool
 	 */
-	private function disable() {
+	private static function disable() {
 		self::$enabled = false;
 		return false;
 	}
