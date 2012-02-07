@@ -227,6 +227,13 @@ $messages['gsw'] = array(
 	'dontswitchmeover-pref' => 'Änderig vu myym Benutzeroberflechinedesign nit erlaube, wänn s Standarddesign gänderet wird',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author Sushant savla
+ */
+$messages['gu'] = array(
+	'dontswitchmeover-pref' => 'જ્યારે મૂળ ફલક બદલાય ત્યરે મારી પસંદગીના ફલકને ને ના બદલશો',
+);
+
 /** Hebrew (עברית)
  * @author YaronSh
  */

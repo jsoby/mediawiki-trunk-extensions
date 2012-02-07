@@ -343,6 +343,8 @@ $messages['gsw'] = array(
  */
 $messages['gu'] = array(
 	'simpleantispam' => 'તમારા ફેરફારને કારણે ઍન્ટી-સ્પૅમ કાર્યપ્રણાલી જાગ્રત થઈ',
+	'simpleantispam-label' => "સ્પૅમ વિરોધી તપાસ.
+આને '''ન''' ભરશો!",
 );
 
 /** Hebrew (עברית)

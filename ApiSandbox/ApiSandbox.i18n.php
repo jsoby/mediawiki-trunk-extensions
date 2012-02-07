@@ -1671,15 +1671,17 @@ Kolla på [//www.mediawiki.org/wiki/API:Main_page API-dokumentationen] för fler
  * @author Shanmugamp7
  */
 $messages['ta'] = array(
-	'apisb-parameters' => 'அளவுருக்கள்',
-	'apisb-result' => 'முடிவு',
+	'apisb-legend-result' => 'முடிவு',
+	'apisb-legend-generic-parameters' => 'பொதுவானஅளவுருக்கள்',
 	'apisb-loading' => 'ஏற்றுகிறது...',
 	'apisb-ns-main' => '(முதன்மை)',
 	'apisb-submit' => 'கோரிக்கை செய்',
 	'apisb-query-prop' => 'பண்புகள்',
 	'apisb-query-list' => 'பட்டியல்கள்',
 	'apisb-query-meta' => 'Meta தகவல்',
-	'apisb-generic-parameters' => 'பொதுவானஅளவுருக்கள்',
+	'apisb-example' => 'உதாரணம்',
+	'apisb-examples' => 'உதாரணங்கள்',
+	'apisb-clear' => 'வெறுமையாக்கு',
 );
 
 /** Telugu (తెలుగు)
