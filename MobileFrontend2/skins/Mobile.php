@@ -129,10 +129,13 @@ class MobileTemplate extends BaseTemplate {
 		<?php $this->html( 'headscripts' ) ?>
 	</head>
 	<body>
+	<?php if ( !MobileFrontend2_Options::getHideSearch() ): ?>
 	<!-- search/header -->
 	<div id="header">
 		<div id="searchbox">
+			<?php if ( !MobileFrontend2_Options::getHideLogo() ): ?>
 			<img src="<?php $this->text( 'mobilelogopath' ) ?>" alt="Logo" id="logo" width="35" height="22" />
+			<?php endif ?>
 			<form action="<?php $this->text( 'wgScript' ) ?>" class="search_bar" method="get">
 				<input type="hidden" name="title" value="Special:Search" />
 
@@ -144,6 +147,7 @@ class MobileTemplate extends BaseTemplate {
 			</form>
 		</div>
 	</div>
+	<?php endif ?>
 
 	<!-- content -->
 	<div class="show" id="content_wrapper">
@@ -162,6 +166,7 @@ class MobileTemplate extends BaseTemplate {
 		<!-- /bodyContent -->
 	</div>
 
+	<?php if ( !MobileFrontend2_Options::getHideFooter() ): ?>
 	<!-- footer -->
 	<div id="footer">
 		<div class="nav" id="footmenu">
@@ -177,6 +182,7 @@ class MobileTemplate extends BaseTemplate {
 			</div>
 		</div>
 	</div>
+	<?php endif ?>
 
 	<?php $this->html( 'bottomscripts' ) ?>
 

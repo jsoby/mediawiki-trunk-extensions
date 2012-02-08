@@ -27,6 +27,7 @@ $wgExtensionMessagesFiles['MobileFrontend2'] = $dir . 'MobileFrontend2.i18n.php'
 
 $wgAutoloadClasses['MobileFrontend2_Detection'] = $dir . 'MobileFrontend2_Detection.php';
 $wgAutoloadClasses['MobileFrontend2_Hooks'] = $dir . 'MobileFrontend2_Hooks.php';
+$wgAutoloadClasses['MobileFrontend2_Options'] = $dir . 'MobileFrontend2_Options.php';
 $wgAutoloadClasses['MobileFrontend2_PostParse'] = $dir . 'MobileFrontend2_PostParse.php';
 
 // Skins

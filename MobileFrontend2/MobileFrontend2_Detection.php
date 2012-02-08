@@ -49,6 +49,10 @@ class MobileFrontend2_Detection {
 	 */
 	private static function enable() {
 		self::$enabled = true;
+
+		// Do some initialization
+		MobileFrontend2_Options::detect();
+
 		return true;
 	}
 
