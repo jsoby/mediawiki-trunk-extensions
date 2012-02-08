@@ -179,7 +179,6 @@ class ApiQueryArticleFeedback extends ApiQueryBase {
 			array(
 				'aa_page_id' => $params['pageid'],
 				'aa_rating_id' => array_keys( $wgArticleFeedbackRatingTypes ),
-				'aa_user_id' => $wgUser->getId(),
 				'aa_user_text' => $wgUser->getName(),
 				'aa_user_anon_token' => $this->getAnonToken( $params ),
 			),

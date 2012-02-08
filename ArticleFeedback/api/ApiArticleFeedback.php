@@ -46,7 +46,6 @@ class ApiArticleFeedback extends ApiBase {
 			'article_feedback',
 			array( 'aa_rating_id', 'aa_rating_value', 'aa_revision' ),
 			array(
-				'aa_user_id' => $wgUser->getId(),
 				'aa_user_text' => $wgUser->getName(),
 				'aa_page_id' => $params['pageid'],
 				'aa_rating_id' => array_keys( $wgArticleFeedbackRatingTypes ),
@@ -70,11 +69,13 @@ class ApiArticleFeedback extends ApiBase {
 		$revisionId = $params['revid'];
 
 		foreach ( $wgArticleFeedbackRatingTypes as $ratingID => $unused ) {
-			$lastRating = false;
-			$lastRevision = false;
+			$lastPageRating = false;
+			$lastRevRating = false;
 			if ( isset( $lastRatings[$ratingID] ) ) {
-				$lastRating = intval( $lastRatings[$ratingID]['value'] );
-				$lastRevision = intval( $lastRatings[$ratingID]['revision'] );
+				$lastPageRating = intval( $lastRatings[$ratingID]['value'] );
+				if ( intval( $lastRatings[$ratingID]['revision'] ) == $revisionId ) {
+					$lastRevRating = $lastPageRating;
+				}
 			}
 
 			$thisRating = false;
@@ -82,11 +83,11 @@ class ApiArticleFeedback extends ApiBase {
 				$thisRating = intval( $params["r{$ratingID}"] );
 			}
 
-			$this->insertRevisionRating( $pageId, $revisionId, $lastRevision, $ratingID, ( $thisRating - $lastRating ),
-					$thisRating, $lastRating
+			$this->insertRevisionRating( $pageId, $revisionId, $ratingID, $thisRating - $lastRevRating,
+					$thisRating, $lastRevRating
 			);
 			
-			$this->insertPageRating( $pageId, $ratingID, ( $thisRating - $lastRating ), $thisRating, $lastRating );
+			$this->insertPageRating( $pageId, $ratingID, $thisRating - $lastPageRating, $thisRating, $lastPageRating );
 
 			$this->insertUserRatings( $pageId, $revisionId, $wgUser, $token, $ratingID, $thisRating, $params['bucket'] );
 		}
@@ -157,13 +158,12 @@ class ApiArticleFeedback extends ApiBase {
 	 * 
 	 * @param $pageId Integer: Page Id
 	 * @param $revisionId Integer: Revision Id
-	 * @param $lastRevision Integer: Revision Id of last rating
 	 * @param $ratingId Integer: Rating Id
 	 * @param $updateAddition Integer: Difference between user's last rating (if applicable)
 	 * @param $thisRating Integer|Boolean: Value of the Rating
 	 * @param $lastRating Integer|Boolean: Value of the last Rating
 	 */
-	private function insertRevisionRating( $pageId, $revisionId, $lastRevision, $ratingId, $updateAddition, $thisRating, $lastRating ) {
+	private function insertRevisionRating( $pageId, $revisionId, $ratingId, $updateAddition, $thisRating, $lastRating ) {
 		$dbw = wfGetDB( DB_MASTER );
 
 		// Try to insert a new "totals" row for this page,rev,rating set
@@ -180,57 +180,20 @@ class ApiArticleFeedback extends ApiBase {
 			 array( 'IGNORE' )
 		);
 
-		// If that succeded in inserting a row, then we are for sure rating a previously unrated
-		// revision, and we need to add more information about this rating to the new "totals" row,
-		// as well as remove the previous rating values from the previous "totals" row
-		if ( $dbw->affectedRows() ) {
-			// If there was a previous rating, there should be a "totals" row for it's revision
-			if ( $lastRating ) {
-				// Deduct the previous rating values from the previous "totals" row
-				$dbw->update(
-					'article_feedback_revisions',
-					array(
-						'afr_total = afr_total - ' . intval( $lastRating ),
-						'afr_count = afr_count - 1',
-					),
-					array(
-						'afr_page_id' => $pageId,
-						'afr_rating_id' => $ratingId,
-						'afr_revision' => $lastRevision
-					),
-					__METHOD__
-				);
-			}
-			// Add this rating's values to the new "totals" row
-			$dbw->update(
-				'article_feedback_revisions',
-				array(
-					'afr_total' => $thisRating,
-					'afr_count' => $thisRating ? 1 : 0,
-				),
-				array(
-					'afr_page_id' => $pageId,
-					'afr_rating_id' => $ratingId,
-				 	'afr_revision' => $revisionId,
-				),
-				__METHOD__
-			);
-		} else {
-			// Apply the difference between the previous and new ratings to the current "totals" row
-			$dbw->update(
-				'article_feedback_revisions',
-				array(
-					'afr_total = afr_total + ' . $updateAddition,
-					'afr_count = afr_count + ' . $this->getCountChange( $lastRating, $thisRating ),
-				),
-				array(
-					'afr_page_id' => $pageId,
-					'afr_rating_id' => $ratingId,
-				 	'afr_revision' => $revisionId,
-				),
-				__METHOD__
-			);
-		}
+		// Apply the difference between the previous and new ratings to the current "totals" row
+		$dbw->update(
+			'article_feedback_revisions',
+			array(
+				'afr_total = afr_total + ' . $updateAddition,
+				'afr_count = afr_count + ' . $this->getCountChange( $lastRating, $thisRating ),
+			),
+			array(
+				'afr_page_id' => $pageId,
+				'afr_rating_id' => $ratingId,
+				'afr_revision' => $revisionId,
+			),
+			__METHOD__
+		);
 	}
 	/**
 	 * Calculate the difference between the previous rating and this one
