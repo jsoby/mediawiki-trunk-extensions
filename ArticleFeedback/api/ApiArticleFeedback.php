@@ -38,60 +38,57 @@ class ApiArticleFeedback extends ApiBase {
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
-		
-		$pageId = $params['pageid'];
-		$revisionId = $params['revid'];
-		
-		// Build array( rating ID => rating value )
-		$ratings = array();
-		foreach ( $wgArticleFeedbackRatingTypes as $ratingID => $unused ) {
-			$ratings[$ratingID] = intval( $params["r{$ratingID}"] );
-		}
-		// Insert the new ratings
-		$id = $this->insertUserRatings( $pageId, $revisionId, $wgUser, $token, $ratings, $params['bucket'] );
-		
-		// Query the previous ratings by this user for this page,
+
+		// Query the latest ratings by this user for this page,
 		// possibly for an older revision
-		// Use aa_id < $id to make sure we get the one before ours even if other ratings were inserted after
-		// insertUserRatings() but before selectRow(); this prevents race conditions from messing things up.
+		// Select from the master to prevent replag-induced bugs
 		$res = $dbw->select(
 			'article_feedback',
 			array( 'aa_rating_id', 'aa_rating_value', 'aa_revision' ),
 			array(
+				'aa_user_id' => $wgUser->getId(),
 				'aa_user_text' => $wgUser->getName(),
 				'aa_page_id' => $params['pageid'],
 				'aa_rating_id' => array_keys( $wgArticleFeedbackRatingTypes ),
 				'aa_user_anon_token' => $token,
-				'aa_id < ' . intval( $id )
 			),
 			__METHOD__,
 			array(
-				'ORDER BY' => 'aa_id DESC',
+				'ORDER BY' => 'aa_revision DESC',
 				'LIMIT' => count( $wgArticleFeedbackRatingTypes ),
 			)
 		);
+
 		$lastRatings = array();
+
 		foreach ( $res as $row ) {
 			$lastRatings[$row->aa_rating_id]['value'] = $row->aa_rating_value;
 			$lastRatings[$row->aa_rating_id]['revision'] = $row->aa_revision;
 		}
-		
+
+		$pageId = $params['pageid'];
+		$revisionId = $params['revid'];
+
 		foreach ( $wgArticleFeedbackRatingTypes as $ratingID => $unused ) {
-			$lastPageRating = false;
-			$lastRevRating = false;
+			$lastRating = false;
+			$lastRevision = false;
 			if ( isset( $lastRatings[$ratingID] ) ) {
-				$lastPageRating = intval( $lastRatings[$ratingID]['value'] );
-				if ( intval( $lastRatings[$ratingID]['revision'] ) == $revisionId ) {
-					$lastRevRating = $lastPageRating;
-				}
+				$lastRating = intval( $lastRatings[$ratingID]['value'] );
+				$lastRevision = intval( $lastRatings[$ratingID]['revision'] );
 			}
-			$thisRating = intval( $params["r{$ratingID}"] );
-			
-			// Update counter tables
-			$this->insertRevisionRating( $pageId, $revisionId, $ratingID, $thisRating - $lastRevRating,
-				$thisRating, $lastRevRating
+
+			$thisRating = false;
+			if ( isset( $params["r{$ratingID}"] ) ) {
+				$thisRating = intval( $params["r{$ratingID}"] );
+			}
+
+			$this->insertRevisionRating( $pageId, $revisionId, $lastRevision, $ratingID, ( $thisRating - $lastRating ),
+					$thisRating, $lastRating
 			);
-			$this->insertPageRating( $pageId, $ratingID, $thisRating - $lastPageRating, $thisRating, $lastPageRating );
+			
+			$this->insertPageRating( $pageId, $ratingID, ( $thisRating - $lastRating ), $thisRating, $lastRating );
+
+			$this->insertUserRatings( $pageId, $revisionId, $wgUser, $token, $ratingID, $thisRating, $params['bucket'] );
 		}
 
 		$this->insertProperties( $revisionId, $wgUser, $token, $params );
@@ -160,12 +157,13 @@ class ApiArticleFeedback extends ApiBase {
 	 * 
 	 * @param $pageId Integer: Page Id
 	 * @param $revisionId Integer: Revision Id
+	 * @param $lastRevision Integer: Revision Id of last rating
 	 * @param $ratingId Integer: Rating Id
 	 * @param $updateAddition Integer: Difference between user's last rating (if applicable)
 	 * @param $thisRating Integer|Boolean: Value of the Rating
 	 * @param $lastRating Integer|Boolean: Value of the last Rating
 	 */
-	private function insertRevisionRating( $pageId, $revisionId, $ratingId, $updateAddition, $thisRating, $lastRating ) {
+	private function insertRevisionRating( $pageId, $revisionId, $lastRevision, $ratingId, $updateAddition, $thisRating, $lastRating ) {
 		$dbw = wfGetDB( DB_MASTER );
 
 		// Try to insert a new "totals" row for this page,rev,rating set
@@ -181,21 +179,58 @@ class ApiArticleFeedback extends ApiBase {
 			__METHOD__,
 			 array( 'IGNORE' )
 		);
-		
-		// Apply the difference between the previous and new ratings to the current "totals" row
-		$dbw->update(
-			'article_feedback_revisions',
-			array(
-				'afr_total = afr_total + ' . $updateAddition,
-				'afr_count = afr_count + ' . $this->getCountChange( $lastRating, $thisRating ),
-			),
-			array(
-				'afr_page_id' => $pageId,
-				'afr_rating_id' => $ratingId,
-				'afr_revision' => $revisionId,
-			),
-			__METHOD__
-		);
+
+		// If that succeded in inserting a row, then we are for sure rating a previously unrated
+		// revision, and we need to add more information about this rating to the new "totals" row,
+		// as well as remove the previous rating values from the previous "totals" row
+		if ( $dbw->affectedRows() ) {
+			// If there was a previous rating, there should be a "totals" row for it's revision
+			if ( $lastRating ) {
+				// Deduct the previous rating values from the previous "totals" row
+				$dbw->update(
+					'article_feedback_revisions',
+					array(
+						'afr_total = afr_total - ' . intval( $lastRating ),
+						'afr_count = afr_count - 1',
+					),
+					array(
+						'afr_page_id' => $pageId,
+						'afr_rating_id' => $ratingId,
+						'afr_revision' => $lastRevision
+					),
+					__METHOD__
+				);
+			}
+			// Add this rating's values to the new "totals" row
+			$dbw->update(
+				'article_feedback_revisions',
+				array(
+					'afr_total' => $thisRating,
+					'afr_count' => $thisRating ? 1 : 0,
+				),
+				array(
+					'afr_page_id' => $pageId,
+					'afr_rating_id' => $ratingId,
+				 	'afr_revision' => $revisionId,
+				),
+				__METHOD__
+			);
+		} else {
+			// Apply the difference between the previous and new ratings to the current "totals" row
+			$dbw->update(
+				'article_feedback_revisions',
+				array(
+					'afr_total = afr_total + ' . $updateAddition,
+					'afr_count = afr_count + ' . $this->getCountChange( $lastRating, $thisRating ),
+				),
+				array(
+					'afr_page_id' => $pageId,
+					'afr_rating_id' => $ratingId,
+				 	'afr_revision' => $revisionId,
+				),
+				__METHOD__
+			);
+		}
 	}
 	/**
 	 * Calculate the difference between the previous rating and this one
@@ -212,45 +247,55 @@ class ApiArticleFeedback extends ApiBase {
 	}
 
 	/**
-	 * Inserts the user's ratings for a specific revision
+	 * Inserts (or Updates, where appropriate) the users ratings for a specific revision
 	 *
 	 * @param $pageId Integer: Page Id
 	 * @param $revisionId Integer: Revision Id
 	 * @param $user User: Current User object
 	 * @param $token Array: Token if necessary
-	 * @param $ratings Array: Keys are rating IDs, values are rating values
+	 * @param $ratingId Integer: Rating Id
+	 * @param $ratingValue Integer: Value of the Rating
 	 * @param $bucket Integer: Which rating widget was the user shown
-	 * @return int Return value of $dbw->insertID(). This is the aa_id of the first (MySQL) or last (SQLite) inserted row
 	 */
-	private function insertUserRatings( $pageId, $revisionId, $user, $token, $ratings, $bucket ) {
+	private function insertUserRatings( $pageId, $revisionId, $user, $token, $ratingId, $ratingValue, $bucket ) {
 		$dbw = wfGetDB( DB_MASTER );
 
 		$timestamp = $dbw->timestamp();
-		
-		$rows = array();
-		foreach ( $ratings as $ratingID => $ratingValue ) {
-			$rows[] = array(
+
+		$dbw->insert(
+			'article_feedback',
+			array(
 				'aa_page_id' => $pageId,
 				'aa_user_id' => $user->getId(),
 				'aa_user_text' => $user->getName(),
 				'aa_user_anon_token' => $token,
 				'aa_revision' => $revisionId,
 				'aa_timestamp' => $timestamp,
-				'aa_rating_id' => $ratingID,
+				'aa_rating_id' => $ratingId,
 				'aa_rating_value' => $ratingValue,
 				'aa_design_bucket' => $bucket,
+			),
+			__METHOD__,
+			 array( 'IGNORE' )
+		);
+
+		if ( !$dbw->affectedRows() ) {
+			$dbw->update(
+				'article_feedback',
+				array(
+					'aa_timestamp' => $timestamp,
+					'aa_rating_value' => $ratingValue,
+				),
+				array(
+					'aa_page_id' => $pageId,
+					'aa_user_text' => $user->getName(),
+					'aa_revision' => $revisionId,
+					'aa_rating_id' => $ratingId,
+					'aa_user_anon_token' => $token,
+				),
+				__METHOD__
 			);
 		}
-
-		// In MySQL, there is native support for multi-row inserts and our rows
-		// will automatically get consecutive insertIDs. In SQLite this seems
-		// to be the case if you use a transaction, but I couldn't find anything
-		// on the web that states whether this is true.
-		$dbw->begin();
-		$dbw->insert( 'article_feedback', $rows, __METHOD__ );
-		$dbw->commit();
-		
-		return $dbw->insertID();
 	}
 
 	/**
