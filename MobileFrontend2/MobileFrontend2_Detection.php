@@ -48,6 +48,8 @@ class MobileFrontend2_Detection {
 	 * @return bool
 	 */
 	private static function enable() {
+		global $wgResourceModules;
+
 		self::$enabled = true;
 
 		// Do some initialization

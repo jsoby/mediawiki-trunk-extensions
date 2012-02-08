@@ -69,7 +69,7 @@ class SkinMobile extends SkinTemplate {
 
 		// CSS & JS
 		// Make these last
-		$tpl->set( 'headscripts', $out->getHeadScripts() );
+		$tpl->set( 'headscripts', $this->getHeadScripts( $out ) );
 		$tpl->set( 'csslinks', $out->buildCssLinks() );
 		$tpl->set( 'bottomscripts', $this->bottomScripts() );
 
@@ -105,6 +105,24 @@ class SkinMobile extends SkinTemplate {
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
 		return '<button>' . wfMessage( 'mobile-frontend2-show-button' )->escaped() .  '</button>';
 	}
+
+	/**
+	 * More minimal version of getHeadScripts from OutputPage
+	 *
+	 * @param OutputPage $out
+	 * @return string
+	 */
+	protected function getHeadScripts( OutputPage $out ) {
+		$scripts = $out->makeResourceLoaderLink( 'startup', ResourceLoaderModule::TYPE_SCRIPTS, true, array( 'mobile' => true ) );
+
+		$scripts .= Html::inlineScript(
+			ResourceLoader::makeLoaderConditionalScript(
+				ResourceLoader::makeConfigSetScript( $out->getJSVars() )
+			)
+		);
+
+		return $scripts;
+	}
 }
 
 class MobileTemplate extends BaseTemplate {
@@ -129,8 +147,10 @@ class MobileTemplate extends BaseTemplate {
 		<?php $this->html( 'headscripts' ) ?>
 	</head>
 	<body>
+
 	<?php if ( !MobileFrontend2_Options::getHideSearch() ): ?>
 	<!-- search/header -->
+	<div id="results"></div>
 	<div id="header">
 		<div id="searchbox">
 			<?php if ( !MobileFrontend2_Options::getHideLogo() ): ?>

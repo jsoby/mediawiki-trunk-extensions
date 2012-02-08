@@ -65,9 +65,72 @@ class MobileFrontend2_Hooks {
 	}
 
 	/**
+	 * Replaces jQuery with zepto.js for mobile
+	 *
+	 * @param $modules
+	 * @return bool
+	 */
+	public static function startupModule( &$modules ) {
+		// comment about this
+		if ( self::isMobileSkin() ) {
+			$modules = array(
+				'zepto',
+				'mediawiki',
+			);
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Registers lite versions of core modules for mobile
+	 *
+	 * @param ResourceLoader $resourceLoader
+	 * @return bool
+	 */
+	public static function registerModules( ResourceLoader &$resourceLoader ) {
+ 		if ( self::isMobileSkin() ) {
+			global $wgResourceModules;
+
+			// We need to remove dependencies from mw.util that will don't use and
+			// aren't compatible with zepto.js
+			// Krinkle will hate me
+			// TODO: This only saves about 4KB, reevaluate later
+			$wgResourceModules['mediawiki.util.lite'] = array(
+				 'scripts' => 'resources/mediawiki/mediawiki.util.js',
+				 /*'dependencies' => array(
+					 'jquery.client',
+					 'jquery.cookie',
+					 'jquery.messageBox',
+					'jquery.mwExtension',
+				 ),*/
+				//'messages' => array( 'showtoc', 'hidetoc' ),
+				'position' => 'top', // For $wgPreloadJavaScriptMwUtil
+			 );
+			 $wgResourceModules['mediawiki.api.lite'] = array(
+				 'scripts' => 'resources/mediawiki/mediawiki.api.js',
+				 'dependencies' => 'mediawiki.util.lite',
+			 );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Checks if the skin parameter is for a mobile skin
+	 *
+	 * This only works for load.php
+	 *
+	 * @return bool
+	 */
+	protected static function isMobileSkin() {
+		return RequestContext::getMain()->getRequest()->getVal( 'skin' ) == 'mobile';
+	}
+
+	/**
 	 * Perform very early setup
 	 *
-	 * This implements the parser if we're going to use the frontend
 	 * @return bool
 	 */
 	public static function setup() {
