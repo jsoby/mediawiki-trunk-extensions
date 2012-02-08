@@ -207,6 +207,22 @@ class ArticleFeedbackHooks {
 			$dir . '/sql/AddArticleFeedbackTimestampIndex.sql',
 			true
 		) );
+		
+		$updater->addExtensionUpdate( array(
+			'addIndex',
+			'article_feedback',
+			'aa_page_user_token',
+			$dir . '/sql/aa_page_user_token.sql',
+			true
+		) );
+		
+		$updater->addExtensionUpdate( array(
+			'dropIndex',
+			'article_feedback',
+			'aa_user_page_revision',
+			$dir . '/sql/delete-aa_user_page_revision.sql',
+			true
+		) );
 
 		return true;
 	}
