@@ -289,6 +289,41 @@ $messages['de'] = array(
 	'ts-citegen-base-disabled' => 'Fehler: %s-Datenbank ist nicht verfügbar.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'ts-citegen-Title' => 'Generator citatowych pśedłogow',
+	'ts-citegen-Send' => 'Generěrowaś',
+	'ts-citegen-Input-title' => 'Zapódaśe',
+	'ts-citegen-Input-text' => 'To jo generator žrědłowych pśedłogow. Z jogo pomocu móžoš žrědłowe pśedłogi we wšakich rěcnych wudaśach Wikipedije napóraś. Pšosym zapiš daty (%s) w slědujucych pólach, a skript wopytujo pśedłogi dokóńcyś. Źiwaj na to, až žedna rola njegrajo, kótare daty zapisujoš do kótarego póla. Skript buźo pšawu pśedłogu za zapódane daty wužywaś.',
+	'ts-citegen-Option-append-author-link' => 'Awtorowe wikiwótkaze k pśedłoze pśipowjesyś',
+	'ts-citegen-Option-append-newlines' => 'Za kuždym parametrom nowe smužki pśipowjesyś',
+	'ts-citegen-Option-add-references' => 'Toflicki <ref> wokoło citatowych pśedłogow pśidaś',
+	'ts-citegen-Option-add-list' => 'Wikilisćinu citatowych pśedłogow napóraś',
+	'ts-citegen-Output-title' => 'Wuslědk',
+	'ts-citegen-Output-select-disclaimer' => 'Wuběranje pśedłogoweje rěcy njegarantěrujo, až specifiska pśedłoga stoj w twójej rěcy k dispoziciji. Toś to pólo nalicy k dispoziciji stojece rěcy kuždeje pódpěraneje pśedłogi, t.g. móžo se francojšćina zwobrazniś, dokulaž se jano "Cite book" pódpěra.',
+	'ts-citegen-Wrong-input' => '%s: njeidentificěrowany ako korektne zapódaśe.',
+	'ts-citegen-Parsers' => 'Parsery',
+	'ts-citegen-Skins' => 'Wudaśe',
+	'ts-citegen-Skin-skins' => 'Drastwy',
+	'ts-citegen-Skin-outputformat' => 'Wudawański format',
+	'ts-citegen-Template-lang' => 'Rěc pśedłogi',
+	'ts-citegen-Sources-title' => 'Žrědła',
+	'ts-citegen-Sources-text' => 'Dołojce stoj lisćina wužytych žrědłow k dispoziciji.',
+	'ts-citegen-Sidebar-title' => 'Generator citatow',
+	'ts-citegen-Sidebar-add-Firefox' => 'Bocnicy pśidaś',
+	'ts-citegen-Sidebar-add-Opera' => 'Hotlistoju Opery pśidaś',
+	'ts-citegen-Sidebar-add-IE-Mac' => 'Page Holderoju pśidaś',
+	'ts-citegen-Sidebar-add-IE-Mac-details' => 'Gaž bok jo zacytany. wócyń swój Page Holder, klikni na "Pśidaś", wužyj pótom tłocašk faworitow w Page Holder, aby jen jako faworit w Page Holder składował.',
+	'ts-citegen-Tools' => 'Rědy',
+	'ts-citegen-Other-languages' => 'Druge rěcy',
+	'ts-citegen-Save-it' => 'Aktualne napšašowanje',
+	'ts-citegen-Errors-title' => 'Zmólki',
+	'ts-citegen-Unavailable-SQL' => 'Zmólka: Datowa banka Toolserver njestoj k dispoziciji. MySQL jo wózjawił: %s',
+	'ts-citegen-base-disabled' => 'Zmólka: Datowa banka %s njestoj k dispoziciji',
+);
+
 /** British English (British English)
  * @author Holek
  */
@@ -565,12 +600,12 @@ $messages['hsb'] = array(
 	'ts-citegen-Skin-outputformat' => 'Wudatny format',
 	'ts-citegen-Template-lang' => 'Rěč předłohi',
 	'ts-citegen-Sources-title' => 'Žórła',
-	'ts-citegen-Sources-text' => 'Deleka je lisćina wužitych žórłow k dispoziciji steji.',
+	'ts-citegen-Sources-text' => 'Deleka lisćina wužitych žórłow k dispoziciji steji.',
 	'ts-citegen-Sidebar-title' => 'Generator citatow',
 	'ts-citegen-Sidebar-add-Firefox' => 'K bóčnicy přidać',
 	'ts-citegen-Sidebar-add-Opera' => 'Hotlistej Opery přidać',
 	'ts-citegen-Sidebar-add-IE-Mac' => 'Page Holderej přidać',
-	'ts-citegen-Sidebar-add-IE-Mac-details' => 'Hdyž strona je začitana. wočiń swój Page holder, klikń na "Přidać", potom wužij tłočatko faworitow w Page Holder, zo by ju jako faworit w Page Hodler składował.',
+	'ts-citegen-Sidebar-add-IE-Mac-details' => 'Hdyž strona je začitana, wočiń swój Page Holder, klikń na "Přidać", wužij potom tłóčatko faworitow w Page Holder, zo by ju jako faworit w Page Holder składował.',
 	'ts-citegen-Tools' => 'Nastroje',
 	'ts-citegen-Other-languages' => 'Druhe rěče',
 	'ts-citegen-Save-it' => 'Aktualne naprašowanje',

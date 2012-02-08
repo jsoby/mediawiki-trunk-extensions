@@ -204,6 +204,8 @@ $messages['lb'] = array(
 	'tweetanew-newdefault' => 'NEI SÄIT: $1 - $2',
 	'tweetanew-new3' => 'Kuckt no op $2 - et gëtt eng nei Säit iwwer $1',
 	'tweetanew-editdefault' => 'AKTUALISÉIERT SÄIT:  $1 - $2',
+	'tweetanew-edit2' => '$1 gouf rezent op $2 aktualiséiert',
+	'tweetanew-edit3' => 'Kuckt no $2 - et gëtt eng neien Inhalt op $1',
 );
 
 /** Macedonian (Македонски)

@@ -251,6 +251,7 @@ $1',
 
 /** Dutch (Nederlands)
  * @author SPQRobin
+ * @author Saruman
  */
 $messages['nl'] = array(
 	'semanticpageseries-desc' => "Een reeks pagina's aanmaken vanuit één [https://www.mediawiki.org/wiki/Extension:Semantic_Forms semantisch formulier]",
@@ -258,9 +259,23 @@ $messages['nl'] = array(
 	'spssuccess' => "{{PLURAL:$1|Eén pagina zal|$1 pagina's zullen}} aangemaakt worden.",
 	'spssuccess-returntoorigin' => 'Terugkeren naar $1',
 	'spserror' => 'Er is een fout opgetreden',
+	'spserror-diffnotsupported' => 'De diff actie wordt niet ondersteund voor paginareeksen.',
+	'spserror-previewnotsupported' => 'De preview actie wordt niet ondersteund voor paginareeksen.',
+	'spserror-noiteratorname' => 'Geen iterator opgegeven. U moet de parameter "iterator" instellen in de #serieslink functieaanroep.',
+	'spserror-iteratorunknown' => 'Iterator " $1 " bestaat niet. U moet de parameter "iterator" in de #serieslink functieaanroep corrigeren.',
+	'spserror-noformname' => 'Geen formuliernaam opgegeven.  U moet de parameter "formulier" in de #serieslink functieaanroep opgeven.',
 	'spserror-formunknown' => 'Formulier "$1" bestaat niet.',
+	'spserror-notargetformname' => 'Geen doelformuliernaam opgegeven. U dient de parameter "target form" op te geven in de #serieslink functieaanroep .',
+	'spserror-notargetfieldname' => 'Geen doelveldnaam gegeven. U dient de parameter "target field" op te geven in de #serieslink functieaanroep.',
+	'spserror-iteratorparammissing' => 'De volgende iterator-parameters ontbreken in de #serieslink aanroep:
+$1',
+	'spserror-noiteratordata' => 'Geen iterator parameters gevonden in de verzonden gegevens.',
+	'spserror-pagegenerationlimitexeeded' => "U hebt geprobeerd {{PLURAL:$1| een pagina| $1 pagina's}} te genereren. Dit overschrijdt de toegestane limiet van {{PLURAL:$2| een pagina| $2  pagina's}}.",
 	'spserror-date-startdatemissing' => 'De begindatum ontbreekt.',
+	'spserror-date-internalerror' => 'Er is een fout opgetreden tijdens het aanmaken van de data. Dit kan zijn veroorzaakt door een ongeldige begin- of einddatum.',
 	'spserror-count-startvaluemalformed' => 'De beginwaarde is geen getal.',
 	'spserror-count-endvaluemalformed' => 'De eindwaarde is geen getal.',
+	'spserror-count-stepvaluemalformed' => 'De stapwaarde is geen getal.',
+	'spserror-count-digitsvaluemalformed' => 'De cijferwaarde is geen getal.',
 );
 

@@ -422,6 +422,56 @@ Sofern ein Link hierhergeführt hat, ist dies bitte <a href="$1">als Fehler zu m
 	'toolbase-error-toomanyedits' => 'Benutzer $1 hat $2 Bearbeitungen gemacht. Dieses Hilfsprogramm hat ein Maximum von $3 Bearbeitungen.',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'toolbase-header-title' => "X!'s Tools (BETA)",
+	'toolbase-header-bugs' => 'Programowe zmólki',
+	'toolbase-header-sitenotice' => 'Globalna powěźeńka toolserwera: $1',
+	'toolbase-replag' => 'Serwer jo se wó $1 wokomuźił',
+	'toolbase-replag-years' => 'lět',
+	'toolbase-replag-months' => 'mjasecow',
+	'toolbase-replag-weeks' => 'tyźenjow',
+	'toolbase-replag-days' => 'dnjow',
+	'toolbase-replag-hours' => 'góźinow',
+	'toolbase-replag-minutes' => 'minutow',
+	'toolbase-replag-seconds' => 'sekundow',
+	'toolbase-footer-exectime' => 'Za $1 sekundow wugbany',
+	'toolbase-footer-source' => 'Žrědłowy tekst se woglědaś',
+	'toolbase-footer-language' => 'Rěc změniś',
+	'toolbase-footer-translate' => 'Pśełožyś',
+	'toolbase-navigation' => 'Nawigacija',
+	'toolbase-navigation-homepage' => 'Startowy bok',
+	'toolbase-navigation-user_id' => 'Wužywarski ID pytaś',
+	'toolbase-navigation-autoedits' => 'Licak awtomatizěrowanych změnow',
+	'toolbase-userid-submit' => 'Wužywarski ID wobstaraś',
+	'toolbase-userid-title' => 'Wužywarski ID pytaś',
+	'toolbase-userid-result' => 'Wužywarski ID za <b>$1</b> na <a href="$3"><b>$3</b></a> jo <b>$2</b>.',
+	'toolbase-autoedits-title' => 'Wulicak awtomatizěrowanych změnow',
+	'toolbase-autoedits-submit' => 'Wulicyś',
+	'toolbase-autoedits-approximate' => '<b>Pśibližna</b> licba změnow z...',
+	'toolbase-autoedits-totalauto' => 'Cełkowna licba awtomatizěrowanych změnow',
+	'toolbase-autoedits-totalall' => 'Cełkowna licba změnow',
+	'toolbase-autoedits-pct' => 'Procentowa sajźba awtomatizěrowanych změnow',
+	'toolbase-main-title' => 'Witaj!',
+	'toolbase-main-content' => 'Witaj k X!\'s tools! Rědowy pakśik konwertěrujo se rowno hyšći do frameworka <a href="$1">Symfony</a>. Toś ten proces buźo chylku traś, ale by měł južo něnto funkcioněrowaś.
+
+Za lisćinu rědow, kótarež južo funkcioněruju z toś tym frameworkom, glědaj bocnicu napšawo.
+
+Programowe zmólki móžoš pśi <a href="$2">Google Code</a> k wěsći daś.',
+	'toolbase-main-404' => 'Dataja njenamakana',
+	'toolbase-main-404-content' => 'Ojejko! Žedne websedło njenamakane!
+
+Pśekontrolěruj, lěc sy URL korektnje zapisał.
+Jolic wótkaz jo śe zwótkul něźi sem wjadł, <a href="$1">daj pšosym programowu zmólku k wěsći</a>.
+</ul>',
+	'toolbase-form-wiki' => 'Wiki',
+	'toolbase-error-nouser' => '$1 njejo płaśiwy wužywaŕ',
+	'toolbase-error-nowiki' => '$1.$2.org njejo płaśiwy wiki',
+	'toolbase-error-toomanyedits' => '$1 ma $2 změnow. Tós ten rěd ma maksimalnje $3 změnow.',
+);
+
 /** Greek (Ελληνικά)
  * @author Evropi
  */
@@ -857,7 +907,7 @@ Za lisćinu gratow, kotrež hižo z tutym frameworkom funguja, hlej bóčnicu na
 
 Programowe zmylki móžeš k <a href="$2">Google Code</a> zdźělić.',
 	'toolbase-main-404' => 'Dataja njenamakana',
-	'toolbase-main-404-content' => 'Ow jej! Žane websydło namakane!
+	'toolbase-main-404-content' => 'Ow jej! Žane websydło njenamakane!
 
 Skontroluj, hač sy URL korektnje zapisał.
 Jeli wotkaz je će wot něhdźe sem wjedł, <a href="$1">zdźěl prošu programowy zmylk</a>.

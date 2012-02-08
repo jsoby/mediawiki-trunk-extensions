@@ -1526,6 +1526,15 @@ Para obtener más información, visite la $1 .',
 	'response-ajax-error-body' => 'Hubo un error al añadir su respuesta.<br />Inténtelo de nuevo más tarde.',
 	'response-concurrency-notification' => 'Alguien ha comenzado recientemente a responder a este comentario.',
 	'moodbar-enotif-subject' => '$1 respondió a tus comentarios',
+	'moodbar-enotif-body' => '¡ Hola  $1 !
+Bienvenido a {{SITENAME}} y gracias por su [ $2 comentarios]. Otro usuario de {{SITENAME}}, [$3  $6], escribió la siguiente respuesta:
+   $4
+Vea este mensaje en su [$5  página de discusión].
+¿Qué es una página de discusión? Su página de discusión de usuario es la página que otros editores de {{SITENAME}} utilizan para comunicarse con usted.  Puede responder haciendo clic en "Editar", moviendo el cursor debajo del comentario, escribiendo su respuesta y cuatro virgulillas al final (~~~~) para firmar y guardar. Todas las páginas de {{SITENAME}} tienen páginas de discusión, y se usan para muchos propósitos diferentes. Cuesta un poco cogerle el truco, pero es bastante fácil una vez que uno se acostumbra.
+¿Aún confundido? [http://en.wikipedia.org/wiki/File:Wikipedia_basics_-_Talk_pages.ogv Este video] (véase en [http://www.youtube.com/watch?v=JdeDLRsB2Es YouTube]) le da una descripción paso a paso de cómo trabajar con las páginas de discusión.
+Gracias por ser parte de la comunidad.
+
+-- {{SITENAME}}',
 );
 
 /** Estonian (Eesti)
@@ -3169,6 +3178,7 @@ Fir méi Informatiounen, gitt w.e.g. op d'$1.",
 	'moodbar-header-user-editcount' => 'Compteur vun den Ännerunge pro Benotzer',
 	'moodbar-header-namespace' => 'Nummraum',
 	'moodbar-header-own-talk' => 'Eegen Diskussiounssäit',
+	'moodbar-feedback-title' => 'Wand mam Feedback',
 	'moodbar-feedback-response-title' => '== Äntwert op Äre [[$1|Feedback]] ==',
 	'moodbar-feedback-view-link' => '(Feedback weisen)',
 	'moodbar-feedback-filters' => 'Filteren',

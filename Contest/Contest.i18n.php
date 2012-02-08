@@ -944,6 +944,8 @@ $messages['be-tarask'] = array(
 	'contest-submission-new-submission' => 'Вам усё яшчэ неабходна ўвесьці URL-адрас у Вашае паведамленьне. Гэта неабходна выканаць да пэўнага тэрміну.',
 	'contest-submission-current-submission' => 'Гэта URL-адрас Вашага паведамленьня, якое Вы можаце зьмяняць да пэўнага тэрміну.',
 	'contest-submission-challenge' => 'У цяперашні момант Вы ўдзельнічаеце ў конкурсе $1.',
+	'contest-submission-challenge-description' => "'''Цяперашні выклік: $1''' — $2",
+	'contest-submission-domains' => 'Паведамленьні пра ўдзел абмежаваныя наступнымі сайтамі: $1',
 );
 
 /** Bulgarian (Български)
@@ -1825,7 +1827,7 @@ $messages['es'] = array(
 	'contest-special-submissioncount' => 'Número de respuestas',
 	'contest-special-edit' => 'Editar',
 	'contest-special-delete' => 'Borrar',
-	'contest-special-confirm-delete' => '¿Estás {{GENDER:$1|seguro|segura}} de que quieres borrar este concurso?',
+	'contest-special-confirm-delete' => '¿Está seguro que desea eliminar este concurso?',
 	'contest-special-delete-failed' => 'No se pudo borrar la competición',
 	'editcontest-text' => 'Editando competición',
 	'editcontest-legend' => 'Concurso',

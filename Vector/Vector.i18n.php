@@ -758,6 +758,7 @@ Wänn Du aagmäldet bisch, chasch s Anzeige vu däre Warnig im „Tekscht-Ygab�
 $messages['gu'] = array(
 	'vector-collapsiblenav-more' => 'વધુ ભાષાઓ',
 	'vector-simplesearch-search' => 'શોધો',
+	'vector-simplesearch-containing' => 'ધરાવતી...',
 	'vector-noexperiments-preference' => 'મને પ્રયોગોમાંથી બકાત રાખો',
 );
 

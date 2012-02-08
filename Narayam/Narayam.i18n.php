@@ -666,6 +666,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Fitoschido
  * @author Imre
  */
@@ -673,9 +674,10 @@ $messages['es'] = array(
 	'narayam-desc' => 'Permite añadir métodos de entrada personalizados para los campos de entrada',
 	'narayam-toggle-ime' => 'Activar ($1)',
 	'narayam-menu' => 'Método de entrada',
-	'narayam-menu-tooltip' => 'Controlar el Editor de métodos de entrada (IME) Narayam',
+	'narayam-menu-tooltip' => 'Seleccione un método de entrada',
 	'narayam-help' => 'Ayuda',
 	'narayam-checkbox-tooltip' => 'Para activar o desactivar el método de entrada',
+	'narayam-enable-preference' => 'Habilitar el método de entrada',
 	'narayam-more-imes' => 'Más métodos de entrada',
 	'narayam-am' => 'Transliteración amárica',
 	'narayam-as' => 'Transliteración asamesa',
@@ -698,22 +700,31 @@ $messages['es'] = array(
 	'narayam-or' => 'Transliteración odiya',
 	'narayam-or-lekhani' => 'Odiya Lekhani',
 	'narayam-or-inscript' => 'Oriya InScript',
+	'narayam-pa-phonetic' => 'Fonética Gurmukhi Punjabi',
 	'narayam-pa-inscript' => 'Gurmukhi Punjabi InScript',
+	'narayam-sa' => 'Transliteración sánscrita',
 	'narayam-sa-inscript' => 'Sánscrito InScript',
 	'narayam-si-singlish' => 'Sinhala Singlish',
 	'narayam-si-wijesekara' => 'Sinhala Wijesekara',
 	'narayam-ta-99' => 'Tamil99',
 	'narayam-ta-inscript' => 'Tamil InScript',
+	'narayam-ta' => 'Transliteración tamil',
 	'narayam-ta-bamini' => 'Tamil Bamini',
+	'narayam-tcy' => 'Transliteración tulu',
+	'narayam-te' => 'Transliteración telugu',
 	'narayam-te-inscript' => 'Telugu InScript',
+	'narayam-bn-avro' => 'Avro bengalí',
 	'narayam-bn-inscript' => 'Bengalí InScript',
+	'narayam-bn-nkb' => 'NKB bengalí',
 	'narayam-ur' => 'Urdu estándar',
 	'narayam-de' => 'Alemán',
+	'narayam-gu' => 'Transliteración gujarati',
 	'narayam-gu-inscript' => 'Gujarati InScript',
 	'narayam-ru-standard' => 'Ruso estándar',
 	'narayam-sah-standard' => 'Saja estándar',
 	'narayam-hne-inscript' => 'Chatisgarí InScript',
 	'narayam-mai-inscript' => 'maithili InScript',
+	'narayam-gom-deva' => 'Transliteración Goan Konkani-Devanagari',
 	'narayam-gom-deva-inscript' => 'Goan Konkaní-Devanagari InScript',
 	'narayam-he-standard-2011-extonly' => 'Hebreo estándar 2011',
 	'narayam-he-standard-2011' => 'Hebreo estándar 2011',
