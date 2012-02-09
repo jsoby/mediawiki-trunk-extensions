@@ -51,10 +51,10 @@ class MobileFrontend2_Hooks {
 
 		$section = "<div section_id=\"$i\" id=\"section-$i\" class=\"mf2-section-container\">"
 			. substr( $section, 0, $headerLength )
-			. '<div class="content_block">'
-			. substr( $section, $headerLength )
-			. '<div class="section_anchors">'
-				. '<a href="#section-' . $i . '" class="back_to_top">'
+			. '<div class="mf2-content-block">'
+			. substr( $section, $headerLength ) . "\n\n"
+			. '<div class="mf2-section-anchor">'
+				. '<a href="#section-' . $i . '">'
 			. wfMessage( 'mobile-frontend2-back-to-top-of-section' )->escaped()
 			. '</a></div></div></div>';
 

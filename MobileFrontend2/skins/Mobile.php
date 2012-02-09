@@ -169,9 +169,9 @@ class MobileTemplate extends BaseTemplate {
 	<div id="header">
 		<div id="searchbox">
 			<?php if ( !MobileFrontend2_Options::getHideLogo() ): ?>
-			<img src="<?php $this->text( 'mobilelogopath' ) ?>" alt="Logo" id="logo" width="35" height="22" />
+			<img src="<?php $this->text( 'mobilelogopath' ) ?>" alt="Logo" id="mf2-logo" width="35" height="22" />
 			<?php endif ?>
-			<form action="<?php $this->text( 'wgScript' ) ?>" class="search_bar" method="get">
+			<form action="<?php $this->text( 'wgScript' ) ?>" class="mf2-search-bar" method="get">
 				<input type="hidden" name="title" value="Special:Search" />
 
 				<div id="sq" class="divclearable">
@@ -206,17 +206,15 @@ class MobileTemplate extends BaseTemplate {
 	<?php if ( !MobileFrontend2_Options::getHideFooter() ): ?>
 	<!-- footer -->
 	<div id="footer">
-		<div class="nav" id="footmenu">
-			<div class="mwm-notice">
-				<a href="#"><?php $this->msg( 'mobile-frontend2-regular-site' ) ?></a> | <a href="#"><?php $this->msg( 'mobile-frontend2-disable-images' ) ?></a>
+		<div id="innerFooter">
+			<a href="#"><?php $this->msg( 'mobile-frontend2-regular-site' ) ?></a> | <a href="#"><?php $this->msg( 'mobile-frontend2-disable-images' ) ?></a>
 
-				<div id="perm">
-					<a href="#"><?php $this->msg( 'mobile-frontend2-perm-stop-redirect' ) ?></a>
-				</div>
+			<div id="perm">
+				<a href="#"><?php $this->msg( 'mobile-frontend2-perm-stop-redirect' ) ?></a>
 			</div>
-			<div id="copyright">
-				<?php $this->msg( 'mobile-frontend2-copyright' ) ?>
-			</div>
+		</div>
+		<div id="copyright">
+			<?php $this->msg( 'mobile-frontend2-copyright' ) ?>
 		</div>
 	</div>
 	<?php endif ?>

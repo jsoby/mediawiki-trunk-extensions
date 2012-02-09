@@ -1,0 +1,138 @@
+/* SEARCH */
+#search {
+	-webkit-appearance: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	outline-style: none;
+	outline-width: initial;
+	outline-color: initial;
+	height: 1.4em;
+}
+
+#search:focus {
+	outline: none;
+}
+
+#searchbox img,
+#searchbox form,
+#searchbox input,
+#searchbox button {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#searchbox {
+	width: auto;
+	padding: 5px;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+#searchbox a, #searchbox img {
+	border: 0px;
+	vertical-align: middle;
+}
+
+#searchbox #goButton {
+	border: 0;
+	/* @embed */
+	background: url(images/s.gif) no-repeat top left;
+	background-size: 27px 25px;
+	height: 25px;
+	width: 27px;
+}
+
+#searchbox #searchField {
+	width: auto;
+}
+
+/*TODO: This might need to go in the main one*/
+.clearlink {
+	/* @embed */
+	background: url(images/close-button.png) no-repeat scroll 0 0 transparent;
+	background-position: center center;
+	cursor: pointer;
+	zoom: 1;
+	position: absolute;
+	right: 0.25em;
+	top: 50%;
+	margin: 1px;
+	height: 12px;
+	width: 12px;
+	margin-top: -6px;
+	z-index: 2;
+	border: 0px solid;
+	display: none;
+}
+
+.divclearable {
+	border: 1px solid #888;
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: middle;
+	height: 1.5em;
+	position: relative;
+}
+
+/* Search Suggestions */
+#results {
+	display: none;
+	background-color: #ffffff;
+	border-top: none;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+	z-index: 2;
+	position: absolute;
+}
+
+.suggestions {
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+.suggestions-result {
+	color: black;
+	color: WindowText;
+	margin: 0;
+	line-height: 1.8em;
+	padding: 0.01em 0.25em;
+	text-align: left;
+	postion: relative;
+	border-bottom: solid 1px #999999;
+}
+
+.suggestions-result:hover {
+	background-color: #ACD1E9;
+}
+
+.suggestions-result a,
+.suggestions-result a:link,
+.suggestions-result a:visited,
+.suggestions-result a:hover,
+.suggestions-result a:active {
+	text-decoration: none;
+	color: #000000;
+}
+
+a.suggestions-result-update {
+	font-size: 1.3em;
+	display: block;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000000;
+	position: absolute;
+	right: 0;
+	width: 1.5em;
+	text-align: center;
+}
+
+a.search-result-item {
+	display: block;
+	margin-right: 2em;
+}

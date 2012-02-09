@@ -62,7 +62,10 @@ $wgResourceModules['ext.mobileFrontend2'] = array(
 ) + $commonModuleInfo;
 
 $wgResourceModules['ext.mobileFrontend2.common'] = array(
-	'styles' => 'ext.mobileFrontend2/ext.mobileFrontend2.css',
+	'styles' => array(
+		'ext.mobileFrontend2/ext.mobileFrontend2.css',
+		'ext.mobileFrontend2/ext.mobileFrontend2.search.css',
+	),
 ) + $commonModuleInfo;
 
 $wgResourceModules['zepto'] = array(

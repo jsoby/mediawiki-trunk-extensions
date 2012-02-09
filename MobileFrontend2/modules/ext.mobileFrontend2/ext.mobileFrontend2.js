@@ -90,14 +90,14 @@ var MobileFrontend2 = mf2 = {
 			return;
 		}
 
-		$r = $( '<div class="suggestions-results">' );
+		$r = $( '<div class="suggestions">' );
 
 		$.each( results, function( i, title ) {
 			$( '<div class="suggestions-result">' )
 				.attr( 'title', title )
 				.attr( 'rel', i + 1 ) // ?
 				.append(
-					$( '<a class="sq-val-update">' )
+					$( '<a class="suggestions-result-update">' )
 						.text( '+' ) // Translate?
 						.click( mf2.updateSearchValue )
 				)
