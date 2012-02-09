@@ -12,6 +12,6 @@ class SpecialExample extends SpecialPage {
 	function execute( $par ) {
 		global $wgOut;
 		
-		$wgOut->addWikimsg( 'example-example' );
+		$wgOut->addWikiMsg( 'example-example' );
 	}
 }
