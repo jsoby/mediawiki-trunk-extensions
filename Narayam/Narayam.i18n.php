@@ -1297,6 +1297,8 @@ $messages['hsb'] = array(
 	'narayam-tcy' => 'Transliteracija tulušćiny',
 	'narayam-te' => 'Transliteracije telugišćiny',
 	'narayam-te-inscript' => 'Telugušćina (InScript)',
+	'narayam-bho' => 'Transliteracija Bhojpuri',
+	'narayam-bho-inscript' => ' InScript Bhojpuri',
 	'narayam-bn-avro' => 'Bengali-Avro',
 	'narayam-bn-inscript' => 'Bengali InScript',
 	'narayam-bn-nkb' => 'Bengali NKB',
@@ -1991,6 +1993,7 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Olgak85
  * @author Sp5uhe
  */
@@ -1998,7 +2001,7 @@ $messages['pl'] = array(
 	'narayam-desc' => 'Pozwala dodać niestandardowe metody wprowadzania tekstu',
 	'narayam-toggle-ime' => 'Włącz ($1)',
 	'narayam-menu' => 'Metoda wprowadzania',
-	'narayam-menu-tooltip' => 'Ustawienia metody wprowadzania znaków w edytorze',
+	'narayam-menu-tooltip' => 'Wybierz metodę wprowadzania znaków w edytorze',
 	'narayam-help' => 'Pomoc',
 	'narayam-checkbox-tooltip' => 'Włączanie i wyłączanie metody wprowadzania',
 	'narayam-more-imes' => 'Inne metody wprowadzania znaków',

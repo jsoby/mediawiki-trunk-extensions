@@ -670,9 +670,9 @@ Konfigurer $wgPrefStatsTrackPrefs for at spore indstillinger.',
  * @author Pill
  */
 $messages['de'] = array(
-	'prefstats' => 'Einstellungsstatistiken',
+	'prefstats' => 'Statistiken zu Benutzereinstellungen',
 	'prefstats-desc' => 'Ermöglicht die Anzeige von Statistiken zu den einzelnen Einstellungen der Benutzer',
-	'prefstats-title' => 'Einstellungsstatistiken',
+	'prefstats-title' => 'Statistiken zu Benutzereinstellungen',
 	'prefstats-list-intro' => 'Derzeit werden die folgenden Einstellungen aufgezeichnet.
 Klicke auf eine, um Statistiken darüber zu erhalten.',
 	'prefstats-noprefs' => 'Derzeit werden keine Einstellungen verfolgt. Konfiguriere $wgPrefStatsTrackPrefs, um Einstellungen zu verfolgen.',
@@ -1216,6 +1216,8 @@ Druck uf eini go Statischtike iber si aaluege.',
 $messages['gu'] = array(
 	'prefstats' => 'પ્રાથમિકતા આંકડા',
 	'prefstats-title' => 'પ્રાથમિકતા આંકડાઓ',
+	'prefstats-list-intro' => 'હાલમાં નીચેની પ્સંદગીઓ પર નજર રખાઈ રહી છે. 
+જેના પર ક્લીક કરશો તેની આંકદાકીય માહિતી જાણી શકશો.',
 	'prefstats-xaxis' => 'અવધિ (કલાકો)',
 	'prefstats-factors' => 'સંખ્યા પ્રતિ : $1',
 	'prefstats-factor-hour' => 'કલાક',

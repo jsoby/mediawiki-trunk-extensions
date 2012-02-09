@@ -4382,6 +4382,7 @@ $messages['lb'] = array(
 	'contest-contestant-submit' => 'Ännerunge späicheren',
 	'contest-contestant-comment-by' => 'Bemierkung vum $1',
 	'contest-email-signup-title' => 'Merci datt Dir bäi dëser Erausfuerderung matmaacht!',
+	'contest-email-reminder-title' => "Nëmmen nach $1 {{PLURAL:$1|Dag|Deeg}} bis d'Ënn vun der Erausfuerderung!",
 	'contest-mycontests-toplink' => 'Meng Concoursen',
 	'contest-mycontests-no-contests' => 'Dir maacht bäi kengem Concours mat.',
 	'contest-mycontests-active-header' => 'Aktuell Concoursen',
@@ -5444,6 +5445,7 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Leinad
  * @author Olgak85
  * @author Rzuwig
@@ -5581,7 +5583,7 @@ $messages['pl'] = array(
 	'contest-contest-reminder-success' => 'Wysłano przypomnienie e‐mailem do $1 {{PLURAL:$1|uczestnika|uczestników}}',
 	'contest-contest-reminder-close' => 'Zamknij',
 	'contest-contest-reminder-retry' => 'Ponów wysyłanie',
-	'contest-contest-reminder-failed' => 'Nie można wysłać przypomnień e‐mailem.',
+	'contest-contest-reminder-failed' => 'Nie udało się wysłać {{PLURAL:$1|przypomnienia|przypomnień|przypomnień}} e‐mailem.',
 	'contest-contest-reminder-subject' => 'Temat',
 	'contest-contestant-id' => 'Identyfikator',
 	'contest-contestant-challenge-name' => 'Nazwa wyzwania',

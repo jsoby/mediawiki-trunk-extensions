@@ -756,7 +756,9 @@ Wänn Du aagmäldet bisch, chasch s Anzeige vu däre Warnig im „Tekscht-Ygab�
  * @author Sushant savla
  */
 $messages['gu'] = array(
+	'vector' => 'વેક્ટર માટે UI સુધારા',
 	'vector-collapsiblenav-more' => 'વધુ ભાષાઓ',
+	'vector-editwarning-preference' => 'સાચવ્યા વગર જો હું પૃષ્ઠ છોડું તો મને ચેતવણી આપો',
 	'vector-simplesearch-search' => 'શોધો',
 	'vector-simplesearch-containing' => 'ધરાવતી...',
 	'vector-noexperiments-preference' => 'મને પ્રયોગોમાંથી બકાત રાખો',

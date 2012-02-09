@@ -1444,6 +1444,8 @@ $messages['gu'] = array(
 	'ogg-dismiss' => 'બંધ કરો',
 	'ogg-download' => 'ફાઈલ ડાઉનલોડ કરો',
 	'ogg-desc-link' => 'આ ફાઈલ વિષે',
+	'ogg-oggThumb-version' => 'OggHandler ને oggThumb $1 અથવા પછીની આવૃત્તિ જરુરી છે.',
+	'ogg-oggThumb-failed' => 'oggThumb  લઘુ ચિત્ર (થમ્બ નેલ)રચવામાં નિષ્ફળ.',
 );
 
 /** Manx (Gaelg)

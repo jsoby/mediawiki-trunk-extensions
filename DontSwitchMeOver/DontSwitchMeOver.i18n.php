@@ -231,6 +231,7 @@ $messages['gsw'] = array(
  * @author Sushant savla
  */
 $messages['gu'] = array(
+	'dontswitchmeover-desc' => 'સભ્યનો દેખાવ પટલ બદલવા વિષેનો વિકલ્પ',
 	'dontswitchmeover-pref' => 'જ્યારે મૂળ ફલક બદલાય ત્યરે મારી પસંદગીના ફલકને ને ના બદલશો',
 );
 

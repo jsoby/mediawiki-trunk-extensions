@@ -1425,7 +1425,7 @@ Para obtener más información, visite la $1 .',
 	'moodbar-loading-title' => 'Compartiendo...',
 	'moodbar-success-title' => '¡Gracias!',
 	'moodbar-error-title' => '¡Vaya!',
-	'moodbar-success-subtitle' => 'El compartir tu experiencia nos ayuda a mejorar $1.',
+	'moodbar-success-subtitle' => 'Compartir su {{FBD-LINK}} nos ayuda a mejorar $1.',
 	'moodbar-error-subtitle' => '¡Algo salió mal! Por favor, comparte tus comentarios más tarde.',
 	'moodbar-blocked-title' => '¡Vaya!',
 	'moodbar-blocked-subtitle' => 'Usted ha sido bloqueado para edición.',
@@ -4084,6 +4084,7 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Leinad
  * @author Masti
  * @author Olgak85
@@ -4123,7 +4124,7 @@ Więcej informacji uzyskasz na $1.',
 	'moodbar-loading-title' => 'Udostępnianie...',
 	'moodbar-success-title' => 'Dziękujemy!',
 	'moodbar-error-title' => 'Oj!',
-	'moodbar-success-subtitle' => 'Wymiana doświadczeń w edytowaniu pomaga udoskonalać {{GRAMMAR:MS.lp|$1}}.',
+	'moodbar-success-subtitle' => 'Wymiana {{FBD-LINK}} pomaga udoskonalać {{GRAMMAR:MS.lp|$1}}.',
 	'moodbar-error-subtitle' => 'Coś poszło źle! Spróbuj udostępnić swoją opinię ponownie za jakiś czas.',
 	'moodbar-blocked-title' => 'Ups!',
 	'moodbar-blocked-subtitle' => 'Została Ci zablokowana możliwość edycji.',
@@ -4169,6 +4170,7 @@ Więcej informacji uzyskasz na $1.',
 	'moodbar-feedback-filters-type-sad' => 'Koszmar',
 	'moodbar-feedback-filters-username' => 'Nazwa użytkownika:',
 	'moodbar-feedback-filters-my-response' => 'Tylko moje odpowiedzi',
+	'moodbar-feedback-filters-show-unanswered' => 'Pokaż informacje bez odpowiedzi',
 	'moodbar-feedback-filters-button' => 'Filtruj',
 	'moodbar-feedback-whatis' => 'Jak działa to narzędzie?',
 	'moodbar-feedback-permalink' => 'link do tej opinii',

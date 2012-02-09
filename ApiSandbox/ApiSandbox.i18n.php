@@ -215,6 +215,7 @@ $messages['bn'] = array(
 
 /** Breton (Brezhoneg)
  * @author Fulup
+ * @author Gwendal
  */
 $messages['br'] = array(
 	'apisb-desc' => 'Aotren dizreinañ galvadennoù [//www.mediawiki.org/wiki/API API MediaWikiI] eus ar merdeer',
@@ -231,6 +232,10 @@ Kit da deuler ur sell war [//www.mediawiki.org/wiki/API:Main_page teulioù API] 
 	'apisb-select-action' => 'Dibab un ober',
 	'apisb-select-query' => 'Petra glask ?',
 	'apisb-select-value' => 'Dibab an talvoud',
+	'apisb-docs-more' => "Lenn hiroc'h",
+	'apisb-params-param' => 'Arventenn',
+	'apisb-params-input' => 'Enmont',
+	'apisb-params-desc' => 'Deskrivadur',
 	'apisb-loading' => 'O kargañ...',
 	'apisb-load-error' => 'Fazi en ur gargañ deskrivadur an API',
 	'apisb-request-error' => 'Ur fazi zo bet o klask seveniñ ar goulenn API',
@@ -240,6 +245,9 @@ Kit da deuler ur sell war [//www.mediawiki.org/wiki/API:Main_page teulioù API] 
 	'apisb-query-prop' => 'Perzhioù',
 	'apisb-query-list' => 'Rolloù',
 	'apisb-query-meta' => 'Titouroù Meta',
+	'apisb-example' => 'Skouer',
+	'apisb-examples' => 'Skouerioù',
+	'apisb-clear' => 'Riñsañ',
 );
 
 /** Catalan (Català)
@@ -400,7 +408,7 @@ $messages['es'] = array(
 	'apisb-desc' => 'Permite depurar llamadas a la [//www.mediawiki.org/wiki/API API de MediaWiki] desde el navegador',
 	'apisandbox' => 'Zona de pruebas API',
 	'apisb-no-js' => "'''Error ''': esta característica requiere JavaScript.",
-	'apisb-intro' => "Utilice está página para experimentar con el '''API de MediaWiki'''.
+	'apisb-intro' => "Utilice está página para experimentar con el '''servicio web API de MediaWiki'''.
 
 Consulte [//www.mediawiki.org/wiki/API:Main_page la documentación API] para más detalles sobre su uso. Ejemplo: [//www.mediawiki.org/wiki/API#A_simple_example accede al contenido de una página principal].  Seleccione una acción para ver más ejemplos.",
 	'apisb-api-disabled' => 'La API está desactivada en este sitio.',
@@ -868,14 +876,19 @@ $messages['ilo'] = array(
 	'apisb-intro' => "Usaren daytoy a panid ti panagsubok ti '''MediaWiki apot a serbisio ti API'''.
 Agiturong idiay [//www.mediawiki.org/wiki/API:Main_page the API dokumentasion] para iti adadu pay a detalye iti panag-usar ti API. Kas pagarigan: [//www.mediawiki.org/wiki/API#A_simple_example alaen ti linaon ti Umuna a Panid].  Agpili ti maaramid tapno makakita ti adu pay a kas pagarigan.",
 	'apisb-api-disabled' => 'Ti API ket nabaldodo iti daytoy a pagsaadan.',
+	'apisb-legend-parameters' => 'Dagiti parametro',
 	'apisb-legend-result' => 'Nagbanagan',
 	'apisb-legend-generic-parameters' => 'Dagiti kadawyan a parametro',
 	'apisb-legend-generator-parameters' => 'Agpaandar',
 	'apisb-result-request-url' => 'Agkiddaw ti URL:',
 	'apisb-result-request-post' => 'POST data:',
 	'apisb-select-action' => 'Agpili ti aramid',
-	'apisb-select-query' => 'Ania ti damdamagen?',
-	'apisb-select-value' => 'Agpili ti kuwenta',
+	'apisb-select-query' => '(agpili ti damdamagen)',
+	'apisb-select-value' => '(agpili ti kuenta)',
+	'apisb-docs-more' => 'agbasa ti dadduma pay',
+	'apisb-params-param' => 'Parametro',
+	'apisb-params-input' => 'Ti ikabil',
+	'apisb-params-desc' => 'Deskripsion',
 	'apisb-loading' => 'Agkarkarga...',
 	'apisb-load-error' => 'Biddut ti panagkarga ti deskripsion ti API',
 	'apisb-request-error' => 'Biddut i panagtungpal ti kiniddaw nga API',
@@ -1274,6 +1287,7 @@ $messages['pdc'] = array(
 
 /** Polish (Polski)
  * @author Beau
+ * @author BeginaFelicysym
  * @author Olgak85
  * @author Sp5uhe
  * @author Woytecr
@@ -1282,17 +1296,23 @@ $messages['pl'] = array(
 	'apisb-desc' => 'Pozwala debugować [//www.mediawiki.org/wiki/API MediaWiki API] zgłoszenia błędów z przeglądarki',
 	'apisandbox' => 'API sandbox (środowisko testowe)',
 	'apisb-no-js' => "'''Błąd''' – ta funkcja wymaga JavaScript.",
-	'apisb-intro' => "Użyj tej strony do eksperymentowania z '''MediaWiki API'''.
-Więcej szczegółów na temat użycia interfejsu API można znaleźć w [//www.mediawiki.org/wiki/API:Main_page API dokumentacji].",
+	'apisb-intro' => "Użyj tej strony do eksperymentowania z '''API serwisu MediaWiki'''.
+Więcej szczegółów na temat użycia interfejsu API można znaleźć w [//www.mediawiki.org/wiki/API:Main_page API dokumentacji].
+Przykład: [//www.mediawiki.org/wiki/API#A_simple_example pobranie zawartości strony Startowej].  Wybierz akcję by zobaczyć więcej przykładów.",
 	'apisb-api-disabled' => 'API jest wyłączone na tej stronie.',
+	'apisb-legend-parameters' => 'Parametry',
 	'apisb-legend-result' => 'Rezultat',
 	'apisb-legend-generic-parameters' => 'Parametry podstawowe',
 	'apisb-legend-generator-parameters' => 'Generator',
 	'apisb-result-request-url' => 'Żądanie URL:',
 	'apisb-result-request-post' => 'Dane POST:',
 	'apisb-select-action' => 'Wybierz działanie',
-	'apisb-select-query' => 'Podaj zapytanie?',
-	'apisb-select-value' => 'Wybierz wartość',
+	'apisb-select-query' => '(wybierz zapytanie)',
+	'apisb-select-value' => '(wybierz wartość)',
+	'apisb-docs-more' => 'by dowiedzieć się więcej',
+	'apisb-params-param' => 'Parametr',
+	'apisb-params-input' => 'Dane wejściowe',
+	'apisb-params-desc' => 'Opis',
 	'apisb-loading' => 'Trwa ładowanie…',
 	'apisb-load-error' => 'Błąd podczas ładowania opisu API.',
 	'apisb-request-error' => 'Błąd podczas wykonywania żądania API.',
@@ -1302,6 +1322,9 @@ Więcej szczegółów na temat użycia interfejsu API można znaleźć w [//www.
 	'apisb-query-prop' => 'Właściwości',
 	'apisb-query-list' => 'Listy',
 	'apisb-query-meta' => 'Matainformacje',
+	'apisb-example' => 'Przykład',
+	'apisb-examples' => 'Przykłady',
+	'apisb-clear' => 'Wyczyść',
 );
 
 /** Piedmontese (Piemontèis)
