@@ -188,12 +188,12 @@ $wgResourceModules['ext.narayam'] = $narayamTpl + array(
 	'dependencies' => 'ext.narayam.core',
 );
 $wgResourceModules['ext.narayam.core'] = $narayamTpl + array(
-	'scripts' => 'resources/ext.narayam.core.js',
-	'styles' => 'resources/ext.narayam.core.css',
+	'scripts' => 'resources/ext.narayam.core/ext.narayam.core.js',
+	'styles' => 'resources/ext.narayam.core/ext.narayam.core.css',
 	'skinStyles' => array(
-		'monobook' => 'resources/ext.narayam.core-monobook.css',
-		'vector' => 'resources/ext.narayam.core-vector.css',
-		'modern' => 'resources/ext.narayam.core-modern.css',
+		'monobook' => 'resources/ext.narayam.core/ext.narayam.core-monobook.css',
+		'vector' => 'resources/ext.narayam.core/ext.narayam.core-vector.css',
+		'modern' => 'resources/ext.narayam.core/ext.narayam.core-modern.css',
 	),
 	'messages' => array(
 		'narayam-checkbox-tooltip',
