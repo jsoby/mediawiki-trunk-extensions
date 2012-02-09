@@ -21,7 +21,7 @@
 	}
 	/**
 	 * Performs click tracking API call
-	 * 
+	 *
 	 * @param {string} id event identifier
 	 */
 	$.trackAction = function( id ) {
@@ -49,8 +49,7 @@
 		}, options);
 
 		if ( ! options.id ) {
-			$.error("You must specify an event ID");
-			return;
+			throw new Error("You must specify an event ID");
 		}
 
 		var data = {
@@ -60,15 +59,15 @@
 				'token': options.token
 			};
 		
-		if ( typeof options.namespace != 'undefined' ) {
+		if ( options.namespace === undefined ) {
 			data.namespacenumber = options.namespace;
 		}
 
-		if ( typeof options.info != 'undefined' ) {
+		if ( options.info === undefined ) {
 			data.additional = options.info;
 		}
 
-		$.post( mw.config.get( 'wgScriptPath' ) + '/api.php', data);
+		$.post( mw.util.wikiScript( 'api' ), data);
 	};
 	
 	/**
