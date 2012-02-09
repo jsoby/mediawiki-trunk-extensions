@@ -87,6 +87,7 @@ function SFI_MS_init( inputID, params ) {
 					res = regexp.exec( link.attr( 'href' ) );
 
 					title = unescape( res[1] );
+					title = title.replace('_', ' ', 'g');
 
 					link.data( 'title', title ); // save title in data
 

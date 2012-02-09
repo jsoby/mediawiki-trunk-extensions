@@ -88,7 +88,7 @@ class SFIMenuSelect extends SFFormInput {
 	 */
 	public function getHtmlText(){
 
-		global $wgUser, $wgTitle;
+		global $wgUser, $wgTitle, $wgParser;
 		global $sfigSettings;
 
 		// first: set up HTML attributes
@@ -113,14 +113,13 @@ class SFIMenuSelect extends SFFormInput {
 
 		// parse menu structure
 
-		$parser = new Parser();
-
 		// FIXME: SF does not parse options correctly. Users have to replace | by {{!}}
 		$structure = str_replace( '{{!}}', '|', $this->mOtherArgs['structure'] );
 		$options = ParserOptions::newFromUser( $wgUser );
 
-		$structure = $parser->parse( $structure, $wgTitle, $options )->getText();
-
+		$structure = $wgParser->doBlockLevels( $structure, true );
+		$wgParser->replaceLinkHolders( $structure );
+		
 		$html .= str_replace( '<li', '<li class=\'ui-state-default\'', $structure );
 
 		$html .= "</span>";
