@@ -33,7 +33,7 @@ $wgExtensionCredits[ 'other' ][] = array(
 $current_dir = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
 
 // Autoload this extension's classes
-$wgAutoloadClasses[ 'Example' ] = $current_dir . 'Example.body.php';
+$wgAutoloadClasses[ 'SpecialExample' ] = $current_dir . 'Example.body.php';
 
 // Add the i18n message file
 $wgExtensionMessagesFiles[ 'Example' ] = $current_dir . 'Example.i18n.php';
