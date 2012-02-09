@@ -483,10 +483,6 @@ img.thumbborder {
 	float: right;
 }
 
-#content_wrapper.home h1#firstHeading {
-	display: none;
-}
-
 body {
 	margin: 0;
 }
@@ -610,3 +606,12 @@ button.section_heading.hide {
 	outline: none;
 }
 
+/* Disable content folding on the main page */
+body.mainPage .section_anchors,
+body.mainPage button.mf2-section-toggle {
+	display: none;
+}
+
+body.mainPage .content_block {
+	display: block;
+}

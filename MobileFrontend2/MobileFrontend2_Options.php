@@ -24,6 +24,14 @@ class MobileFrontend2_Options {
 	protected static $hideFooter = false;
 
 	/**
+	 * Not a user-option, used to do thing such as hide the title for the main
+	 * page
+	 *
+	 * @var bool
+	 */
+	protected static $mainPage = false;
+
+	/**
 	 * Detects options based on user preferences
 	 */
 	public static function detect() {
@@ -56,5 +64,19 @@ class MobileFrontend2_Options {
 	 */
 	public static function getHideFooter() {
 		return self::$hideFooter;
+	}
+
+	/**
+	 * @param boolean $mainPage
+	 */
+	public static function setMainPage( $mainPage ) {
+		self::$mainPage = $mainPage;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public static function getMainPage() {
+		return self::$mainPage;
 	}
 }

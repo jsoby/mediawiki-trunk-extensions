@@ -152,4 +152,4 @@ var MobileFrontend2 = mf2 = {
 
 $( mf2.init );
 
-})( Zepto, MediaWiki );
+})( Zepto, mediaWiki );

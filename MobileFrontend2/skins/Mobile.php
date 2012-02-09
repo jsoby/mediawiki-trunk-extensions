@@ -27,6 +27,18 @@ class SkinMobile extends SkinTemplate {
 
 		// TODO: Hook for adding modules
 
+		$bodyClass = 'mobile';
+
+		if ( MobileFrontend2_Options::getMainPage() ) {
+			// fixup the HTML title
+			$msg = wfMessage( 'pagetitle-view-mainpage' )->inContentLanguage();
+			if ( !$msg->isDisabled() ) {
+				$out->setHTMLTitle( $msg->title( $this->getTitle() )->text() );
+			}
+
+			$bodyClass .= ' mainPage';
+		}
+
 		Profiler::instance()->setTemplated( true );
 
 		$this->initPage( $out );
@@ -67,6 +79,9 @@ class SkinMobile extends SkinTemplate {
 
 		$tpl->setRef( 'bodycontent', MobileFrontend2_PostParse::mangle( $out->mBodytext ) );
 
+		// Pass the bodyClass for CSS magic
+		$tpl->set( 'bodyclass', $bodyClass );
+
 		// CSS & JS
 		// Make these last
 		$tpl->set( 'headscripts', $this->getHeadScripts( $out ) );
@@ -103,7 +118,7 @@ class SkinMobile extends SkinTemplate {
 	 * @return string
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
-		return '<button>' . wfMessage( 'mobile-frontend2-show-button' )->escaped() .  '</button>';
+		return '<button class="mf2-section-toggle">' . wfMessage( 'mobile-frontend2-show-button' )->escaped() .  '</button>';
 	}
 
 	/**
@@ -146,7 +161,7 @@ class MobileTemplate extends BaseTemplate {
 		<?php $this->html( 'csslinks' ) ?>
 		<?php $this->html( 'headscripts' ) ?>
 	</head>
-	<body>
+	<body class="<?php $this->text( 'bodyclass' ) ?>">
 
 	<?php if ( !MobileFrontend2_Options::getHideSearch() ): ?>
 	<!-- search/header -->
@@ -171,11 +186,13 @@ class MobileTemplate extends BaseTemplate {
 
 	<!-- content -->
 	<div class="show" id="content_wrapper">
+		<?php if ( !MobileFrontend2_Options::getMainPage() ): ?>
 		<!-- firstHeading -->
 		<h1 id="firstHeading" class="firstHeading">
 			<span dir="auto"><?php $this->html( 'title' ) ?></span>
 		</h1>
 		<!-- /firstHeading -->
+		<?php endif ?>
 		<!-- bodyContent -->
 		<div id="bodyContent">
 			<?php $this->html( 'bodycontent' ) ?>

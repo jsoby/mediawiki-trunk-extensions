@@ -27,6 +27,8 @@ class MobileFrontend2_Hooks {
 	/**
 	 * Adds jump back a section links to content blocks
 	 *
+	 * @todo broken, see mobile main page
+	 *
 	 * @param $parser MobileFrontend2_Parser
 	 * @param $i int
 	 * @param $section string
@@ -112,6 +114,27 @@ class MobileFrontend2_Hooks {
 				 'scripts' => 'resources/mediawiki/mediawiki.api.js',
 				 'dependencies' => 'mediawiki.util.lite',
 			 );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Overrides the main page with the mobile version of the main page
+	 *
+	 * @param Title $title
+	 * @param $unused
+	 * @param $output
+	 * @param $user
+	 * @param $request
+	 * @param $wiki
+	 * @return bool
+	 */
+	public static function beforeInitialize( Title &$title, &$unused, &$output, &$user, $request, $wiki ) {
+		if ( MobileFrontend2_Detection::isEnabled() && $title->isMainPage() ) {
+			$title = Title::newFromText( wfMsgForContent( 'mainpage-mobile' ) );
+			RequestContext::getMain()->setTitle( $title );
+			MobileFrontend2_Options::setMainPage( true );
 		}
 
 		return true;

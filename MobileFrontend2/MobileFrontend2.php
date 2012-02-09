@@ -39,6 +39,7 @@ $wgHooks['ParserSectionCreate'][] = 'MobileFrontend2_Hooks::parserSectionCreate'
 $wgHooks['ArticleViewHeader'][] = 'MobileFrontend2_Hooks::articleView';
 $wgHooks['ResourceLoaderGetStartupModules'][] = 'MobileFrontend2_Hooks::startupModule';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontend2_Hooks::registerModules';
+$wgHooks['BeforeInitialize'][] = 'MobileFrontend2_Hooks::beforeInitialize';
 $wgExtensionFunctions[] = 'MobileFrontend2_Hooks::setup';
 
 // Modules
