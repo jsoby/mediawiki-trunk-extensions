@@ -7,10 +7,15 @@
 
 class NarayamHooks {
 
-	/// Hook: BeforePageDisplay
+	/**
+	 * Hook: BeforePageDisplay
+	 * @param $out OutputPage
+	 * @param $skin
+	 * @return bool
+	 */
 	public static function addModules( $out, $skin ) {
 		if ( $out->getUser()->getOption( 'narayamEnable' ) ) {
-			$schemes = array_values( self::getSchemes () );
+			$schemes = array_values( self::getSchemes() );
 			if ( count( $schemes ) ) {
 				$out->addModules( $schemes );
 				$out->addModules( 'ext.narayam' );
@@ -35,7 +40,11 @@ class NarayamHooks {
 		return true;
 	}
 
-	/// Hook: ResourceLoaderGetConfigVars
+	/**
+	 * Hook: ResourceLoaderGetConfigVars
+	 * @param $vars Array
+	 * @return bool
+	 */
 	public static function addConfig( &$vars ) {
 		global $wgNarayamRecentItemsLength, $wgNarayamEnabledByDefault;
 		$vars['wgNarayamEnabledByDefault'] = $wgNarayamEnabledByDefault;
@@ -44,9 +53,13 @@ class NarayamHooks {
 		return true;
 	}
 
-	/// Hook: MakeGlobalVariablesScript
+	/**
+	 * Hook: MakeGlobalVariablesScript
+	 * @param $vars Array
+	 * @return bool
+	 */
 	public static function addVariables( &$vars ) {
-		global $wgUser, $wgNarayamSchemes, $wgNarayamUseBetaMapping;
+		global $wgNarayamSchemes, $wgNarayamUseBetaMapping;
 
 		$vars['wgNarayamAvailableSchemes'] = self::getSchemes(); // Note: scheme names must be keys, not values
 		$allSchemes = $wgNarayamSchemes;
@@ -72,7 +85,7 @@ class NarayamHooks {
 
 	/**
 	 * Get the available schemes for the user and content language
-	 * @return array( scheme name => module name )
+	 * @return array array( scheme name => module name )
 	 */
 	protected static function getSchemes() {
 		global $wgLanguageCode, $wgLang, $wgNarayamSchemes, $wgTitle, $wgNarayamUseBetaMapping;
@@ -92,19 +105,22 @@ class NarayamHooks {
 			if ( $version === "beta" ) {
 				if ( !$wgNarayamUseBetaMapping ) {
 					unset( $schemes[$i] );
-				}
-				else {
+				} else {
 					$schemes[$i] = $scheme[0];
 				}
-			}
-			else {
+			} else {
 				$schemes[$i] = $scheme;
 			}
 		}
 		return $schemes;
 	}
 
-	/// Hook: GetPreferences
+	/**
+	 * Hook: GetPreferences
+	 * @param $user User
+	 * @param $preferences Array
+	 * @return bool
+	 */
 	public static function addPreference( $user, &$preferences ) {
 		// A checkbox in preferences to disable Narayam
 		$preferences['narayamEnable'] = array(
@@ -116,6 +132,7 @@ class NarayamHooks {
 
 		return true;
 	}
+
 	/**
 	 * UserGetDefaultOptions hook handler.
 	 * @param $defaultOptions array
