@@ -25,33 +25,50 @@
 	 * @param {string} id event identifier
 	 */
 	$.trackAction = function( id ) {
-		$.post(
-			mw.config.get( 'wgScriptPath' ) + '/api.php', {
-				'action': 'clicktracking',
-				'format' : 'json',
-				'namespacenumber': mw.config.get( 'wgNamespaceNumber' ),
-				'eventid': id,
-				'token': $.cookie( 'clicktracking-session' )
-			}
-		);
+		$.trackActionWithOptions( { 'id' : id });
 	};
 	/**
 	 * Performs click tracking API call
-	 * 
+	 *
 	 * @param {string} id event identifier
 	 * @param {string} info additional information to be stored with the click
 	 */
 	$.trackActionWithInfo = function( id, info ) {
-		$.post(
-			mw.config.get( 'wgScriptPath' ) + '/api.php', {
+		$.trackActionWithOptions( { 'id' : id, 'info' : info });
+	};
+
+	/**
+	 * Performs click tracking API call
+	 *
+	 * @param {map} options Data to submit. Valid keys: id, namespace, info, token
+	 */
+	$.trackActionWithOptions = function( options ) {
+		options = $.extend( {
+			'namespace' : mw.config.get( 'wgNamespaceNumber' ),
+			'token' : $.cookie( 'clicktracking-session' )
+		}, options);
+
+		if ( ! options.id ) {
+			$.error("You must specify an event ID");
+			return;
+		}
+
+		var data = {
 				'action': 'clicktracking',
 				'format' : 'json',
-				'eventid': id,
-				'namespacenumber': mw.config.get( 'wgNamespaceNumber' ),
-				'token': $.cookie( 'clicktracking-session' ),
-				'additional': info
-			}
-		);
+				'eventid': options.id,
+				'token': options.token
+			};
+		
+		if ( typeof options.namespace != 'undefined' ) {
+			data.namespacenumber = options.namespace;
+		}
+
+		if ( typeof options.info != 'undefined' ) {
+			data.additional = options.info;
+		}
+
+		$.post( mw.config.get( 'wgScriptPath' ) + '/api.php', data);
 	};
 	
 	/**
