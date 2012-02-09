@@ -86,6 +86,6 @@
 			'token': $.cookie( 'clicktracking-session' ),
 			'redirectto': url
 		} );
-	}
+	};
 
 } )( jQuery );
