@@ -59,11 +59,11 @@
 				'token': options.token
 			};
 		
-		if ( options.namespace === undefined ) {
+		if ( options.namespace !== undefined ) {
 			data.namespacenumber = options.namespace;
 		}
 
-		if ( options.info === undefined ) {
+		if ( options.info !== undefined ) {
 			data.additional = options.info;
 		}
 
