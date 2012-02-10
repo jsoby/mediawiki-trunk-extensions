@@ -94,3 +94,10 @@ $messages['ne'] = array(
 	'previewfunctions-desc' => 'एक जोर पार्सर तरिकाहरू(parser functions) जसले पृष्ठ को पुर्वावलोकन लाइ प्रयोग गर्नमा सहायता गर्दछ।',
 );
 
+/** Dutch (Nederlands)
+ * @author SPQRobin
+ */
+$messages['nl'] = array(
+	'previewfunctions-desc' => 'Een reeks parserfuncties om de paginavoorvertoning te beïnvloeden',
+);
+

@@ -967,8 +967,10 @@ Também pode [[Special:Favoritelist/edit|editar a lista da maneira convencional]
 
 /** Russian (Русский)
  * @author Alexandr Efremov
+ * @author Eleferen
  */
 $messages['ru'] = array(
+	'favorites-desc' => 'Создание списка «Избранное»',
 	'favoritelist' => 'Мое избранное',
 );
 

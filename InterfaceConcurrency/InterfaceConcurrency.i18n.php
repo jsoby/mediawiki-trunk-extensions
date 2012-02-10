@@ -84,9 +84,10 @@ $messages['nl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'interfaceconcurrency-desc' => "A dà un backend për l'antërfacia utent ch'a mosta che arzorse a son dovrà",
+	'interfaceconcurrency-desc' => "A dà un terminal për l'antërfacia utent ch'a mostra j'arsorse ch'a son dovrà",
 );
 

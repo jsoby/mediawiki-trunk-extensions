@@ -1425,7 +1425,7 @@ Para obtener más información, visite la $1 .',
 	'moodbar-loading-title' => 'Compartiendo...',
 	'moodbar-success-title' => '¡Gracias!',
 	'moodbar-error-title' => '¡Vaya!',
-	'moodbar-success-subtitle' => 'Compartir su {{FBD-LINK}} nos ayuda a mejorar $1.',
+	'moodbar-success-subtitle' => 'Compartir su {{FBD-LINK}} nos ayuda a mejorar $1 .',
 	'moodbar-error-subtitle' => '¡Algo salió mal! Por favor, comparte tus comentarios más tarde.',
 	'moodbar-blocked-title' => '¡Vaya!',
 	'moodbar-blocked-subtitle' => 'Usted ha sido bloqueado para edición.',
@@ -4357,7 +4357,7 @@ Për savèjne ëd pi, për piasì vìsita ël $1.",
 	'moodbar-invalid-item' => "Ël sistema a l'ha nen podù trové ël coment giust.",
 	'moodbar-feedback-action-error' => "A l'é capitaje n'eror an provand a fé st'assion.",
 	'moodbar-feedback-response-summary' => "[[$1|$2]] [[$3|a l'ha arspondù]] $4 fà",
-	'moodbar-feedback-response-helpful-summary' => "[[$1|$2]] [[$3|arspondù]] $4 fà e [[$5|$6]] a l'ha trovalo ùtil",
+	'moodbar-feedback-response-helpful-summary' => "[[$1|$2]] [[$3|a l'ha rëspondù]] $4 fà e [[$5|$6]] a l'ha trovalo ùtil",
 	'moodbar-feedback-edit-summary' => "Rispòsta a l'[[Special:FeedbackDashboard/$1|opinion d'utent]]: $2",
 	'moodbar-feedback-top-responders-title' => 'Rëspondent prinsipaj',
 	'moodbar-type-happy' => '{{GENDER:$1|Content}}',
@@ -4395,9 +4395,9 @@ Smon-e ës mëssagi dzora a soa [\$5 pàgina ëd ciaciarade].
 Lòn ch'a l'é na pàgina ëd ciaciarade?
 Soa pàgina ëd ciaciarade a l'é la pàgina che d'àutri contributor ëd {{SITENAME}} a deuvro për comuniché con chiel. A peul rësponde an sgnacand \"Modifiché\", spostand ël cursor sota ël coment, scrivend soa rispòsta e quatr tilde (~~~~) për sot-signé, e argistrand. Tute le pàgine an {{SITENAME}} a l'han dle pàgine ëd discussion, e a son dovrà për tanti but diferent. A-i va un pòch për pijé l'andi, ma a l'é bastansa bel fé na vira ch'a l'é costumasse.
 
-Ancor nen sigur? [http://en.wikipedia.org/wiki/File:Wikipedia_basics_-_Talk_pages.ogv Ës filmà] (da vëdde su [http://www.youtube.com/watch?v=JdeDLRsB2Es YouTube]) a-j dà na dimostrassion detajà ëd com le pagine ëd discussion a travajo.
+Ancor nen sigur? [http://en.wikipedia.org/wiki/File:Wikipedia_basics_-_Talk_pages.ogv Ës filmà] (da vëdde su [http://www.youtube.com/watch?v=JdeDLRsB2Es YouTube]) a-j dà na dimostrassion detajà ëd com a marcio le pàgine ëd discussion.
 
-Mersì për esse part ëd la comunità,
+Mersì d'esse part ëd la comunità,
 
 -- {{SITENAME}}",
 );

@@ -29,6 +29,13 @@ $messages['dsb'] = array(
 	'swiftcloudfiles-desc' => "Zmóžnja wužywanje ''[https://github.com/rackspace/php-cloudfiles php-cloudfiles]'', z kótarymiž MediaWiki dajo se ako wužywarski powjerch za składowak OpenStack Swift.y",
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'swiftcloudfiles-desc' => "Incluye y registra la API ''php-cloudfiles'' (https://github.com/rackspace/php-cloudfiles), permitiendo a MediaWiki interactuar con un servidor de almacenamiento de OpenStack Swift.",
+);
+
 /** French (Français)
  * @author Gomoko
  */
@@ -79,9 +86,10 @@ $messages['ms'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'swiftcloudfiles-desc' => "A comprend e a registra l'API ëd ''php-coudfiles'' (https://github.com/rackspace/php-cloudfiles), an përmëttend a MediaWiki d'antërfacesse con un backend ëd memorisassion OpenStack Swift.",
+	'swiftcloudfiles-desc' => "A comprend e a registra l'API ëd ''php-coudfiles'' (https://github.com/rackspace/php-cloudfiles), an përmëttend a MediaWiki d'antërfacesse con un terminal ëd memorisassion OpenStack Swift.",
 );
 

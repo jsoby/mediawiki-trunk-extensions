@@ -1215,9 +1215,15 @@ Druck uf eini go Statischtike iber si aaluege.',
  */
 $messages['gu'] = array(
 	'prefstats' => 'પ્રાથમિકતા આંકડા',
+	'prefstats-desc' => 'સભ્યોની વિકલ્પ પસંદગી આધારિત વર્ગીકરણ બતાવે છે',
 	'prefstats-title' => 'પ્રાથમિકતા આંકડાઓ',
 	'prefstats-list-intro' => 'હાલમાં નીચેની પ્સંદગીઓ પર નજર રખાઈ રહી છે. 
 જેના પર ક્લીક કરશો તેની આંકદાકીય માહિતી જાણી શકશો.',
+	'prefstats-noprefs' => 'હાલમાં કોઈ પણ વિકલ્પ પર નજર નથી રખાઈ રહી.
+વિકલ્પોના વપરાશ પર નજર રાખવા $wgPrefStatsTrackPrefs ને ગોઠવો.',
+	'prefstats-counters' => '*  આંકડાકીય માહિતીની ગણતરી શરૂ થઈ  ત્યાર બાદ $1 {{PLURAL:$1|સભ્ય|સભ્યોએ}} આ વિકલ્પ સક્રીય કર્યો.
+** $2 {{PLURAL:$2|સભ્ય|સભ્યો}}એ હજી પણ આને સક્રીય રાખ્યાં છે.
+** $3 {{PLURAL:$3|સભ્ય|સભ્યો}} એ આને બંધ કરી દીધાં.',
 	'prefstats-xaxis' => 'અવધિ (કલાકો)',
 	'prefstats-factors' => 'સંખ્યા પ્રતિ : $1',
 	'prefstats-factor-hour' => 'કલાક',

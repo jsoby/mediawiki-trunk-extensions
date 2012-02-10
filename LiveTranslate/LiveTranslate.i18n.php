@@ -263,7 +263,7 @@ $messages['de'] = array(
 	'group-tmxadmin-member' => '{{GENDER:$1|TMX-Administrator|TMX-Administratorin}}',
 	'grouppage-tmxadmin' => '{{ns:project}}:TMX-Administratoren',
 	'livetranslate-translate-to' => 'Diese Seite in folgende Sprache übersetzen:',
-	'livetranslate-button-translate' => 'Übersetze',
+	'livetranslate-button-translate' => 'Übersetzen',
 	'livetranslate-button-translating' => 'Übersetze …',
 	'livetranslate-button-revert' => 'Originalinhalt anzeigen',
 	'livetranslate-dictionary-error' => 'Das Wörterbuch konnte nicht geladen werden. Daher werden die in ihm enthaltenen Wörter nicht während des Übersetzungsvorgangs berücksichtigt.',
@@ -879,12 +879,18 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Byulent
  * @author Sp5uhe
  * @author Woytecr
  */
 $messages['pl'] = array(
 	'livetranslate-desc' => 'Włącza tłumaczenie zawartości strony na żywo z wykorzystaniem serwisu tłumaczącego Google',
+	'right-managetms' => '[[Special:SpecialLiveTranslate|Zmień]] listę retrospekcji tłumaczeń',
+	'action-managetms' => 'zarządzania retrospekcjami tłumaczeń',
+	'group-tmxadmin' => 'Administratorzy TMX',
+	'group-tmxadmin-member' => '{{GENDER:$1|administrator|administratorka}} TMX',
+	'grouppage-tmxadmin' => '{{ns:project}}:administratorzy TMX',
 	'livetranslate-translate-to' => 'Przetłumacz tę stronę na',
 	'livetranslate-button-translate' => 'Tłumacz',
 	'livetranslate-button-translating' => 'Tłumaczenie...',
@@ -893,8 +899,22 @@ $messages['pl'] = array(
 	'livetranslate-dictionary-empty' => 'Na razie brak jest jeszcze słów w słowniku. Kliknij zakładkę „Edytuj“ aby jakieś dodać.',
 	'livetranslate-dictionary-count' => '{{PLURAL:$1|Jest $1 słowo|Są $1 słowa|Jest $1 słów}} w $2 {{PLURAL:$2|języku|językach}}. Kliknij zakładkę „Edytuj“ aby dodać następne.',
 	'livetranslate-dictionary-unallowed-langs' => '{{PLURAL:$2|Język $1 nie jest obecnie dostępny jako docelowy|Języki $1 nie są obecnie dostępne jako docelowe}} dla tłumaczeń. Zmień dopuszczalne języki w konfiguracji swojej wiki lub usuń to ze słownika.',
+	'livetranslate-dictionary-goto-edit' => 'Zmiana retrospekcji tłumaczeń.',
+	'special-livetranslate' => 'Tłumaczenie na żywo',
+	'livetranslate-tmtype-ltf' => 'Format tłumaczenia na żywo',
+	'livetranslate-tmtype-tmx' => 'Translation Memory eXchange',
+	'livetranslate-tmtype-gcsv' => 'CSV Google',
+	'livetranslate-special-no-tms-yet' => 'Nie istnieją jeszcze retrospekcje tłumaczeń.',
+	'livetranslate-special-button' => 'Zapisz i zaktualizuj',
 	'livetranslate-special-type' => 'Typ',
+	'livetranslate-special-location' => 'Lokalizacja',
 	'livetranslate-special-remove' => 'Usuń',
+	'livetranslate-special-local' => 'Lokalne',
+	'livetranslate-special-add-tm' => 'Dodawanie nowych retrospekcji tłumaczeń',
+	'livetranslate-special-current-tms' => 'Istniejące retrospekcje tłumaczeń',
+	'livetranslate-special-tms-update' => 'Aktualizacja retrospekcji tłumaczeń',
+	'livetranslate-special-update' => 'Aktualizacja retrospekcji tłumaczeń',
+	'livetranslate-importtms-param-miscmatch' => 'Niezgodność między liczbą lokalizacji i typami',
 );
 
 /** Piedmontese (Piemontèis)

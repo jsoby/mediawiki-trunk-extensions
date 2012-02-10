@@ -1336,9 +1336,11 @@ Bitte ha e chly Geduld.',
 	'youtubeauthsub_jserror_nodesc' => 'Bitte gib e Bschryybig für s Video aa.',
 );
 
-/** Gujarati (ગુજરાતી) */
+/** Gujarati (ગુજરાતી)
+ * @author Dsvyas
+ */
 $messages['gu'] = array(
-	'youtubeauthsub_title' => 'શિર્ષક',
+	'youtubeauthsub_title' => 'શીર્ષક',
 	'youtubeauthsub_category' => 'શ્રેણી',
 );
 
