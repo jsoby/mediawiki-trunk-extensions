@@ -1,6 +1,6 @@
 /**
  * Transliteration regular expression rules table for the Bhojpuri language
- * Based on CDAC's "Enhanced InScript Keyboard Layout 5.2" for Hindi
+ * Based on Hindi transliteration. 
  * @author Santhosh Thottingal, Amir E. Aharoni
  * @date 2012-02-09
  * License: GPLv3
