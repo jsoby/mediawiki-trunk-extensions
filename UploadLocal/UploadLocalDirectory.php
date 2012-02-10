@@ -133,8 +133,7 @@ class UploadLocalDirectory {
 	}
 	
 	function getFilenamesOfFilesInDirectory($directory) {
-		if (!is_dir($directory)) return array();
-		if ($directory[strlen($directory)-1] !== '/') $directory .= '/';
+		if (! is_dir($directory) || ! is_readable($directory)) return array();
 		$dh = opendir($directory);
 		$filenames = array();
 		# Make sure the handle opens correctly
@@ -144,13 +143,14 @@ class UploadLocalDirectory {
 		while (($file = readdir($dh)) !== false) {
 			if ($file == '.' || $file == '..') continue;
 			// check if it's a directory
-			if (is_dir($directory . $file)) continue;
+			if (is_dir($directory . '/' . $file)) continue;
 			// check if it's a hidden file - regexp: /\.[^.]+/
 			if ($file[0] == '.' && strpos($file,'.',1) === false) {
 				continue;
 			}
 			$filenames[] = $file;
 		}
+		sort($filenames);
 		closedir($dh);
 		return $filenames;
 	}
