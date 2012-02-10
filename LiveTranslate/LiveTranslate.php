@@ -99,8 +99,9 @@ if ( defined( 'MW_SUPPORTS_RESOURCE_MODULES' ) ) {
 		'scripts' => array(
 			'includes/jquery.replaceText.js',
 			'includes/ext.livetranslate.js',
-			'includes/jquery.liveTranslate.js',
 			'includes/ext.lt.tm.js',
+			'includes/jquery.liveTranslate.js',
+			'includes/ext.lt.load.js',
 		),
 		'dependencies' => array( 'jquery'/*, 'jquery.ui.button'*/ ),
 		'messages' => $egLTJSMessages

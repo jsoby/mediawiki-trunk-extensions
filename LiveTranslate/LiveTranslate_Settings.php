@@ -71,3 +71,6 @@ $egGoogleApiKey = '';
 # Microsoft App Id, needed when using the Microsoft Translation service.
 # http://www.bing.com/developers/createapp.aspx
 $egLiveTranslateMSAppId = '';
+
+$egLiveTranslateLanguages[] = 'nl';
+$egLiveTranslateLanguages[] = 'de';
