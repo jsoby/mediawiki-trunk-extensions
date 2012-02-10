@@ -128,7 +128,7 @@ class WMFRewrite(object):
         try:
             upcopy = opener.open(reqorig.url)
         except urllib2.HTTPError,status:
-            if status == 404:
+            if status.code == 404:
                 resp = webob.exc.HTTPNotFound('Expected original file not found')
                 return resp
             else:
