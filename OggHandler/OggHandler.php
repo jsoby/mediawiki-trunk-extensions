@@ -30,6 +30,8 @@ $wgExtensionMessagesFiles['OggHandler'] = "$oggDir/OggHandler.i18n.php";
 $wgExtensionMessagesFiles['OggHandlerMagic'] = "$oggDir/OggHandler.i18n.magic.php";
 $wgParserOutputHooks['OggHandler'] = array( 'OggHandler', 'outputHook' );
 
+$wgHooks['ExtractThumbParameters'][] = 'OggHandler::onExtractThumbParameters';
+
 $wgExtensionCredits['media'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'OggHandler',
