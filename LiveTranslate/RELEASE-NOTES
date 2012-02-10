@@ -8,6 +8,8 @@ Latest version of the release notes: http://svn.wikimedia.org/viewvc/mediawiki/t
 (trunk)
 
 * Added action-managetms message.
+* Fixed JavaScript dependency issue causing the extension to break on MediaWiki 1.19 and later.
+* JavaScript tweaks.
 
 === Version 1.2.2 ===
 2011-09-15
