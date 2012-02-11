@@ -44,6 +44,7 @@ $messages['en'] = array(
 	'narayam-or' => 'Odiya Transliteration',
 	'narayam-or-lekhani' => 'Odiya Lekhani',
 	'narayam-or-inscript' =>  'Oriya InScript',
+	'narayam-pa' => 'Gurmukhi Punjabi Transliteration',
 	'narayam-pa-phonetic' => 'Gurmukhi Punjabi Phonetic',
 	'narayam-pa-inscript' => 'Gurmukhi Punjabi InScript',
 	'narayam-sa' => 'Sanskrit Transliteration',
