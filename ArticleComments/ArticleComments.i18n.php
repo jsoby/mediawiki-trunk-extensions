@@ -2243,7 +2243,9 @@ $messages['zh-hans'] = array(
 	'processcomment' => '进程文章注释',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Oapbtommy
+ */
 $messages['zh-hant'] = array(
 	'article-comments-desc' => '內容頁上啟用注釋部分',
 	'article-comments-title-string' => '標題',
@@ -2253,7 +2255,7 @@ $messages['zh-hant'] = array(
 	'article-comments-url-string' => '互聯網地止',
 	'article-comments-comment-string' => '評論',
 	'article-comments-comment-field' => '評論：',
-	'article-comments-submit-button' => '輸入',
+	'article-comments-submit-button' => '提交',
 	'article-comments-leave-comment-link' => '留言...',
 	'article-comments-invalid-field' => '$1 所提供的 <nowiki>[$2]</nowiki> 是無效的。',
 	'article-comments-required-field' => '“$1”字段是必需的。',

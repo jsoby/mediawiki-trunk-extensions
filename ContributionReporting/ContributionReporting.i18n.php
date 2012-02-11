@@ -6555,6 +6555,7 @@ $messages['zh-hans'] = array(
  * @author Anakmalaysia
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  */
 $messages['zh-hant'] = array(
 	'contributionreporting-desc' => '維基媒體現場募捐活動報告',
@@ -6580,7 +6581,7 @@ $messages['zh-hant'] = array(
 	'contribstats-currency-totals' => '$1的財政年度貨幣總計',
 	'contribstats-contribution-breakdown' => '值為$1的財政年度的貢獻的分項數字',
 	'contribstats-day' => '日',
-	'contribstats-month' => '月份',
+	'contribstats-month' => '月',
 	'contribstats-currency' => '貨幣',
 	'contribstats-amount' => '金額（美元）',
 	'contribstats-contributions' => '貢獻',

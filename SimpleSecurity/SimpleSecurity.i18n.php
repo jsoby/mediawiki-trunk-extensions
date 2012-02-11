@@ -1271,10 +1271,11 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
-	'security-type-category' => '分類',
+	'security-type-category' => '類別',
 	'security-type-namespace' => '名字空間',
 	'restriction-read' => '讀',
 );

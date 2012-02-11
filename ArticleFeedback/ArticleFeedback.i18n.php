@@ -2143,6 +2143,7 @@ Kõike paremat!
 
 /** Basque (Euskara)
  * @author Abel2es
+ * @author An13sa
  * @author Joxemai
  * @author Theklan
  */
@@ -2166,6 +2167,7 @@ $messages['eu'] = array(
 	'articlefeedback-error' => 'Arazo bat egon da. Saia zaitez beranduago.',
 	'articlefeedback-form-switch-label' => 'Kalifikatu orri hau',
 	'articlefeedback-form-panel-title' => 'Kalifikatu orri hau',
+	'articlefeedback-form-panel-explanation' => 'Zer da hau?',
 	'articlefeedback-form-panel-clear' => 'Balorazio hau ezabatu',
 	'articlefeedback-form-panel-expertise' => 'Gai honen inguruko ezagutza handia dut (aukerazkoa)',
 	'articlefeedback-form-panel-expertise-studies' => 'Unibertsitateko titulazio bat dut gai honetan',
@@ -2174,7 +2176,7 @@ $messages['eu'] = array(
 	'articlefeedback-form-panel-expertise-other' => 'Nire ezagutzaren jatorria ez da goiko aukeren artean agertzen',
 	'articlefeedback-form-panel-helpimprove' => 'Wikipedia hobetzen lagundu nahi dut, bidalidazue e-posta bat (aukeran)',
 	'articlefeedback-form-panel-helpimprove-note' => 'E-posta bat bidaliko dizugu konfirmaziorako. Ez diogu zure helbidea beste inori bidaliko. $1',
-	'articlefeedback-form-panel-helpimprove-privacy' => 'Pribazitate arauak',
+	'articlefeedback-form-panel-helpimprove-privacy' => 'Feedback pribazitate arauak',
 	'articlefeedback-form-panel-submit' => 'Bidali balorazioa',
 	'articlefeedback-form-panel-pending' => 'Zure balorazioak ez dira oraindik bidali',
 	'articlefeedback-form-panel-success' => 'Ondo gorde da',
@@ -3571,7 +3573,7 @@ $messages['ia'] = array(
 	'articlefeedback-form-panel-expertise-other' => 'Le origine de mi cognoscentia non es listate hic',
 	'articlefeedback-form-panel-helpimprove' => 'Io volerea adjutar a meliorar Wikipedia, per favor invia me un e-mail (optional)',
 	'articlefeedback-form-panel-helpimprove-note' => 'Nos te inviara un e-mail de confirmation. Nos non divulgara tu adresse de e-mail a exterior personas secundo nostre $1.',
-	'articlefeedback-form-panel-helpimprove-privacy' => 'declaration de confidentialitate super le retroaction',
+	'articlefeedback-form-panel-helpimprove-privacy' => 'declaration de confidentialitate super le evalutation',
 	'articlefeedback-form-panel-submit' => 'Submitter evalutationes',
 	'articlefeedback-form-panel-pending' => 'Tu evalutationes non ha essite submittite',
 	'articlefeedback-form-panel-success' => 'Salveguardate con successo',

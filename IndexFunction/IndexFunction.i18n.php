@@ -1479,6 +1479,7 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -1487,7 +1488,7 @@ $messages['zh-hant'] = array(
 	'index' => '索引搜索',
 	'index-legend' => '搜索索引',
 	'index-search' => '搜尋：',
-	'index-submit' => '遞交',
+	'index-submit' => '提交',
 	'index-hide-detail' => '隱藏頁面清單',
 	'index-no-results' => '無任何搜尋結果',
 );

@@ -2499,6 +2499,7 @@ $messages['zh-hans'] = array(
  * @author Gzdavidwong
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -2515,9 +2516,9 @@ $messages['zh-hant'] = array(
 	'recordadmin-buttonsave' => '儲存',
 	'recordadmin-viewlink' => '檢視',
 	'recordadmin-editlink' => '編輯',
-	'recordadmin-created' => '已發起',
+	'recordadmin-created' => '已建立',
 	'recordadmin-modified' => '曾修改',
-	'recordadmin-actions' => '操作',
+	'recordadmin-actions' => '編輯',
 	'recordadmin-needscontent' => '添加內容。。。',
 );
 

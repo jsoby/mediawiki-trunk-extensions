@@ -214,10 +214,14 @@ $1',
  * @author Robby
  */
 $messages['lb'] = array(
+	'spssuccesstitle' => '$1 Säite ginn ugeluecht',
 	'spssuccess-returntoorigin' => 'Zréck op $1',
 	'spserror' => 'Et ass e Feeler geschitt',
 	'spserror-formunknown' => 'De Formulaire "$1" gëtt et net.',
+	'spserror-pagegenerationlimitexeeded' => 'Dir hutt probéiert {{PLURAL:$1|eng Säit|$1 Säiten}} ze generéieren. Dat geet iwwert Är Limit vun  {{PLURAL:$2|eng Säit|$1 Säiten}}.',
 	'spserror-date-startdatemissing' => 'Den Ufanksdatum feelt.',
+	'spserror-count-startvaluemalformed' => 'Den Ufankswäert ass keng Zuel.',
+	'spserror-count-endvaluemalformed' => 'De Schlusswäert ass keng Zuel.',
 );
 
 /** Macedonian (Македонски)

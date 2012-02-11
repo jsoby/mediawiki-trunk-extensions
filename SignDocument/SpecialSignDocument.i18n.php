@@ -5410,6 +5410,7 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Liangent
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -5418,7 +5419,7 @@ $messages['zh-hant'] = array(
 	'sign-city' => '城市：',
 	'sign-state' => '州份/省份：',
 	'sign-zip' => '郵政編號：',
-	'sign-country' => '國家地區：',
+	'sign-country' => '國家：',
 	'sign-phone' => '電話號碼：',
 	'sign-bday' => '年齡：',
 	'sign-email' => '電郵地址：',
@@ -5431,7 +5432,7 @@ $messages['zh-hant'] = array(
 	'sign-viewfield-address' => '地址',
 	'sign-viewfield-city' => '城市',
 	'sign-viewfield-state' => '州份/省份',
-	'sign-viewfield-country' => '國家地區',
+	'sign-viewfield-country' => '國家',
 	'sign-viewfield-zip' => '郵政編號',
 	'sign-viewfield-ip' => 'IP位址',
 	'sign-viewfield-phone' => '電話',

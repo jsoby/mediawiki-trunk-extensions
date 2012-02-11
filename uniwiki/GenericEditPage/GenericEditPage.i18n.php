@@ -1855,6 +1855,7 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -1865,13 +1866,13 @@ $messages['zh-hant'] = array(
 	'gep-emailsuccess' => '感謝您推薦分類： $1。',
 	'gep-categories' => '頁面分類',
 	'gep-addcategory' => '增加一個分類',
-	'gep-addcategorybutton' => '增加',
+	'gep-addcategorybutton' => '新增',
 	'gep-suggestcategory' => '建議一個分類',
 	'gep-suggestcategorybutton' => '提交',
 	'gep-sections' => '節',
 	'gep-sectionnotdisabled' => '這部分不能被停用',
 	'gep-addsection' => '增加一個段落',
-	'gep-addsectionbutton' => '增加',
+	'gep-addsectionbutton' => '新增',
 	'gep-classicmode' => '經典模式',
 	'gep-genericmode' => '通用模式',
 	'gep-nocategories' => '請在儲存前至少選擇一個分類',

@@ -1168,11 +1168,12 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Gzdavidwong
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
 	'randomincategory-toolbox' => '隨機頁面',
-	'randomincategory-label' => '分類：',
+	'randomincategory-label' => '類別：',
 	'randomincategory-submit' => '進入',
 );
 

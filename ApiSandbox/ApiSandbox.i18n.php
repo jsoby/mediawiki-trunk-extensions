@@ -1903,6 +1903,7 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Anakmalaysia
  * @author Liangent
+ * @author Oapbtommy
  */
 $messages['zh-hant'] = array(
 	'apisb-desc' => '允許從瀏覽器調試[//www.mediawiki.org/wiki/API MediaWiki API]調用',
@@ -1918,7 +1919,7 @@ $messages['zh-hant'] = array(
 	'apisb-legend-generator-parameters' => '生成器',
 	'apisb-result-request-url' => '請求的 URL：',
 	'apisb-result-request-post' => 'POST數據：',
-	'apisb-select-action' => '選擇操作',
+	'apisb-select-action' => '（選擇動作）',
 	'apisb-select-query' => '（請選擇查詢）',
 	'apisb-select-value' => '（選擇值）',
 	'apisb-docs-more' => '閱讀更多',

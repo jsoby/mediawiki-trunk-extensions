@@ -4074,6 +4074,7 @@ YouTube可能需要一些时间处理您的视频，所以可能不会立即出�
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Alexsh
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -4085,7 +4086,7 @@ $messages['zh-hant'] = array(
 	'youtubeauthsub_password' => 'YouTube 密碼',
 	'youtubeauthsub_username' => 'YouTube 使用者名稱',
 	'youtubeauthsub_keywords' => '關鍵字',
-	'youtubeauthsub_category' => '分類',
+	'youtubeauthsub_category' => '類別',
 	'youtubeauthsub_submit' => '提交',
 	'youtubeauthsub_clickhere' => '按這裡登入 YouTube',
 	'youtubeauthsub_tokenerror' => '驗證使用者訊息發生錯誤，請重新整理頁面。',

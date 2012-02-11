@@ -2410,6 +2410,7 @@ $messages['yue'] = array(
  * @author Gzdavidwong
  * @author Liangent
  * @author Shinjiman
+ * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
 	'patrol' => '编辑巡逻',
@@ -2431,7 +2432,7 @@ $messages['zh-hans'] = array(
 	'patrol-another' => '显示其他存在的编辑。',
 	'patrol-stopped' => '您选择不巡逻其他编辑。$1',
 	'patrol-resume' => '点击这里继续。',
-	'group-patroller' => '巡逻员',
+	'group-patroller' => '巡查员',
 	'group-patroller-member' => '{{GENDER:$1|巡查员}}',
 	'grouppage-patroller' => '{{ns:project}}:巡逻员',
 	'right-patroller' => '巡查页面',

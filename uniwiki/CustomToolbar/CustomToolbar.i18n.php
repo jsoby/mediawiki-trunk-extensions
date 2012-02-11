@@ -3499,6 +3499,7 @@ $messages['zh-hans'] = array(
  * @author Gzdavidwong
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -3541,7 +3542,7 @@ $messages['zh-hant'] = array(
 	'ct_success' => '檔案成功上傳！',
 	'ct_popupblocked' => '彈出的上傳視窗被攔截。
 請檢查您的彈出視窗阻擋程式。',
-	'ct_user_user' => '使用者',
+	'ct_user_user' => '用戶',
 	'ct_user_tip' => '插入一個用戶頁面的連結',
 	'ct_user_caption' => '用戶連結',
 	'ct_user_sample' => '使用者名稱',

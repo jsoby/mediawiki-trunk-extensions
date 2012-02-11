@@ -226,6 +226,7 @@ $messages['lb'] = array(
 	'zero-rated-mobile-access-search' => 'Sichen',
 	'zero-rated-mobile-access-language-selection' => 'All Sproochen',
 	'zero-rated-mobile-access-home-page-selection' => '$1 Ufaankssäit',
+	'zero-rated-mobile-access-home-page-selection-text' => "Oder gitt op d'Haaptsäit vun dëse Sproochen:",
 	'zero-rated-mobile-access-banner-text' => '{{SITENAME}} fräi iwwer $1',
 	'zero-rated-mobile-access-banner-text-data-charges' => 'Fraisë fir Dateniwwerdroung kënnen entstoe wann Dir weiderfuert: $1 oder $2',
 	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'Jo',
@@ -379,5 +380,16 @@ $messages['zh-hans'] = array(
 	'zero-rated-mobile-access-banner-text-data-charges-yes' => '是',
 	'zero-rated-mobile-access-banner-text-data-charges-no' => '否',
 	'zero-rated-mobile-access-click-to-view-image' => '点击来查看“$1”的图像…',
+);
+
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Oapbtommy
+ */
+$messages['zh-hant'] = array(
+	'zero-rated-mobile-access-search' => '搜尋',
+	'zero-rated-mobile-access-language-selection' => '所有語言',
+	'zero-rated-mobile-access-home-page-selection' => '$1 主頁',
+	'zero-rated-mobile-access-banner-text-data-charges-yes' => '是',
+	'zero-rated-mobile-access-banner-text-data-charges-no' => '否',
 );
 

@@ -2346,7 +2346,9 @@ $messages['zh-hans'] = array(
 	'cb_edit_paste_right_hint' => '如有可能，将运算符粘贴到下一个位置',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Oapbtommy
+ */
 $messages['zh-hant'] = array(
 	'categorybrowser' => '類別瀏覽器',
 	'categorybrowser-desc' => '提供了[[Special:CategoryBrowser|特殊頁面]]以篩選最受歡迎的類別，並使用AJAX界面瀏覽。',
@@ -2371,8 +2373,8 @@ $messages['zh-hant'] = array(
 	'cb_cat_files' => '文件',
 	'cb_apply_button' => '應用',
 	'cb_all_op' => '全部',
-	'cb_or_op' => '或',
-	'cb_and_op' => '和',
+	'cb_or_op' => '或者',
+	'cb_and_op' => '及',
 	'cb_edit_left_hint' => '如有可能移至左側',
 	'cb_edit_right_hint' => '如有可能移至右側',
 	'cb_edit_remove_hint' => '如果可能則刪除',

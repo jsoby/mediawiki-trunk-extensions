@@ -841,10 +841,11 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Gzdavidwong
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
 	'categoryonupload-desc' => '提示使用者在上載檔案時為它選擇分類',
-	'categoryonupload-label' => '分類：',
+	'categoryonupload-label' => '類別：',
 );
 

@@ -2674,6 +2674,7 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -2685,7 +2686,7 @@ $messages['zh-hant'] = array(
 	'usagestatisticsinterval' => '區間',
 	'usagestatisticsnamespace' => '名字空間：',
 	'usagestatisticstype' => '類型',
-	'usagestatisticsstart' => '起始日期：',
+	'usagestatisticsstart' => '開始日期：',
 	'usagestatisticsend' => '終止日期：',
 	'usagestatisticssubmit' => '生成統計',
 	'usagestatisticsnostart' => '請選擇開始日期',

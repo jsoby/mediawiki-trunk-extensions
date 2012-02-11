@@ -3010,13 +3010,14 @@ $messages['zh-hans'] = array(
  * @author Horacewai2
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Shinjiman
  * @author Waihorace
  */
 $messages['zh-hant'] = array(
 	'badimages' => '損壞圖像列表',
 	'badimage-desc' => '增加錯誤圖像的特殊頁面',
-	'badimages-add-btn' => '加入',
+	'badimages-add-btn' => '新增',
 	'badimages-added' => '已經加入 $1 到列表中。',
 	'badimages-count' => "在損壞圖像列表中共有 '''$1''' 幅圖像。",
 	'badimages-name' => '名稱：',

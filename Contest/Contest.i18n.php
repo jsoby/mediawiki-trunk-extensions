@@ -4286,6 +4286,7 @@ $messages['lb'] = array(
 	'specialpages-group-contest' => 'Concoursen',
 	'contest-nav-contests' => 'Lëscht vun de Concoursen',
 	'contest-nav-editcontest' => 'Concours änneren',
+	'contest-nav-contestwelcome' => 'Zilsäit',
 	'contest-special-addnew' => 'En neie Concours derbäisetzen',
 	'contest-special-newname' => 'Numm vum Concours',
 	'contest-special-add' => 'Concours derbäisetzen',
@@ -7893,6 +7894,7 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Anakmalaysia
+ * @author Oapbtommy
  */
 $messages['zh-hant'] = array(
 	'contest-desc' => '允許用戶參與比賽挑戰。裁判可以討論並為提交投票',
@@ -8025,7 +8027,7 @@ $messages['zh-hant'] = array(
 	'contest-contest-reminder-success' => '已成功將提醒電子郵件發送給$1個選手',
 	'contest-contest-reminder-close' => '關閉',
 	'contest-contest-reminder-retry' => '重試發送',
-	'contest-contest-reminder-failed' => '無法發送提醒電子郵件。',
+	'contest-contest-reminder-failed' => '無法發送提醒電子郵件 {{PLURAL:$1|e-mail|e-mails}}。',
 	'contest-contest-reminder-subject' => '主題：',
 	'contest-contestant-id' => 'ID',
 	'contest-contestant-challenge-name' => '挑戰名稱',

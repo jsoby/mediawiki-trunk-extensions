@@ -1203,6 +1203,7 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Horacewai2
+ * @author Oapbtommy
  * @author Waihorace
  * @author Wrightbus
  */
@@ -1211,7 +1212,7 @@ $messages['zh-hant'] = array(
 	'emergencydesysop-desc' => '容許管理員犧牲他們的特權，免除另一名管理員的權限。',
 	'emergencydesysop-otheradmin' => '其他管理員去移除權限',
 	'emergencydesysop-reason' => '移除理由',
-	'emergencydesysop-submit' => '遞交',
+	'emergencydesysop-submit' => '提交',
 	'emergencydesysop-incomplete' => '請填寫所有輸入框之後再試一次。',
 	'emergencydesysop-notasysop' => '目標使用者不在管理員群組中。',
 	'emergencydesysop-nogroups' => '無',

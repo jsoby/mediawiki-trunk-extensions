@@ -11583,6 +11583,7 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -11647,15 +11648,15 @@ $messages['zh-hant'] = array(
 	'mv_search_match' => '搜尋文字',
 	'mv_search_spoken_by' => '透過口語',
 	'mv_search_categories' => '分類',
-	'mv_search_and' => '和',
-	'mv_search_or' => '或',
+	'mv_search_and' => '及',
+	'mv_search_or' => '或者',
 	'mv_search_stream_name' => '串流名稱',
 	'mv_search_date_range' => '日期範圍',
 	'mv_stream_name' => '串流名稱',
 	'mv_date_range' => '日期範圍',
 	'mv_date_last_week' => '過去一星期',
 	'mv_category_results' => '分類結果',
-	'mv_category' => '分類',
+	'mv_category' => '類別',
 	'mv_play_inline' => '播放內嵌',
 	'mv_resource_not_found' => "找不到資源'''$1'''",
 	'mv_sequence_add' => '加入短片',

@@ -281,3 +281,10 @@ $messages['uk'] = array(
 	'apiexplorer-loading' => 'Завантаження функцій...',
 );
 
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Oapbtommy
+ */
+$messages['zh-hant'] = array(
+	'apiexplorer-loading' => '正在載入功能……',
+);
+

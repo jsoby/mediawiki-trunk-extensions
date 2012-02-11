@@ -22553,6 +22553,7 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Gzdavidwong
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -22656,7 +22657,7 @@ $messages['zh-hant'] = array(
 	'configure-setting-wgLogRestrictions-key' => '記錄類型',
 	'configure-setting-wgLogRestrictions-value' => '需要的讀取權限',
 	'configure-setting-wgSpecialPageGroups' => '特殊頁面組別',
-	'configure-setting-wgSpecialPageGroups-key' => '組別',
+	'configure-setting-wgSpecialPageGroups-key' => '群組',
 	'configure-setting-wgAutopromote-value' => '條件',
 	'configure-setting-wgAccountCreationThrottle' => '每個IP位址可建立的帳號數量',
 	'configure-setting-wgEnableAPI' => '啟用API',
@@ -22701,7 +22702,7 @@ $messages['zh-hant'] = array(
 	'configure-setting-wgDBmysql5' => '使用UTF-8編碼',
 	'configure-setting-wgDBprefix' => '表前綴',
 	'configure-setting-wgDBClusterTimeout' => '數據庫超時',
-	'configure-setting-wgDBservers' => '數據庫伺服器',
+	'configure-setting-wgDBservers' => '資料庫伺服器',
 	'configure-setting-wgExternalServers' => '外部MySQL伺服器',
 	'configure-setting-wgAntivirus' => '病毒掃描器的內部名稱',
 	'configure-setting-wgAntivirusSetup' => '病毒掃描器設定',

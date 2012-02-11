@@ -1321,9 +1321,22 @@ $messages['zh-hans'] = array(
 	'collabwatchlistedit-normal-submit' => '保存',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Oapbtommy
+ */
 $messages['zh-hant'] = array(
+	'collabwatchlisttagcomment' => '評論',
+	'collabwatchlisttools-view' => '顯示',
+	'collabwatchlisttools-edit' => '編輯類別',
+	'collabwatchlisttools-delete' => '刪除',
+	'collabwatchlistedit-users-raw-submit' => '儲存',
 	'collabwatchlistedit-raw-titles' => '分類：',
+	'collabwatchlistedit-users-raw-titles' => '用戶︰',
+	'collabwatchlistedit-normal-title' => '編輯類別',
 	'collabwatchlistedit-tags-raw-submit' => '保存',
+	'collabwatchlistdelete-submit' => '刪除',
+	'collabwatchlistnew-name' => '列表名稱',
+	'collabwatchlistnew-submit' => '建立',
+	'collabwatchlistedit-normal-submit' => '儲存',
 );
 

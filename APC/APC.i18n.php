@@ -7837,6 +7837,7 @@ APC 似乎不会运行。',
  * @author Gzdavidwong
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Pbdragonwang
  * @author Wrightbus
  */
@@ -7900,7 +7901,7 @@ APC 似乎不會運行。',
 	'viewapc-display-type-user' => '緩存應用程序數據',
 	'viewapc-display-num_hits' => '點擊',
 	'viewapc-display-mtime' => '曾修改',
-	'viewapc-display-creation_time' => '已發起',
+	'viewapc-display-creation_time' => '已建立',
 	'viewapc-display-deletion_time' => '刪除',
 	'viewapc-display-no-delete' => '不會被刪除',
 	'viewapc-display-access_time' => '訪問',
@@ -7916,7 +7917,7 @@ APC 似乎不會運行。',
 	'viewapc-ls-header-size' => '大小',
 	'viewapc-ls-header-accessed' => '最後一次訪問',
 	'viewapc-ls-header-modified' => '最後編輯時間',
-	'viewapc-ls-header-created' => '已發起',
+	'viewapc-ls-header-created' => '已建立',
 	'viewapc-ls-header-deleted' => '刪除',
 	'viewapc-ls-header-timeout' => '超時',
 	'viewapc-ls-delete' => '[立即刪除]',
@@ -7928,7 +7929,7 @@ APC 似乎不會運行。',
 	'viewapc-ls-sort-name' => '名稱',
 	'viewapc-ls-sort-accessed' => '最後一次訪問',
 	'viewapc-ls-sort-modified' => '最近更改',
-	'viewapc-ls-sort-created' => '創建',
+	'viewapc-ls-sort-created' => '已建立',
 	'viewapc-ls-sort-deleted' => '刪除',
 	'viewapc-ls-sort-timeout' => '超時',
 	'viewapc-ls-limit-none' => '所有',

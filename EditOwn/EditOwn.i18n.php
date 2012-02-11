@@ -72,6 +72,13 @@ $messages['be-tarask'] = array(
 	'editown-desc' => 'Удзельнікі без правоў рэдагаваньня могуць рэдагаваць толькі старонкі, якія яны самі стварылі',
 );
 
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+$messages['bg'] = array(
+	'editown-desc' => 'Потребителите без права editall могат да редактират само страници, които са създали',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */
@@ -334,6 +341,13 @@ $messages['ms'] = array(
 	'editown-desc' => 'Pengguna tanpa hak sunting semua (editall) boleh menyunting laman-laman yang diciptanya sahaja',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'editown-desc' => "Brukere uten ''editall''-rettigheter kan kun redigere sider de selv har opprettet",
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -360,13 +374,6 @@ $messages['nl'] = array(
  */
 $messages['nn'] = array(
 	'editown-desc' => "Brukarar utan ''editall''-rettar kan berre endra sider dei sjølv har oppretta",
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'editown-desc' => "Brukere uten ''editall''-rettigheter kan kun redigere sider de selv har opprettet",
 );
 
 /** Northern Sotho (Sesotho sa Leboa)

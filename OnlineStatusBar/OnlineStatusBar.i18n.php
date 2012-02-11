@@ -259,6 +259,7 @@ $messages['lb'] = array(
 	'onlinestatusbar-line' => '$1 ass elo $2 $3',
 	'onlinestatusbar-used' => 'Ären online-Status op Ärer Benotzer-Säit weisen',
 	'onlinestatusbar-away-time' => "Minutte bis Dir als 'net do' markéiert gitt:",
+	'onlinestatusbar-purge' => "De'Benotzersäit all kéier wann Dir Iech eran oder erausloggt eidel maachen",
 	'onlinestatusbar-status-busy' => 'Beschäftegt',
 	'onlinestatusbar-status-away' => 'Net do',
 	'onlinestatusbar-status-uknown' => 'Status onbekannt',

@@ -4061,6 +4061,7 @@ $2',
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Liangent
  * @author Mark85296341
+ * @author Oapbtommy
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
@@ -4100,7 +4101,7 @@ $2',
 	'group-restricted' => '受限用戶',
 	'group-restricted-member' => '受限用戶',
 	'group-manager' => '管理員',
-	'group-manager-member' => '管理員',
+	'group-manager-member' => '{{GENDER:$1|管理員}}',
 );
 
 /** Chinese (Taiwan) (‪中文(台灣)‬)
