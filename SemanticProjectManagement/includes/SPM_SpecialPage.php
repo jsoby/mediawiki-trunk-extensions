@@ -34,7 +34,6 @@ class SemanticProjectManagement extends SpecialPage
 	 */
 	function __construct() {
 		parent::__construct( 'SemanticProjectManagement' );
-		wfLoadExtensionMessages( 'SemanticProjectManagement' );
 	}
 	//main class
 	function execute( $par ){

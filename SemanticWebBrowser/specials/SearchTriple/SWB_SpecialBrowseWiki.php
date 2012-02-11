@@ -52,7 +52,7 @@ class SWBSpecialBrowseWiki extends SpecialPage {
 	public function __construct() {
 		global $smwgBrowseShowAll;
 		parent::__construct( 'BrowseWiki', '', true, false, 'default', true );
-		smwfLoadExtensionMessages( 'SemanticMediaWiki' );
+
 		if ( $smwgBrowseShowAll ) {
 			SWBSpecialBrowseWiki::$incomingvaluescount = 21;
 			SWBSpecialBrowseWiki::$incomingpropertiescount = - 1;

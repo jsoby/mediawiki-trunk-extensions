@@ -28,7 +28,6 @@ class SWBResolvableUriValue extends SMWDataValue {
 	protected function parseUserValue( $value ) {
 		// echo "parseUserValue";
 
-		smwfLoadExtensionMessages( 'SemanticMediaWiki' );
 		$value = trim( $value );
 		$this->m_wikitext = $value;
 		if ( $this->m_caption === false ) {

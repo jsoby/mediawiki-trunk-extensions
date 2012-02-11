@@ -46,5 +46,6 @@ Especially for descriptions, make sure you give a few linebreaks before/after th
 	'uploadlocal_error_unknown' => 'An unknown error occurred.',
 		
 	'right-uploadlocal' => 'Upload files from the local machine'
+	'action-uploadlocal' => 'upload files from the local machine'
 );
 

@@ -13,7 +13,6 @@
 class SpecialFavoritelist extends SpecialPage {
         function __construct() {
                 parent::__construct( 'Favoritelist' );
-                wfLoadExtensionMessages('Favoritelist');
         }
  
         function execute( $par ) {

@@ -60,12 +60,9 @@ class SPMWBS extends SMWResultPrinter {
 	}
 
 	public function getName() {
-		wfLoadExtensionMessages('SemanticProjectManagement');
 		return wfMsg('spm_printername_wbs');
 	}
 
-	
-	
 	/**
 	 *	This method renders the result set provided by SMW according to the printer
 	 * 
@@ -181,7 +178,6 @@ class SPMWBS extends SMWResultPrinter {
 						if ($this->getSearchLabel($outputmode)) {
 				$label = $this->getSearchLabel($outputmode);
 			} else {
-				wfLoadExtensionMessages('SemanticProjectManagement');
 				$label = wfMsgForContent('spm_wbs_link');
 			}
 			$link = $res->getQueryLink($label);

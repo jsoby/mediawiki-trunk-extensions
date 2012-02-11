@@ -107,7 +107,6 @@ function spmfAddToAdminLinks( &$admin_links_tree ) {
 	if ( is_null( $displaying_data_section ) )
 		return true;
 	$smw_docu_row = $displaying_data_section->getRow( 'smw' );
-	wfLoadExtensionMessages( 'SemanticProjectManagement' );
 	$srf_docu_label = wfMsg( 'adminlinks_documentation', wfMsg( 'spm-name' ) );
 	$smw_docu_row->addItem( AlItem::newFromExternalLink( "http://www.mediawiki.org/wiki/Extension:Semantic_Project_Management", $spm_docu_label ) );
 	return true;
