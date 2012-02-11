@@ -73,7 +73,7 @@ $wgHooks['ParserFirstCallInit'][] = 'efEtherpadLiteParser_Initialize';
 // https://www.mediawiki.org/wiki/Manual:Tag_extensions
 function efEtherpadLiteParser_Initialize( &$parser ) {
 	$parser->setHook('eplite', 'efEtherpadLiteParserFunction_Render');
-        return true;
+	return true;
 }
 
 # Define a default Etherpad Lite server Url and base path
@@ -88,12 +88,11 @@ $wgEtherpadLiteShowChat         = 'true';
 $wgEtherpadLiteShowAuthorColors = 'true';
 
 function efEtherpadLiteParserFunction_Render( $input, $args, $parser, $frame ) {
-	
+
 	global $wgUser;
-	global  $wgEtherpadLiteDefaultPadUrl,$wgEtherpadLiteDefaultWidth,
-		$wgEtherpadLiteDefaultHeigth,$wgEtherpadLiteMonospacedFont,$wgEtherpadLiteShowControls,
-		$wgEtherpadLiteShowLineNumbers,$wgEtherpadLiteShowChat,$wgEtherpadLiteUserName,
-		$wgEtherpadLiteShowAuthorColors;
+	global $wgEtherpadLiteDefaultPadUrl, $wgEtherpadLiteDefaultWidth, $wgEtherpadLiteDefaultHeight,
+		$wgEtherpadLiteMonospacedFont, $wgEtherpadLiteShowControls, $wgEtherpadLiteShowLineNumbers,
+		$wgEtherpadLiteShowChat, $wgEtherpadLiteShowAuthorColors;
 
 	$padId            = ( !empty( $args['pad-id'] ) ) ? $args['pad-id'] : "" ;
 	$height           = ( !empty( $args['height'] ) ) ? $args['height'] : $wgEtherpadLiteDefaultHeight;
@@ -104,17 +103,17 @@ function efEtherpadLiteParserFunction_Render( $input, $args, $parser, $frame ) {
 	$showLineNumbers  = ( !empty( $args['show-linenumbers'] ) ) ? $args['show-linenumbers'] : $wgEtherpadLiteShowLineNumbers;
 	$showChat         = ( !empty( $args['show-chat'] ) ) ? $args['show-chat'] : $wgEtherpadLiteShowChat;
 	$noColors         = ! ( ( !empty( $args['show-colors'] ) ) ? $args['show-colors'] : $wgEtherpadLiteShowAuthorColors );
-	
+
 	$epliteHostUrl = Sanitizer::cleanUrl ( 
 		( !empty( $args['pad-url'] ) ) ? $args['pad-url'] : $wgEtherpadLiteDefaultPadUrl
-		);
+	);
 
 	// preset the pad username from MediaWiki username or IP
 	// attention: 
 	// the pad username can currently be overwritten when editing the pad
 
 	$userName  = $wgUser->getName();
-	
+
 	$iframeAttributes = array(
 		"style"      => "width:$width;height:$height",
 		"id"         => "epframe$padId",
@@ -126,10 +125,9 @@ function efEtherpadLiteParserFunction_Render( $input, $args, $parser, $frame ) {
 				"&userName=$userName" .
 				"&noColors=$noColors"
 		);
-	
+
 	$output = Html::rawElement( 'iframe', $iframeAttributes );
-	
+
 	wfDebug( "EtherpadLite:efEtherpadLiteParserFunction_Render $output\n" );
 	return array( $output, 'noparse' => true, 'isHTML' => true );
-
 }
