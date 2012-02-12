@@ -60,7 +60,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.01 20120212',
+	'version' => '1.02 20120212',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
