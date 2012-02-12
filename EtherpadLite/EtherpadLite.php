@@ -61,7 +61,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.03 20120212',
+	'version' => '1.04 20120212',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
@@ -89,10 +89,8 @@ $wgEtherpadLiteShowChat         = true;
 $wgEtherpadLiteShowAuthorColors = true;
 
 
-function wfEtherpadLiteStringFromTestedBoolean( $var, $default ) {
-	# http://www.php.net/manual/en/function.is-bool.php#104643
-	$booleanVar = ( isset( $var ) ) ? filter_var( $var, FILTER_VALIDATE_BOOLEAN ) : $default;
-	return ( $booleanVar ) ? "true" : "false";
+function wfEtherpadLiteStringFromBoolean( $bool ) {
+	return ( $bool ) ? "true" : "false";
 }
 
 function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
@@ -109,11 +107,25 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	$args['height']   = ( isset( $args['height'] ) ) ? $args['height'] : $wgEtherpadLiteDefaultHeight;
 	$args['width']    = ( isset( $args['width'] ) ) ? $args['width'] : $wgEtherpadLiteDefaultWidth;
 	
-	$useMonospaceFont = wfEtherpadLiteStringFromTestedBoolean( $args['monospaced-font'], $wgEtherpadLiteMonospacedFont );
-	$showControls     = wfEtherpadLiteStringFromTestedBoolean( $args['show-controls'], $wgEtherpadLiteShowControls ) ;
-	$showLineNumbers  = wfEtherpadLiteStringFromTestedBoolean( $args['show-linenumbers'], $wgEtherpadLiteShowLineNumbers );
-	$showChat         = wfEtherpadLiteStringFromTestedBoolean( $args['show-chat'], $wgEtherpadLiteShowChat );
-	$noColors         = ! ( wfEtherpadLiteStringFromTestedBoolean( $args['show-colors'], $wgEtherpadLiteShowAuthorColors ) );
+	$useMonospaceFont = wfEtherpadLiteStringFromBoolean(
+		( ( isset( $args['monospaced-font'] ) ) ? filter_var( $args['monospaced-font'], FILTER_VALIDATE_BOOLEAN ) : $wgEtherpadLiteMonospacedFont )
+	);
+
+	$showControls = wfEtherpadLiteStringFromBoolean(
+		( ( isset( $args['show-controls'] ) ) ? filter_var( $args['show-controls'], FILTER_VALIDATE_BOOLEAN ) : $wgEtherpadLiteShowControls )
+	);
+
+	$showLineNumbers = wfEtherpadLiteStringFromBoolean(
+		( ( isset( $args['show-linenumbers'] ) ) ? filter_var( $args['show-linenumbers'], FILTER_VALIDATE_BOOLEAN ) : $wgEtherpadLiteShowLineNumbers )
+	);
+			
+	$showChat = wfEtherpadLiteStringFromBoolean(
+		( ( isset( $args['show-chat'] ) ) ? filter_var( $args['show-chat'], FILTER_VALIDATE_BOOLEAN ) : $wgEtherpadLiteShowChat )
+	);
+	
+	$noColors = wfEtherpadLiteStringFromBoolean(
+		! ( ( isset( $args['show-colors'] ) ) ? filter_var( $args['show-colors'], FILTER_VALIDATE_BOOLEAN ) : $wgEtherpadLiteShowAuthorColors )
+	);
 
 	$args['src'] = Sanitizer::cleanUrl ( 
 		( isset( $args['src'] ) ) ? $args['src'] : $wgEtherpadLiteDefaultPadUrl
@@ -126,24 +138,29 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	# 2. the pad username can currently be overwritten when editing the pad
 
 	$parser->disableCache();
-	$userName  = $wgUser->getName();
+	$userName  = rawurlencode( $wgUser->getName() );
 	
 	$sanitizedAttributes = Sanitizer::validateAttributes( $args, array ( "width", "height", "id", "src" ) );
 	
 	$iframeAttributes = array(
- 		"style"      => "width:" . $sanitizedAttributes['width'] . ";" .
+ 		"style" => "width:" . $sanitizedAttributes['width'] . ";" .
 				"height:" . $sanitizedAttributes['height'],
-		"id"         => "eplite-iframe-" . $sanitizedAttributes['id'] ,
-		"src"        => $sanitizedAttributes['src'] . "/" . $sanitizedAttributes['id'] . 
-				"?showControls=$showControls" .
-				"&showChat=$showChat" .
-				"&showLineNumbers=$showLineNumbers" .
-				"&useMonospaceFont=$useMonospaceFont" .
-				"&userName=$userName" .
-				"&noColors=$noColors"
-		);
+		"class" => "eplite-iframe-" . $sanitizedAttributes['id'] ,
+		"src"   => Sanitizer::cleanUrl( 
+			$sanitizedAttributes['src'] . "/" . $sanitizedAttributes['id'] . 
+			"?showControls=$showControls" .
+			"&showChat=$showChat" .
+			"&showLineNumbers=$showLineNumbers" .
+			"&useMonospaceFont=$useMonospaceFont" .
+			"&noColors=$noColors" .
+			"&userName=$userName"
+		),
+	);
 
-	$output = Html::rawElement( 'iframe', $iframeAttributes );
+	$output = Html::rawElement(
+		'iframe', 
+		Sanitizer::validateAttributes( $iframeAttributes, array ( "style", "class", "src" ) ) 
+	);
 
 	wfDebug( "EtherpadLite:wfEtherpadLiteRender $output\n" );
 	return array( $output );
