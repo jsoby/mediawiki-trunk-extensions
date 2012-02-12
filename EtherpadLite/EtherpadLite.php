@@ -87,9 +87,11 @@ $wgEtherpadLiteShowLineNumbers  = true;
 $wgEtherpadLiteShowChat         = true;
 $wgEtherpadLiteShowAuthorColors = true;
 
-function wfEtherpadLiteTestAndReturnBoolean( $var, $default ) {
+
+function wfEtherpadLiteStringFromTestedBoolean( $var, $default ) {
 	# http://www.php.net/manual/en/function.is-bool.php#104643
-	return ( isset( $var ) ) ? filter_var( $var, FILTER_VALIDATE_BOOLEAN ) : $default;
+	$booleanVar = ( isset( $var ) ) ? filter_var( $var, FILTER_VALIDATE_BOOLEAN ) : $default;
+	return ( $booleanVar ) ? "true" : "false";
 }
 
 function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
@@ -103,11 +105,11 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	$height           = ( isset( $args['height'] ) ) ? $args['height'] : $wgEtherpadLiteDefaultHeight;
 	$width            = ( isset( $args['width'] ) ) ? $args['width'] : $wgEtherpadLiteDefaultWidth;
 
-	$useMonospaceFont = wfEtherpadLiteTestAndReturnBoolean( $args['monospaced-font'], $wgEtherpadLiteMonospacedFont );
-	$showControls     = wfEtherpadLiteTestAndReturnBoolean( $args['show-controls'], $wgEtherpadLiteShowControls ) ;
-	$showLineNumbers  = wfEtherpadLiteTestAndReturnBoolean( $args['show-linenumbers'], $wgEtherpadLiteShowLineNumbers );
-	$showChat         = wfEtherpadLiteTestAndReturnBoolean( $args['show-chat'], $wgEtherpadLiteShowChat );
-	$noColors         = ! ( wfEtherpadLiteTestAndReturnBoolean( $args['show-colors'], $wgEtherpadLiteShowAuthorColors ) );
+	$useMonospaceFont = wfEtherpadLiteStringFromTestedBoolean( $args['monospaced-font'], $wgEtherpadLiteMonospacedFont );
+	$showControls     = wfEtherpadLiteStringFromTestedBoolean( $args['show-controls'], $wgEtherpadLiteShowControls ) ;
+	$showLineNumbers  = wfEtherpadLiteStringFromTestedBoolean( $args['show-linenumbers'], $wgEtherpadLiteShowLineNumbers );
+	$showChat         = wfEtherpadLiteStringFromTestedBoolean( $args['show-chat'], $wgEtherpadLiteShowChat );
+	$noColors         = ! ( wfEtherpadLiteStringFromTestedBoolean( $args['show-colors'], $wgEtherpadLiteShowAuthorColors ) );
 
 	$epliteHostUrl = Sanitizer::cleanUrl ( 
 		( isset( $args['pad-url'] ) ) ? $args['pad-url'] : $wgEtherpadLiteDefaultPadUrl
