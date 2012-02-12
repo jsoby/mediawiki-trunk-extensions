@@ -3,7 +3,7 @@
 /**
  * Take the bodycontent and manipulate it for mobile
  */
-class MobileSkin_PostParse {
+class MobileFrontend2_PostParse {
 
 	/**
 	 * HTML to parse

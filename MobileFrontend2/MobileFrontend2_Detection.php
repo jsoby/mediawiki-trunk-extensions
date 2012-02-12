@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class containing all detection logic for mobile skin
+ * Class containing all detection logic for mobile frontend
  */
-class MobileSkin_Detection {
+class MobileFrontend2_Detection {
 
 	/**
 	 * Cached detection result
@@ -13,7 +13,7 @@ class MobileSkin_Detection {
 	protected static $enabled = null;
 
 	/**
-	 * Main function deciding if the MobileSkin should be enabled
+	 * Main function deciding if the MobileFrontend should be enabled
 	 *
 	 * @return bool
 	 */
@@ -31,19 +31,19 @@ class MobileSkin_Detection {
 		$request = RequestContext::getMain()->getRequest();
 		$useFormat = $request->getText( 'useformat' );
 
-		// Start with the basics, did they force the skin?
+		// Start with the basics, did they force the frontend?
 		if ( $useFormat == 'mobile' ) {
 			return self::enable();
 		}
 
 		// TODO: Other detection magic
 
-		// Nope. No mobile skin for you.
+		// Nope. No mobile frontend for you.
 		return self::disable();
 	}
 
 	/**
-	 * Enable mobile skin
+	 * Enable mobile frontend
 	 *
 	 * @return bool
 	 */
@@ -53,13 +53,13 @@ class MobileSkin_Detection {
 		self::$enabled = true;
 
 		// Do some initialization
-		MobileSkin_Options::detect();
+		MobileFrontend2_Options::detect();
 
 		return true;
 	}
 
 	/**
-	 * Disable mobile skin
+	 * Disable mobile frontend
 	 *
 	 * @return bool
 	 */

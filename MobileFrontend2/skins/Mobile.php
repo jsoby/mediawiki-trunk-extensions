@@ -12,7 +12,7 @@ class SkinMobile extends SkinTemplate {
 	 * @param null|OutputPage $out
 	 */
 	function outputPage( OutputPage $out = null ) {
-		global $wgScript, $wgMobileSkinLogo;
+		global $wgScript, $wgMobileFrontend2Logo;
 
 		$out = $this->getOutput();
 		$request = $this->getRequest();
@@ -23,13 +23,13 @@ class SkinMobile extends SkinTemplate {
 		$out->clearAllModules();
 
 		// Add the mobile js
-		$out->addModules( 'ext.mobileSkin' );
+		$out->addModules( 'ext.mobileFrontend2' );
 
 		// TODO: Hook for adding modules
 
 		$bodyClass = 'mobile';
 
-		if ( MobileSkin_Options::getMainPage() ) {
+		if ( MobileFrontend2_Options::getMainPage() ) {
 			// fixup the HTML title
 			$msg = wfMessage( 'pagetitle-view-mainpage' )->inContentLanguage();
 			if ( !$msg->isDisabled() ) {
@@ -63,7 +63,7 @@ class SkinMobile extends SkinTemplate {
 		$tpl->setRef( 'wgScript', $wgScript );
 
 		// Mobile stuff
-		$tpl->setRef( 'mobilelogopath', $wgMobileSkinLogo );
+		$tpl->setRef( 'mobilelogopath', $wgMobileFrontend2Logo );
 
 		# Add a <div class="mw-content-ltr/rtl"> around the body text
 		# not for special pages or file pages AND only when viewing AND if the page exists
@@ -77,7 +77,7 @@ class SkinMobile extends SkinTemplate {
 			$out->mBodytext = Html::rawElement( 'div', $realBodyAttribs, $out->mBodytext );
 		}
 
-		$tpl->setRef( 'bodycontent', MobileSkin_PostParse::mangle( $out->mBodytext ) );
+		$tpl->setRef( 'bodycontent', MobileFrontend2_PostParse::mangle( $out->mBodytext ) );
 
 		// Pass the bodyClass for CSS magic
 		$tpl->set( 'bodyclass', $bodyClass );
@@ -104,7 +104,7 @@ class SkinMobile extends SkinTemplate {
 	 * @param OutputPage $out
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
-		$out->addModuleStyles( 'ext.mobileSkin.common' );
+		$out->addModuleStyles( 'ext.mobileFrontend2.common' );
 	}
 
 	/**
@@ -118,7 +118,7 @@ class SkinMobile extends SkinTemplate {
 	 * @return string
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
-		return '<button class="mf2-section-toggle">' . wfMessage( 'mobile-skin-show-button' )->escaped() .  '</button>';
+		return '<button class="mf2-section-toggle">' . wfMessage( 'mobile-frontend2-show-button' )->escaped() .  '</button>';
 	}
 
 	/**
@@ -163,12 +163,12 @@ class MobileTemplate extends BaseTemplate {
 	</head>
 	<body class="<?php $this->text( 'bodyclass' ) ?>">
 
-	<?php if ( !MobileSkin_Options::getHideSearch() ): ?>
+	<?php if ( !MobileFrontend2_Options::getHideSearch() ): ?>
 	<!-- search/header -->
 	<div id="results"></div>
 	<div id="header">
 		<div id="searchbox">
-			<?php if ( !MobileSkin_Options::getHideLogo() ): ?>
+			<?php if ( !MobileFrontend2_Options::getHideLogo() ): ?>
 			<img src="<?php $this->text( 'mobilelogopath' ) ?>" alt="Logo" id="mf2-logo" width="35" height="22" />
 			<?php endif ?>
 			<form action="<?php $this->text( 'wgScript' ) ?>" class="mf2-search-bar" method="get">
@@ -186,7 +186,7 @@ class MobileTemplate extends BaseTemplate {
 
 	<!-- content -->
 	<div class="show" id="content_wrapper">
-		<?php if ( !MobileSkin_Options::getMainPage() ): ?>
+		<?php if ( !MobileFrontend2_Options::getMainPage() ): ?>
 		<!-- firstHeading -->
 		<h1 id="firstHeading" class="firstHeading">
 			<span dir="auto"><?php $this->html( 'title' ) ?></span>
@@ -203,18 +203,18 @@ class MobileTemplate extends BaseTemplate {
 		<!-- /bodyContent -->
 	</div>
 
-	<?php if ( !MobileSkin_Options::getHideFooter() ): ?>
+	<?php if ( !MobileFrontend2_Options::getHideFooter() ): ?>
 	<!-- footer -->
 	<div id="footer">
 		<div id="innerFooter">
-			<a href="#"><?php $this->msg( 'mobile-skin-regular-site' ) ?></a> | <a href="#"><?php $this->msg( 'mobile-skin-disable-images' ) ?></a>
+			<a href="#"><?php $this->msg( 'mobile-frontend2-regular-site' ) ?></a> | <a href="#"><?php $this->msg( 'mobile-frontend2-disable-images' ) ?></a>
 
 			<div id="perm">
-				<a href="#"><?php $this->msg( 'mobile-skin-perm-stop-redirect' ) ?></a>
+				<a href="#"><?php $this->msg( 'mobile-frontend2-perm-stop-redirect' ) ?></a>
 			</div>
 		</div>
 		<div id="copyright">
-			<?php $this->msg( 'mobile-skin-copyright' ) ?>
+			<?php $this->msg( 'mobile-frontend2-copyright' ) ?>
 		</div>
 	</div>
 	<?php endif ?>

@@ -1,6 +1,6 @@
 (function( $, mw, undefined ) {
 
-var MobileSkin = mf2 = {
+var MobileFrontend2 = mf2 = {
 	/**
 	 * Timer for updating search suggestions
 	 */
@@ -43,7 +43,7 @@ var MobileSkin = mf2 = {
 		$contentDiv.toggle();
 
 		// Change the button text
-		buttonMsg = $contentDiv.css( 'display' ) === 'block' ? 'mobile-skin-hide-button' : 'mobile-skin-show-button';
+		buttonMsg = $contentDiv.css( 'display' ) === 'block' ? 'mobile-frontend2-hide-button' : 'mobile-frontend2-show-button';
 		$header.find( 'button' ).html( mw.msg( buttonMsg ) );
 	},
 

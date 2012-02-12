@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Hooks for the new mobile skin
+ * Hooks for the new mobile frontend
  */
-class MobileSkin_Hooks {
+class MobileFrontend2_Hooks {
 	/**
 	 * Loads the mobile skin if we need to
 	 *
@@ -12,15 +12,15 @@ class MobileSkin_Hooks {
 	 * @return bool
 	 */
 	public static function createSkin( $context, &$skin ) {
-		// Abort if we're not using the mobile skin
-		if ( !MobileSkin_Detection::isEnabled() ) {
+		// Abort if we're not using the mobile frontend
+		if ( !MobileFrontend2_Detection::isEnabled() ) {
 			return true;
 		}
 
 		// TODO: WML support
 		$skin = new SkinMobile;
 
-		// halt the hook
+		// Be a dick and halt the hook
 		return false;
 	}
 
@@ -29,14 +29,14 @@ class MobileSkin_Hooks {
 	 *
 	 * @todo broken, see mobile main page
 	 *
-	 * @param $parser MobileSkin_Parser
+	 * @param $parser MobileFrontend2_Parser
 	 * @param $i int
 	 * @param $section string
 	 * @param $showEditLink bool
 	 * @return bool
 	 */
 	public static function parserSectionCreate( $parser, $i, &$section, $showEditLink ) {
-		if ( !MobileSkin_Detection::isEnabled() ) {
+		if ( !MobileFrontend2_Detection::isEnabled() ) {
 			return true;
 		}
 
@@ -55,7 +55,7 @@ class MobileSkin_Hooks {
 			. substr( $section, $headerLength ) . "\n\n"
 			. '<div class="mf2-section-anchor">'
 				. '<a href="#section-' . $i . '">'
-			. wfMessage( 'mobile-skin-back-to-top-of-section' )->escaped()
+			. wfMessage( 'mobile-frontend2-back-to-top-of-section' )->escaped()
 			. '</a></div></div></div>';
 
 		return true;
@@ -131,10 +131,10 @@ class MobileSkin_Hooks {
 	 * @return bool
 	 */
 	public static function beforeInitialize( Title &$title, &$unused, &$output, &$user, $request, $wiki ) {
-		if ( MobileSkin_Detection::isEnabled() && $title->isMainPage() ) {
+		if ( MobileFrontend2_Detection::isEnabled() && $title->isMainPage() ) {
 			$title = Title::newFromText( wfMsgForContent( 'mainpage-mobile' ) );
 			RequestContext::getMain()->setTitle( $title );
-			MobileSkin_Options::setMainPage( true );
+			MobileFrontend2_Options::setMainPage( true );
 		}
 
 		return true;
@@ -157,15 +157,15 @@ class MobileSkin_Hooks {
 	 * @return bool
 	 */
 	public static function setup() {
-		if ( !MobileSkin_Detection::isEnabled() ) {
+		if ( !MobileFrontend2_Detection::isEnabled() ) {
 			return true;
 		}
-		global $wgMobileSkinLogo, $wgExtensionAssetsPath;
+		global $wgMobileFrontend2Logo, $wgExtensionAssetsPath;
 
 		// We need a sane default and $wgExtensionAssetsPath isn't ready until
 		// after LocalSettings
-		if ( $wgMobileSkinLogo === null ) {
-			$wgMobileSkinLogo = $wgExtensionAssetsPath . '/MobileSkin/modules/ext.mobileSkin/images/mw.png';
+		if ( $wgMobileFrontend2Logo === null ) {
+			$wgMobileFrontend2Logo = $wgExtensionAssetsPath . '/MobileFrontend2/modules/ext.mobileFrontend2/images/mw.png';
 		}
 	}
 }
