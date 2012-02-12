@@ -20,7 +20,7 @@ class MobileSkin_Hooks {
 		// TODO: WML support
 		$skin = new SkinMobile;
 
-		// Be a dick and halt the hook
+		// halt the hook
 		return false;
 	}
 
