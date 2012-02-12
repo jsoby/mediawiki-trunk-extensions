@@ -56,23 +56,23 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 // Credits
-$wgExtensionCredits['other'][] = array(
+$wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.00 20120211',
-	'url' => '//www.mediawiki.org/wiki/Extension:EtherpadLite',
+	'version' => '1.01 20120212',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
 
 $dir = dirname( __FILE__ ) . '/';
 
 $wgExtensionMessagesFiles['EtherpadLite'] = $dir . 'EtherpadLite.i18n.php';
-$wgHooks['ParserFirstCallInit'][] = 'efEtherpadLiteParser_Initialize';
+$wgHooks['ParserFirstCallInit'][] = 'wfEtherpadLiteParserInit';
 
 // https://www.mediawiki.org/wiki/Manual:Tag_extensions
-function efEtherpadLiteParser_Initialize( &$parser ) {
-	$parser->setHook('eplite', 'efEtherpadLiteParserFunction_Render');
+function wfEtherpadLiteParserInit( $parser ) {
+	$parser->setHook('eplite', 'wfEtherpadLiteRender');
 	return true;
 }
 
@@ -80,38 +80,46 @@ function efEtherpadLiteParser_Initialize( &$parser ) {
 # this server is used unless a distinct server is defined by pad-id="..."
 $wgEtherpadLiteDefaultPadUrl    = "http://www.example.com/p/";
 $wgEtherpadLiteDefaultWidth     = "300px";
-$wgEtherpadLiteDefaultHeigth    = "200px";
-$wgEtherpadLiteMonospacedFont   = 'false';
-$wgEtherpadLiteShowControls     = 'true';
-$wgEtherpadLiteShowLineNumbers  = 'true';
-$wgEtherpadLiteShowChat         = 'true';
-$wgEtherpadLiteShowAuthorColors = 'true';
+$wgEtherpadLiteDefaultHeight    = "200px";
+$wgEtherpadLiteMonospacedFont   = false;
+$wgEtherpadLiteShowControls     = true;
+$wgEtherpadLiteShowLineNumbers  = true;
+$wgEtherpadLiteShowChat         = true;
+$wgEtherpadLiteShowAuthorColors = true;
 
-function efEtherpadLiteParserFunction_Render( $input, $args, $parser, $frame ) {
+function wfEtherpadLiteTestAndReturnBoolean( $var, $default ) {
+	# http://www.php.net/manual/en/function.is-bool.php#104643
+	return ( isset( $var ) ) ? filter_var( $var, FILTER_VALIDATE_BOOLEAN ) : $default;
+}
+
+function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 
 	global $wgUser;
 	global $wgEtherpadLiteDefaultPadUrl, $wgEtherpadLiteDefaultWidth, $wgEtherpadLiteDefaultHeight,
 		$wgEtherpadLiteMonospacedFont, $wgEtherpadLiteShowControls, $wgEtherpadLiteShowLineNumbers,
 		$wgEtherpadLiteShowChat, $wgEtherpadLiteShowAuthorColors;
 
-	$padId            = ( !empty( $args['pad-id'] ) ) ? $args['pad-id'] : "" ;
-	$height           = ( !empty( $args['height'] ) ) ? $args['height'] : $wgEtherpadLiteDefaultHeight;
-	$width            = ( !empty( $args['width'] ) ) ? $args['width'] : $wgEtherpadLiteDefaultWidth;
+	$padId            = ( isset( $args['pad-id'] ) ) ? $args['pad-id'] : "" ;
+	$height           = ( isset( $args['height'] ) ) ? $args['height'] : $wgEtherpadLiteDefaultHeight;
+	$width            = ( isset( $args['width'] ) ) ? $args['width'] : $wgEtherpadLiteDefaultWidth;
 
-	$useMonospaceFont = ( !empty( $args['monospaced-font'] ) ) ? $args['monospaced-font'] : $wgEtherpadLiteMonospacedFont;
-	$showControls     = ( !empty( $args['show-controls'] ) ) ? $args['show-controls'] : $wgEtherpadLiteShowControls;
-	$showLineNumbers  = ( !empty( $args['show-linenumbers'] ) ) ? $args['show-linenumbers'] : $wgEtherpadLiteShowLineNumbers;
-	$showChat         = ( !empty( $args['show-chat'] ) ) ? $args['show-chat'] : $wgEtherpadLiteShowChat;
-	$noColors         = ! ( ( !empty( $args['show-colors'] ) ) ? $args['show-colors'] : $wgEtherpadLiteShowAuthorColors );
+	$useMonospaceFont = wfEtherpadLiteTestAndReturnBoolean( $args['monospaced-font'], $wgEtherpadLiteMonospacedFont );
+	$showControls     = wfEtherpadLiteTestAndReturnBoolean( $args['show-controls'], $wgEtherpadLiteShowControls ) ;
+	$showLineNumbers  = wfEtherpadLiteTestAndReturnBoolean( $args['show-linenumbers'], $wgEtherpadLiteShowLineNumbers );
+	$showChat         = wfEtherpadLiteTestAndReturnBoolean( $args['show-chat'], $wgEtherpadLiteShowChat );
+	$noColors         = ! ( wfEtherpadLiteTestAndReturnBoolean( $args['show-colors'], $wgEtherpadLiteShowAuthorColors ) );
 
 	$epliteHostUrl = Sanitizer::cleanUrl ( 
-		( !empty( $args['pad-url'] ) ) ? $args['pad-url'] : $wgEtherpadLiteDefaultPadUrl
+		( isset( $args['pad-url'] ) ) ? $args['pad-url'] : $wgEtherpadLiteDefaultPadUrl
 	);
 
 	// preset the pad username from MediaWiki username or IP
+	
 	// attention: 
-	// the pad username can currently be overwritten when editing the pad
+	// 1. we must render the page for each visiting user to get their username
+	// 2. the pad username can currently be overwritten when editing the pad
 
+	$parser->disableCache();
 	$userName  = $wgUser->getName();
 
 	$iframeAttributes = array(
@@ -128,6 +136,6 @@ function efEtherpadLiteParserFunction_Render( $input, $args, $parser, $frame ) {
 
 	$output = Html::rawElement( 'iframe', $iframeAttributes );
 
-	wfDebug( "EtherpadLite:efEtherpadLiteParserFunction_Render $output\n" );
-	return array( $output, 'noparse' => true, 'isHTML' => true );
+	wfDebug( "EtherpadLite:wfEtherpadLiteRender $output\n" );
+	return array( $output );
 }
