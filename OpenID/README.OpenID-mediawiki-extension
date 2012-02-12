@@ -1,5 +1,5 @@
 MediaWiki OpenID extension README.OpenID-mediawiki-extension file
-version 0.947-beta 20120205
+version 1.000 20120212
 Homepage and manual http://www.mediawiki.org/wiki/Extension:OpenID
 
 Please check OpenID.setup.php for the current program version number
@@ -466,6 +466,7 @@ The big changes for the future:
   into that account now
 
 == CHANGES ==
+* 1.000 release version
 * 0.947 using jQuery closure for redirect
 * 0.946 fixed the problem of broken automatic redirect to OpenID provider login
         replaced hookEvent() by	jQuery( document ).ready( submitOpenIDForm )

@@ -1,4 +1,4 @@
-Status: 0.929-beta 20110528
+Status: 1.000 20120212
 
 ? more details are needed to understand the "to do"
 * resolved, or partially resolved, wontfix
@@ -21,6 +21,13 @@ Status: 0.929-beta 20110528
   in OpenID.setup.php. I don't know, if it can be avoided.
 - keep user from mailing new password in OpenID account except case S/OO
 - keep user from setting password in OpenID account except case S/OO
+- OpenID-only enabled account owners cannot set their password when the account
+  lacks an e-mail address - which cannot be set up because they don't have a
+  password (rat race condition) 
+  https://bugzilla.wikimedia.org/show_bug.cgi?id=34357
+  This is a regression from implementation of
+  Changing your email address should require entering your password
+  https://bugzilla.wikimedia.org/show_bug.cgi?id=20185
 - participate in account-creation throttle
 - audit to prevent circumventing blocks/bans
 - share timezone when/if available
