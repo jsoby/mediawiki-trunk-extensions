@@ -11,9 +11,10 @@
  *
  * Usage:
  *
- * <eplite pad-id="padid" />
- * <eplite pad-id="myPseudoSecretPadHash-7ujHvhq06g" />
- * <eplite pad-id="padid" height="200px" width="600px" />
+ * <eplite id="padid" />
+ * <eplite id="myPseudoSecretPadHash-7ujHvhq06g" />
+ * <eplite id="padid" height="200px" width="600px" />
+ * <eplite id="padid" src="http://www.another-pad-server.org/p/" />
  *
  * Installation:
  *
@@ -49,18 +50,18 @@
  *
  */
 
-// Check environment
+# Check environment
 if ( !defined( 'MEDIAWIKI' ) ) {
 	echo( "This is an extension to MediaWiki and cannot be run standalone.\n" );
 	die( - 1 );
 }
 
-// Credits
+# Credits
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.02 20120212',
+	'version' => '1.03 20120212',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
@@ -70,14 +71,14 @@ $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['EtherpadLite'] = $dir . 'EtherpadLite.i18n.php';
 $wgHooks['ParserFirstCallInit'][] = 'wfEtherpadLiteParserInit';
 
-// https://www.mediawiki.org/wiki/Manual:Tag_extensions
+# https://www.mediawiki.org/wiki/Manual:Tag_extensions
 function wfEtherpadLiteParserInit( $parser ) {
 	$parser->setHook('eplite', 'wfEtherpadLiteRender');
 	return true;
 }
 
 # Define a default Etherpad Lite server Url and base path
-# this server is used unless a distinct server is defined by pad-id="..."
+# this server is used unless a distinct server is defined by id="..."
 $wgEtherpadLiteDefaultPadUrl    = "http://www.example.com/p/";
 $wgEtherpadLiteDefaultWidth     = "300px";
 $wgEtherpadLiteDefaultHeight    = "200px";
@@ -101,33 +102,39 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 		$wgEtherpadLiteMonospacedFont, $wgEtherpadLiteShowControls, $wgEtherpadLiteShowLineNumbers,
 		$wgEtherpadLiteShowChat, $wgEtherpadLiteShowAuthorColors;
 
-	$padId            = ( isset( $args['pad-id'] ) ) ? $args['pad-id'] : "" ;
-	$height           = ( isset( $args['height'] ) ) ? $args['height'] : $wgEtherpadLiteDefaultHeight;
-	$width            = ( isset( $args['width'] ) ) ? $args['width'] : $wgEtherpadLiteDefaultWidth;
+	# undefined id= attributes are replaced by id="" and result
+	# in Etherpad Lite server showing its entry page - where you can open a new pad.
+	$args['id']       = ( isset( $args['id'] ) ) ? $args['id'] : "";
 
+	$args['height']   = ( isset( $args['height'] ) ) ? $args['height'] : $wgEtherpadLiteDefaultHeight;
+	$args['width']    = ( isset( $args['width'] ) ) ? $args['width'] : $wgEtherpadLiteDefaultWidth;
+	
 	$useMonospaceFont = wfEtherpadLiteStringFromTestedBoolean( $args['monospaced-font'], $wgEtherpadLiteMonospacedFont );
 	$showControls     = wfEtherpadLiteStringFromTestedBoolean( $args['show-controls'], $wgEtherpadLiteShowControls ) ;
 	$showLineNumbers  = wfEtherpadLiteStringFromTestedBoolean( $args['show-linenumbers'], $wgEtherpadLiteShowLineNumbers );
 	$showChat         = wfEtherpadLiteStringFromTestedBoolean( $args['show-chat'], $wgEtherpadLiteShowChat );
 	$noColors         = ! ( wfEtherpadLiteStringFromTestedBoolean( $args['show-colors'], $wgEtherpadLiteShowAuthorColors ) );
 
-	$epliteHostUrl = Sanitizer::cleanUrl ( 
-		( isset( $args['pad-url'] ) ) ? $args['pad-url'] : $wgEtherpadLiteDefaultPadUrl
+	$args['src'] = Sanitizer::cleanUrl ( 
+		( isset( $args['src'] ) ) ? $args['src'] : $wgEtherpadLiteDefaultPadUrl
 	);
 
-	// preset the pad username from MediaWiki username or IP
+	# preset the pad username from MediaWiki username or IP
 	
-	// attention: 
-	// 1. we must render the page for each visiting user to get their username
-	// 2. the pad username can currently be overwritten when editing the pad
+	# attention: 
+	# 1. we must render the page for each visiting user to get their username
+	# 2. the pad username can currently be overwritten when editing the pad
 
 	$parser->disableCache();
 	$userName  = $wgUser->getName();
-
+	
+	$sanitizedAttributes = Sanitizer::validateAttributes( $args, array ( "width", "height", "id", "src" ) );
+	
 	$iframeAttributes = array(
-		"style"      => "width:$width;height:$height",
-		"id"         => "epframe$padId",
-		"src"        => "$epliteHostUrl/$padId" .
+ 		"style"      => "width:" . $sanitizedAttributes['width'] . ";" .
+				"height:" . $sanitizedAttributes['height'],
+		"id"         => "eplite-iframe-" . $sanitizedAttributes['id'] ,
+		"src"        => $sanitizedAttributes['src'] . "/" . $sanitizedAttributes['id'] . 
 				"?showControls=$showControls" .
 				"&showChat=$showChat" .
 				"&showLineNumbers=$showLineNumbers" .
