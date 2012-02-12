@@ -1,6 +1,6 @@
 <?php
 
-class MobileFrontend2_Options {
+class MobileSkin_Options {
 
 	/**
 	 * Hide the search bar
