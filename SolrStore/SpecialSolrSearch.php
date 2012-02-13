@@ -142,7 +142,8 @@ class SpecialSolrSearch extends SpecialPage {
 		}
 
 		if ( !empty( $query ) ) {
-			$query .=$fieldSet->getQuery();
+			//Add the Extra query string plus a space to the end of the query
+			$query .=' '.trim($fieldSet->getQuery());
 		}
 		// TODO: More Exception Handling for Format Exceptions
 		try {

@@ -142,8 +142,6 @@ class SolrTalker {
 					if ( strpos( $parts[1], '*' ) !== false ) {
 						$parts[1] = strtolower( $parts[1] );
 					}
-					//If we got an "AND" or an "OR" we have to write them upercase
-					$parts[1] = str_ireplace( 'and', 'AND', $parts[1] );
 
 					//If we have a solrField Match add a ':' (its the Lucene equivalent of '=' )
 					if ( $solrField ) {
