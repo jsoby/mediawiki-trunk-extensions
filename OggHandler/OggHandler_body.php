@@ -443,12 +443,11 @@ class OggHandler extends MediaHandler {
 	}
 
 	function setHeaders( $out ) {
-		global $wgOggScriptVersion, $wgCortadoJarFile;
-
 		if ( $out->hasHeadItem( 'OggHandlerScript' ) && $out->hasHeadItem( 'OggHandlerInlineScript' ) &&
 			$out->hasHeadItem( 'OggHandlerInlineCSS' ) ) {
 			return;
 		}
+		global $wgOggScriptVersion, $wgCortadoJarFile, $wgLang;
 
 		$msgNames = array( 'ogg-play', 'ogg-pause', 'ogg-stop', 'ogg-no-player',
 			'ogg-player-videoElement', 'ogg-player-oggPlugin', 'ogg-player-cortado', 'ogg-player-vlc-mozilla',
@@ -461,13 +460,12 @@ class OggHandler extends MediaHandler {
 		$cortadoUrl = $wgCortadoJarFile;
 		$scriptPath = self::getMyScriptPath();
 		if( substr( $cortadoUrl, 0, 1 ) != '/'
-				&& substr( $cortadoUrl, 0, 4 ) != 'http' )
-		{
+				&& substr( $cortadoUrl, 0, 4 ) != 'http' ) {
 			$cortadoUrl = wfExpandUrl( "$scriptPath/$cortadoUrl", PROTO_CURRENT );
 		}
 		$encCortadoUrl = Xml::encodeJsVar( $cortadoUrl );
 		$encExtPathUrl = Xml::encodeJsVar( $scriptPath );
-		$alignStart = wfUILang()->alignStart();
+		$alignStart = $wgLang->alignStart();
 
 		$out->addHeadItem( 'OggHandlerScript' , Html::linkedScript( "{$scriptPath}/OggPlayer.js?$wgOggScriptVersion" ) );
 
