@@ -64,7 +64,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.05 20120213',
+	'version' => '1.06 20120213',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
@@ -73,12 +73,6 @@ $dir = dirname( __FILE__ ) . '/';
 
 $wgExtensionMessagesFiles['EtherpadLite'] = $dir . 'EtherpadLite.i18n.php';
 $wgHooks['ParserFirstCallInit'][] = 'wfEtherpadLiteParserInit';
-
-# https://www.mediawiki.org/wiki/Manual:Tag_extensions
-function wfEtherpadLiteParserInit( $parser ) {
-	$parser->setHook('eplite', 'wfEtherpadLiteRender');
-	return true;
-}
 
 # Define a default Etherpad Lite server Url and base path
 # this server is used unless a distinct server is defined by id="..."
@@ -91,12 +85,27 @@ $wgEtherpadLiteShowLineNumbers  = true;
 $wgEtherpadLiteShowChat         = true;
 $wgEtherpadLiteShowAuthorColors = true;
 
+# Whitelist of allowed Etherpad Lite server Urls
+#
+# If there are items in the array, and the user supplied URL is not in the array,
+# the url will not be allowed (proposed in bug 27768 for Extension:RSS)
+# Attention: 
+# Urls are case-sensitively tested against values in the array. 
+# They must exactly match including any trailing "/" character.
+$wgEtherpadLiteUrlWhitelist = array();
+
+# https://www.mediawiki.org/wiki/Manual:Tag_extensions
+function wfEtherpadLiteParserInit( $parser ) {
+	$parser->setHook('eplite', 'wfEtherpadLiteRender');
+	return true;
+}
+
 function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 
 	global $wgUser;
 	global $wgEtherpadLiteDefaultPadUrl, $wgEtherpadLiteDefaultWidth, $wgEtherpadLiteDefaultHeight,
 		$wgEtherpadLiteMonospacedFont, $wgEtherpadLiteShowControls, $wgEtherpadLiteShowLineNumbers,
-		$wgEtherpadLiteShowChat, $wgEtherpadLiteShowAuthorColors;
+		$wgEtherpadLiteShowChat, $wgEtherpadLiteShowAuthorColors, $wgEtherpadLiteUrlWhitelist;
 
 	# check the user input
 
@@ -132,8 +141,14 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	
 	$src = ( isset( $args['src'] ) ) ? $args['src'] : $wgEtherpadLiteDefaultPadUrl;
 	
+	# Anything from a parser tag should use Content lang for message,
+	# since the cache doesn't vary by user language: do not use wfMsgForContent but wfMsgForContent
+	if ( count( $wgEtherpadLiteUrlWhitelist ) && !in_array( $src, $wgEtherpadLiteUrlWhitelist ) ) {
+		return wfMsgForContent( 'etherpadlite-url-is-not-whitelisted', htmlspecialchars( $src ) );
+	}
+
 	if ( !Http::isValidURI( $src ) ) {
-		return wfMsg( 'etherpadlite-invalid-pad-url', htmlspecialchars( $src ) );
+		return wfMsgForContent( 'etherpadlite-invalid-pad-url', htmlspecialchars( $src ) );
 	} else {
 		$args['src'] = Sanitizer::cleanUrl ( $src );
 	}
@@ -147,7 +162,7 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	# just check again with the pad id appended
 
 	if ( !Http::isValidURI( $url ) ) {
-		return wfMsg( 'etherpadlite-invalid-pad-url', htmlspecialchars( $url ) );
+		return wfMsgForContent( 'etherpadlite-invalid-pad-url', htmlspecialchars( $url ) );
 	}
 	
 	# preset the pad username from MediaWiki username or IP
