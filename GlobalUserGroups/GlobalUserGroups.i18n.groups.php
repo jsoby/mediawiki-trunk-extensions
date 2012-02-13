@@ -30,7 +30,7 @@ $messages['en'] = array(
    'grouppage-helper-global'         => '{{ns:project}}:Global Helpers',
 
    'group-ipblock-exempt-g'          => 'Global IP block exemptions',
-   'group-ipblock-exempt-g-member'   => '{{GENDER:$1|global ip block exemption}}',
+   'group-ipblock-exempt-g-member'   => '{{GENDER:$1|global IP block exempt}}',
    'grouppage-ipblock-exempt-g'      => '{{ns:project}}:Global IP block exemptions',
 
    'group-rollback-global'           => 'Global Rollbackers',
@@ -96,16 +96,16 @@ $messages['de'] = array(
    'grouppage-bot-global'            => '{{ns:project}}:Globale Bots',
 
    'group-checkuser-global'          => 'Globale Checkuser',
-   'group-checkuser-global-member'   => '{{GENDER:$1|Globaler Checkuser|Globale Checkuserin}}',
+   'group-checkuser-global-member'   => '{{GENDER:$1|Globaler Checkuser-Berechtigter|Globale Checkuser-Berechtigte}}',
    'grouppage-checkuser-global'      => '{{ns:project}}:Globale Checkuser',
 
    'group-helper-global'             => 'Globale Helfer',
    'group-helper-global-member'      => '{{GENDER:$1|Globaler Helfer|Globale Helferin}}',
    'grouppage-helper-global'         => '{{ns:project}}:Globale Helfer',
 
-   'group-ipblock-exempt-g'          => 'Globale IP-Sperre-Ausnahmen',
-   'group-ipblock-exempt-g-member'   => '{{GENDER:$1|Globale IP-Sperre-Ausnahme}}',
-   'grouppage-ipblock-exempt-g'      => '{{ns:project}}:Globale IP-Sperre-Ausnahmen',
+   'group-ipblock-exempt-g'          => 'Globale IP-Sperren-Ausgenommene',
+   'group-ipblock-exempt-g-member'   => '{{GENDER:$1|Globaler IP-Sperren-Ausgenommener|Globale IP-Sperren-Ausgenommene}}',
+   'grouppage-ipblock-exempt-g'      => '{{ns:project}}:Globale IP-Sperren-Ausgenommene',
 
    'group-rollback-global'           => 'Globale Zurücksetzer',
    'group-rollback-global-member'    => '{{GENDER:$1|Globaler Zurücksetzer|Globale Zurücksetzerin}}',
@@ -156,7 +156,7 @@ $messages['nl'] = array(
    'grouppage-steward-global'        => '{{ns:project}}:Globale stewards',
 
    'group-sysadmin-global'           => 'globale systeembeheerders',
-   'group-sysadmin-global-member'    => '{{GENDER:$1|globale systeembeheerders}}',
+   'group-sysadmin-global-member'    => '{{GENDER:$1|globale systeembeheerder}}',
    'grouppage-sysadmin-global'       => '{{ns:project}}:Globale systeembeheerders',
 
    'group-sysop-global'              => 'globale beheerders',
