@@ -652,10 +652,6 @@ nc4.akl.callplus.net.nz.
 150.101.8.198 # ce1.sa.esc.net.au
 150.101.8.199 # ce2.sa.esc.net.au
 
-# *.cache.pol.co.uk
-webcacheh01a.cache.pol.co.uk
-webcacheh02a.cache.pol.co.uk
-
 # www.ucc.ie
 143.239.7.1 # ccproxy1
 143.239.7.2 # ccproxy2
