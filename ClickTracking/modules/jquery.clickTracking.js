@@ -25,7 +25,7 @@
 	 * @param {string} id event identifier
 	 */
 	$.trackAction = function( id ) {
-		$.trackActionWithOptions( { 'id' : id });
+		return $.trackActionWithOptions( { 'id' : id });
 	};
 	/**
 	 * Performs click tracking API call
@@ -34,7 +34,7 @@
 	 * @param {string} info additional information to be stored with the click
 	 */
 	$.trackActionWithInfo = function( id, info ) {
-		$.trackActionWithOptions( { 'id' : id, 'info' : info });
+		return $.trackActionWithOptions( { 'id' : id, 'info' : info });
 	};
 
 	/**
@@ -67,7 +67,7 @@
 			data.additional = options.info;
 		}
 
-		$.post( mw.util.wikiScript( 'api' ), data);
+		return $.post( mw.util.wikiScript( 'api' ), data);
 	};
 	
 	/**
