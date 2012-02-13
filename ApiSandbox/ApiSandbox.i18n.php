@@ -221,17 +221,19 @@ $messages['br'] = array(
 	'apisb-desc' => 'Aotren dizreinañ galvadennoù [//www.mediawiki.org/wiki/API API MediaWikiI] eus ar merdeer',
 	'apisandbox' => 'Poull-traezh API',
 	'apisb-no-js' => "'''Fazi''' : Rekis eo JavaScript evit an arc'hwel-mañ.",
-	'apisb-intro' => "Grit gant ar bajenn-mañ evit amprouiñ '''MediaWiki API'''.
-Kit da deuler ur sell war [//www.mediawiki.org/wiki/API:Main_page teulioù API] evit gouzout hiroc'h penaos embreger API.",
+	'apisb-intro' => "Grit gant ar bajenn-mañ evit amprouiñ '''servij Web API MediaWiki'''.
+Kit da deuler ur sell war [//www.mediawiki.org/wiki/API:Main_page titouroù an API] evit gouzout hiroc'h war an doare da embreger API. Da skouer : 
+[//www.mediawiki.org/wiki/API#A_simple_example gwelet danvez ur bennbajenn]. Dibabit un oberiadenn bennak evit gwelet skouerioù all",
 	'apisb-api-disabled' => "Diweredekaet eo API war al lec'hienn-mañ.",
+	'apisb-legend-parameters' => 'Arventennoù',
 	'apisb-legend-result' => "Disoc'h",
 	'apisb-legend-generic-parameters' => 'Arventennoù hollek',
 	'apisb-legend-generator-parameters' => 'Ganer',
 	'apisb-result-request-url' => 'Goulenn URL :',
 	'apisb-result-request-post' => 'roadennoù POST :',
 	'apisb-select-action' => 'Dibab un ober',
-	'apisb-select-query' => 'Petra glask ?',
-	'apisb-select-value' => 'Dibab an talvoud',
+	'apisb-select-query' => '(dibab ar reked)',
+	'apisb-select-value' => '(dibab an talvoud)',
 	'apisb-docs-more' => "Lenn hiroc'h",
 	'apisb-params-param' => 'Arventenn',
 	'apisb-params-input' => 'Enmont',

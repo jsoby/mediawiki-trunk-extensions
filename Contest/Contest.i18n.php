@@ -1422,6 +1422,13 @@ $messages['de-formal'] = array(
 	'contest-submission-challenge' => 'Sie stellen sich gerade der Herausforderung $1',
 );
 
+/** Zazaki (Zazaki)
+ * @author Mirzali
+ */
+$messages['diq'] = array(
+	'contest-special-edit' => 'Bıvurne',
+);
+
 /** Greek (Ελληνικά)
  * @author AK
  */

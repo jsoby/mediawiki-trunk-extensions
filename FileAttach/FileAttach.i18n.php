@@ -91,6 +91,17 @@ $messages['de'] = array(
 	'fileattach-editcomment' => 'Datei [[File:$1|$1]] wurde angehängt',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'fileattach-desc' => 'Zmóžnja nagraśe datajow do aktualnego boka',
+	'fileattach-attachments' => 'Datajowe pśidanki',
+	'fileattach-attachfile' => 'Dataju pśipowjesyś',
+	'fileattach-uploadheading' => 'Dataju k $1 pśipowjesyś',
+	'fileattach-editcomment' => 'Dataja [[File:$1|$1]] pśipowjesona',
+);
+
 /** Greek (Ελληνικά)
  * @author Glavkos
  */

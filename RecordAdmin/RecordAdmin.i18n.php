@@ -560,6 +560,13 @@ $messages['de-formal'] = array(
 	'recordadmin-select' => 'Wählen Sie den zu verwaltenden Aufzeichnungstyp',
 );
 
+/** Zazaki (Zazaki)
+ * @author Mirzali
+ */
+$messages['diq'] = array(
+	'recordadmin-editlink' => 'bıvurne',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */

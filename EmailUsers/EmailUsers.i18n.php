@@ -511,6 +511,13 @@ $messages['tl'] = array(
 	'emailusers-toomanyrecipientsselected' => 'Napakaraming napiling mga tagatanggap ({{PLURAL:$1|pinakamataas ang $1|pinakamataas ang $1}}).',
 );
 
+/** Turkish (Türkçe)
+ * @author Emperyan
+ */
+$messages['tr'] = array(
+	'emailusers' => 'E-posta kullanıcıları',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Liangent
  * @author 阿pp

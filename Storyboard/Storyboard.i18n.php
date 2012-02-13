@@ -1001,6 +1001,13 @@ Entrementres, pode [$2 ler outras historias publicadas].',
 	'storyboard-storydeletionconfirm' => 'Está seguro de querer borrar permanentemente esta historia?',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'storyboard-language' => 'Γλῶττα',
+);
+
 /** Swiss German (Alemannisch)
  * @author Als-Holder
  */

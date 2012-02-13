@@ -322,6 +322,13 @@ $messages['de-formal'] = array(
 	'wikitweet-intheroom' => 'Sie sind beim Feedstrang',
 );
 
+/** Zazaki (Zazaki)
+ * @author Mirzali
+ */
+$messages['diq'] = array(
+	'wikitweet-status0' => 'Werênayış',
+);
+
 /** Spanish (Español)
  * @author Fitoschido
  */

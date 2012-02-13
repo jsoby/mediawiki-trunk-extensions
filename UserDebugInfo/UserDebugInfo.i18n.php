@@ -122,6 +122,13 @@ $messages['gl'] = array(
 	'userdebuginfo-language' => 'Lingua',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'userdebuginfo-language' => 'Γλῶττα',
+);
+
 /** Swiss German (Alemannisch)
  * @author Als-Chlämens
  */

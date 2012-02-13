@@ -1136,10 +1136,11 @@ Em caso de problemas, pode experimentar <b>{{#special:call}}/DebuG</b>",
 
 /** Brazilian Portuguese (Português do Brasil)
  * @author Eduardo.mps
+ * @author Giro720
  */
 $messages['pt-br'] = array(
 	'call' => 'Call',
-	'call-desc' => 'Cria uma hiperligação para uma predefinição (ou para uma página wiki normal) com passagem de parâmetros. Pode ser usada na linha de comandos do navegador ou dentro de texto wiki.',
+	'call-desc' => 'Cria um hiperlink para uma predefinição (ou para uma página wiki normal) com passagem de parâmetros. Pode ser usada na linha de comandos do navegador ou dentro de texto wiki.',
 	'call-text' => "A extensão Call espera uma página wiki e parâmetros opcionais para essa página como argumentos.<br /><br />
 Exemplo 1: &nbsp; <tt>[[{{#special:call}}/Minha Predefinição,parm1=value1]]</tt><br />
 Exemplo 2: &nbsp; <tt>[[{{#special:call}}/Talk:Minha Discussão,parm1=value1]]</tt><br />

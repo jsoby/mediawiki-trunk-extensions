@@ -284,6 +284,13 @@ $messages['gl'] = array(
 	'ts-kml-on-ol-map-by' => 'Mapa de',
 );
 
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
+$messages['grc'] = array(
+	'ts-kml-on-ol-languages' => 'Γλῶτται',
+);
+
 /** Swiss German (Alemannisch)
  * @author Als-Holder
  */

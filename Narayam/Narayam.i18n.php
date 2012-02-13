@@ -111,6 +111,7 @@ This allows for Narayam to add custom input methods for input fields. Esperanto 
 	'narayam-ne-inscript' => '[[w:InScript|InScript]] keyboard layout for the [[w:Nepali language|Nepali language]].',
 	'narayam-or' => 'Transliteration scheme for the Oriya language.',
 	'narayam-or-inscript' => '[[w:InScript|InScript]] keyboard layout for the Oriya language.',
+	'narayam-pa' => 'A Narayam transliteration implementation of the Punjabi language in Gurmukhi script',
 	'narayam-pa-inscript' => 'A Narayam InScript implementation of the Punjabi language in Gurmukhi script',
 	'narayam-sa' => 'Transliteration scheme for the Sanskrit language.',
 	'narayam-sa-inscript' => '[[w:InScript|InScript]] keyboard layout for the Sanskrit language.',
@@ -369,6 +370,22 @@ $messages['be-tarask'] = array(
  */
 $messages['bg'] = array(
 	'narayam-eo' => 'Есперанто',
+);
+
+/** Bhojpuri (भोजपुरी)
+ * @author Anshumangupta21
+ */
+$messages['bho'] = array(
+	'narayam-desc' => 'इनपुट फ़ील्ड के कस्टम इनपुट विधि के जोड़न खातिर अनुमति देईं',
+	'narayam-toggle-ime' => 'सक्षम करीं ($1)',
+	'narayam-menu' => 'इन्पुट के विधि',
+	'narayam-menu-tooltip' => 'इन्पुट विधि के चयन करीं',
+	'narayam-help' => 'मदद',
+	'narayam-checkbox-tooltip' => 'इन्पुट विधि के चालु या बन्द करल जाय',
+	'narayam-enable-preference' => 'इन्पुट विधि के सक्षम करीं',
+	'narayam-more-imes' => 'अधिक इन्पुट विधि',
+	'narayam-bho' => 'भोजपुरी लिप्यंतरण',
+	'narayam-bho-inscript' => 'भोजपुरी इंस्क्रिप्ट',
 );
 
 /** Bengali (বাংলা)
@@ -706,6 +723,7 @@ $messages['es'] = array(
 	'narayam-or' => 'Transliteración odiya',
 	'narayam-or-lekhani' => 'Odiya Lekhani',
 	'narayam-or-inscript' => 'Oriya InScript',
+	'narayam-pa' => 'Transliteración Gurmukhi Punjabi',
 	'narayam-pa-phonetic' => 'Fonética Gurmukhi Punjabi',
 	'narayam-pa-inscript' => 'Gurmukhi Punjabi InScript',
 	'narayam-sa' => 'Transliteración sánscrita',
@@ -882,6 +900,7 @@ $messages['fr'] = array(
 	'narayam-or' => 'Translittération oriya',
 	'narayam-or-lekhani' => 'Odiya Lekhani',
 	'narayam-or-inscript' => 'InScript oriya',
+	'narayam-pa' => 'Translittération panjābī (gurmukhī)',
 	'narayam-pa-phonetic' => 'Phonétique Gurmukhi Punjabi',
 	'narayam-pa-inscript' => 'InScript Gurmukhi Punjabi',
 	'narayam-sa' => 'Translittération sanskrit',
@@ -1371,6 +1390,7 @@ $messages['ia'] = array(
 	'narayam-or' => 'Translitteration in oriya',
 	'narayam-or-lekhani' => 'Odiya Lekhani',
 	'narayam-or-inscript' => 'Oriya (InScript)',
+	'narayam-pa' => 'Translitteration Gurmukhi Punjabi',
 	'narayam-pa-phonetic' => 'Gurmukhi Punjabi phonetic',
 	'narayam-pa-inscript' => 'Punjabi - Gurmukhi (InScript)',
 	'narayam-sa' => 'Translitteration in sanscrito',
@@ -1720,6 +1740,7 @@ $messages['mk'] = array(
 	'narayam-or' => 'Транслитерација на одија',
 	'narayam-or-lekhani' => 'одија - Lekhani',
 	'narayam-or-inscript' => 'орија - InScript',
+	'narayam-pa' => 'Транслитерација на гурмуки за пенџапски',
 	'narayam-pa-phonetic' => 'гурмуки за пенџапски (фонетски)',
 	'narayam-pa-inscript' => 'пенџапски InScript (за гурмуки)',
 	'narayam-sa' => 'Транслитерација на санскрит',
@@ -1920,6 +1941,7 @@ $messages['ms'] = array(
 	'narayam-or' => 'Alih Huruf Oriya',
 	'narayam-or-lekhani' => 'Lekhani Odiya',
 	'narayam-or-inscript' => 'InScript Oriya',
+	'narayam-pa' => 'Alih Huruf Punjabi Gurmukhi',
 	'narayam-pa-phonetic' => 'Fonetik Punjabi Gurmukhi',
 	'narayam-pa-inscript' => 'InScript Punjabi Gurmukhi',
 	'narayam-sa' => 'Alih Huruf Sanskrit',
@@ -1999,6 +2021,7 @@ $messages['nl'] = array(
 	'narayam-or' => 'Oriya (transliteratie)',
 	'narayam-or-lekhani' => 'Oriya Lekhani',
 	'narayam-or-inscript' => 'Oriya InScript',
+	'narayam-pa' => 'Punjabi Gurmukhi (transliteratie)',
 	'narayam-pa-phonetic' => 'Gurmukhi Punjabi Fonetisch',
 	'narayam-pa-inscript' => 'Punjabi Gurmukhi (InScript)',
 	'narayam-sa' => 'Sanskriet (transliteratie)',

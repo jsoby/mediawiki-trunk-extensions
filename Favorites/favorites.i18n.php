@@ -1012,3 +1012,17 @@ $messages['sv'] = array(
 	'favoritelisttools-edit' => 'Visa och redigera favoriter',
 );
 
+/** Turkish (Türkçe)
+ * @author Emperyan
+ */
+$messages['tr'] = array(
+	'favorites-desc' => 'Bir sık kullanılanlar listesi oluşturma',
+	'prefs-favoritelist' => 'Sık kullanılanlar',
+	'prefs-advancedfavoritelist' => 'Gelişmiş seçenekler',
+	'favoritelist' => 'Sık kullanılanlarım',
+	'myfavoritelist' => 'Sık kullanılanlarım',
+	'favoritelist-options' => 'Sık kullanılanlar seçenekleri',
+	'favoritelisttools-view' => 'Sık Kullanılanları Görüntüle',
+	'favoritelisttools-edit' => 'Sık kullanılanları gör ve düzenle',
+);
+

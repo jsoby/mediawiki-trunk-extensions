@@ -1422,6 +1422,7 @@ $messages['gsw'] = array(
  * @author Sushant savla
  */
 $messages['gu'] = array(
+	'ogg-desc' => 'JavaScript પ્લેયર સાથે Ogg Theora and Vorbis ફાઈલ માટેનો હેંડલર,',
 	'ogg-short-audio' => 'Ogg $1 ધ્વનિ ફાઈલ, $2',
 	'ogg-short-video' => 'Ogg $1 વિડીઓ ફાઈલ, $2',
 	'ogg-short-general' => 'Ogg $1 મિડીઆ ફાઈલ, $2',
@@ -1437,6 +1438,9 @@ $messages['gu'] = array(
 	'ogg-play-sound' => 'ધ્વનિ ચલાવો',
 	'ogg-no-player' => 'ખેદ છે, તમારી કોમ્પ્યુટર પ્રણાલીમાં કોઈ માન્ય પ્લેયર સોફ્ટવેર નથી.
 મહેરબાની કરી <a href="http://www.mediawiki.org/wiki/Extension:OggHandler/Client_download">download a player</a>.',
+	'ogg-no-xiphqt' => 'લાગે છે તમારી પાસે  QuickTime માટેનો XiphQT ભાગ નથી.
+આ ભાગ વગર QuickTime;  Ogg ફાઈલો નહીં ચલાવી શકે..
+કૃપા કરી <a href="http://www.mediawiki.org/wiki/Extension:OggHandler/Client_download">XiphQT ડાઉનલોડ કરો </a> અથવા અન્ય પ્લેયર પસંદ કરો.',
 	'ogg-player-videoElement' => 'મૂળભૂત બ્રાઉઝર આધાર',
 	'ogg-player-oggPlugin' => 'બ્રાઉઝર પ્લગઈન',
 	'ogg-player-thumbnail' => 'માત્ર સ્થિત ચિત્ર જ',

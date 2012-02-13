@@ -53,6 +53,22 @@ $messages['qqq'] = array(
 * $1 is the alt text of the image that can be viewed.',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'zero-rated-mobile-access-desc' => 'Ufre carauterístiques pa los fornidores de servicios móviles que dan accesu de baldre',
+	'zero-rated-mobile-access-search' => 'Guetar',
+	'zero-rated-mobile-access-language-selection' => 'Toles llingües',
+	'zero-rated-mobile-access-home-page-selection' => 'Páxina principal en $1',
+	'zero-rated-mobile-access-home-page-selection-text' => 'O dir a la páxina principal na llingua siguiente:',
+	'zero-rated-mobile-access-banner-text' => '{{SITENAME}} de baldre dende $1',
+	'zero-rated-mobile-access-banner-text-data-charges' => 'Si sigues puen aplicase tarifes de datos: $1 o $2',
+	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'Sí',
+	'zero-rated-mobile-access-banner-text-data-charges-no' => 'Non',
+	'zero-rated-mobile-access-click-to-view-image' => 'Calca pa ver esta imaxe, "$1"...',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Wizardist
@@ -71,6 +87,7 @@ $messages['be-tarask'] = array(
 );
 
 /** Breton (Brezhoneg)
+ * @author Fulup
  * @author Y-M D
  */
 $messages['br'] = array(
@@ -80,6 +97,7 @@ $messages['br'] = array(
 	'zero-rated-mobile-access-banner-text' => '{{SITENAME}} dieub abaoe $1',
 	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'Ya',
 	'zero-rated-mobile-access-banner-text-data-charges-no' => 'Ket',
+	'zero-rated-mobile-access-click-to-view-image' => 'Klikañ da welet skeudenn "$1"...',
 );
 
 /** German (Deutsch)

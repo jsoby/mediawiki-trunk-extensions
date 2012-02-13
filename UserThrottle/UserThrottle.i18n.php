@@ -51,6 +51,15 @@ $messages['arz'] = array(
 من فضلك انتظر لحظة واضغط 'reload' فى متصفحك لإعادة التنفيذ.",
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'userthrottle-desc' => "Aselar la creación d'usuarios",
+	'acct_creation_global_hard_throttle_hit' => 'La creación de cuentes suspendióse automáticamente dellos segundos pa torgar ataques d\'inundación de rexistros.
+Por favor, aguarda dellos minutos y calca nel botón "Recargar" del navegador pa volver a intentalo.',
+);
+
 /** Bavarian (Boarisch)
  * @author Man77
  */

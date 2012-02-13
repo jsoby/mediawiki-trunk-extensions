@@ -2789,6 +2789,7 @@ Bitte erstellen Sie sie und führen Sie configure.sql darin aus oder korrigieren
  * @author Mirzali
  */
 $messages['diq'] = array(
+	'configure-throttle-action-edit' => 'Bıvurne',
 	'configure-throttle-action-rollback' => 'Peyser bia',
 );
 

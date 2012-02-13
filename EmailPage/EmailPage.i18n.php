@@ -156,6 +156,38 @@ $messages['az'] = array(
 	'ea-allusers' => 'Bütün istifadəçilər',
 );
 
+/** Bavarian (Boarisch)
+ * @author Mucalexx
+ */
+$messages['bar'] = array(
+	'e-mailpage' => 'Mittels E-Póst vaschicker',
+	'ea-desc' => 'Daméglichts Vasenden vah HTML-Seiten an E-Póst-Adressen óder E-Póst-Adresslisten mid [http://phpmailer.worxware.com/ PHPMailer]',
+	'ea-heading' => '=== E-Póst-Vasånd vah da Seiten „[[$1]]“ ===',
+	'ea-group-info' => "Zuasétzlich kå d' Seiten an d' Midgliader vah ner Benutzergruppm gsåndt wern",
+	'ea-pagesend' => 'Seiten „$1“ (as $2)',
+	'ea-nopage' => "Zum Vasénden is koah Seiten néd ågeem worn. Bittscheh 'n Link „mittels E-Póst vaschicker“ in da Seitenleisten unter dé Werkzeig óder an entsprecherden Reiter ómern in da Menueleisten vawenden.",
+	'ea-norecipients' => 'Es han koane E-Póst-Adressen zan Vasenden vurhånden!',
+	'ea-listrecipients' => '=== {{PLURAL:$1|Empfénger|$1 Empfénger}} ===',
+	'ea-error' => "'''Feeler ban Vasénden vah da Seiten „[[$1]]“:''' $2",
+	'ea-denied' => 'Da E-Póst-Vasånd hod wéger aner fejhenden Berechtigung néd durchgfyrd wern kenner.',
+	'ea-sent' => "Seiten „[[$1]]“ is erfóigreich vam  [[User:$3|$3]] an '''$2''' {{PLURAL:$2|Empfénger|Empfénger}} gsendt worn.",
+	'ea-compose' => 'Noochricht vafossen',
+	'ea-show' => 'Empfénger åzoang',
+	'ea-from' => 'Voh:',
+	'ea-to' => 'Aun:',
+	'ea-to-info' => 'E-Póst-Adressen kennern mid am Striechbunkt, Beistriech, am Sternderl óder am Zeichen fyra neiche Zeiln („\\n“) vahranånder trennd wern',
+	'ea-cc' => 'CC:',
+	'ea-send' => 'Senden',
+	'ea-subject' => 'Bedreff:',
+	'ea-message' => 'Noochricht:',
+	'ea-message-info' => "'m Inhoid vah da Seiten a Noochricht vuråstejn (ópziónoi, Eihgob af Wikitext erforderlich):",
+	'ea-style' => 'Stiel:',
+	'ea-selectcss' => 'Stylesheet aswejn:',
+	'ea-data' => 'Daaten',
+	'ea-selectrecord' => "Dé Vurlong kennern gnutzd wern, um a' da Noochricht vurhånderne Fejder z' vavóiständing:",
+	'ea-allusers' => 'Oj Benutzer',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by

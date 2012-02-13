@@ -50,6 +50,15 @@ $messages['arz'] = array(
 	'stalepages-summary' => 'هذه قائمة بالصفحات التى لم يتم تعديلها فى آخر $1 {{PLURAL:$1|يوم|يوم}}.',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'stalepages' => 'Páxines abandonaes',
+	'stalepages-desc' => "Xenera una [[Special:Stalepages|llista de páxines]] que nun s'editaron últimamente",
+	'stalepages-summary' => "Esta ye una llista coles páxines que nun s'editaron {{PLURAL:$1|nel caberu día|nos caberos $1 díes}}.",
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by

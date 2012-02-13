@@ -256,11 +256,12 @@ $1',
 /** Dutch (Nederlands)
  * @author SPQRobin
  * @author Saruman
+ * @author Siebrand
  */
 $messages['nl'] = array(
 	'semanticpageseries-desc' => "Een reeks pagina's aanmaken vanuit één [https://www.mediawiki.org/wiki/Extension:Semantic_Forms semantisch formulier]",
-	'spssuccesstitle' => "$1 pagina's aanmaken",
-	'spssuccess' => "{{PLURAL:$1|Eén pagina zal|$1 pagina's zullen}} aangemaakt worden.",
+	'spssuccesstitle' => "Er worden $1 pagina's aangemaakt",
+	'spssuccess' => "Er {{PLURAL:$1|wordt één pagina|worden $1 pagina's}} aangemaakt.",
 	'spssuccess-returntoorigin' => 'Terugkeren naar $1',
 	'spserror' => 'Er is een fout opgetreden',
 	'spserror-diffnotsupported' => 'De handeling diff (verschillen weergeven) wordt niet ondersteund voor paginareeksen.',
@@ -271,7 +272,7 @@ $messages['nl'] = array(
 	'spserror-formunknown' => 'Formulier "$1" bestaat niet.',
 	'spserror-notargetformname' => 'Geen doelformuliernaam opgegeven. U dient de parameter "target form" op te geven in de functieaanroep #serieslink.',
 	'spserror-notargetfieldname' => 'Geen doelveldnaam gegeven. U dient de parameter "target field" op te geven in de #serieslink functieaanroep.',
-	'spserror-iteratorparammissing' => 'De volgende iterator-parameters ontbreken in de aanroep #serieslink:
+	'spserror-iteratorparammissing' => 'De volgende iteratorparameters ontbreken in de aanroep #serieslink:
 $1',
 	'spserror-noiteratordata' => 'Geen iteratorparameters gevonden in de verzonden gegevens.',
 	'spserror-pagegenerationlimitexeeded' => "U hebt geprobeerd {{PLURAL:$1|een pagina| $1 pagina's}} te genereren. Dit overschrijdt de toegestane limiet van {{PLURAL:$2|één pagina| $2  pagina's}}.",
