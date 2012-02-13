@@ -33,7 +33,7 @@
 	 *
 	 * @param {string} id event identifier
 	 * @param {string} info additional information to be stored with the click
- 	 * @return jqXHR object (see <http://api.jquery.com/jQuery.get/#jqxhr-object>)
+	 * @return jqXHR object (see <http://api.jquery.com/jQuery.get/#jqxhr-object>)
 	 */
 	$.trackActionWithInfo = function( id, info ) {
 		return $.trackActionWithOptions( { 'id' : id, 'info' : info });
