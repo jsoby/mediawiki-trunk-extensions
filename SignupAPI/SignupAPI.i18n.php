@@ -55,6 +55,7 @@ $messages['az'] = array(
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
+	'usersignup' => 'Рэгістрацыя ўдзельніка',
 	'signupapi-desc' => 'Пазбаўляе [[Special:UserLogin|старонку ўваходу]] элемэнтаў, датычных стварэньня рахунку, і дадае API стварэньня рахунку',
 	'signupapi-ok' => 'Добра',
 	'signupapi-noname' => 'Імя ўдзельніка не пазначанае',
