@@ -98,7 +98,6 @@ class WMFRewrite(object):
         self.key = conf['key'].strip()
         self.thumbhost = conf['thumbhost'].strip()
         self.writethumb = 'writethumb' in conf
-        self.user_agent = conf['user_agent'].strip()
         self.bind_port = conf['bind_port'].strip()
         self.shard_containers = conf['shard_containers'].strip() #all, some, none
         if (self.shard_containers == 'some'):
@@ -121,7 +120,10 @@ class WMFRewrite(object):
         # upload doesn't like our User-agent, otherwise we could call it
         # using urllib2.url()
         opener = urllib2.build_opener()
-        opener.addheaders = [('User-agent', self.user_agent)]
+        # Pass on certain headers from the caller squid to the scalers
+        for header_to_pass in ['X-Forwarded-For', 'X-Original-URI', 'User-Agent']:
+            if reqorig.headers.get( header_to_pass ) != None:
+                opener.addheaders[header_to_pass] = reqorig.headers.get( header_to_pass )
         # At least in theory, we shouldn't be handing out links to originals
         # that we don't have (or in the case of thumbs, can't generate).
         # However, someone may have a formerly valid link to a file, so we
