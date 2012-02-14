@@ -252,7 +252,7 @@ class WMFRewrite(object):
                 resp = webob.exc.HTTPNotImplemented('Unknown Status: %s' % (status)) #10
                 return resp(env, start_response)
         else:
-            resp = webob.exc.HTTPBadRequest('Regexp failed: "%s"' % (req.path)) #11
+            resp = webob.exc.HTTPNotFound('Regexp failed to match URI: "%s"' % (req.path)) #11
             return resp(env, start_response)
 
 def filter_factory(global_conf, **local_conf):
