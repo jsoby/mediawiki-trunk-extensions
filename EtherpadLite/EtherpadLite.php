@@ -92,6 +92,9 @@ $wgEtherpadLiteShowAuthorColors = true;
 # Attention: 
 # Urls are case-sensitively tested against values in the array. 
 # They must exactly match including any trailing "/" character.
+#
+# Warning: Allowing all urls (not setting a whitelist)
+# may be a security concern.
 $wgEtherpadLiteUrlWhitelist = array();
 
 # https://www.mediawiki.org/wiki/Manual:Tag_extensions
@@ -140,30 +143,19 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	# id=  is the pad name (also known as pad id) and is user input in <eplite id=  > tag from MediaWiki page
 	
 	$src = ( isset( $args['src'] ) ) ? $args['src'] : $wgEtherpadLiteDefaultPadUrl;
+	# Sanitizer::cleanUrl just does some normalization, somewhat not needed.
+	$src = Sanitizer::cleanUrl( $src );
 	
-	# Anything from a parser tag should use Content lang for message,
-	# since the cache doesn't vary by user language: do not use wfMsgForContent but wfMsgForContent
 	if ( count( $wgEtherpadLiteUrlWhitelist ) && !in_array( $src, $wgEtherpadLiteUrlWhitelist ) ) {
-		return wfMsgForContent( 'etherpadlite-url-is-not-whitelisted', htmlspecialchars( $src ) );
+		$listOfAllowed = $parser->getFunctionLang()->listToText( $wgEtherpadLiteUrlWhitelist );
+		return wfEtherpadLiteError( 'etherpadlite-url-is-not-whitelisted',
+			array( $src, $listOfAllowed )
+		);
 	}
 
-	if ( !Http::isValidURI( $src ) ) {
-		return wfMsgForContent( 'etherpadlite-invalid-pad-url', htmlspecialchars( $src ) );
-	} else {
-		$args['src'] = Sanitizer::cleanUrl ( $src );
-	}
-	
-	# let's use the MediaWiki santizer for our user attributes
-	
-	$sanitizedAttributes = Sanitizer::validateAttributes( $args, array ( "width", "height", "id", "src" ) );
+	# Append the id to end of url. Strip off trailing / if present before appending one.
+	$url = preg_replace( "/\/+$/", "", $src ) . "/" . $args['id'];
 
-	$url = Sanitizer::cleanUrl( preg_replace( "/\/+$/", "", $sanitizedAttributes['src'] ) . "/" . $sanitizedAttributes['id'] );
-
-	# just check again with the pad id appended
-
-	if ( !Http::isValidURI( $url ) ) {
-		return wfMsgForContent( 'etherpadlite-invalid-pad-url', htmlspecialchars( $url ) );
-	}
 	
 	# preset the pad username from MediaWiki username or IP
 	# this not strict, as the pad username can be overwritten in the pad
@@ -171,6 +163,10 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	# attention: 
 	# 1. we must render the page for each visiting user to get their username
 	# 2. the pad username can currently be overwritten when editing the pad
+	#
+	# Future todo might be to make the adding of username optional
+	# since disabling of cache has a significant performance impact
+	# on larger sites.
 
 	$parser->disableCache();
 
@@ -183,19 +179,44 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 			"userName"         => rawurlencode( $wgUser->getName() ),
 		)
 	);
-	
+
+	# @todo One could potentially stuff other css in the width argument
+	# since ; isn't checked for. Since overall css is checked for allowed
+	# rules, this isn't super big deal.
 	$iframeAttributes = array(
- 		"style" => "width:" . $sanitizedAttributes['width'] . ";" .
-			"height:" . $sanitizedAttributes['height'],
-		"class" => "eplite-iframe-" . $sanitizedAttributes['id'] ,
+ 		"style" => "width:" . $args['width'] . ";" .
+			"height:" . $args['height'],
+		"class" => "eplite-iframe-" . $args['id'] ,
 		"src"   => Sanitizer::cleanUrl( $url ),
 	);
 
+	$sanitizedAttributes = Sanitizer::validateAttributes( $iframeAttributes, array ( "style", "class", "src" ) );
+
+	if ( !isset( $sanitizedAttributes['src'] ) ) {
+		// The Sanitizer decided that the src attribute was no good.
+		// (aka used a protocol that isn't in the whitelist)
+		return wfEtherpadLiteError( 'etherpadlite-invalid-pad-url', $src );	
+	}
+
 	$output = Html::rawElement(
 		'iframe', 
-		Sanitizer::validateAttributes( $iframeAttributes, array ( "style", "class", "src" ) ) 
+		$sanitizedAttributes
 	);
 
 	wfDebug( "EtherpadLite:wfEtherpadLiteRender $output\n" );
-	return array( $output );
+	return $output;
+}
+/**
+ * Output an error message, all wraped up nicely.
+ * @param String $errorName The system message that this error is
+ * @param String|Array $param Error parameter (or parameters)
+ * @return String Html that is the error.
+ */
+function wfEtherpadLiteError( $errorName, $param ) {
+	// Anything from a parser tag should use Content lang for message,
+	// since the cache doesn't vary by user language: do not use wfMsgForContent but wfMsgForContent
+	// The ->parse() part makes everything safe from an escaping standpoint.
+	return Html::rawElement( 'span', array( 'class' => 'error' ),
+		wfMessage( $errorName )->inContentLanguage()->params( $param )->parse()
+	);
 }
