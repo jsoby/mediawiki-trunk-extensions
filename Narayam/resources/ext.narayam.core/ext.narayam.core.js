@@ -647,10 +647,7 @@ $.narayam = new ( function() {
 	 */
 	this.buildMenu = function() {
 		// Remove the menu if already exists
-		if( $( 'li#pt-webfont' ).length > 0 ) {
-			$( 'li#pt-narayam' ).remove();
-			$( 'div#narayam-menu' ).remove();
-		}
+		$( 'li#pt-narayam,div#narayam-menu' ).remove();
 		var $menuItemsDiv = that.buildMenuItems();
 		if( $menuItemsDiv == null ) {
 			return;
