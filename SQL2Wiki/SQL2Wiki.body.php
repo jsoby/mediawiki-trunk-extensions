@@ -87,7 +87,7 @@ class SQL2Wiki {
 			wfSuppressWarnings();
 			$db = $wgExSql2WikiDatabases[$this->mArgs["database"]];
 			$this->mDBType = $db['type'];
-			$this->mDB = Database::newFromType( $this->mDBType, $db );
+			$this->mDB = DatabaseBase::factory( $this->mDBType, $db );
 			wfRestoreWarnings();
 		} catch ( Exception $ex) {
 			$lastError = $ex->getMessage();

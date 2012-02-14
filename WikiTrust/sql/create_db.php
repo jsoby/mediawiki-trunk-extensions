@@ -103,7 +103,7 @@ foreach ($db_indexes as $table => $idx){
 }
 
 // We need root priveledges to do this.
-$db_root = DatabaseBase::newFromType( $wgDBtype,
+$db_root = DatabaseBase::factory( $wgDBtype,
 	array(
 		 'host' => $wgDBserver,
 		 'user' => $dba,

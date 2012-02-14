@@ -13,8 +13,6 @@ class SpecialAsksql extends SpecialPage {
 	function execute( $par ) {
 		global $wgAllowSysopQueries, $wgUser, $wgRequest, $wgOut;
 
-
-
 		if ( !$wgAllowSysopQueries ) {
 			throw new ErrorPageError( 'nosuchspecialpage', 'nospecialpagetext' );
 		}
@@ -52,7 +50,7 @@ class SqlQueryForm {
 	}
 
 	function showForm( $err ) {
-		global $wgOut, $wgUser, $wgLang;
+		global $wgOut;
 		global $wgLogQueries;
 
 		$wgOut->setPagetitle( wfMsg( 'asksql' ) );
@@ -82,8 +80,8 @@ class SqlQueryForm {
 	}
 
 	function doSubmit() {
-		global $wgOut, $wgUser, $wgServer, $wgLang, $wgContLang;
-		global $wgDBserver, $wgDBsqluser, $wgDBsqlpassword, $wgDBname, $wgSqlTimeout;
+		global $wgOut, $wgUser, $wgContLang;
+		global $wgDBserver, $wgDBsqluser, $wgDBsqlpassword, $wgDBname;
 		global $wgDBtype;
 
 		# Use a limit, folks!
@@ -93,12 +91,12 @@ class SqlQueryForm {
 			$this->query .= ' LIMIT 100';
 		}
 
-		$conn = DatabaseBase::newFromType( $wgDBtype,
+		$conn = DatabaseBase::factory( $wgDBtype,
 			array(
-			     'host' => $wgDBserver,
-			     'user' => $wgDBsqluser,
-			     'password' => $wgDBsqlpassword,
-			     'dbname' => $wgDBname
+				'host' => $wgDBserver,
+				'user' => $wgDBsqluser,
+				'password' => $wgDBsqlpassword,
+				'dbname' => $wgDBname
 			)
 		);
 
@@ -111,7 +109,6 @@ class SqlQueryForm {
 		# $conn->stopTimer();
 		$this->logFinishedQuery();
 
-		$n = 0;
 		@$n = $conn->numFields( $res );
 		$titleList = false;
 
