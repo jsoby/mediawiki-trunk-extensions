@@ -27,9 +27,19 @@ require( "$IP/extensions/GoogleMaps/SpecialGoogleMapsKML.php" );
 require( "$IP/extensions/GoogleMaps/GoogleMaps.body.php" );
 
 function wfGoogleMaps_CommentJS(&$pParser, &$pText) {
-    global $wgGoogleMaps;
-    return $wgGoogleMaps->commentJS($pParser, $pText);
+	global $wgGoogleMaps;
+	return $wgGoogleMaps->commentJS($pParser, $pText);
 }
+
+$wgGoogleMapsKey = null;
+$wgGoogleMapsKeys = array( );
+$wgGoogleMapsDisableEditorsMap = false;
+$wgGoogleMapsEnablePaths = false;
+$wgGoogleMapsDefaults = null;
+$wgGoogleMapsCustomMessages = null;
+$wgGoogleMapsUrlPath = "{$wgScriptPath}/extensions/GoogleMaps";
+$wgXhtmlNamespaces = null;
+$wgGoogleMapsTemplateVariables = false;
 
 /**
  * This function registers all of the MW hook functions necessary for the
@@ -46,33 +56,6 @@ function wfGoogleMaps_Install() {
 		$wgTitle;
 	// set up some default values for the various extension configuration parameters
 	// to keep from getting PHP notices if running in strict mode
-	if( !isset( $wgGoogleMapsKey ) ) {
-		$wgGoogleMapsKey = null;
-	}
-	if( !isset( $wgGoogleMapsKeys ) ) {
-		$wgGoogleMapsKeys = array( );
-	}
-	if( !isset( $wgGoogleMapsDisableEditorsMap ) ) {
-		$wgGoogleMapsDisableEditorsMap = false;
-	}
-	if( !isset( $wgGoogleMapsEnablePaths ) ) {
-		$wgGoogleMapsEnablePaths = false;
-	}
-	if( !isset( $wgGoogleMapsDefaults ) ) {
-		$wgGoogleMapsDefaults = null;
-	}
-	if( !isset( $wgGoogleMapsCustomMessages ) ) {
-		$wgGoogleMapsCustomMessages = null;
-	}
-	if( !isset( $wgGoogleMapsUrlPath ) ) {
-		$wgGoogleMapsUrlPath = "{$wgScriptPath}/extensions/GoogleMaps";
-	}
-	if( !isset( $wgXhtmlNamespaces ) ) {
-		$wgXhtmlNamespaces = null;
-	}
-	if( !isset( $wgGoogleMapsTemplateVariables ) ) {
-		$wgGoogleMapsTemplateVariables = false;
-	}
 
 	// make poly-lines work with IE in MW 1.9+. See MW bug #7667
 	if( is_array( $wgXhtmlNamespaces ) ) {
