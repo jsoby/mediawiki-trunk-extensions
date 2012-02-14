@@ -148,8 +148,9 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	
 	if ( count( $wgEtherpadLiteUrlWhitelist ) && !in_array( $src, $wgEtherpadLiteUrlWhitelist ) ) {
 		$listOfAllowed = $parser->getFunctionLang()->listToText( $wgEtherpadLiteUrlWhitelist );
+		$numberAllowed = $parser->getFunctionLang()->formatNum( count( $wgEtherpadLiteUrlWhitelist ) );
 		return wfEtherpadLiteError( 'etherpadlite-url-is-not-whitelisted',
-			array( $src, $listOfAllowed )
+			array( $src, $listOfAllowed, $numberAllowed )
 		);
 	}
 
