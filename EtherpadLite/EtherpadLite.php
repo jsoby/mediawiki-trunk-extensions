@@ -64,7 +64,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.06 20120213',
+	'version' => '1.07 20120214',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
@@ -170,15 +170,16 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 
 	$parser->disableCache();
 
+	# Etherpad Lite requires rawurlencoded userName, thus we must add it manually
+	
 	$url = wfAppendQuery( $url, array(
 			"showControls"     => $showControls,
 			"showChat"         => $showChat,
 			"showLineNumbers"  => $showLineNumbers,
 			"useMonospaceFont" => $useMonospaceFont,
 			"noColors"         => $noColors,
-			"userName"         => rawurlencode( $wgUser->getName() ),
 		)
-	);
+	) . "&userName=" . rawurlencode( $wgUser->getName() );
 
 	# @todo One could potentially stuff other css in the width argument
 	# since ; isn't checked for. Since overall css is checked for allowed
