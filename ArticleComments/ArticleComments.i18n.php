@@ -1239,6 +1239,42 @@ Méiglech sinn "plain", "normal" a "wiki".',
 	'processcomment' => "D'Bemierkung zum Artikel gëtt verschafft",
 );
 
+/** Lezghian (Лезги)
+ * @author Migraghvi
+ */
+$messages['lez'] = array(
+	'article-comments-desc' => 'Асул ччинриз къейдерин паяр алава йизва',
+	'article-comments-title-string' => 'кьилинцIар',
+	'article-comments-name-string' => 'Тlвар',
+	'article-comments-name-field' => 'Тlвар (герекзава)',
+	'article-comments-url-field' => 'Вебсайт',
+	'article-comments-url-string' => 'URL',
+	'article-comments-comment-string' => 'Къейд',
+	'article-comments-comment-field' => 'КЪейд',
+	'article-comments-submit-button' => 'Ракъурун',
+	'article-comments-leave-comment-link' => 'КЪейд кхьихь',
+	'article-comments-invalid-field' => '$1, эгер <nowiki>[$2]</nowiki> дуьз туштIа',
+	'article-comments-required-field' => '"$1" герекзава',
+	'article-comments-submission-failed' => 'КЪейд ракъурун мумкин хьанвач',
+	'article-comments-failure-reasons' => 'Багъишламиша, куь къейд и {{PLURAL:$1|себебдалди|себебралди}} ракъуриз хьанвач:',
+	'article-comments-no-comments' => 'Багъишламиша, "[[$1]]" ччина къейд кхьиз мумкин туш.',
+	'article-comments-talk-page-starter' => '<noinclude>"[[$1]]" - да къейдер 
+<comments />
+----- __NOEDITSECTION__</noinclude>',
+	'article-comments-commenter-said' => '$1 лагьана',
+	'article-comments-summary' => '$1 патай кхьенвай къейд - ArticleComments гегьеншрун куькмедалди',
+	'article-comments-submission-succeeded' => 'КЪейд агалкьунралди ракъурнава',
+	'article-comments-submission-success' => '"[[$1]]" - з талукь къейд агалкьунралди ракъурнава',
+	'article-comments-submission-view-all' => 'Квевай [[$1|и ччина авай вири къейдериз]] килигиз жеда',
+	'article-comments-user-is-blocked' => 'Алай чIава "[[$1]]" дуьзар хъувун патал  куь аккаунт блокарнава.',
+	'article-comments-comment-bad-mode' => 'Виже текъвер тир къейддин режим.
+"plain", "normal" ва "wiki" режимар виже къеведайбур я.',
+	'article-comments-comment-missing-name-parameter' => 'Авачир тIвар',
+	'article-comments-comment-missing-date-parameter' => 'Аачир къейдинин тарих',
+	'article-comments-no-spam' => 'Ракъурнавайбурукай гьич тахьайтIа са къерех спам хьиз лишан авунва.',
+	'processcomment' => 'КЪейд расун',
+);
+
 /** Limburgish (Limburgs)
  * @author Pahles
  */

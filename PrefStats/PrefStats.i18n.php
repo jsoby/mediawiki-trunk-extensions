@@ -1667,6 +1667,7 @@ $messages['ka'] = array(
 );
 
 /** Khmer (ភាសាខ្មែរ)
+ * @author គីមស៊្រុន
  * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
@@ -1680,6 +1681,9 @@ $messages['km'] = array(
 	'prefstats-factor-week' => 'សប្តាហ៍',
 	'prefstats-factor-twoweeks' => '២ សប្តាហ៍',
 	'prefstats-factor-fourweeks' => '៤ សប្តាហ៍',
+	'prefstats-factor-default' => 'តាមលំនាំដើម',
+	'prefstats-legend-out' => 'បដិសេដ',
+	'prefstats-legend-in' => 'ទទួលយក',
 );
 
 /** Kannada (ಕನ್ನಡ)

@@ -4230,15 +4230,15 @@ Witamy na {{SITENAME}}, i dziękujemy za Twoją [$2 opinię]. Inny użytkownik  
 
      $4
 
-Zobacz ta wiadomość na swojej [$5 talk page]
+Zobacz ta wiadomość na swojej [$5 talk page].
 
 Co to talk page?
 Twoja strona talk page to strona, na której inny redaktorzy {{SITENAME}} używają do komunikacji z Tobą. Możesz odpowiedzieć za pomocą "Edytuj", ustawiając kursor poniżej komentarza, pisząc swój komentarz i dodając cztery tyldy (~~~~), a następnie zapisując.
-Wszystkie strony na  {{SITENAME}}, mają talk pages, i są używane do wielu różnych zastosowań. Nauczenie się tego zajmuje trochę czasu, ale staje się proste gdy użyjesz tego parę razy.
+Wszystkie strony na  {{SITENAME}}, mają talk page, i są używane do wielu różnych zastosowań. Nauczenie się tego zajmuje trochę czasu, ale staje się proste gdy użyjesz tego parę razy.
 
-Potrzebujesz więcej informacji? Obejrzyj [http://en.wikipedia.org/wiki/File:Wikipedia_basics_-_Talk_pages.ogv Te video] (zobacz na [http://www.youtube.com/watch?v=JdeDLRsB2Es YouTube]). Jest to przewodnik krok-po-kroku.
+Potrzebujesz więcej informacji? Obejrzyj [http://en.wikipedia.org/wiki/File:Wikipedia_basics_-_Talk_pages.ogv Te video] (zobacz na [http://www.youtube.com/watch?v=JdeDLRsB2Es YouTube]) - przewodnik krok-po-kroku jak działa talk page.
 
-Miłego dnia,
+Dziękujemy, że należysz do naszej społeczności,
 
 -- {{SITENAME}}',
 );

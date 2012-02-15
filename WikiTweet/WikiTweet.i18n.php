@@ -850,6 +850,7 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Sp5uhe
  * @author Woytecr
  */
@@ -859,6 +860,7 @@ $messages['pl'] = array(
 	'wikitweet-delete' => 'usuń',
 	'wikitweet-timeago' => '$1 temu',
 	'wikitweet-inthefuture' => 'W przyszłości!!',
+	'wikitweet-directlink' => 'Bezpośrednie łącze:',
 );
 
 /** Pashto (پښتو)

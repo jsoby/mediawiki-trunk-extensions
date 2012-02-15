@@ -322,9 +322,11 @@ $messages['or'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Woytecr
  */
 $messages['pl'] = array(
+	'signupapi-ok' => 'OK',
 	'signupapi-noname' => 'Nie podano nazwy użytkownika',
 	'signupapi-userexists' => 'Użytkownik już istnieje',
 	'signupapi-enterpassword' => 'Musisz wprowadzić hasło',
@@ -333,6 +335,7 @@ $messages['pl'] = array(
 	'signupapi-medium' => 'Średnie',
 	'signupapi-strong' => 'Silne',
 	'signupapi-badretype' => 'Wprowadzone hasła nie pasują do siebie',
+	'signupapi-passwordsmatch' => 'Hasła pasują do siebie',
 	'signupapi-invalidemailaddress' => 'Adres e-mail jest nieprawidłowy',
 );
 

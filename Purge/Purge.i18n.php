@@ -418,11 +418,12 @@ $messages['oc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Sp5uhe
  */
 $messages['pl'] = array(
 	'purge' => 'wyczyść',
-	'purge-desc' => "Dodaje zakładkę '''wyczyść''' dla wszystkich zwykłych stron oraz omija testowanie stanu czyszczenia dla anonimowych użytkowników aby szybko wyczyścić pamięć podręczną",
+	'purge-desc' => "Dodaje zakładkę '''wyczyść''' na wszystkich zwykłych stronach aby szybko wyczyścić pamięć podręczną",
 );
 
 /** Piedmontese (Piemontèis)

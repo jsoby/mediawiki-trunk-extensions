@@ -16392,6 +16392,7 @@ $messages['pdc'] = array(
 
 /** Polish (Polski)
  * @author Anoon6
+ * @author BeginaFelicysym
  * @author Derbeth
  * @author Grzechooo
  * @author Leinad
@@ -16658,6 +16659,9 @@ $messages['pl'] = array(
 	'configure-setting-wgDBClusterTimeout' => 'Limit czasu dla bazy danych',
 	'configure-setting-wgDBservers' => 'Serwery baz danych',
 	'configure-setting-wgEnableParserCache' => 'Włącz pamięć podręczną analizatora składni',
+	'configure-setting-wgValidateAllHtml' => 'Odmówić  wyświetlania niepoprawnych stron',
+	'configure-setting-wgRawHtml' => 'Zezwalaj na surowy, niezweryfikowany HTML w sekcjach <code><nowiki><html></nowiki></code>{{int:ellipsis}}<code><nowiki></html></nowiki></code>',
+	'configure-setting-wgDisableUploadScriptChecks' => 'Wyłącz sprawdzenia skryptów we przesyłanych plikach',
 	'configure-setting-wgXMLMimeTypes-key' => 'Typ MIME',
 	'configure-setting-wgDocType' => 'Typ dokumentu w deklaracji DOCTYPE',
 	'configure-setting-wgMimeType' => 'Typ MIME stron wiki',

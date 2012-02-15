@@ -78,9 +78,10 @@ $messages['bcc'] = array(
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Jim-by
+ * @author Wizardist
  */
 $messages['be-tarask'] = array(
-	'mwsearch-desc' => 'Плягін MWSearch',
+	'mwsearch-desc' => 'Плагін MWSearch',
 );
 
 /** Bulgarian (Български)

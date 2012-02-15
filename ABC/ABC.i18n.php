@@ -722,6 +722,14 @@ $messages['mai'] = array(
 	'abcdownload' => 'डाऊनलोड करू',
 );
 
+/** Basa Banyumasan (Basa Banyumasan)
+ * @author StefanusRA
+ */
+$messages['map-bms'] = array(
+	'abc-desc' => 'Tambahna tag <code>&lt;abc&gt;</code> kanggo format musik ABC',
+	'abcdownload' => 'Unduh:',
+);
+
 /** Malagasy (Malagasy)
  * @author Jagwar
  */
