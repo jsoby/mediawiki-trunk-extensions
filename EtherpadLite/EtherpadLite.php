@@ -64,7 +64,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.07 20120214',
+	'version' => '1.08 20120215',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
@@ -95,7 +95,13 @@ $wgEtherpadLiteShowAuthorColors = true;
 #
 # Warning: Allowing all urls (not setting a whitelist)
 # may be a security concern.
+#
+# an empty or non-existent array means: no whitelist defined
+# this is the default: an empty whitelist
 $wgEtherpadLiteUrlWhitelist = array();
+#
+# include "*" if you expressly want to allow all urls
+# $wgEtherpadLiteUrlWhitelist = array( "*" );
 
 # https://www.mediawiki.org/wiki/Manual:Tag_extensions
 function wfEtherpadLiteParserInit( $parser ) {
@@ -146,7 +152,25 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	# Sanitizer::cleanUrl just does some normalization, somewhat not needed.
 	$src = Sanitizer::cleanUrl( $src );
 	
-	if ( count( $wgEtherpadLiteUrlWhitelist ) && !in_array( $src, $wgEtherpadLiteUrlWhitelist ) ) {
+	switch ( true ) {
+	
+	# disallow because there is no whitelist or emtpy whitelist
+	case ( !isset( $wgEtherpadLiteUrlWhitelist ) 
+		|| !is_array( $wgEtherpadLiteUrlWhitelist )
+		|| ( count( $wgEtherpadLiteUrlWhitelist ) === 0 ) ):
+		return wfEtherpadLiteError( 'etherpadlite-empty-whitelist',
+			$src
+		);
+		break;
+
+	# allow
+	case ( in_array( "*", $wgEtherpadLiteUrlWhitelist ) ):
+	case ( in_array( $src, $wgEtherpadLiteUrlWhitelist ) ):
+		break;
+
+	# otherwise disallow
+	case ( !in_array( $src, $wgEtherpadLiteUrlWhitelist ) ):
+	default:
 		$listOfAllowed = $parser->getFunctionLang()->listToText( $wgEtherpadLiteUrlWhitelist );
 		$numberAllowed = $parser->getFunctionLang()->formatNum( count( $wgEtherpadLiteUrlWhitelist ) );
 		return wfEtherpadLiteError( 'etherpadlite-url-is-not-whitelisted',
