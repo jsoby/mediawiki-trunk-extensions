@@ -100,6 +100,7 @@ function animateNode(node) {
 			var data = getData(e);
 			var display = 'block';
 			var o = t * window.star_config.out_spin;
+			var d = data.depth;
 
 			// Set origin for the children to this elements center
 			var ox = e.position().left + e.width() / 2;
@@ -115,8 +116,17 @@ function animateNode(node) {
 				t = 1 - t;
 			}
 
+			// If opening, check siblings to see if one needs to be closed
+			else if( d > 1 && fx.pos == 0 ) {
+				var pdata = getData(data.parent);
+				for( var i in pdata.children ) {
+					var sibling = pdata.children[i];
+					var sdata = getData(sibling);
+					if( sdata.open ) animateNode(sibling);
+				}
+			}
+
 			// Current radius for this elements children
-			var d = data.depth;
 			var r = window.star_config.radii;
 			r = d > r.length ? r[r.length-1] : r[d-1];
 			r = r * t;
