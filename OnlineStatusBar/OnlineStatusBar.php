@@ -39,7 +39,7 @@ $wgResourceModules['ext.OnlineStatusBar'] = array (
 		'cologne' => array ( 'resources/OnlineStatusBarCologne.css' ),
 		'nostalgia' => array ( 'resources/OnlineStatusBarNostalgia.css' ),
 	),
-	'scripts' => 'ext.onlinestatusbar.js',
+	'scripts' => 'resources/ext.onlinestatusbar.js',
 	'localBasePath' => dirname ( __FILE__ ),
 	'remoteExtPath' => 'OnlineStatusBar',
 	'messages' => array (   'onlinestatusbar-status-offline',
