@@ -37,7 +37,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Suhosin',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.08 20120215',
+	'version' => '1.00 20120217',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Suhosin',
 	'descriptionmsg' => 'suhosin-desc',
 );
@@ -55,7 +55,7 @@ $wgExtensionMessagesFiles['Suhosin'] = $dir . 'Suhosin.i18n.php';
 if ( extension_loaded( "suhosin" ) 
 	&& ini_get( "suhosin.get.max_name_length" ) 
 	&& isset( $wgResourceLoaderMaxQueryLength ) 
-	&& $wgResourceLoaderMaxQueryLength > 0 ) {
+	&& ( $wgResourceLoaderMaxQueryLength > 0 ) ) {
 
 		// suhosin is active, thus do something meaningful with ini_get( "suhosin.get.max_name_length" )
 		$wgResourceLoaderMaxQueryLength = min( $wgResourceLoaderMaxQueryLength, ini_get( "suhosin.get.max_name_length" ) );
