@@ -29,6 +29,7 @@ $messages['qqq'] = array(
  */
 $messages['be-tarask'] = array(
 	'etherpadlite-desc' => 'Дадае падтрымку парсэрам тэгу &lt;eplite&gt;, з дапамогай якога можна дадаваць на старонку адзін ці некалькі сшыткаў Etherpad Lite, якія разьмяшчаюцца на лякальным або вонкавым сэрвэры (сэрвэрах) Etherpad Lite.',
+	'etherpadlite-invalid-pad-url' => '«$1» не зьяўляецца слушным URL або назовам сшытку Etherpad Lite.',
 );
 
 /** German (Deutsch)

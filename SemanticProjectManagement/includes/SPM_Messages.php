@@ -230,18 +230,6 @@ $messages['mk'] = array(
 	'right-SPMsetup' => 'Основни нагодувања за семантички проект',
 );
 
-/** Dutch (Nederlands)
- * @author Siebrand
- */
-$messages['nl'] = array(
-	'spm_wbs_link' => 'Naar MS Project XML exporteren',
-	'spm_printername_wbs' => 'Naar MS Project exporteren',
-	'spm-name' => 'Semantisch projectmanagement',
-	'semanticprojectmanagement-desc' => 'Projectmanagementformaten voor inline zoekopdrachten van Semantic MediaWiki',
-	'semanticprojectmanagement' => 'Instellingen Semantisch projectmanagement',
-	'right-SPMsetup' => 'Basisinstellingen voor semantisch projectmanagement bewerken',
-);
-
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Event
  * @author Nghtwlkr
@@ -253,6 +241,18 @@ $messages['nb'] = array(
 	'semanticprojectmanagement-desc' => 'Project Management Formats for Semantic MediaWiki «inline»-spørringer',
 	'semanticprojectmanagement' => 'Semantic Project Management-innstillinger',
 	'right-SPMsetup' => 'Rediger grunnleggende Semantic Project Management-innstillinger',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'spm_wbs_link' => 'Naar MS Project XML exporteren',
+	'spm_printername_wbs' => 'Naar MS Project exporteren',
+	'spm-name' => 'Semantisch projectmanagement',
+	'semanticprojectmanagement-desc' => 'Projectmanagementformaten voor inline zoekopdrachten van Semantic MediaWiki',
+	'semanticprojectmanagement' => 'Instellingen Semantisch projectmanagement',
+	'right-SPMsetup' => 'Basisinstellingen voor semantisch projectmanagement bewerken',
 );
 
 /** Polish (Polski)
@@ -314,5 +314,17 @@ $messages['tl'] = array(
 	'semanticprojectmanagement-desc' => 'Mga Anyo ng Pamamahala ng Proyekto para sa nasa guhit na mga pagtatanong ng Semantikong MediaWiki',
 	'semanticprojectmanagement' => 'Mga katakdaan ng Pamamahala ng Proyektong Semantiko',
 	'right-SPMsetup' => 'Baguhin ang payak na mga katakdaan ng pamamahala ng proyektong semantiko',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Linforest
+ */
+$messages['zh-hans'] = array(
+	'spm_wbs_link' => 'MS项目XML导出',
+	'spm_printername_wbs' => 'MS项目导出',
+	'spm-name' => '语义项目管理',
+	'semanticprojectmanagement-desc' => 'Semantic MediaWiki嵌入式查询的项目管理格式',
+	'semanticprojectmanagement' => '语义项目管理设置',
+	'right-SPMsetup' => '编辑基本的语义项目管理设置',
 );
 

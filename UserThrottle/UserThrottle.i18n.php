@@ -162,6 +162,14 @@ $messages['es'] = array(
 Por favor espere un momento y presione 'Recargar' en su navegador para reenviar.",
 );
 
+/** Persian (فارسی)
+ * @author Huji
+ */
+$messages['fa'] = array(
+	'acct_creation_global_hard_throttle_hit' => 'امکان ایجاد حساب کاربری به منظور کاهش حمله سیل ثبت‌نام بطور خودکار برای چند ثانیه تعلیق شده‌است.
+لطفاً چند لحظه صبر کنید و برای ارسال مجدد دکمه «بارگذاری مجدد صفحه» را در مرورگرتان بزنید.',
+);
+
 /** Finnish (Suomi)
  * @author Mobe
  * @author Nike

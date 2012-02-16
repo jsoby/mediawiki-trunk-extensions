@@ -161,3 +161,11 @@ $messages['te'] = array(
 	'sdt-duration' => 'నిడివి',
 );
 
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Linforest
+ */
+$messages['zh-hans'] = array(
+	'sdt-desc' => 'Semantic MediaWiki及扩展的附加数据类型',
+	'sdt-duration' => '持续时间',
+);
+

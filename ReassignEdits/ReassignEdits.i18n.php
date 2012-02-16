@@ -48,6 +48,23 @@ $messages['qqq'] = array(
 	'right-reassignedits' => '{{doc-right|reassignedits}}',
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'reassignedits' => 'Пераназначэньне аўтараў рэдагаваньняў',
+	'reassignedits-desc' => 'Дазваляе пераназначэньне рэдагаваньняў ад аднаго аўтара да другога',
+	'reassignedits-error-invalid' => 'Няслушнае імя ўдзельніка «<nowiki>$1</nowiki>».',
+	'reassignedits-new' => 'Новы ўдзельнік',
+	'reassignedits-old' => 'Стары ўдзельнік',
+	'reassignedits-submit' => 'Пераназначыць',
+	'reassignedits-success' => 'Рэдагаваньні «<nowiki>$1</nowiki>» былі прысвоеныя ўдзельніку «<nowiki>$2</nowiki>».',
+	'reassignedits-summary' => 'Пераназначэньне рэдагаваньняў ад аднаго ўдзельніка другому.',
+	'reassignedits-updatelog-title' => 'Абнавіць імя ўдзельніка ў журналах',
+	'reassignedits-updatelog-user' => 'Абнавіць выканальніка зьменаў у журналах',
+	'right-reassignedits' => 'пераназначэньне рэдагаваньняў ад аднаго ўдзельніка другому',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */
