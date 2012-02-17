@@ -1,80 +1,92 @@
 <?php
 /**
  * WikiArticleFeeds.php - A MediaWiki extension for converting regular pages into feeds.
- * @author Jim R. Wilson
- * @version 0.6.7
+ * @author Jim R. Wilson, Thomas Gries
+ * @maintainer Thomas Gries
+ *
+ * @version 0.671
  * @copyright Copyright (C) 2007 Jim R. Wilson
  * @license The MIT License - http://www.opensource.org/licenses/mit-license.php
- * -----------------------------------------------------------------------
- * Description:
- *     This is a MediaWiki (http://www.mediawiki.org/) extension which adds support
- *     for publishing RSS or Atom feeds generated from standard wiki articles.
- * Requirements:
- *     MediaWiki 1.12.x or higher
- *     PHP 4.x, 5.x or higher
- * Installation:
- *     1. Drop this script (WikiArticleFeeds.php) in $IP/extensions
- *         Note: $IP is your MediaWiki install dir.
- *     2. Enable the extension by adding this line to your LocalSettings.php:
- *            require_once('extensions/WikiArticleFeeds.php');
- * Usage:
- *     Once installed, you may utilize WikiArticleFeeds by invoking the 'feed' action of an article:
- *         $wgScript?title=Some_Article&action=feed
- *     Note: You may optionally supply a feed type.  Acceptable values inculde 'rss' and 'atom'.
- *     If no feed type is specified, the default is 'atom'.  For example:
- *         $wgScript?title=Some_Article&action=feed&feed=atom
- * Creating a Feed:
- *     To delimit a section of an article as containing feed items, use the <startFeed />
- *     and <endFeed /> tags respectively.  These tags are merely flags, and any attributes
- *     specified, or content inside the tags themselves will be ignored.
- * Tagging a Feed item:
- *     To tag a feed item, insert either the <itemTags> tag, or the a call to the {{#itemTags}} parser
- *     function somewhere between the opening header of the item (== Item Title ==) and the header of
- *     the next item.  For example, to mark an item about dogs and cats, you could do any of the following:
- *         <itemTags>dogs, cats</itemTags>
- *         {{#itemTags:dogs, cats}}
- *         {{#itemTags:dogs|cats}}
- * Version Notes:
- *     version 0.6.6:
- *         Updated version requirement to MediaWiki 1.12 and up.
- *     version 0.6.5:
- *         Simplified many regular expression to get it working on MW 1.16
- *     version 0.6.4:
- *         Small fix for MW 1.14 in which section header anchors changed format.
+ *
+ * Description
+ *
+ * This is a MediaWiki (http://www.mediawiki.org/) extension which adds support
+ * for publishing RSS or Atom feeds generated from standard wiki articles.
+ *
+ * Requirements
+ *
+ * MediaWiki 1.12.x or higher
+ * PHP 4.x, 5.x or higher
+ *
+ * Installation
+ *
+ * 1. Drop this script (WikiArticleFeeds.php) in $IP/extensions
+ *    Note: $IP is your MediaWiki install dir.
+ * 2. Enable the extension by adding this line to your LocalSettings.php:
+ *    require_once('extensions/WikiArticleFeeds.php');
+ *
+ * Usage
+ *
+ * Once installed, you may utilize WikiArticleFeeds by invoking the 'feed' action of an article:
+ * $wgScript?title=Some_Article&action=feed
+ *
+ * Note: You may optionally supply a feed type.  Acceptable values inculde 'rss' and 'atom'.
+ * If no feed type is specified, the default is 'atom'.  For example:
+ * $wgScript?title=Some_Article&action=feed&feed=atom
+ *
+ * Creating a Feed
+ *
+ * To delimit a section of an article as containing feed items, use the <startFeed />
+ * and <endFeed /> tags respectively.  These tags are merely flags, and any attributes
+ * specified, or content inside the tags themselves will be ignored.
+ *
+ * Tagging a Feed item
+ *
+ * To tag a feed item, insert either the <itemTags> tag, or the a call to the {{#itemTags}} parser
+ * function somewhere between the opening header of the item (== Item Title ==) and the header of
+ * the next item.  For example, to mark an item about dogs and cats, you could do any of the following:
+ *
+ * <itemTags>dogs, cats</itemTags>
+ * {{#itemTags:dogs, cats}}
+ * {{#itemTags:dogs|cats}}
+ *
+ * Versions
+ *
+ * 0.671   added ob_start() to prevent headers-already sent problem
+ *         added check for undefined variable
+ *         removed host wiki $wgSitename from the RSS feed title. 
+ *         feed title has now the programmatic form 'Pagename - Feed' which looks nice."
+ *         recode feed publication timestamps in UTC
+ *         refactored the source code comment section layout
+ *         introduced a new version numbering format
+ * 0.6.6   Updated version requirement to MediaWiki 1.12 and up.
+ * 0.6.5   Simplified many regular expression to get it working on MW 1.16
+ * 0.6.4   Small fix for MW 1.14 in which section header anchors changed format.
  *         First version to be checked into wikimedia SVN.
- *     version 0.6.3:
- *         Wrapped extension points for versions less than 1.7 (old version compatibility)
- *     version 0.6.2:
- *         Added support for alternate signatures (when users are not in the User namespace)
+ * 0.6.3   Wrapped extension points for versions less than 1.7 (old version compatibility)
+ * 0.6.2   Added support for alternate signatures (when users are not in the User namespace)
  *         Tied purge of xml feeds to purge of page - helps with consumers of semantic and DPL
- *             (Thanks to Charlie Huggard of charlie.huggardlee.net for these contributions)
- *     version 0.6.1:
- *         Fixed stale feed problem by expiring the feed cache when any of an article's transcluded pages change.
- *     version 0.6:
- *         Added support for "tagging" feed items by way of <itemTags> or {{itemTags}}
+ *         Thanks to Charlie Huggard of charlie.huggardlee.net for these contributions)
+ * 0.6.1   Fixed stale feed problem by expiring the feed cache when any of an article's transcluded pages change.
+ * 0.6	   Added support for "tagging" feed items by way of <itemTags> or {{itemTags}}
  *         Added support for filtering generated feed based on item tags.
  *         Added global ($wgWikiArticleFeedsSkipCache) used for skipping object-cache while debugging.
  *         Fixed namespace restriction - now works for namespaces other than NS_MAIN
- *     version 0.5:
- *         Now supports offloading to FeedBurner (http://feedburner.com/) via <feedBurner> tag.
+ * 0.5     Now supports offloading to FeedBurner (http://feedburner.com/) via <feedBurner> tag.
  *         Capitalized RSS and Atom links in the toolbox.
- *     version 0.4:
- *         Added wgForceArticleFeedSectionLinks to override default link behavior (set in LocalSettings).
+ * 0.4     Added wgForceArticleFeedSectionLinks to override default link behavior (set in LocalSettings).
  *         Feed generator now follows Article redirects.
- *     version 0.3:
- *         Added Version Notes.
+ * 0.3     Added Version Notes.
  *         Fixed relative-links bug (all links in item descriptions are now fully qualified).
  *         Fixed date-overwrite bug (previously, items with the exact same timestamp would be ignored).
  *         Improved W3C validation. Feeds validate, but there are still warnings.
- *     version 0.2:
- *         Renamed from WikiFeeds.php to WikiArticleFeeds.php
+ * 0.2     Renamed from WikiFeeds.php to WikiArticleFeeds.php
  *         Corrected credits and copyright info.
  *         Numerous minor fixes and tweaks.
  *         Expanded support for versions 1.6.x, 1.8.x and 1.9.x.
  *         Improved return values from hooking functions (plays better with other extensions).
- *     version 0.1:
- *         Initial release.
- * -----------------------------------------------------------------------
+ * 0.1     Initial release.
+ *
  * Copyright (c) 2007 Jim R. Wilson
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -95,13 +107,13 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
- * -----------------------------------------------------------------------
+ *
  */
 
 # Confirm MW environment
 if ( !defined( 'MEDIAWIKI' ) ) die();
 
-define( 'WIKIARTICLEFEEDS_VERSION', '0.6.7' );
+define( 'WIKIARTICLEFEEDS_VERSION', '0.671 20120217' );
 
 # Bring in supporting classes
 require_once( "$IP/includes/Feed.php" );
@@ -111,7 +123,7 @@ require_once( "$IP/includes/Sanitizer.php" );
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
 	'name' => 'WikiArticleFeeds',
-	'author' => 'Jim Wilson (wilson.jim.r&lt;at&gt;gmail.com)',
+	'author' => array( 'Jim Wilson (wilson.jim.r&lt;at&gt;gmail.com)', 'Thomas Gries' ),
 	'url' => '//www.mediawiki.org/wiki/Extension:WikiArticleFeeds',
 	'descriptionmsg' => 'wikiarticlefeeds-desc',
 	'version' => WIKIARTICLEFEEDS_VERSION
@@ -186,6 +198,7 @@ $wgHooks['ArticlePurge'][] = 'wfPurgeFeedsOnArticlePurge';
 
 /**
  * Adds the Wiki feed link headers.
+ *
  * Usage: $wgHooks['OutputPageBeforeHTML'][] = 'wfAddWikiFeedHeaders';
  * @param $out Handle to an OutputPage object (presumably $wgOut).
  * @param $text Article/Output text.
@@ -237,6 +250,7 @@ function wfAddWikiFeedHeaders( $out, $text ) {
 
 /**
  * Adds the Wiki feed links to the bottom of the toolbox in Monobook or like-minded skins.
+ *
  * Usage: $wgHooks['SkinTemplateToolboxEnd'][] = 'wfWikiArticleFeedsToolboxLinks';
  * @param QuickTemplate $template Instance of MonoBookTemplate or other QuickTemplate
  */
@@ -300,6 +314,7 @@ function wfWikiArticleFeedsToolboxLinks( $template ) {
 
 /**
  * Injects handling of the 'feed' action.
+ *
  * Usage: $wgHooks['UnknownAction'][] = 'wfWikiArticleFeedsAction';
  * @param $action Handle to an action string (presumably same as global $action).
  * @param $article Article to be converted to rss or atom feed
@@ -385,6 +400,7 @@ function wfWikiArticleFeedsAction( $action, $article ) {
 
 /**
  * Purges all associated feeds when an Article is purged.
+ *
  * Usage: $wgHooks['ArticlePurge'][] = 'wfPurgeFeedsOnArticlePurge';
  * @param Article $article The Article which is being purged.
  * @return boolean Always true to permit additional hook processing.
@@ -401,7 +417,8 @@ function wfPurgeFeedsOnArticlePurge( $article ) {
 }
 
 /**
- * Converts an MArticle into a feed, echoing generated content directly.
+ * Converts an MediaWiki article into a feed, echoing generated content directly.
+ *
  * @param Article $article Article to be converted to RSS or Atom feed.
  * @param String $feedFormat A format type - must be either 'rss' or 'atom'
  * @param Array $filterTags Tags to use in filtering out items.
@@ -494,13 +511,15 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 			# Determine the item author and date
 			$author = null;
 			$date = null;
-			$signatureRegExp = '#<a href=".+?User:.+?" title="User:.+?">(.*?)</a> (\d\d):(\d\d), (\d+) ([a-z]+) (\d{4}) \([A-Z]+\)#im';
+			$signatureRegExp = '#<a href=".+?User:.+?" title="User:.+?">(.*?)</a> (\d\d):(\d\d), (\d+) ([a-z]+) (\d{4}) (\([A-Z]+\))#im';
+			
 			# Look for a regular ~~~~ sig
 			$isAttributable = preg_match($signatureRegExp, $seg, $matches );
 
 			# Parse it out - if we can
 			if ( $isAttributable ) {
-				list( $author, $hour, $min, $day, $monthName, $year ) = array_slice( $matches, 1 );
+
+				list( $author, $hour, $min, $day, $monthName, $year, $timezone ) = array_slice( $matches, 1 );
 				$months = array(
 								'January' => '01', 'February' => '02', 'March' => '03', 'April' => '04',
 								'May' => '05', 'June' => '06', 'July' => '07', 'August' => '08',
@@ -509,6 +528,12 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 				$month = $months[$monthName];
 				$day = str_pad( $day, 2, '0', STR_PAD_LEFT );
 				$date = $year . $month . $day . $hour . $min . '00';
+
+				$tempTimezone = date_default_timezone_get();
+				date_default_timezone_set( 'UTC' );
+				$date = date( "YmdHis" , strtotime( "$year-$month-$day $hour:$min:00 $timezone" ) );
+				date_default_timezone_set( $tempTimezone );
+
 			}
 
 			# Set default 'article section' feed-link
