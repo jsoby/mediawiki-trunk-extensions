@@ -53,10 +53,13 @@ $wgExtensionMessagesFiles['Suhosin'] = $dir . 'Suhosin.i18n.php';
 # $wgResourceLoaderMaxQueryLength = -1;
 
 if ( extension_loaded( "suhosin" ) 
-	&& ini_get( "suhosin.get.max_name_length" ) 
-	&& isset( $wgResourceLoaderMaxQueryLength ) 
-	&& ( $wgResourceLoaderMaxQueryLength > 0 ) ) {
+	&& ini_get( "suhosin.get.max_value_length" ) 
+	&& isset( $wgResourceLoaderMaxQueryLength ) ) {
 
-		// suhosin is active, thus do something meaningful with ini_get( "suhosin.get.max_name_length" )
-		$wgResourceLoaderMaxQueryLength = min( $wgResourceLoaderMaxQueryLength, ini_get( "suhosin.get.max_name_length" ) );
+		if ( $wgResourceLoaderMaxQueryLength > 0 ) {
+			// suhosin is active, thus do something meaningful with ini_get( "suhosin.get.max_value_length" )
+			$wgResourceLoaderMaxQueryLength = min( $wgResourceLoaderMaxQueryLength, ini_get( "suhosin.get.max_value_length" ) );
+		} else {
+			$wgResourceLoaderMaxQueryLength = ini_get( "suhosin.get.max_value_length" );
+		}
 }
