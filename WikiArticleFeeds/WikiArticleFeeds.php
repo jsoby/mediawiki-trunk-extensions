@@ -4,7 +4,7 @@
  * @author Jim R. Wilson, Thomas Gries
  * @maintainer Thomas Gries
  *
- * @version 0.671
+ * @version 0.672
  * @copyright Copyright (C) 2007 Jim R. Wilson
  * @license The MIT License - http://www.opensource.org/licenses/mit-license.php
  *
@@ -52,6 +52,7 @@
  *
  * Versions
  *
+ * 0.672   changed certain !empty() to isset()
  * 0.671   added ob_start() to prevent headers-already sent problem
  *         added check for undefined variable
  *         removed host wiki $wgSitename from the RSS feed title. 
@@ -111,9 +112,11 @@
  */
 
 # Confirm MW environment
-if ( !defined( 'MEDIAWIKI' ) ) die();
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( "This is not a valid entry point.\n" );
+}
 
-define( 'WIKIARTICLEFEEDS_VERSION', '0.671 20120217' );
+define( 'WIKIARTICLEFEEDS_VERSION', '0.672 20120217' );
 
 # Bring in supporting classes
 require_once( "$IP/includes/Feed.php" );
@@ -452,7 +455,7 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 
 		# Determine Feed item depth (what header level defines a feed)
 		preg_match_all( '/<h(\\d)>/m', $feedContent, $matches );
-		if ( empty( $matches[1] ) ) next;
+		if ( !isset( $matches[1] ) ) next;
 		$lvl = $matches[1][0];
 		foreach ( $matches[1] as $match ) {
 			if ( $match < $lvl ) $lvl = $match;
@@ -548,7 +551,7 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 					$strippedSeg,
 					$matches
 					);
-				if ( !empty( $matches[2] ) ) {
+				if ( isset( $matches[2] ) ) {
 					$url = $matches[2];
 					if ( preg_match( '#^/#', $url ) ) {
 						$url = $wgServer . $url;
