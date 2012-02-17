@@ -33,7 +33,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 # Credits
-$wgExtensionCredits['parserhook'][] = array(
+$wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'Suhosin',
 	'author' => array( 'Thomas Gries' ),
