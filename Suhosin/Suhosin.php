@@ -63,3 +63,5 @@ if ( extension_loaded( "suhosin" )
 			$wgResourceLoaderMaxQueryLength = ini_get( "suhosin.get.max_value_length" );
 		}
 }
+
+// echo( "Suhosin wgResourceLoaderMaxQueryLength $wgResourceLoaderMaxQueryLength ; suhosin.get.max_value_length ". ini_get( "suhosin.get.max_value_length" )."\n" );
