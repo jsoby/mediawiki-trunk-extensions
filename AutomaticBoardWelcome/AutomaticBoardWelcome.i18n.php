@@ -59,6 +59,13 @@ $messages['dsb'] = array(
 	'automaticboardwelcome-desc' => 'Sćelo awtomatiski [[MediaWiki:User-board-welcome-message|pówitańsku powěsć]] na wužywarske delki nowych wužywarjow pó załoženju konta',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'automaticboardwelcome-desc' => 'Publica automáticamente [[MediaWiki:User-board-welcome-message| un mensaje de bienvenida]] en las páginas de usuario de los nuevos usuarios después de la creación de la cuenta',
+);
+
 /** French (Français)
  * @author Gomoko
  */

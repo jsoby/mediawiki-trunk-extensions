@@ -1483,14 +1483,17 @@ $messages['roa-tara'] = array(
 	'apisb-desc' => "Permette de verificà le chiamate de [//www.mediawiki.org/wiki/API MediaWiki API] da 'u browser",
 	'apisandbox' => "Sandbox de l'API",
 	'apisb-no-js' => "'''Errore''': sta funzionalità vole 'u JavaScript.",
+	'apisb-legend-parameters' => 'Parametre',
 	'apisb-legend-result' => 'Resultate',
 	'apisb-legend-generic-parameters' => 'Parametre generiche',
 	'apisb-legend-generator-parameters' => 'Generatore',
 	'apisb-result-request-url' => 'URL richieste:',
 	'apisb-result-request-post' => "POST d'u date:",
 	'apisb-select-action' => "Scacchie l'azione",
-	'apisb-select-query' => "Ce ha 'nderrogà?",
-	'apisb-select-value' => "Scacchie 'nu valore",
+	'apisb-select-query' => "(scacchie l'inderrogazione)",
+	'apisb-select-value' => "(scacchie 'nu valore)",
+	'apisb-params-param' => 'Parametre',
+	'apisb-params-desc' => 'Descrizione',
 	'apisb-loading' => 'Stoche a careche…',
 	'apisb-load-error' => "Errore jndr'à 'u carecamende d'a descrizione de l'API",
 	'apisb-request-error' => "Errore in esecuzione d'a richieste de l'API",
@@ -1500,6 +1503,8 @@ $messages['roa-tara'] = array(
 	'apisb-query-prop' => 'probbietà',
 	'apisb-query-list' => 'Elenghe',
 	'apisb-query-meta' => "'Mbormaziune sus a le Meta",
+	'apisb-example' => 'Esembie',
+	'apisb-examples' => 'Esembie',
 );
 
 /** Russian (Русский)

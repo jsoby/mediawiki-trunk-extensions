@@ -20,3 +20,17 @@ $messages['qqq'] = array(
 	'suhosin-desc' => '{{desc}}',
 );
 
+/** German (Deutsch)
+ * @author Kghbln
+ */
+$messages['de'] = array(
+	'suhosin-desc' => 'Ermöglicht die Anpassung des vom ResourceLoader genutzten Parameterwerts an den von Suhosin vorgegebenen Parameterwert',
+);
+
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'suhosin-desc' => 'Adapta le configuration de MediaWiki pro conformitate al limites de un extension "Suhosin" active (projecto Hardened-PHP)',
+);
+

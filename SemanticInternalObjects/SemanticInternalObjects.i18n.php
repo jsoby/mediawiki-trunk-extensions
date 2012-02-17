@@ -358,9 +358,11 @@ $messages['vi'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Liangent
+ * @author Linforest
  */
 $messages['zh-hans'] = array(
 	'semanticinternalobjects-desc' => '在语义MediaWiki中设置内部对象',
+	'semanticinternalobjects-internalproperty' => '内部属性',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬) */

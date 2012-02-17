@@ -90,10 +90,12 @@ $messages['dsb'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Fitoschido
  */
 $messages['es'] = array(
 	'categorize-desc' => 'Añade un cuadro de entrada para editar y cargar páginas que permiten a los usuarios asignar categorías',
+	'categorize-title' => 'Calificación de conocimiento',
 	'categorize-footer' => 'Si quieres añadir una etiqueta, contacta a un [[Special:ListUsers/sysop|administrador]].',
 	'categorize-advice' => 'Pulse en las etiquetas que quiere atribuir a esta página:',
 );

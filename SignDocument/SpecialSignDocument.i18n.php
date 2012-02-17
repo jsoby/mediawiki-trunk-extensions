@@ -4305,6 +4305,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author Kaganer
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
@@ -4324,7 +4325,7 @@ $messages['ru'] = array(
 	'sign-bday' => 'Возраст:',
 	'sign-email' => 'Адрес эл. почты:',
 	'sign-indicates-req' => '<small><i><span style="color:red">*</span> отмечает обязательные поля.</i></small>',
-	'sign-hide-note' => '<small><i><span style="color:red">**</span> Замечание: невключённая в список информация будет видна модераторам.</i></small>',
+	'sign-hide-note' => '<small><i><span style="color:red">**</span> Замечание. Информация, не включённая в список, будет видна модераторам.</i></small>',
 	'sign-list-anonymous' => 'Анонимно',
 	'sign-list-hideaddress' => 'Не включать в список адрес',
 	'sign-list-hideextaddress' => 'Не включать в список город, страну и индекс',

@@ -284,3 +284,32 @@ $1',
 	'spserror-count-digitsvaluemalformed' => 'De cijferwaarde is geen getal.',
 );
 
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Linforest
+ */
+$messages['zh-hans'] = array(
+	'semanticpageseries-desc' => '利用一个[https://www.mediawiki.org/wiki/Extension:Semantic_Forms 语义表单]创建一系列的页面',
+	'spssuccesstitle' => '创建$1页面',
+	'spssuccess' => '将会创建{{PLURAL:$1|一个页面|$1个页面}}。',
+	'spssuccess-returntoorigin' => '返回到$1',
+	'spserror' => '出现了一个错误',
+	'spserror-diffnotsupported' => '页面系列不支持diff差别比较操作。',
+	'spserror-previewnotsupported' => '页面系列不支持预览操作。',
+	'spserror-noiteratorname' => '没有指定迭代器。你必须在#serieslink解析器函数调用中设置迭代器参数"iterator"。',
+	'spserror-iteratorunknown' => '迭代器" $1 "并不存在。你必须在#serieslink解析器函数调用中更正迭代器参数"iterator"。',
+	'spserror-noformname' => '没有指定表单名称。你必须在#serieslink解析器函数中设置表单参数"form"。',
+	'spserror-formunknown' => '表单"$1"并不存在。',
+	'spserror-notargetformname' => '没有指定目标表单名称。你必须在#serieslink 解析器函数调用中设置目标表单参数"target form"。',
+	'spserror-notargetfieldname' => '没有指定目标字段名称。您必须在#serieslink 解析器函数调用中设置目标字段参数"target field"。',
+	'spserror-iteratorparammissing' => '#serieslink调用中缺少下列迭代器参数：
+$1',
+	'spserror-noiteratordata' => '在已发送的数据中找不到迭代器参数。',
+	'spserror-pagegenerationlimitexeeded' => '您已尝试生成{{PLURAL:$1|一个页面|$1个页面}}。这超过了您的允许极限：{{PLURAL:$2|一个页面|$2个页面}}。',
+	'spserror-date-startdatemissing' => '缺少开始日期。',
+	'spserror-date-internalerror' => '创建日期时出现了一个错误。这可能是因为格式错误的开始或结束日期。',
+	'spserror-count-startvaluemalformed' => '起始值不是数字。',
+	'spserror-count-endvaluemalformed' => '结束值不是数字。',
+	'spserror-count-stepvaluemalformed' => '步长值不是数字。',
+	'spserror-count-digitsvaluemalformed' => '位数值不是数字。',
+);
+

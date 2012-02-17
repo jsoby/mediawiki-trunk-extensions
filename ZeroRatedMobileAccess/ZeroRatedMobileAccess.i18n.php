@@ -139,6 +139,22 @@ $messages['dsb'] = array(
 	'zero-rated-mobile-access-click-to-view-image' => 'Klikni how, aby wobraz wót "$1" wiźeł...',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'zero-rated-mobile-access-desc' => 'Proporciona las características para los proveedores móviles que ofrecen acceso gratuito',
+	'zero-rated-mobile-access-search' => 'Buscar',
+	'zero-rated-mobile-access-language-selection' => 'Todos los idiomas',
+	'zero-rated-mobile-access-home-page-selection' => 'página de inicio $1',
+	'zero-rated-mobile-access-home-page-selection-text' => 'O ir a la página de inicio en el siguiente idioma:',
+	'zero-rated-mobile-access-banner-text' => '{{SITENAME}} libre desde $1',
+	'zero-rated-mobile-access-banner-text-data-charges' => 'Se pueden aplicar cargos por los datos si continúa: $1 o $2',
+	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'Sí',
+	'zero-rated-mobile-access-banner-text-data-charges-no' => 'No',
+	'zero-rated-mobile-access-click-to-view-image' => 'Haga clic para ver la imagen de, "$1"...',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  */
