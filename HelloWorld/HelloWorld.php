@@ -43,7 +43,8 @@ $wgExtensionCredits['specialpage'][] = array(
 	'descriptionmsg' => 'helloworld-desc',
 );
 
-$dir = dirname( __FILE__ ) . '/';
+// The full directory path for this extension
+$dir = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
 
 // Load the HelloWorld special page class
 $wgAutoloadClasses['SpecialHelloWorld'] = $dir . 'SpecialHelloWorld.php';
