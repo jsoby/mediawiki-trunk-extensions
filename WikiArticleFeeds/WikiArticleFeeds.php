@@ -363,7 +363,8 @@ function wfWikiArticleFeedsAction( $action, $article ) {
 	global $wgWikiArticleFeedsSkipCache;
 	if ( !$wgWikiArticleFeedsSkipCache && is_string( $cachedFeed ) ) {
 		wfDebug( "WikiArticleFeedsExtension: Outputting cached feed\n" );
-		$feed = new $wgFeedClasses[$feedFormat]( $wgSitename . ' - ' . $title->getText(), '', $title->getFullURL() );
+		$feed = new $wgFeedClasses[$feedFormat]( $title->getText(), '', $title->getFullURL(). " - Feed" );
+		ob_start();
 		$feed->httpHeaders();
 		echo $cachedFeed;
 	} else {
@@ -373,7 +374,7 @@ function wfWikiArticleFeedsAction( $action, $article ) {
 		$cachedFeed = ob_get_contents();
 		ob_end_flush();
 
-		$expire = 3600 * 24; # One day
+		$expire = 3600; # One hour
 		$messageMemc->set( $key, $cachedFeed );
 		$messageMemc->set( $timekey, wfTimestamp( TS_MW ), $expire );
 	}
@@ -522,7 +523,7 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 					$strippedSeg,
 					$matches
 					);
-				if ( $matches[2] ) {
+				if ( !empty( $matches[2] ) ) {
 					$url = $matches[2];
 					if ( preg_match( '#^/#', $url ) ) {
 						$url = $wgServer . $url;
@@ -539,7 +540,7 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 	}
 
 	# Programmatically determine the feed title and id.
-	$feedTitle = $wgSitename . ' - ' . $title->getPrefixedText();
+	$feedTitle = $title->getPrefixedText() . " - Feed";
 	$feedId = $title->getFullUrl();
 
 	# Create feed
