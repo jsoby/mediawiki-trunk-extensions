@@ -2,21 +2,21 @@
 /**
  * Extension based on SkinPerPage to allow a customized skin per namespace
  *
- * Require MediaWiki 1.15.0 or greater.
+ * Require MediaWiki 1.19.0 or greater.
  *
  * @file
  * @author Alexandre Emsenhuber
  * @license GPLv2
  */
 
-$wgHooks['BeforePageDisplay'][] = 'efSkinPerPageBeforePageDisplayHook';
+$wgHooks['RequestContextCreateSkin'][] = 'efSkinPerPageRequestContextCreateSkin';
 
 // Add credits :)
 $wgExtensionCredits['other'][] = array(
 	'path'        => __FILE__,
 	'name'        => 'SkinPerNamespace',
 	'url'         => 'https://www.mediawiki.org/wiki/Extension:SkinPerNamespace',
-	'version'     => '2011-01-10',
+	'version'     => '2012-02-18',
 	'description' => 'Allow a per-namespace skin',
 	'author'      => 'Alexandre Emsenhuber',
 	
@@ -46,33 +46,33 @@ $wgSkinPerNamespaceOverrideLoggedIn = true;
 // Implementation
 
 /**
- * Hook function for BeforePageDisplay
+ * Hook function for RequestContextCreateSkin
  */
-function efSkinPerPageBeforePageDisplayHook( &$out, &$skin ){
+function efSkinPerPageRequestContextCreateSkin( $context, &$skin ) {
 	global $wgSkinPerNamespace, $wgSkinPerSpecialPage,
-		$wgSkinPerNamespaceOverrideLoggedIn, $wgUser;
+		$wgSkinPerNamespaceOverrideLoggedIn;
 
-	if( !$wgSkinPerNamespaceOverrideLoggedIn && $wgUser->isLoggedIn() )
+	if ( !$wgSkinPerNamespaceOverrideLoggedIn && $context->getUser()->isLoggedIn() ) {
 		return true;
+	}
 
-	$title = $out->getTitle();
+	$title = $context->getTitle();
 	$ns = $title->getNamespace();
 	$skinName = null;
 
-	if( $ns == NS_SPECIAL ) {
+	if ( $ns == NS_SPECIAL ) {
 		list( $canonical, /* $subpage */ ) = SpecialPage::resolveAliasWithSubpage( $title->getDBkey() );
-		if( isset( $wgSkinPerSpecialPage[$canonical] ) ) {
+		if ( isset( $wgSkinPerSpecialPage[$canonical] ) ) {
 			$skinName = $wgSkinPerSpecialPage[$canonical];
 		}
 	}
 
-	if( $skinName === null && isset( $wgSkinPerNamespace[$ns] ) ) {
+	if ( $skinName === null && isset( $wgSkinPerNamespace[$ns] ) ) {
 		$skinName = $wgSkinPerNamespace[$ns];
 	}
 	
-	if( $skinName !== null ) {
-		$skin = Skin::newFromKey( $skinName );
-		$skin->setTitle( $out->getTitle() );
+	if ( $skinName !== null ) {
+		$skin = $skinName;
 	}
 
 	return true;
