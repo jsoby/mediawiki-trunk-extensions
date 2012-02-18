@@ -160,7 +160,6 @@ jQuery( function( $ ) {
 	// Apply a class to the entire panel to activate styles
 	$( '#mw-panel' ).addClass( 'collapsible-nav' );
 	// Use cookie data to restore preferences of what to show and hide
-	$( '#mw-panel div.body').hide();
 	$( '#mw-panel > div.portal:not(.persistent)' )
 		.each( function( i ) {
 			var id = $(this).attr( 'id' );
@@ -174,6 +173,7 @@ jQuery( function( $ ) {
 				$(this)
 					.addClass( 'expanded' )
 					.find( 'div.body' )
+					.hide() // bug 34450
 					.show();
 			} else {
 				$(this).addClass( 'collapsed' );
