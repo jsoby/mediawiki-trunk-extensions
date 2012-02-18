@@ -135,6 +135,7 @@ $messages['gl'] = array(
  * @author ערן
  */
 $messages['he'] = array(
+	'apiexplorer' => 'סייר API',
 	'apiexplorer-desc' => 'דף לעיון אינטראקטיבי בתיעוד ה־API של מדיה־ויקי',
 	'apiexplorer-intro' => 'דף זה מציג תיעוד ה־API של הוויקי. לחצו על פונקציה להלן לקבלת מידע נוסף על הפרמטרים שהיא מקבלת. ראו גם [http://www.mediawiki.org/wiki/API:Main_page התיעוד הכללי של MediaWiki API].',
 	'apiexplorer-loading' => 'טוען פונקציות...',

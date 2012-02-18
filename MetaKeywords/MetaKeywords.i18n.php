@@ -67,7 +67,7 @@ $messages['arz'] = array(
  * @author Xuacu
  */
 $messages['ast'] = array(
-	'metakeywords-desc' => 'Permite configurar les etiquetes <code>&lt;meta "keywords"&gt;</code> and <code>&lt;meta "description"&gt;</code> per espaciu de nomes',
+	'metakeywords-desc' => 'Permite configurar les etiquetes <code>&lt;meta "keywords"&gt;</code> y <code>&lt;meta "description"&gt;</code> por espaciu de nomes',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)

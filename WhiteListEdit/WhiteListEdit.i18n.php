@@ -1546,6 +1546,7 @@ $messages['haw'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
@@ -1601,9 +1602,9 @@ $2',
 	'action-editwhitelist' => 'לשנות את הרשימה הלבנה למשתמשים קיימים',
 	'action-restricttowhitelist' => 'לערוך ולהציג דפים מהרשימה הלבנה בלבד',
 	'group-restricted' => 'משתמשים מוגבלים',
-	'group-restricted-member' => 'משתמש מוגבל',
+	'group-restricted-member' => '{{GENDER:$1|משתמש מוגבל|משתמשת מוגבלת}}',
 	'group-manager' => 'מנהלים',
-	'group-manager-member' => 'מנהל',
+	'group-manager-member' => '{{GENDER:$1|מנהל|מנהלת}}',
 );
 
 /** Hindi (हिन्दी)

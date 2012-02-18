@@ -150,8 +150,8 @@ $messages['eu'] = array(
  */
 $messages['fa'] = array(
 	'pdfbook-action' => 'چاپ به صورت پی‌دی‌اف',
-	'pdfbook-log' => '$1 برون‌ریزی شده به صورت یک کتاب پی‌دی‌اف',
-	'pdfbook-desc' => 'از صفحه‌های یک رده کتابی می‌سازد و به صورت یک کتاب پی‌دی‌اف برون‌ریزی می‌کند',
+	'pdfbook-log' => '$1 برون‌بری شده به صورت یک کتاب پی‌دی‌اف',
+	'pdfbook-desc' => 'از صفحه‌های یک رده کتابی می‌سازد و به صورت یک کتاب پی‌دی‌اف برون‌بری می‌کند',
 );
 
 /** French (Français)
@@ -333,15 +333,6 @@ $messages['mzn'] = array(
 	'pdfbook-desc' => 'از صفحه‌ئون اتا رج کتاب ساجنه و به صورت اتا کتاب پی‌دی‌اف برون‌ریزی کانده',
 );
 
-/** Dutch (Nederlands)
- * @author Siebrand
- */
-$messages['nl'] = array(
-	'pdfbook-action' => 'Afdrukken als PDF',
-	'pdfbook-log' => '$1 is geëxporteerd als PDF-boek',
-	'pdfbook-desc' => "Maakt een boek van pagina's in een categorie en maakt een export als PDF-boek",
-);
-
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
@@ -349,6 +340,15 @@ $messages['nb'] = array(
 	'pdfbook-action' => 'Skriv ut som PDF',
 	'pdfbook-log' => '$1 eksportert som en PDF-bok',
 	'pdfbook-desc' => 'Komponerer en bok fra sider i en kategori og eksporterer dem som en PDF-bok',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'pdfbook-action' => 'Afdrukken als PDF',
+	'pdfbook-log' => '$1 is geëxporteerd als PDF-boek',
+	'pdfbook-desc' => "Maakt een boek van pagina's in een categorie en maakt een export als PDF-boek",
 );
 
 /** Polish (Polski)

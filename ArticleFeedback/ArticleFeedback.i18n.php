@@ -2236,7 +2236,7 @@ $messages['fa'] = array(
 	'articlefeedback-survey-submit' => 'ارسال',
 	'articlefeedback-survey-title' => 'لطفاً به چند پرسش پاسخ دهید',
 	'articlefeedback-survey-thanks' => 'از این که نظرسنجی را تکمیل کردید متشکریم.',
-	'articlefeedback-survey-disclaimer' => 'برای بهبود این ویژگی، بازخورد شما به طور ناشناس با جامعهٔ {{SITENAME}} به اشتراک گذاشته می‌شود.',
+	'articlefeedback-survey-disclaimer' => 'با ارسال بازخورد شما این $1 شفافیت را می‌پذیرید.',
 	'articlefeedback-survey-disclaimerlink' => 'شرایط',
 	'articlefeedback-error' => 'خطایی رخ داده است. لطفا بعداً دوباره سعی کنید.',
 	'articlefeedback-form-switch-label' => 'رای دادن به این صفحه',
@@ -2250,8 +2250,8 @@ $messages['fa'] = array(
 	'articlefeedback-form-panel-expertise-hobby' => 'این یک علاقهٔ شدید شخصی است',
 	'articlefeedback-form-panel-expertise-other' => 'منبع دانش من در اینجا فهرست نشده است',
 	'articlefeedback-form-panel-helpimprove' => 'من می‌خواهم برای بهبود {{SITENAME}} کمک کنم، به من یک پست الکترونیکی بفرستید (اختیاری)',
-	'articlefeedback-form-panel-helpimprove-note' => 'ما به شما یک تأییدهٔ پست الکترونیکی خواهیم فرستاد. ما نشانی شما را با هیچ کس به اشتراک نخواهیم گذاشت. $1',
-	'articlefeedback-form-panel-helpimprove-privacy' => 'سیاست حفظ اسرار',
+	'articlefeedback-form-panel-helpimprove-note' => 'ما به شما یک تأییدیهٔ پست الکترونیکی خواهیم فرستاد. مطابق $1، ما نشانی شما را با هیچ کس به اشتراک نخواهیم گذاشت.',
+	'articlefeedback-form-panel-helpimprove-privacy' => 'بیانیهٔ محرمانگی بازخورد',
 	'articlefeedback-form-panel-submit' => 'ثبت رأی',
 	'articlefeedback-form-panel-pending' => 'رأی شما هنوز ثبت نشده است',
 	'articlefeedback-form-panel-success' => 'با موفقیت ذخیره شد',
@@ -2305,14 +2305,14 @@ $messages['fa'] = array(
 	'articlefeedback-survey-message-error' => 'خطایی رخ داده است.
 لطفاً بعداً دوباره سعی کنید.',
 	'articleFeedback-table-caption-dailyhighsandlows' => 'بالاترین‌ها و پایین‌ترین‌های امروز',
-	'articleFeedback-table-caption-dailyhighs' => 'صفحات با بالاترین رأی:$1',
-	'articleFeedback-table-caption-dailylows' => 'صفحات با کمترین رأی:$1',
+	'articleFeedback-table-caption-dailyhighs' => 'صفحه‌های دارای بالاترین رتبه: $1',
+	'articleFeedback-table-caption-dailylows' => 'صفحه‌های دارای پایین‌ترین رتبه: $1',
 	'articleFeedback-table-caption-weeklymostchanged' => 'بیشترین تغییر این هفته',
 	'articleFeedback-table-caption-recentlows' => 'سطوح پایین اخیر',
 	'articleFeedback-table-heading-page' => 'صفحه',
 	'articleFeedback-table-heading-average' => 'میانگین',
 	'articleFeedback-copy-above-highlow-tables' => 'این یک ویژگی تجربی است.  لطفاً بازخورد را در [$1 صفحهٔ بحث] ارائه دهید.',
-	'articlefeedback-disable-preference' => 'ابزار نظرسنجی مقاله را در صفحات نشان نده',
+	'articlefeedback-disable-preference' => 'ابزار نظرسنجی مقاله را در صفحه‌ها نشان نده',
 	'articlefeedback-emailcapture-response-body' => 'سلام!
 
 از شما برای ابراز علاقه در بهبود {{SITENAME}} تشکر می‌کنم.

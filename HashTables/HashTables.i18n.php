@@ -54,6 +54,13 @@ $messages['gl'] = array(
 	'hashtables-desc' => 'Funcións analíticas destinadas ás páxinas que permiten traballar con táboas hash',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'hashtables-desc' => 'פונקציות מפענח שמאפשרות לעבוד עם טבלאות גיבוב בהקשר בתחום הדף',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */

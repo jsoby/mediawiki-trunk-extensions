@@ -23,7 +23,7 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'etherpadlite-invalid-pad-url' => "Error if the url did not meet validation (for example, if it didn't start with an allowed protocol). $1 is the invalid url",
 	'etherpadlite-url-is-not-whitelisted' => "Error if url isn't in list of allowed urls. $1 is name of url specified by user, $2 is a comma separated list of allowed urls, $3 is the number of urls in the allowed list",
-	'etherpadlite-pad-used-more-than-once' => 'Error if users try to show multiple frames of the very same pad, identified by the full pad url $1 (server/padid). Each pad must be unique on a wiki page.', 
+	'etherpadlite-pad-used-more-than-once' => 'Error if users try to show multiple frames of the very same pad, identified by the full pad url $1 (server/padid). Each pad must be unique on a wiki page.',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
@@ -83,6 +83,7 @@ $messages['hsb'] = array(
 	'etherpadlite-invalid-pad-url' => '"$1" płaćiwy URL Etherpad Lite abo płaćiwe mjeno pisanskeje płoniny njeje.',
 	'etherpadlite-url-is-not-whitelisted' => '"$1" njeje w lisćinje dowolenych serwerow Etherpad Lite. {{PLURAL:$3|$2 je jenički dowoleny serwer|Slědowacej serweraj stej móžno: $2|Slědowace serwery su móžno: $2|Slědowace serwery su móžno: $2}}.',
 	'etherpadlite-empty-whitelist' => '"$1" njeje w lisćinje dowolenych serwerow Etherpad Lite. W lisćinje dowolene serwery njejsu.',
+	'etherpadlite-pad-used-more-than-once' => 'Pisanska płonina "$1" je so hižo do toho na tutej stronje wužiła; móžeš wjele pisanskich płoninow na stronje měć, ale jenož, jeli su rozdźělne płoniny-',
 );
 
 /** Interlingua (Interlingua)

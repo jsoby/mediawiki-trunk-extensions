@@ -94,6 +94,13 @@ $messages['gsw'] = array(
 	'automaticboardwelcome-desc' => 'Duet automatisch [[MediaWiki:User-board-welcome-message|e Begriessigsnoocht]] uff d Benutzerdiskusionssyte yystelle, wänn s Chonto aaglait worde isch',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'automaticboardwelcome-desc' => 'שליחה אוטומטית של [[MediaWiki:User-board-welcome-message|הודעת "ברוך בואך"]] לדפי משתמש אחרי יצירת החשבון',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */

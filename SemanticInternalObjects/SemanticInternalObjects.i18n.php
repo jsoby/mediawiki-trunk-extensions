@@ -152,11 +152,13 @@ $messages['gsw'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author Rotemliss
  * @author YaronSh
  */
 $messages['he'] = array(
 	'semanticinternalobjects-desc' => 'הגדרות העצמים הפנימיים במדיה־ויקי הסמנטי',
+	'semanticinternalobjects-internalproperty' => 'מאפיין פנימי',
 );
 
 /** Hiligaynon (Ilonggo)

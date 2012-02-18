@@ -1545,6 +1545,7 @@ $messages['et'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Huji
  * @author Mjbmr
  * @author ZxxZxxZ
  */
@@ -1644,9 +1645,9 @@ $messages['fa'] = array(
 	'moodbar-feedback-restore' => 'بازیابی بازخوردهای پنهان',
 	'moodbar-action-reason' => 'دلیل:',
 	'moodbar-action-reason-required' => 'لطفاً دلیلی ذکر کنید.',
-	'moodbar-type-happy' => 'شاد',
-	'moodbar-type-sad' => 'غمگین',
-	'moodbar-type-confused' => 'گیج',
+	'moodbar-type-happy' => '{{GENDER:$1|شاد}}',
+	'moodbar-type-sad' => '{{GENDER:$1|ناراحت}}',
+	'moodbar-type-confused' => '{{GENDER:$1|گیج}}',
 	'moodbar-user-anonymized' => 'گمنام',
 	'moodbar-user-ip' => 'نشانی آی‌پی',
 	'moodbar-user-user' => 'کاربر ثبت شده',

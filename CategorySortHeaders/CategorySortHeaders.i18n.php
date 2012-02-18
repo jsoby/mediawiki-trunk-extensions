@@ -67,7 +67,7 @@ $messages['gl'] = array(
  * @author Amire80
  */
 $messages['he'] = array(
-	'categorysortheaders-desc' => 'אפשרות להגדיר מיון מותאם אישית בקטגוריות לפי first-character, באמצעות התחביר <nowiki>[[קטגוריה:פלונית|^כותרת^החלק הבלתי־נראה של מפתח המיון]]</nowiki>',
+	'categorysortheaders-desc' => "אפשרות לציין כותרות מיון 'first-character' מרובות־תווים מותאמות אישית כדי ליצור רשימות דפים בקטגוריות, באמצועת תחביר כגון <nowiki>[[category:Foo|^Header^חלק בלתי־נראה של מפתח מיון]]</nowiki>",
 );
 
 /** Upper Sorbian (Hornjoserbsce)

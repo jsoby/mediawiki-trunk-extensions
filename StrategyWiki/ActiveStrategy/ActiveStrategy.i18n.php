@@ -169,14 +169,15 @@ $messages['es'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Huji
  * @author Ladsgroup
  * @author Sahim
  * @author Wayiran
  */
 $messages['fa'] = array(
 	'activestrategy' => 'راهبرد فعال',
-	'active-strategy-desc' => 'تعداد ویرایش‌ها را به صفحات برنامه‌ریزی راهبردی نشان می‌دهد.',
-	'active-strategy-intro' => 'تعداد ویرایش‌ها به صفحات گروه ضربت در $1 روز اخیر.',
+	'active-strategy-desc' => 'تعداد ویرایش‌های صفحه‌های برنامه‌ریزی راهبردی نشان می‌دهد.',
+	'active-strategy-intro' => 'تعداد ویرایش‌های صفحه‌های گروه ضربت در {{PLURAL:$1|$1 روز|$1 روز}} اخیر.',
 	'nedits' => '$1 {{PLURAL:$1|ویرایش|ویرایش}}',
 );
 

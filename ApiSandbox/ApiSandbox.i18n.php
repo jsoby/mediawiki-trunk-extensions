@@ -487,6 +487,7 @@ $messages['eu'] = array(
 
 /** Persian (فارسی)
  * @author Ebraminio
+ * @author Huji
  * @author Leyth
  * @author Mjbmr
  * @author ZxxZxxZ
@@ -496,13 +497,19 @@ $messages['fa'] = array(
 	'apisandbox' => 'گودال ماسه‌بازی رابط برنامه‌نویسی',
 	'apisb-no-js' => "'''خطا''': این قابلیت نیازمند جاوااسکریپت است.",
 	'apisb-api-disabled' => 'رابط برنامه‌نویسی در این تارنما غیرفعال شده‌است.',
+	'apisb-legend-parameters' => 'پارامترها',
 	'apisb-legend-result' => 'نتیجه',
 	'apisb-legend-generic-parameters' => 'پارامترهای عمومی',
 	'apisb-legend-generator-parameters' => 'تولیدکننده',
 	'apisb-result-request-url' => 'درخواست آدرس:',
 	'apisb-result-request-post' => 'فرستادن داده‌ها:',
 	'apisb-select-action' => 'انتخاب اقدامات',
-	'apisb-select-value' => 'انتخاب مقدار',
+	'apisb-select-query' => '(درخواست را انتخاب کنید)',
+	'apisb-select-value' => '(مقدار راانتخاب کنید)',
+	'apisb-docs-more' => 'ادامه مطلب',
+	'apisb-params-param' => 'پارامتر',
+	'apisb-params-input' => 'ورودی',
+	'apisb-params-desc' => 'توضیح',
 	'apisb-loading' => 'در حال بارگذاری…',
 	'apisb-load-error' => 'خطا در بارگذاری توضیحات ای‌پی‌آی',
 	'apisb-request-error' => 'خطا در اجرای درخواست ای‌پی‌آی',
@@ -512,6 +519,9 @@ $messages['fa'] = array(
 	'apisb-query-prop' => 'ویژگی‌ها',
 	'apisb-query-list' => 'فهرست‌ها',
 	'apisb-query-meta' => 'اطلاعات متا',
+	'apisb-example' => 'مثال',
+	'apisb-examples' => 'مثال‌ها',
+	'apisb-clear' => 'پاک کردن',
 );
 
 /** Finnish (Suomi)

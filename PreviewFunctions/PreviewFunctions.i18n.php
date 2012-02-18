@@ -59,6 +59,13 @@ $messages['gl'] = array(
 	'previewfunctions-desc' => 'Un conxunto de funcións analíticas para manipular a páxina durante a vista previa',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'previewfunctions-desc' => 'ערכה של פונקציות מפענח לטיפול בדף בעת תצוגה מקדימה',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */

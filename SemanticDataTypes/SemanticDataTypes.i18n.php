@@ -83,6 +83,14 @@ $messages['gl'] = array(
 	'sdt-duration' => 'Duración',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'sdt-desc' => 'סוגי נתונים נוספים למדיה־ויקי סמנטית ולהרחבות',
+	'sdt-duration' => 'משך',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */

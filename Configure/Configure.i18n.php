@@ -3594,6 +3594,7 @@ $messages['eu'] = array(
 
 /** Persian (فارسی)
  * @author Ebraminio
+ * @author Huji
  * @author Mjbmr
  * @author ZxxZxxZ
  */
@@ -3616,7 +3617,7 @@ $messages['fa'] = array(
 	'configure-old' => 'نسخه‌های قدیمی',
 	'configure-old-changes' => 'تغییرات',
 	'configure-section-general' => 'تنظیمات عمومی',
-	'configure-section-pages' => 'صفحات',
+	'configure-section-pages' => 'صفحه‌ها',
 	'configure-section-timezone' => 'منطقهٔ زمانی',
 	'configure-section-performance' => 'کارایی',
 	'configure-section-upload' => 'بارگذاری',
@@ -6958,14 +6959,19 @@ $messages['lez'] = array(
 	'configure-edit-core' => 'MediaWiki',
 	'configure-edit-ext' => 'Гегьеншунар',
 	'configure-viewconfig-default-diff' => 'Авай хьиз кьунвай низамарунрив гекъигайла дегишвилер',
+	'configure-ext-doc' => 'Онлайн документуниз килигун',
 	'configure-ext-settings' => 'Низамарунар',
 	'configure-ext-use-extension' => 'И гегьеншвал кардик кутун',
 	'configure-ext-use' => 'Кардик кутун',
 	'configure-form-reason' => 'Себеб:',
+	'configure-customised' => 'И низамарун дегишарнава.',
 	'configure-arrayinput-oneperline' => "''(гьар са цIарцIе сад)''",
+	'configure-btn-save' => 'Низамарунар хуьн',
 	'configure-js-add' => 'ЦIийи кхьин алава авун',
+	'configure-js-prompt-group' => 'ЦIийи кIеретIдин тIвар ттун',
 	'configure-js-remove' => 'Алудун',
 	'configure-js-remove-row' => 'И кхьин алудун',
+	'configure-js-get-image-url' => 'Файлдин тIвар URL-диз дибдай дегишрун',
 	'configure-js-biglist-shown' => 'Низамарунрин куьлуь-шуьлуьяр чуьнуьхиз жеда',
 	'configure-js-biglist-hidden' => 'Низамарунрин куьлуь-шуьлуьяр чуьнуьхнава',
 	'configure-js-biglist-show' => '[куьлуь-шуьлуьяр къалурун]',
@@ -6973,7 +6979,11 @@ $messages['lez'] = array(
 	'configure-js-summary-none' => 'Низамарунар авайд туш',
 	'configure-js-search-legend' => 'Жагъурунин низамарунар',
 	'configure-js-search-prompt' => 'ТIалабун:',
+	'configure-no-diff' => 'Хкягъай жуьрейрин арада са тафаватни авач',
+	'configure-no-old' => 'Низамарунрин цIуру жуьреяр авач.',
+	'configure-no-transwiki' => 'Квез муькуь викийра низамарунар дегишдай ихтияр авач.',
 	'configure-old' => 'ЦIуру жуьреяр',
+	'configure-old-versions' => 'Низамарунрин цIуру жуьрейрин сиягь:',
 	'configure-old-changes' => 'дегишвилер',
 	'configure-old-summary' => '$1 патал $2 $4 $3',
 	'configure-saved' => 'Низамарун хуьн авунва',
@@ -7030,6 +7040,19 @@ $messages['lez'] = array(
 	'configure-section-htcp' => 'HTCP-мультикаст',
 	'configure-section-misc' => 'Жуьреба-жуьре',
 	'configure-section-filter' => 'Куьзун',
+	'configure-section-mw-extensions' => 'MediaWiki-дин гегьеншурунар',
+	'configure-section-external-tools' => 'Кьецепатан алатар',
+	'configure-section-filesystem' => 'Файлдин системани Shell галаз алакъалу яз кар авун',
+	'configure-section-thumbnail' => 'Суьретрин бицıи акунар',
+	'configure-section-output' => 'Нетижа',
+	'configure-select-wiki' => 'Вики хкягъун',
+	'configure-select-wiki-desc' => 'Квез низамаруниз кIанзавай вики хкягъа',
+	'configure-select-wiki-view-all' => 'Вири викияр',
+	'configure-select-wiki-view-specific' => 'КЬетIен вики:',
+	'configure-select-wiki-submit' => 'Хкягъун',
+	'configure-view' => 'Килигун',
+	'configure-view-all-versions' => 'Жуьрейрин тамам сиягь',
+	'configure-view-default' => 'Авайд хьиз тир низамарунар',
 );
 
 /** Lingua Franca Nova (Lingua Franca Nova)

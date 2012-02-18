@@ -155,6 +155,17 @@ $messages['es'] = array(
 	'zero-rated-mobile-access-click-to-view-image' => 'Haga clic para ver la imagen de, "$1"...',
 );
 
+/** Persian (فارسی)
+ * @author Huji
+ */
+$messages['fa'] = array(
+	'zero-rated-mobile-access-search' => 'جستجو',
+	'zero-rated-mobile-access-language-selection' => 'همۀ زبان‌ها',
+	'zero-rated-mobile-access-home-page-selection' => 'صفحهٔ اصلی $1',
+	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'بله',
+	'zero-rated-mobile-access-banner-text-data-charges-no' => 'خیر',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  */

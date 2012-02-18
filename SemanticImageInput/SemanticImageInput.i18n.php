@@ -79,6 +79,14 @@ $messages['gl'] = array(
 	'sii-imageinput-loading' => 'Cargando a imaxe...',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'sii-desc' => 'הוספת קלט תמונות שמושך תמונות מוויקיפדיה ל[https://www.mediawiki.org/wiki/Extension:Semantic_Forms טפסים סמנטיים]',
+	'sii-imageinput-loading' => 'התמונה נטענת...',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */

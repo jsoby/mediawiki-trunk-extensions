@@ -62,6 +62,27 @@ $messages['ar'] = array(
 	'fptc-no-suggestion' => 'لم يعثر على اقتراحات',
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'freqpatterntagcloud-desc' => '[[Special:FreqPatternTagCloud|Спэцыяльная старонка]] для стварэньня воблака тэгаў, якое грунтуецца на пэўных атрыбутаў, і пошуку падобных значэньняў атрыбутаў',
+	'fptc-categoryname' => 'Катэгорыя',
+	'fptc-context-menu-browse' => 'Праглядзець старонкі з гэтым значэньнем',
+	'fptc-context-menu-similar-tags' => 'Падобныя тэгі:',
+	'fptc-form-attribute-name' => 'Атрыбут:',
+	'fptc-form-submit-button' => 'Даслаць',
+	'fptc-invalid-attribute' => 'Уведзены атрыбут няслушны.',
+	'fptc-insufficient-rights-for-maintenance' => 'Вы мусіце ўвайсьці ў якасьці адміністратара, каб бачыць гэтую старонку.',
+	'fptc-refresh-frequent-patterns' => 'Абнавіць зьвесткі',
+	'fptc-refreshed-frequent-patterns' => 'Правілы шаблёну частасьці абноўленыя.',
+	'fptc-search-attribute-name' => 'Шукаць па ўласьцівасьці',
+	'fptc-search-button' => 'Шукаць',
+	'fptc-search-suggestion-value' => 'Падобна да «%s»:',
+	'fptc-suggestion' => 'Магчыма, Вы мелі на ўвазе:',
+	'fptc-no-suggestion' => 'Падказкі ня знойдзеныя',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */

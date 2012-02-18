@@ -62,6 +62,13 @@ $messages['gl'] = array(
 	'interfaceconcurrency-desc' => 'Proporciona unha infraestrutura para a interface de usuario que mostra os recursos en uso',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'interfaceconcurrency-desc' => 'יצירת מנוע לממשק משתמש שמציג באילו משאבים נעשה שימוש',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */

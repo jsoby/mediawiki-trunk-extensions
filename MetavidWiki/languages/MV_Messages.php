@@ -8250,6 +8250,7 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Jwitos
  * @author Leinad
  * @author Maikking
@@ -8315,7 +8316,7 @@ lub <a href="$3">dodać strumień</a>.',
 	'mv_summary_add_stream' => 'strumień dodany za pomocą formularza',
 	'mv_error_stream_insert' => 'wstawienie strumienia nieudane',
 	'mv_redirect_and_delete_reason' => 'usunięta strona przekierowująca',
-	'mv_remove_reason' => 'Powód usunięcia',
+	'mv_remove_reason' => 'Powód usunięcia:',
 	'mv_stream_delete_warrning' => "'''Usunięcie tego strumienia spowoduje usunięcie także $1 {{PLURAL:$1|część|części}} powiązanych metadanych'''<br />",
 	'mv_label_stream_type' => 'Typ strumienia',
 	'mv_metavid_file' => 'Istniejący na serwerze plik',

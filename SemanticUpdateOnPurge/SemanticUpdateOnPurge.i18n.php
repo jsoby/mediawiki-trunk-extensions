@@ -54,6 +54,13 @@ $messages['gl'] = array(
 	'suop-desc' => 'Actualiza os atributos semánticos dunha páxina wiki ao purgar a páxina',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'suop-desc' => 'עדכון מאפיינים סמנטיים בוויקי בעת ניקוי הדף',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */

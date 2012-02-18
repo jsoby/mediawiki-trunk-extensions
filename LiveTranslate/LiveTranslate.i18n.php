@@ -510,6 +510,7 @@ $messages['gsw'] = array(
 $messages['he'] = array(
 	'livetranslate-desc' => 'הפעלת תרגום חי של תוכן הדף באמצעות שירות התרגום של גוגל',
 	'right-managetms' => '[[Special:SpecialLiveTranslate|לשנות]] את רשימת זיכרונות התרגום',
+	'action-managetms' => 'ניהול זיכרונות תרגום',
 	'group-tmxadmin' => 'מנהלי TMX',
 	'group-tmxadmin-member' => '{{GENDER:$1|מנהל TMX|מנהלת TMX}}',
 	'grouppage-tmxadmin' => '{{ns:project}}:מנהלי TMX',

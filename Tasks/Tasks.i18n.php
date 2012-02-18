@@ -2426,6 +2426,7 @@ $messages['lb'] = array(
 	'tasks_action_delete' => 'Eng Aufgab gouf geläscht.',
 	'tasks_task_was_deleted' => "D'Aufgab gouf geläscht.",
 	'tasks_reopen' => 'Aufgab nees opmaachen',
+	'tasks_assignedto' => 'Dem $1 zougewisen',
 	'tasks_created_by' => 'Vum $1 gemaach',
 	'tasks_discussion_page_link' => 'Diskussiounssäit vun der Aufgab',
 	'tasks_closedby' => 'Zougemaach vum $1',

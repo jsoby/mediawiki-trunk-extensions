@@ -2091,7 +2091,7 @@ $messages['uk'] = array(
 	'createsigndoc-create' => 'Створити',
 );
 
-/** Veps (Vepsan kel')
+/** Veps (Vepsän kel')
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
@@ -2109,6 +2109,8 @@ $messages['vep'] = array(
 	'createsigndoc-create' => 'Säta',
 	'createsigndoc-error-generic' => 'Petuz: $1',
 	'createsigndoc-error-pagenoexist' => "Petuz: ei ole [[$1]]-lehtpol't.",
+	'createsigndoc-error-alreadycreated' => 'Allekirjutamine «$1»-lehtpolen täht om jo kävutamas.
+Sidä ei voi tehta völ kerdan.',
 );
 
 /** Vietnamese (Tiếng Việt)
