@@ -64,7 +64,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'EtherpadLite',
 	'author' => array( 'Thomas Gries' ),
-	'version' => '1.08 20120215',
+	'version' => '1.09 20120218',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EtherpadLite',
 	'descriptionmsg' => 'etherpadlite-desc',
 );
@@ -97,14 +97,16 @@ $wgEtherpadLiteShowAuthorColors = true;
 # may be a security concern.
 #
 # an empty or non-existent array means: no whitelist defined
-# this is the default: an empty whitelist
+# this is the default: an empty whitelist. No servers are allowed by default.
 $wgEtherpadLiteUrlWhitelist = array();
 #
-# include "*" if you expressly want to allow all urls
+# include "*" if you expressly want to allow all urls (you should not do this)
 # $wgEtherpadLiteUrlWhitelist = array( "*" );
 
 # https://www.mediawiki.org/wiki/Manual:Tag_extensions
 function wfEtherpadLiteParserInit( $parser ) {
+	global $wgEtherpadLitePadsOnThisPage;
+	$wgEtherpadLitePadsOnThisPage = array();
 	$parser->setHook('eplite', 'wfEtherpadLiteRender');
 	return true;
 }
@@ -114,7 +116,8 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 	global $wgUser;
 	global $wgEtherpadLiteDefaultPadUrl, $wgEtherpadLiteDefaultWidth, $wgEtherpadLiteDefaultHeight,
 		$wgEtherpadLiteMonospacedFont, $wgEtherpadLiteShowControls, $wgEtherpadLiteShowLineNumbers,
-		$wgEtherpadLiteShowChat, $wgEtherpadLiteShowAuthorColors, $wgEtherpadLiteUrlWhitelist;
+		$wgEtherpadLiteShowChat, $wgEtherpadLiteShowAuthorColors, $wgEtherpadLiteUrlWhitelist,
+		$wgEtherpadLitePadsOnThisPage;
 
 	# check the user input
 
@@ -180,6 +183,18 @@ function wfEtherpadLiteRender( $input, $args, $parser, $frame ) {
 
 	# Append the id to end of url. Strip off trailing / if present before appending one.
 	$url = preg_replace( "/\/+$/", "", $src ) . "/" . $args['id'];
+
+	# prevent multiple iframes and rendering of a same pad on a page
+	# show an error message if a pad is found more than once on a page.
+	#
+	# the empty id however may be used more than once as the empty id invokes an
+	# Etherpad Lite server showing its "create a pad" html page.
+
+	if ( !in_array( $url, $wgEtherpadLitePadsOnThisPage ) ) {
+		$wgEtherpadLitePadsOnThisPage[] = $url;
+	} elseif ( $args['id'] !== "" ) {
+		return wfEtherpadLiteError( 'etherpadlite-pad-used-more-than-once', $url );
+	}
 
 	
 	# preset the pad username from MediaWiki username or IP
