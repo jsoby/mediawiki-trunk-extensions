@@ -16,7 +16,7 @@ $messages['en'] = array(
 	'etherpadlite-invalid-pad-url' => '"$1" is not a valid Etherpad Lite URL or pad name.',
 	'etherpadlite-url-is-not-whitelisted' => '"$1" is not in the whitelist of allowed Etherpad Lite servers. {{PLURAL:$3|$2 is the only allowed server|The allowed servers are as follows: $2}}.',
 	'etherpadlite-empty-whitelist' => '"$1" is not in the whitelist of allowed Etherpad Lite servers. There are no allowed servers in the whitelist.',
-	'etherpadlite-pad-used-more-than-once' => 'The pad "$1" has already been used before on this page; you can have many pads on a page, but only if they are different pads.', 
+	'etherpadlite-pad-used-more-than-once' => 'The pad "$1" has already been used before on this page; you can have many pads on a page, but only if they are different pads.',
 );
 
 /** Message documentation (Message documentation) */
