@@ -4,7 +4,7 @@
  * @author Jim R. Wilson, Thomas Gries
  * @maintainer Thomas Gries
  *
- * @version 0.672
+ * @version 0.690
  * @copyright Copyright (C) 2007 Jim R. Wilson
  * @license The MIT License - http://www.opensource.org/licenses/mit-license.php
  *
@@ -116,7 +116,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "This is not a valid entry point.\n" );
 }
 
-define( 'WIKIARTICLEFEEDS_VERSION', '0.672 20120217' );
+define( 'WIKIARTICLEFEEDS_VERSION', '0.690 20120219' );
 
 # Bring in supporting classes
 require_once( "$IP/includes/Feed.php" );
@@ -137,7 +137,7 @@ $wgExtensionMessagesFiles['WikiArticleFeeds'] = $dir . 'WikiArticleFeeds.i18n.ph
 $wgExtensionMessagesFiles['WikiArticleFeedsMagic'] = $dir . 'WikiArticleFeeds.i18n.magic.php';
 
 /**
- * Wrapper class for consolidating all WAF related parser methods
+ * Wrapper class for consolidating all WikiArticleFeeds related parser methods
  */
 class WikiArticleFeedsParser {
 	function feedStart( $text, $params = array() ) {
@@ -195,7 +195,7 @@ function wfWikiArticleFeedsParserSetup( $parser ) {
 # Attach Hooks
 $wgHooks['OutputPageBeforeHTML'][] = 'wfAddWikiFeedHeaders';
 $wgHooks['SkinTemplateToolboxEnd'][] = 'wfWikiArticleFeedsToolboxLinks'; // introduced in 1.13
-
+$wgHooks['LinkEnd'][] = 'wfWikiArticleFeedsAddSignatureMarker';
 $wgHooks['UnknownAction'][] = 'wfWikiArticleFeedsAction';
 $wgHooks['ArticlePurge'][] = 'wfPurgeFeedsOnArticlePurge';
 
@@ -248,6 +248,23 @@ function wfAddWikiFeedHeaders( $out, $text ) {
 	$wgWikiFeedPresent = true;
 
 	# True to indicate that other action handlers should continue to process this page
+	return true;
+}
+
+/**
+ * Add additional attributes to links to User- or User_talk pages.
+ * These are used later in wfGenerateWikiFeed to determine signatures with timestamps
+ * for attributing author and timestamp values to the feed item.
+ *
+ * Currently this method works only if the user page exists.
+ */
+# https://www.mediawiki.org/wiki/Manual:Hooks/LinkEnd
+function wfWikiArticleFeedsAddSignatureMarker( $skin, $title, $options, $text, &$attribs, $ret ) {
+	if ( $title->getNamespace() == NS_USER) {
+		$attribs['userpage-link'] = 'true';
+	} elseif ( $title->getNamespace() == NS_USER_TALK ) {
+		$attribs['usertalkpage-link'] = 'true';
+	}
 	return true;
 }
 
@@ -442,10 +459,10 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 	# Parse page into feed items.
 	$content = $wgOut->parse( $article->getContent() . "\n__NOEDITSECTION__ __NOTOC__" );
 	preg_match_all(
-				   '/<!--\\s*FEED_START\\s*-->(.*?)<!--\\s*FEED_END\\s*-->/s',
-				   $content,
-				   $matches
-				   );
+		'/<!--\\s*FEED_START\\s*-->(.*?)<!--\\s*FEED_END\\s*-->/s',
+		$content,
+		$matches
+	);
 	$feedContentSections = $matches[1];
 
 	# Parse and process all feeds, collecting feed items
@@ -479,7 +496,6 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 			if ( !$feedDescription ) {
 				$feedDescription = $segDesc;
 			} else {
-
 				$feedDescription = wfMsg( 'wikiarticlefeeds_combined_description' );
 			}
 		}
@@ -511,30 +527,30 @@ function wfGenerateWikiFeed( $article, $feedFormat = 'atom', $filterTags = null 
 			}
 			if ( $skip ) continue;
 
-			# Determine the item author and date
+			# Try hard to determine the item author and date
+			# Look for a regular signatures of the layout
+			# userpage-link [optional user_talk page link] date (with a delimiting timezone code in parentheses)
+
 			$author = null;
 			$date = null;
-			$signatureRegExp = '#<a href=".+?User:.+?" title="User:.+?">(.*?)</a> (\d\d):(\d\d), (\d+) ([a-z]+) (\d{4}) (\([A-Z]+\))#im';
-			
-			# Look for a regular ~~~~ sig
-			$isAttributable = preg_match($signatureRegExp, $seg, $matches );
 
-			# Parse it out - if we can
+			$signatureRegExp = '#<a href=".+?User:.+?" title="User:.+?">(.*?)</a> (\d\d):(\d\d), (\d+) ([a-z]+) (\d{4}) (\([A-Z]+\))#im';
+
+			$signatureRegExp1 = '#<.*userpage-link.*>(.*?)</a>.*<.*usertalkpage-link.*>.*</a>\) (.*\([A-Z]+\))#im';
+			$signatureRegExp2 = '#<.*userpage-link.*>(.*?)</a> (.*\([A-Z]+\))#im';
+			$signatureRegExp3 = '#<.*usertalkpage-link.*>(.*?)</a> (.*\([A-Z]+\))#im';
+			
+			$isAttributable = ( preg_match( $signatureRegExp1, $seg, $matches )
+				|| preg_match( $signatureRegExp2, $seg, $matches )
+				|| preg_match( $signatureRegExp3, $seg, $matches ) );
+
 			if ( $isAttributable ) {
 
-				list( $author, $hour, $min, $day, $monthName, $year, $timezone ) = array_slice( $matches, 1 );
-				$months = array(
-								'January' => '01', 'February' => '02', 'March' => '03', 'April' => '04',
-								'May' => '05', 'June' => '06', 'July' => '07', 'August' => '08',
-								'September' => '09', 'October' => '10', 'November' => '11', 'December' => '12'
-								);
-				$month = $months[$monthName];
-				$day = str_pad( $day, 2, '0', STR_PAD_LEFT );
-				$date = $year . $month . $day . $hour . $min . '00';
-
+				list( $author, $timestring ) = array_slice( $matches, 1 );
+			
 				$tempTimezone = date_default_timezone_get();
 				date_default_timezone_set( 'UTC' );
-				$date = date( "YmdHis" , strtotime( "$year-$month-$day $hour:$min:00 $timezone" ) );
+				$date = date( "YmdHis" , strtotime( $timestring ) );
 				date_default_timezone_set( $tempTimezone );
 
 			}
