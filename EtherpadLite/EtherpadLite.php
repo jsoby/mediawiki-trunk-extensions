@@ -74,7 +74,7 @@ $wgExtensionMessagesFiles['EtherpadLite'] = $dir . 'EtherpadLite.i18n.php';
 $wgHooks['ParserFirstCallInit'][] = 'EtherpadLite::EtherpadLiteParserInit';
 
 # Define a default Etherpad Lite server Url and base path
-# this server is used unless a distinct server is defined by id="..."
+# unless a different server is defined with the src= attribute
 $wgEtherpadLiteDefaultPadUrl    = "http://beta.etherpad.org/p/";
 
 $wgEtherpadLiteDefaultWidth     = "300px";
