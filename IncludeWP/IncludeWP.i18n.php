@@ -336,6 +336,7 @@ $messages['nl'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Woytecr
  */
 $messages['pl'] = array(
@@ -344,8 +345,13 @@ $messages['pl'] = array(
 	'includewp-show-full-page' => 'Pokaż całą stronę',
 	'includewp-show-fragment' => 'Pokaż tylko pierwszy akapit',
 	'includewp-loading-failed' => 'Nie można załadować strony.',
+	'includewp-licence-notice' => 'Powyższa zawartość pochodzi ze strony  $1 <a href="$2">$3</a> na licencji <a href="$4">$5</a>.
+Tu jest dostępna <a href="$6">pełna lista autorów</a>.',
 	'includewp-parserhook-desc' => 'Hak analizatora składni umożliwiający wyświetlanie zawartości strony z Wikipedii.',
 	'includewp-include-par-page' => 'Nazwa strony którą chcesz wyświetlić.',
+	'includewp-include-par-wiki' => 'Nazwa wiki, z której chcesz kopiować zawartość. Musi być jedną z dozwolonych wiki, domyślnie tylko Wikipedia.',
+	'includewp-include-par-paragraphs' => 'Liczba akapitów, które mają być początkowo wyświetlane.',
+	'includewp-include-par-height' => 'Maksymalna wysokość w pikselach div HTML, w którym wczytywana jest zawartość. Wartość 0 na brak ograniczenia.',
 );
 
 /** Piedmontese (Piemontèis)

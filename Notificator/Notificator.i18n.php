@@ -422,15 +422,31 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Sp5uhe
  * @author Woytecr
  */
 $messages['pl'] = array(
+	'notificator' => 'Notificator',
+	'notificator-desc' => 'Powiadamia osobę pocztą e-mail o zmianach na stronie po kliknięciu przycisku na stronie.',
+	'notificator-db-table-does-not-exist' => 'Tabela bazy danych "notificator" nie istnieje. Skrypt konserwacyjny update.php musi być uruchamiany przed użyciem rozszerzenia Notificator.',
 	'notificator-e-mail-address' => 'adres e‐mail',
+	'notificator-notify' => 'Powiadom',
+	'notificator-notify-address-or-name' => 'Powiadom $1',
+	'notificator-revs-not-from-same-title' => 'Identyfikatory wersji nie pochodzą od tego samego tytułu/strony',
 	'notificator-return-to' => 'Wróć do',
+	'notificator-special-page-accessed-directly' => 'Ta specjalna strona nie jest dostępna bezpośrednio. Jest przeznaczona do użycia za pomocą przycisku Notificator.',
+	'notificator-e-mail-address-invalid' => 'Podany adres e-mail jest nieprawidłowy.',
+	'notificator-notification-not-sent' => 'Powiadomienie nie zostało wysłane.',
 	'notificator-change-tag' => 'zmień',
 	'notificator-new-tag' => 'nowy',
+	'notificator-notification-text-changes' => '$1 chce powiadamiać cię o następujących zmianach w  $2:',
+	'notificator-notification-text-new' => '$1 chce powiadamiać cię o  $2 .',
+	'notificator-following-e-mail-sent-to' => 'Następująca wiadomość e-mail została wysłana do  $1:',
 	'notificator-subject' => 'Temat',
+	'notificator-error-sending-e-mail' => 'Wystąpił błąd podczas wysyłania powiadomienia e-mailem do  $1.',
+	'notificator-error-parameter-missing' => 'Błąd: Brak parametru.',
+	'notificator-notified-already' => '$1 została powiadomiona o tej stronę lub zmianie poprzedniej strony.',
 );
 
 /** Portuguese (Português)

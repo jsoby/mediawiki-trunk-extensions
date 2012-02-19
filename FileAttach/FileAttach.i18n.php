@@ -299,6 +299,17 @@ $messages['nl'] = array(
 	'fileattach-editcomment' => 'Het bestand [[File:$1|$1]] is toegevoegd',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'fileattach-desc' => 'Umożliwia przesyłanie plików na bieżącą stronę',
+	'fileattach-attachments' => 'Załączniki',
+	'fileattach-attachfile' => 'Załącz plik',
+	'fileattach-uploadheading' => 'Załącz plik do $1',
+	'fileattach-editcomment' => 'Załączono plik [[File:$1|$1]]',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

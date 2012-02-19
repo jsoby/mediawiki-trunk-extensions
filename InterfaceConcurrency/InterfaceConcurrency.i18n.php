@@ -97,6 +97,13 @@ $messages['nl'] = array(
 	'interfaceconcurrency-desc' => 'Biedt een backend voor de gebruikersinterface waarmee in gebruik zijnde bronnen weergegeven kunnen worden',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'interfaceconcurrency-desc' => 'Udostępnia zaplecze dla interfejsu użytkownika pokazującego, które zasoby są używane',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

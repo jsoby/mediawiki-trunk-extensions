@@ -131,6 +131,13 @@ $messages['nl'] = array(
 	'localjquery-desc' => 'jQuery van [[MediaWiki:JQuery.js]] laden (met ResourceLoader)',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'localjquery-desc' => 'Ładuje jQuery z [[MediaWiki:JQuery.js]] (za pomocą ResourceLoader)',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */

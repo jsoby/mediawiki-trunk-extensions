@@ -602,6 +602,7 @@ $messages['lb'] = array(
 	'semanticformsinputs-datepicker-weekstart' => 'Den éischten Dag vun der Woch (0 - Sonndeg, 1 - Méindeg, ...).',
 	'semanticformsinputs-datepicker-firstdate' => 'Den éischten Datum deen erausgesicht ka ginn (am Format JJJJ/MM/DD)',
 	'semanticformsinputs-datepicker-lastdate' => 'De leschten Datum deen erausgesicht ka ginn (am Format JJJJ/MM/DD)',
+	'semanticformsinputs-timepicker-interval' => 'Intervall tëschent de Minutten. Zuel tëschent 1 a 60.',
 	'semanticformsinputs-menuselect-structure' => "D'Struktur vum Menü als net zortéiert Lëscht.",
 	'semanticformsinputs-menuselect-enableinputfield' => "Soll et dem Benotzer méiglech si fir d'Feld direkt auszefëllen?",
 );

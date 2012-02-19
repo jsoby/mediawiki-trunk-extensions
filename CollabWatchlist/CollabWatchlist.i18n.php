@@ -402,6 +402,18 @@ $messages['es'] = array(
 	'collabwatchlistdelete-explain' => 'Eliminando una lista de seguimiento colaborativa se eliminarán todos los rastros de la lista de seguimiento. Las etiquetas que se pusieron en las ediciones se conservan.',
 	'collabwatchlistdelete-submit' => 'Eliminar',
 	'collabwatchlistdelete-title' => 'Eliminar lista de seguimiento colaborativa',
+	'collabwatchlistedit-set-tags-numitems' => 'Esta lista de seguimiento colaborativa contiene {{PLURAL:$1|1 etiqueta activa|$1 etiquetas activas}}',
+	'collabwatchlistedit-set-tags-noitems' => 'Esta lista de seguimiento colaborativa no contiene ninguna etiqueta.',
+	'collabwatchlistnew-legend' => 'Crear una nueva lista de seguimiento colaborativa',
+	'collabwatchlistnew-explain' => 'El nombre de la lista tiene que ser único.',
+	'collabwatchlistnew-name' => 'Nombre de la lista',
+	'collabwatchlistnew-submit' => 'Crear',
+	'collabwatchlistedit-raw-done' => 'Se ha actualizado la lista de seguimiento colaborativa.',
+	'collabwatchlistedit-raw-added' => '{{PLURAL:$1|1 página o categoría fue añadida|$1 páginas o categorías fueron añadidas}}:',
+	'collabwatchlistedit-raw-removed' => '{{PLURAL:$1|1 página o categoría fue eliminada|$1  páginas o categorías fueron eliminadas}}',
+	'collabwatchlistedit-normal-submit' => 'Guardar',
+	'collabwatchlistshowhidelistusers' => '$1usuarios de la lista',
+	'tog-collabwatchlisthidelistusers' => 'Ocultar las ediciones de los usuarios de la lista de seguimiento colaborativa',
 );
 
 /** Persian (فارسی)

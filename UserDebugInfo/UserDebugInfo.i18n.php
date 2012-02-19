@@ -217,6 +217,20 @@ $messages['nl'] = array(
 	'userdebuginfo-language' => 'Taal',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'userdebuginfo' => 'Informacje debugowania użytkownika',
+	'userdebuginfo-desc' => 'Wyświetla potencjalnie użyteczne informacje debugowania o bieżącym użytkowniku',
+	'userdebuginfo-useragent' => 'Agent użytkownika HTTP',
+	'userdebuginfo-remotehost' => 'Host zdalny HTTP',
+	'userdebuginfo-remoteaddr' => 'Zdalny adres HTTP',
+	'userdebuginfo-key' => 'Klucz',
+	'userdebuginfo-value' => 'Wartość',
+	'userdebuginfo-language' => 'Język',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

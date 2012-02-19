@@ -103,6 +103,13 @@ $messages['nl'] = array(
 	'hashtables-desc' => 'Parserfuncties die het mogelijk maken om met hashtabellen te werken in een paginacontext',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'hashtables-desc' => 'Funkcje parsera umożliwiające pracę z tablicami haszy w kontekście ograniczonym do strony',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  */

@@ -20,6 +20,13 @@ $messages['qqq'] = array(
 	'suhosin-desc' => '{{desc}}',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'suhosin-desc' => 'Adauta la configuración de MediaWiki dientro de les llendes d\'una estensión "Suhosin" activada (proyeutu Hardened-PHP)',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Wizardist
  */
@@ -81,5 +88,12 @@ $messages['mk'] = array(
  */
 $messages['ms'] = array(
 	'suhosin-desc' => 'Menyesuaikan tetapan MediaWiki dalam batasan sambungan "Suhosin" yang diaktifkan (Hardened-PHP Project)',
+);
+
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'suhosin-desc' => 'Dostosowuje ustawienia MediaWiki w granicach aktywowanego rozszerzenia "Suhosin" (projekt Hardened-PHP)',
 );
 

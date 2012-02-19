@@ -215,8 +215,10 @@ $1',
  */
 $messages['lb'] = array(
 	'spssuccesstitle' => '$1 Säite ginn ugeluecht',
+	'spssuccess' => '{{PLURAL:$1|Eng Säit gëtt|$1 Säite ginn}} ugeluecht.',
 	'spssuccess-returntoorigin' => 'Zréck op $1',
 	'spserror' => 'Et ass e Feeler geschitt',
+	'spserror-previewnotsupported' => "'Kucken ouni ze späicheren' gëtt fir Serie vu Säiten net ënnerstëtzt.",
 	'spserror-formunknown' => 'De Formulaire "$1" gëtt et net.',
 	'spserror-pagegenerationlimitexeeded' => 'Dir hutt probéiert {{PLURAL:$1|eng Säit|$1 Säiten}} ze generéieren. Dat geet iwwert Är Limit vun  {{PLURAL:$2|eng Säit|$1 Säiten}}.',
 	'spserror-date-startdatemissing' => 'Den Ufanksdatum feelt.',

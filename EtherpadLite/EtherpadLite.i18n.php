@@ -43,6 +43,7 @@ $messages['de'] = array(
 	'etherpadlite-invalid-pad-url' => '„$1“ ist keine gültige EtherPad-Lite-URL oder ein Editierfeldname.',
 	'etherpadlite-url-is-not-whitelisted' => '„$1“ befindet sich nicht in der Liste zulässiger EtherPad-Lite-Server. {{PLURAL:$3|$2 ist der einzige mögliche Server|Die folgenden Server sind möglich: $2}}.',
 	'etherpadlite-empty-whitelist' => '„$1“ befindet sich nicht in der Liste zulässiger EtherPad-Lite-Server. Es gibt keine zulässigen Server in der Liste.',
+	'etherpadlite-pad-used-more-than-once' => 'Das Pad „$1“ wurde früher bereits auf dieser Seite verwendet. Es können viele Pads auf einer Seite genutzt werden, jedoch nur, sofern es unterschiedliche sind.',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -53,6 +54,7 @@ $messages['dsb'] = array(
 	'etherpadlite-invalid-pad-url' => '"$1" njejo płaśiwy URL Etherpad Lite abo płaśiwe mě pisańskeje płoniny.',
 	'etherpadlite-url-is-not-whitelisted' => '"$1" njejo w lisćinje dowólonych serwerow Etherpad Lite. {{PLURAL:$3|$2 jo jadnucki dowólony serwer|Slědujucej serwera stej móžno: $2|Slědujuce serwery su móžno: $2|Slědujuce serwery su móžno: $2}}.',
 	'etherpadlite-empty-whitelist' => '"$1" njejo w lisćinje dowólonych serwerow Etherpad Lite. W lisćinje dowólone serwery njejsu.',
+	'etherpadlite-pad-used-more-than-once' => 'Pisańska płonina "$1" jo se južo do togo na toś tom boku wužyła; móžoš wjele pisańskich płoninow na boku měś, ale jano, jolic su rozdźělne płoniny-',
 );
 
 /** French (Français)
@@ -73,6 +75,18 @@ $messages['gl'] = array(
 	'etherpadlite-invalid-pad-url' => '"$1" non é un nome de documento ou enderezo URL de Etherpad Lite válido.',
 	'etherpadlite-url-is-not-whitelisted' => '"$1" non se atopa na lista branca dos servidores de Etherpad Lite permitidos. {{PLURAL:$3|$2 é o único servidor permitido|Os servidores permitidos son os seguintes: $2}}.',
 	'etherpadlite-empty-whitelist' => '"$1" non se atopa na lista branca dos servidores de Etherpad Lite permitidos. Non hai servidores permitidos na lista branca.',
+	'etherpadlite-pad-used-more-than-once' => 'O documento "$1" utilizouse nesta páxina con anterioridade; pode ter varios documentos nunha páxina, pero unicamente se son diferentes.',
+);
+
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'etherpadlite-desc' => 'הוספת תג מפענח &lt;eplite&gt; שמטמיע בדפים לוח כתיבה אחד או יותר של אתרפד לייט (שמתארחים בשרת Etherpad Lite מקומי או חיצוני)',
+	'etherpadlite-invalid-pad-url' => '"$1" אינה כתובת תקינה של את\'רפד לייט או שם תקין של לוח כתיבה',
+	'etherpadlite-url-is-not-whitelisted' => '"$1" לא נמצא ברשימת שרתי את\'רפד לייט מורשים. {{PLURAL:$3|השרת המותר היחיד הוא $2|מותרים השרתים הבאים: $2}}.',
+	'etherpadlite-empty-whitelist' => '"$1" לא נמצא ברשימת שרתי את\'רפד לייט מורשים. אין שום שרת מורשה ברשימה.',
+	'etherpadlite-pad-used-more-than-once' => 'לוח הכתיבה "$1" כבר נמצא בדף הזה; אפשר לשים מספר לוחות כתיבה בדף, אבל הם צריכים להיות שונים.',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
@@ -94,6 +108,7 @@ $messages['ia'] = array(
 	'etherpadlite-invalid-pad-url' => '"$1" non es un URL de Etherpad Lite o nomine de documento valide.',
 	'etherpadlite-url-is-not-whitelisted' => '"$1" non es in le lista de servitores Etherpad Lite autorisate. {{PLURAL:$3|Solmente le servitor $2 es autorisate|Le servitores autorisate es: $2}}.',
 	'etherpadlite-empty-whitelist' => '"$1" non es in le lista de servitores Etherpad Lite autorisate. Nulle servitor es autorisate.',
+	'etherpadlite-pad-used-more-than-once' => 'Le documento collaborative "$1" ha jam essite usate in iste pagina; il pote haber multe documentos collaborative in un pagina, ma solmente si illos es differente.',
 );
 
 /** Macedonian (Македонски)
@@ -104,5 +119,17 @@ $messages['mk'] = array(
 	'etherpadlite-invalid-pad-url' => '„$1“ не е важечко име на плочка или URL на Etherpad Lite.',
 	'etherpadlite-url-is-not-whitelisted' => '„$1“ не е на белиот список на дозволени опслужувачи за Etherpad Lite. {{PLURAL:$3|Единствениот дозволен е $2|Дозволени се следниве: $2}}.',
 	'etherpadlite-empty-whitelist' => '„$1“ не е на белиот список на дозволени опслужувачи за Etherpad Lite. На списокот нема ниеден дозволен осплужувач.',
+	'etherpadlite-pad-used-more-than-once' => 'Плочката „$1“ е веќе користена на оваа страница. На страницава може да имате повеќе плочки, но само ако се различни.',
+);
+
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'etherpadlite-desc' => 'Dodaje tag analizatora składni &lt;eplite&gt; w celu osadzenia na stronach jednej lub wielu konsol Etherpad Lite (które są hostowane na lokalnych lub zewnętrznych serwerach Etherpad Lite)',
+	'etherpadlite-invalid-pad-url' => '"$1" nie jest prawidłową nazwą adresu URL Etherpad Lite ani nazwą konsoli.',
+	'etherpadlite-url-is-not-whitelisted' => '"$1" nie występuje na białej liście dozwolonych serwerów Etherpad Lite.  {{PLURAL:$3|$2  jest jedynym dozwolonym serwerem|Dozwolone są następujące serwery: $2|Dozwolone są następujące serwery: $2}}.',
+	'etherpadlite-empty-whitelist' => '" $1 " nie występuje na białej liście dozwolonych serwerów Etherpad Lite. Na białej liście nie ma dozwolonych serwerów.',
+	'etherpadlite-pad-used-more-than-once' => 'Konsola "$1" została już użyta powyżej na tej stronie; można mieć wiele konsol na stronie, ale tylko wtedy, jeżeli są to różne konsole.',
 );
 

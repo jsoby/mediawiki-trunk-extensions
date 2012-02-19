@@ -329,6 +329,27 @@ $messages['nl'] = array(
 	'onlinestatusbar-status-hidden' => 'Verborgen',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'onlinestatusbar-desc' => 'Pasek stanu, który wskazuje, czy użytkownik jest w trybie online, w oparciu o preferencje ze strony użytkownika',
+	'onlinestatusbar-line' => '$1 jest teraz $2 $3',
+	'onlinestatusbar-used' => 'Wyświetlić twój status online na twoich stronach użytkownika',
+	'onlinestatusbar-away-time' => 'Ile minut do oznaczenia jako "nieobecny":',
+	'onlinestatusbar-status' => 'Jaki jest stan domyślny, którego chcesz użyć:',
+	'onlinestatusbar-away' => 'Traktuj jako "nieobecny" automatycznie po określonym interwale',
+	'onlinestatusbar-purge' => 'Wyczyść stronę użytkownika za każdym razem, gdy użytkownik loguje się lub wylogowuje',
+	'prefs-onlinestatus' => 'Stan online',
+	'onlinestatusbar-hide' => 'Ukryj pasek stanu na stronach użytkownika po wykorzystaniu magicznego słowa (dla użytkowników zaawansowanych)',
+	'onlinestatusbar-status-online' => 'Dostępny',
+	'onlinestatusbar-status-busy' => 'Zajęty',
+	'onlinestatusbar-status-away' => 'Nieobecny',
+	'onlinestatusbar-status-offline' => 'Niedostępny',
+	'onlinestatusbar-status-uknown' => 'stan nieznany',
+	'onlinestatusbar-status-hidden' => 'Ukryty',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  * @author Vvk.pentapati

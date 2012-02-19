@@ -49,6 +49,13 @@ $messages['dsb'] = array(
 	'categorysortheaders-desc' => 'Dowólujo swójske sortěrowańske głowy z někotarymi znamuškami pódaś, aby se boki z pomocu syntaksy <nowiki>[[category:Foo|^Header^Invisible part of sortkey]]</nowiki> do kategorijow sortěrowali',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'categorysortheaders-desc' => "Permite especificar el 'primer-carácter' como multi-carácter personalizado clasificando los encabezados de las páginas en categorías, utilizando una sintaxis como <nowiki>[[category:Foo|^Encabezado^Parte invisible de sortkey]]</nowiki>",
+);
+
 /** French (Français)
  * @author Gomoko
  */
@@ -132,6 +139,13 @@ $messages['nb'] = array(
  */
 $messages['nl'] = array(
 	'categorysortheaders-desc' => "Maakt het mogelijk om aangepaste sorteervolgorden (op meerdere tekens) toe te voegen aan pagina's voor opname in categorieën, met de opmaak <nowiki>[[category:Foo:Categorienaam|ˆHeader^Onzichtbaar deel van de sorteervolgorde]]</nowiki>",
+);
+
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'categorysortheaders-desc' => 'Pozwala określić niestandardowe wieloznalowe sortowanie nagłówków "według pierwszego znaku\' do listowania stron w kategoriach, przy użyciu składni w stylu <nowiki>[[category:Foo|^Nagłówek^Niewidoczna część klucza sortowania]]</nowiki>',
 );
 
 /** Piedmontese (Piemontèis)

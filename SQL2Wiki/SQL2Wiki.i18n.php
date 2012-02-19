@@ -271,6 +271,25 @@ met de foutmelding: "$2".',
 	'sql2wiki-err-feature_not_supported' => 'SQL2Wiki: de functie wordt niet ondersteund door databases van het type $1!',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'sql2wiki' => 'SQL2Wiki',
+	'sql2wiki-desc' => 'Wyświetla dane SQL bezpośrednio w treści strony',
+	'sql2wiki-special' => 'Uruchom kod SQL2Wiki na kliknięcie',
+	'sql2wiki-cache_refresh' => 'Odśwież',
+	'sql2wiki-err-invalid_db_id' => 'SQL2Wiki: Brak lub nieprawidłowy identyfikator bazy danych',
+	'sql2wiki-err-invalid_type' => 'SQL2Wiki: Brak lub niepoprawny typ',
+	'sql2wiki-err-failed_to_connect' => 'SQL2Wiki: Nie udało się połączyć z  $1!',
+	'sql2wiki-err-failed_to_execute' => 'SQL2Wiki: Nie udało się wykonać instrukcji:
+
+"$1"
+
+ komunikat o błędzie: "$2"!',
+	'sql2wiki-err-feature_not_supported' => 'SQL2Wiki: Funkcja nie jest obsługiwana przez bazę danych typu  $1!',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

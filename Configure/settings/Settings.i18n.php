@@ -5642,6 +5642,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Dferg
  * @author Imre
@@ -5690,7 +5691,9 @@ $messages['es'] = array(
 	'configure-setting-wgThumbUpright' => 'Factor de ajuste de anchura para miniaturas verticales',
 	'configure-setting-wgShowEXIF' => 'Mostrar datos EXIF en páginas de descripción de archivo',
 	'configure-setting-wgThumbLimits' => 'Tamaños miniaturas de imagenes permitidas',
+	'configure-setting-wgExcludeFromThumbnailPurge' => 'Extensiones de archivo que deben excluirse de las operaciones normales de purga de las miniaturas',
 	'configure-setting-wgUseImageResize' => 'Permitir el redimensionamiento dinámico de las imágenes del lado del servidor',
+	'configure-setting-wgEnableAutoRotation' => 'Rotar las imágenes según su orientación EXIF',
 	'configure-setting-wgTrustedMediaFormats' => "Tipos media y tipos MIME los cuales son considerados 'seguros'",
 	'configure-setting-wgImgAuthDetails' => 'Mostrar las razones de por qué falló el acceso en img_auth.php',
 	'configure-setting-wgImgAuthPublicTest' => 'Verificar si las imágenes son accesibles públicamente y mostrar un error en img_auth.php de ser este el caso',
@@ -5699,6 +5702,7 @@ $messages['es'] = array(
 	'configure-setting-wgDBAhandler' => 'Gestor de Administración de Base de Datos a utilizar',
 	'configure-setting-wgCacheEpoch' => 'Tiempo de expiración de la memoria intermedia (caché)',
 	'configure-setting-wgCachePages' => 'Permitir el almacenamiento de páginas en la memoria intermedia del cliente',
+	'configure-setting-wgCachePrefix' => 'Valor personalizado para el prefijo de caché',
 	'configure-setting-wgClockSkewFudge' => 'Tiempo extra añadido a las marcas de tiempo para compensar los desvíos del reloj',
 	'configure-setting-wgFileCacheDirectory' => 'Directorio cache de archivo',
 	'configure-setting-wgForcedRawSMaxage' => 'Edad máxima por defecto para el acceso crudo a CSS o JS',
@@ -14782,6 +14786,7 @@ $messages['nl'] = array(
 	'configure-setting-wgDBAhandler' => 'Te gebruiken DBA-handler',
 	'configure-setting-wgCacheEpoch' => 'Periode voor ongeldigverklaring van de cache',
 	'configure-setting-wgCachePages' => "Clients toestaan pagina's te cachen",
+	'configure-setting-wgCachePrefix' => 'Aangepaste waarde voor het voorvoegsel van de cache',
 	'configure-setting-wgClockSkewFudge' => 'Coulancetijd om aan cachetijdstempels toe te voegen om te compenseren voor tijdsafwijkingen',
 	'configure-setting-wgInvalidateCacheOnLocalSettingsChange' => 'Verschillende caches invalideren als LocalSettings.php wijzigt',
 	'configure-setting-wgFileCacheDirectory' => 'Map voor bestandscache',

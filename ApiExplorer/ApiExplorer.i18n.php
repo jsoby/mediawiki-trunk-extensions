@@ -229,10 +229,12 @@ $messages['nl'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Woytecr
  */
 $messages['pl'] = array(
 	'apiexplorer' => 'Eksplorator API',
+	'apiexplorer-desc' => 'Strona interakcyjnego poznawania dokumentacji API MediaWiki',
 	'apiexplorer-loading' => 'Ładowanie funkcji...',
 );
 

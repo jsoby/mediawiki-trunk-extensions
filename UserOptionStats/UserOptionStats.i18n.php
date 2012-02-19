@@ -598,6 +598,7 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Leinad
  * @author Sp5uhe
  * @author ToSter
@@ -607,6 +608,7 @@ $messages['pl'] = array(
 	'useroptionstats-desc' => '[[Special:UserOptionStats|Strona specjalna]] przedstawiająca użycie opcji dostępnych dla użytkowników MediaWiki',
 	'uos-warn' => 'PHPlot nie został zainstalowany!',
 	'uos-choose' => 'Wybierz jedną z następujących opcji użytkowników: $1',
+	'uos-choose-hidden' => 'Wybierz jedną z następujących ukrytych opcji użytkowników: $1',
 	'uos-unknown' => '*Domyślna',
 	'uos-other' => '*Inna',
 	'uos-title' => 'Rozkład wartości opcji użytkowników $1',

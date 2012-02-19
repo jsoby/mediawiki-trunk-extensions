@@ -108,3 +108,10 @@ $messages['nl'] = array(
 	'previewfunctions-desc' => 'Een reeks parserfuncties om de paginavoorvertoning te beïnvloeden',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'previewfunctions-desc' => 'Zestaw funkcji analizatora składni do manipulowania stroną na podglądzie',
+);
+

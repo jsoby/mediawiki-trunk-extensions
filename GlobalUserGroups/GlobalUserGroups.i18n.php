@@ -140,6 +140,13 @@ $messages['nl'] = array(
 	'globalusergroups-desc' => 'Maakt het mogelijk lokale groepen als globale groepen te gebruiken',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'globalusergroups-desc' => 'Pozwala na używanie określonych lokalnych grup użytkowników jako grup globalnych',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  */
