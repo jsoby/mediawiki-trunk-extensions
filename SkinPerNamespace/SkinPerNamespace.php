@@ -17,10 +17,12 @@ $wgExtensionCredits['other'][] = array(
 	'name'        => 'SkinPerNamespace',
 	'url'         => 'https://www.mediawiki.org/wiki/Extension:SkinPerNamespace',
 	'version'     => '2012-02-18',
-	'description' => 'Allow a per-namespace skin',
+	'descriptionmsg' => 'skinpernamespace-desc',
 	'author'      => 'Alexandre Emsenhuber',
 	
 );
+
+$wgExtensionMessagesFiles['SkinPerNamespace'] = dirname( __FILE__ ) . "/SkinPerNamespace.i18n.php";
 
 // Configuration part, you can copy it to your LocalSettings.php and change it
 // there, *not* here. Also modify it after including this file or you won't see
