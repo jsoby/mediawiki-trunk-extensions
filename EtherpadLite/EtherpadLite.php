@@ -70,42 +70,42 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 $dir = dirname( __FILE__ ) . '/';
-
 $wgExtensionMessagesFiles['EtherpadLite'] = $dir . 'EtherpadLite.i18n.php';
 $wgHooks['ParserFirstCallInit'][] = 'EtherpadLite::EtherpadLiteParserInit';
 
+# Define a default Etherpad Lite server Url and base path
+# this server is used unless a distinct server is defined by id="..."
+$wgEtherpadLiteDefaultPadUrl    = "http://beta.etherpad.org/p/";
+
+$wgEtherpadLiteDefaultWidth     = "300px";
+$wgEtherpadLiteDefaultHeight    = "200px";
+$wgEtherpadLiteMonospacedFont   = false;
+$wgEtherpadLiteShowControls     = true;
+$wgEtherpadLiteShowLineNumbers  = true;
+$wgEtherpadLiteShowChat         = true;
+$wgEtherpadLiteShowAuthorColors = true;
+
+# Whitelist of allowed Etherpad Lite server Urls
+#
+# If there are items in the array, and the user supplied URL is not in the array,
+# the url will not be allowed (proposed in bug 27768 for Extension:RSS)
+# Attention: 
+# Urls are case-sensitively tested against values in the array. 
+# They must exactly match including any trailing "/" character.
+#
+# Warning: Allowing all urls (not setting a whitelist)
+# may be a security concern.
+#
+# an empty or non-existent array means: no whitelist defined
+# this is the default: an empty whitelist. No servers are allowed by default.
+
+$wgEtherpadLiteUrlWhitelist = array();
+
+# include "*" if you expressly want to allow all urls (you should not do this)
+# $wgEtherpadLiteUrlWhitelist = array( "*" );
+
+
 class EtherpadLite {
-
-	# Define a default Etherpad Lite server Url and base path
-	# this server is used unless a distinct server is defined by id="..."
-	public $wgEtherpadLiteDefaultPadUrl    = "http://beta.etherpad.org/p/";
-
-	public $wgEtherpadLiteDefaultWidth     = "300px";
-	public $wgEtherpadLiteDefaultHeight    = "200px";
-	public $wgEtherpadLiteMonospacedFont   = false;
-	public $wgEtherpadLiteShowControls     = true;
-	public $wgEtherpadLiteShowLineNumbers  = true;
-	public $wgEtherpadLiteShowChat         = true;
-	public $wgEtherpadLiteShowAuthorColors = true;
-
-	# Whitelist of allowed Etherpad Lite server Urls
-	#
-	# If there are items in the array, and the user supplied URL is not in the array,
-	# the url will not be allowed (proposed in bug 27768 for Extension:RSS)
-	# Attention: 
-	# Urls are case-sensitively tested against values in the array. 
-	# They must exactly match including any trailing "/" character.
-	#
-	# Warning: Allowing all urls (not setting a whitelist)
-	# may be a security concern.
-	#
-	# an empty or non-existent array means: no whitelist defined
-	# this is the default: an empty whitelist. No servers are allowed by default.
-
-	public $wgEtherpadLiteUrlWhitelist = array();
-	
-	# include "*" if you expressly want to allow all urls (you should not do this)
-	# $wgEtherpadLiteUrlWhitelist = array( "*" );
 
 	/**
 	 * Tell the parser how to handle <eplite> elements
