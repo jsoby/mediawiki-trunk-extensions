@@ -114,7 +114,7 @@ abstract class EmbedVideo {
 
 	# Return the HTML necessary to embed the video normally.
 	private static function generateNormalClause( $url, $width, $height ) {
-		return Hmtl::rawElement(
+		return Html::rawElement(
 			'object',
 			array( 'width' => $width, 'height' => $height ),
 			Html::element( 'param', array( 'name' => 'movie', 'value' => $url ) )
