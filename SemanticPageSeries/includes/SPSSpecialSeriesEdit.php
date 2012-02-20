@@ -149,7 +149,7 @@ class SPSSpecialSeriesEdit extends SpecialPage {
 		$text = '<form name="createbox" id="sfForm" action="" method="post" class="createbox">'
 			. $preFormHtml
 			. "\n"
-			. SFFormUtils::hiddenFieldHTML( 'iteratordata', $iteratorData )
+			. Html::hidden( 'iteratordata', $iteratorData )
 			. $formText;
 
 		SFUtils::addJavascriptAndCSS();

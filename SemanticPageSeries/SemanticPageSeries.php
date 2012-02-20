@@ -33,7 +33,7 @@ if ( !defined( 'SF_VERSION' ) ) {
 define( 'SPS_VERSION', '0.2 alpha' );
 
 // register the extension
-$wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'other'][] = array(
+$wgExtensionCredits['semantic'][] = array(
 	'path' => __FILE__,
 	'name' => 'Semantic Page Series',
 	'author' => '[http://www.mediawiki.org/wiki/User:F.trott Stephan Gambke]',
