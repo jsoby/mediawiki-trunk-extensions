@@ -320,9 +320,9 @@ $.narayam = new ( function() {
 	 */
 	this.addInputs = function( inputs ) {
 		if ( typeof( inputs ) === "string" ) {
-			// If a string is passed, it is a CSS selector
+			// If a string is passed, it is a CSS selector.
 			// We can use jQuery's .live() instead of .bind()
-			// So Narayam can work on elements added later to DOM too
+			// so Narayam can work on elements added later to DOM too
 			$( inputs )
 				.live( 'keydown', onkeydown )
 				.live( 'keypress', onkeypress )
@@ -495,8 +495,8 @@ $.narayam = new ( function() {
 		if ( enabledCookie ) {
 			$.cookie( 'narayam-enabled', enabledCookie, { path: '/', expires: 30 } );
 		}
-
 	};
+
 	/**
 	 * Construct the menu item, for the given scheme name.
 	 */
@@ -582,11 +582,11 @@ $.narayam = new ( function() {
 			.text( mw.msg( 'narayam-more-imes' ) )
 			.prop( 'href', '#' )
 			.click( function( event ) {
-				$('.narayam-scheme-dynamic-item').toggle( 'fast' );
-				if ( $('li.narayam-more-imes-link').hasClass( 'open' ) ) {
-					$('li.narayam-more-imes-link').removeClass( 'open' );
+				$( '.narayam-scheme-dynamic-item' ).toggle( 'fast' );
+				if ( $( 'li.narayam-more-imes-link' ).hasClass( 'open' ) ) {
+					$( 'li.narayam-more-imes-link' ).removeClass( 'open' );
 				} else {
-					$('li.narayam-more-imes-link').addClass( 'open' );
+					$( 'li.narayam-more-imes-link' ).addClass( 'open' );
 				}
 				event.stopPropagation();
 			} );
@@ -612,7 +612,7 @@ $.narayam = new ( function() {
 		// Event listener for scheme selection - dynamic loading of rules.
 		$narayamMenuItems.delegate( 'input:radio', 'click', function( ) {
 			that.setScheme( $( this ).val() );
-			if ( $( this ).parent().hasClass( 'narayam-scheme-dynamic-item' ) ){
+			if ( $( this ).parent().hasClass( 'narayam-scheme-dynamic-item' ) ) {
 				// rebuild the menu items with recent items.
 				$( '#narayam-menu' ).html( $.narayam.buildMenuItems() );
 				$( '#narayam-menu-items' ).css( 'left', $( 'li#pt-narayam' ).offset().left );
@@ -629,8 +629,8 @@ $.narayam = new ( function() {
 				.text( mw.msg( 'narayam-help' ) )
 				.prop( 'href',  helppage )
 				.prop( 'target', '_blank' );
-			var $li = $( '<li>' ).addClass( 'narayam-help-link' );
-			$narayamMenuItems.append( $li.append( $link ) );
+			var $liHelpLink = $( '<li>' ).addClass( 'narayam-help-link' );
+			$narayamMenuItems.append( $liHelpLink.append( $link ) );
 		}
 
 		$narayamMenuItems.prepend( $( '<li>' ).append( $label ) );
@@ -640,7 +640,6 @@ $.narayam = new ( function() {
 			.addClass( 'menu-items' )
 			.append( $narayamMenuItems );
 	}
-
 
 	/**
 	 * Construct the menu for Narayam
@@ -661,34 +660,34 @@ $.narayam = new ( function() {
 			.attr( 'title', mw.msg( 'narayam-menu-tooltip' ) );
 
 		$menu.append( $menuItemsDiv );
-		var $li = $( '<li>' ).attr( 'id', 'pt-narayam' ).append( $link );
+		var $liMenu = $( '<li>' ).attr( 'id', 'pt-narayam' ).append( $link );
 
 		// If rtl, add to the right of top personal links. Else, to the left
 		var rtlEnv = $( 'body' ).hasClass( 'rtl' );
 		var positionFunction = rtlEnv ? "append" : "prepend";
-		$( '#p-personal ul:first' )[positionFunction]( $li );
+		$( '#p-personal ul:first' )[positionFunction]( $liMenu );
 		$( 'body' ).prepend( $menu );
 		$menu.hide();
-		$li.click( function( event ) {
+		$liMenu.click( function( event ) {
 			var menuSide, menuOffset, distanceToEdge;
 
 			if ( rtlEnv ) {
-				distanceToEdge = $li.outerWidth() + $li.offset().left;
+				distanceToEdge = $liMenu.outerWidth() + $liMenu.offset().left;
 				if ( $menuItemsDiv.outerWidth() > distanceToEdge ) {
 					menuSide = 'left';
-					menuOffset = $li.offset().left;
+					menuOffset = $liMenu.offset().left;
 				} else {
 					menuSide = 'right';
 					menuOffset = $(window).width() - distanceToEdge;
 				}
 			} else {
-				distanceToEdge = $(window).width() - $li.offset().left;
+				distanceToEdge = $(window).width() - $liMenu.offset().left;
 				if ( $menuItemsDiv.outerWidth() > distanceToEdge ) {
 					menuSide = 'right';
-					menuOffset = distanceToEdge - $li.outerWidth();
+					menuOffset = distanceToEdge - $liMenu.outerWidth();
 				} else {
 					menuSide = 'left';
-					menuOffset = $li.offset().left;
+					menuOffset = $liMenu.offset().left;
 				}
 			}
 
