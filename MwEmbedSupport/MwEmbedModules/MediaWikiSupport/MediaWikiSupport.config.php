@@ -10,7 +10,7 @@ return array(
 
 	"MediaWiki.ApiProviders" => array(
 		"commons" => array(
-			'url' => 'http://commons.wikimedia.org/w/api.php'
+			'url' => '//commons.wikimedia.org/w/api.php'
 		)
 	),
 	
