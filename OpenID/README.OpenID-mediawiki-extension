@@ -1,5 +1,5 @@
 MediaWiki OpenID extension README.OpenID-mediawiki-extension file
-version 1.000 20120212
+version 1.001 20120220
 Homepage and manual http://www.mediawiki.org/wiki/Extension:OpenID
 
 Please check OpenID.setup.php for the current program version number
@@ -118,10 +118,8 @@ Download and patch of openid library:
 	cd $IP/extensions/OpenID
 	make
 
-The makefile downloads the openid-php library from http://www.openidenabled.com/php-openid/
-and applies a patch to avoid PHP errors because Call-time pass-by-reference is deprecated
-since PHP 5.3.x see https://github.com/openid/php-openid/issues#issue/8  and
-the patch and fork of user kost https://github.com/openid/php-openid/pull/44/files
+The makefile downloads the openid-php library from 
+https://github.com/Wikinaut/php-openid/tree/mw-extension-openid .
     
 Version 0.3 and below of this extension used a different database structure
 that was pretty inefficient. If you installed this extension before, you should
@@ -466,6 +464,8 @@ The big changes for the future:
   into that account now
 
 == CHANGES ==
+* 1.001 convenience release with download of the version for PHP 5.3.x
+	from https://github.com/Wikinaut/php-openid/tree/mw-extension-openid
 * 1.000 release version
 * 0.947 using jQuery closure for redirect
 * 0.946 fixed the problem of broken automatic redirect to OpenID provider login

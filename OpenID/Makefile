@@ -1,8 +1,6 @@
-PHP_OPENID_VERSION=2.2.2
-SUBDIR=openid-php-openid-782224d
+PHP_OPENID_VERSION=mw-extension-openid
+SUBDIR=Wikinaut-php-openid-e46daed
 SHELL = /bin/sh
-
-# how to make that one predictable easily?
 
 # http://www.mediawiki.org/wiki/Extension:OpenID
 #
@@ -29,8 +27,9 @@ SHELL = /bin/sh
 #    svn checkout svn+ssh://USERNAME@svn.wikimedia.org/svnroot/mediawiki/trunk/extensions/OpenID OpenID
 #
 # STEP 2
-# The makefile downloads the openid-php library from http://www.openidenabled.com/php-openid/
-# and applies a patch to avoid PHP errors because Call-time pass-by-reference is deprecated
+# The makefile downloads the php-openid library see http://www.openidenabled.com/php-openid/
+# from the fork version https://github.com/Wikinaut/php-openid/tree/mw-extension-openid
+# which contains a patch to avoid PHP errors because Call-time pass-by-reference is deprecated
 # since PHP 5.3.x see https://github.com/openid/php-openid/issues#issue/8  and
 # the patch and fork of user kost https://github.com/openid/php-openid/pull/44/files
 #
@@ -50,32 +49,17 @@ SHELL = /bin/sh
 # initially written by Brion Vibber
 # 20110203 T. Gries 
 # 20111014 added a test whether "patch" (program) exists before starting it blindly
+# 20120220 removed the patch and checks
+#          pointing to and downloading the already patched version
+#          from https://github.com/Wikinaut/php-openid/tree/mw-extension-openid
 
-install: check-if-patch-exists Auth
-
-# test if "patch" program is installed 
-# some distributions don't have it installed by default
-# 
-# as suggested in 
-# http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
-# we use "hash" to test existence of "patch"
-
-check-if-patch-exists:
-	@if $(SHELL) -c 'hash patch' >/dev/null 2>&1; then \
-		# echo "... The 'patch' program exists." ; \
-		true; \
-	else \
-		echo "... The 'patch' program does not exist on your system. Please install it before running make."; \
-		false; \
-	fi
+install: Auth
 
 Auth:	php-openid-$(PHP_OPENID_VERSION).tar.gz check-php-openid-sha1
 	@echo "... Extracting php-openid-$(PHP_OPENID_VERSION).tar.gz:"
 	tar -xzf php-openid-$(PHP_OPENID_VERSION).tar.gz $(SUBDIR)/Auth
 	rm -f php-openid-$(PHP_OPENID_VERSION).tar.gz
 	mv $(SUBDIR)/Auth ./
-	@echo "... Patching php-openid-$(PHP_OPENID_VERSION) files in the Auth subdirectory:"
-	patch -p1 -d Auth < patches/php-openid-$(PHP_OPENID_VERSION).patch
 	rmdir $(SUBDIR)
 	@echo -e "\n\
 ... Now almost everything is ready for making your MediaWiki OpenID-aware.\n\
@@ -85,7 +69,7 @@ Auth:	php-openid-$(PHP_OPENID_VERSION).tar.gz check-php-openid-sha1
 
 php-openid-$(PHP_OPENID_VERSION).tar.gz:
 	@echo "... Downloading the PHP library for OpenID:"
-	wget --no-check-certificate https://github.com/openid/php-openid/tarball/$(PHP_OPENID_VERSION) -O php-openid-$(PHP_OPENID_VERSION).tar.gz
+	wget --no-check-certificate https://github.com/Wikinaut/php-openid/tarball/$(PHP_OPENID_VERSION) -O php-openid-$(PHP_OPENID_VERSION).tar.gz
 
 check-php-openid-sha1:
 	@if $(SHELL) -c "sha1sum -c php-openid-$(PHP_OPENID_VERSION).tar.gz.sha1" >/dev/null 2>&1; then \
