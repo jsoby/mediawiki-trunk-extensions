@@ -40,73 +40,8 @@ $.narayam = new ( function() {
 	// Number of recent input methods to be shown
 	var recentItemsLength = mw.config.get( 'wgNarayamRecentItemsLength' );
 
+
 	/* Private functions */
-
-	/**
-	 * Transliterate a string using the current scheme
-	 * @param str String to transliterate
-	 * @param keyBuffer The key buffer
-	 * @param useExtended Whether to use the extended part of the scheme
-	 * @return Transliterated string, or str if no applicable transliteration found.
-	 */
-	this.transliterate = function( str, keyBuffer, useExtended ) {
-		var rules = currentScheme.extended_keyboard && useExtended ?
-			currentScheme.rules_x : currentScheme.rules;
-		for ( var i = 0; i < rules.length; i++ ) {
-			var regex = new RegExp( rules[i][0] + '$' );
-			if ( regex.test( str ) // Input string match
-				&&
-				(
-					rules[i][1].length === 0 // Keybuffer match not required
-					||
-					( // Keybuffer match specified, so it should be met
-						rules[i][1].length > 0
-						&& rules[i][1].length <= keyBuffer.length
-						&& new RegExp( rules[i][1] + '$' ).test( keyBuffer )
-					)
-				)
-			) {
-				return str.replace( regex, rules[i][2] );
-			}
-		}
-		// No matches, return the input
-		return str;
-	}
-
-	/**
-	 * Get the n characters in str that immediately precede pos
-	 * Example: lastNChars( "foobarbaz", 5, 2 ) == "ba"
-	 * @param str String to search in
-	 * @param pos Position in str
-	 * @param n Number of characters to go back from pos
-	 * @return Substring of str, at most n characters long, immediately preceding pos
-	 */
-	this.lastNChars = function( str, pos, n ) {
-		if ( n === 0 ) {
-			return '';
-		} else if ( pos <= n ) {
-			return str.substr( 0, pos );
-		} else {
-			return str.substr( pos - n, n );
-		}
-	}
-
-	/**
-	 * Find the point at which a and b diverge, i.e. the first position
-	 * at which they don't have matching characters.
-	 * @param a String
-	 * @param b String
-	 * @return Position at which a and b diverge, or -1 if a == b
-	 */
-	this.firstDivergence = function( a, b ) {
-		var minLength = a.length < b.length ? a.length : b.length;
-		for ( var i = 0; i < minLength; i++ ) {
-			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
-				return i;
-			}
-		}
-		return -1;
-	}
 
 	/**
 	 * Check whether a keypress event corresponds to the shortcut key
@@ -312,6 +247,72 @@ $.narayam = new ( function() {
 
 
 	/* Public functions */
+
+	/**
+	 * Transliterate a string using the current scheme
+	 * @param str String to transliterate
+	 * @param keyBuffer The key buffer
+	 * @param useExtended Whether to use the extended part of the scheme
+	 * @return Transliterated string, or str if no applicable transliteration found.
+	 */
+	this.transliterate = function( str, keyBuffer, useExtended ) {
+		var rules = currentScheme.extended_keyboard && useExtended ?
+			currentScheme.rules_x : currentScheme.rules;
+		for ( var i = 0; i < rules.length; i++ ) {
+			var regex = new RegExp( rules[i][0] + '$' );
+			if ( regex.test( str ) // Input string match
+				&&
+				(
+					rules[i][1].length === 0 // Keybuffer match not required
+					||
+					( // Keybuffer match specified, so it should be met
+						rules[i][1].length > 0
+						&& rules[i][1].length <= keyBuffer.length
+						&& new RegExp( rules[i][1] + '$' ).test( keyBuffer )
+					)
+				)
+			) {
+				return str.replace( regex, rules[i][2] );
+			}
+		}
+		// No matches, return the input
+		return str;
+	}
+
+	/**
+	 * Get the n characters in str that immediately precede pos
+	 * Example: lastNChars( "foobarbaz", 5, 2 ) == "ba"
+	 * @param str String to search in
+	 * @param pos Position in str
+	 * @param n Number of characters to go back from pos
+	 * @return Substring of str, at most n characters long, immediately preceding pos
+	 */
+	this.lastNChars = function( str, pos, n ) {
+		if ( n === 0 ) {
+			return '';
+		} else if ( pos <= n ) {
+			return str.substr( 0, pos );
+		} else {
+			return str.substr( pos - n, n );
+		}
+	}
+
+	/**
+	 * Find the point at which a and b diverge, i.e. the first position
+	 * at which they don't have matching characters.
+	 * @param a String
+	 * @param b String
+	 * @return Position at which a and b diverge, or -1 if a == b
+	 */
+	this.firstDivergence = function( a, b ) {
+		var minLength = a.length < b.length ? a.length : b.length;
+		for ( var i = 0; i < minLength; i++ ) {
+			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
+				return i;
+			}
+		}
+		return -1;
+	}
 
 	/**
 	 * Add more inputs to apply Narayam to
