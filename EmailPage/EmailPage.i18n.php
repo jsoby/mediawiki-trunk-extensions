@@ -735,7 +735,7 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'e-mailpage' => '電子メールでページを送信',
-	'ea-desc' => '特定の電子メールアドレス、あるいは[http://phpmailer.sourceforge.net phpmailer]を使ってアドレスの一覧宛に、HTML描画されたページを送信',
+	'ea-desc' => '[http://phpmailer.sourceforge.net phpmailer]を使って、1件か複数の電子メールアドレス宛に、HTML描画されたページを送信',
 	'ea-heading' => 'ページ「[[$1]]」を電子メールで送信',
 	'ea-group-info' => 'さらに、グループのメンバーにページを送信できます',
 	'ea-pagesend' => '$2から送信されたページ「$1」',
@@ -749,7 +749,7 @@ $messages['ja'] = array(
 	'ea-show' => '受信者一覧を表示',
 	'ea-from' => '差出人：',
 	'ea-to' => '宛先：',
-	'ea-to-info' => '電子メールアドレスは1つ以上のセミコロン、カンマ、アスタリスクや改行文字で区切ることができます。',
+	'ea-to-info' => '複数の電子メールアドレスは1つ以上のセミコロン、カンマ、アスタリスクや改行文字で区切ることができます。',
 	'ea-cc' => 'CC：',
 	'ea-send' => '送信',
 	'ea-subject' => '件名：',
@@ -757,7 +757,7 @@ $messages['ja'] = array(
 	'ea-message-info' => '追加のウィキテキストのメッセージを本文の先頭に追加',
 	'ea-style' => 'スタイル：',
 	'ea-selectcss' => 'スタイルシートを選択できます',
-	'ea-data' => '日付',
+	'ea-data' => 'データ',
 	'ea-selectrecord' => 'これらのテンプレートをメッセージの内容を入力するために使用することができます',
 	'ea-allusers' => 'すべての利用者',
 );

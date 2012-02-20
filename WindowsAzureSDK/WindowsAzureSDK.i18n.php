@@ -5,6 +5,13 @@ $messages['en'] = array(
 	'windowsazuresdk-desc' => 'Provides the [http://phpazure.codeplex.com/ PHPAzure] SDK created by [http://www.realdolmen.com/ REALDOLMEN]'
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'windowsazuresdk-desc' => 'Прадстаўляе [http://phpazure.codeplex.com/ PHPAzure] SDK, створаны [http://www.realdolmen.com/ REALDOLMEN]',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */

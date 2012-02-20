@@ -27,6 +27,22 @@ $messages['qqq'] = array(
 	'parserfun-desc' => '{{desc}}',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'parserfun-desc' => "Amiesta una función analítica <code>#parse</code> p'analizar testu wiki, ya introduz el prefixu <code>THIS:</code> pa les variables máxiques rellacionaes cola información de les páxines",
+	'parserfun-invalid-caller-mode' => "Nun se dio dengún mou d'operación o índiz numbéricu válidu.",
+);
+
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'parserfun-desc' => 'Дадае функцыю парсэра <code>#parse</code> для разбору вікітэкста і ўключае прэфікс <code>THIS:</code> для магічных словаў, якія выдаюць зьвесткі пра старонку',
+	'parserfun-invalid-caller-mode' => 'Пададзены няслушны рэжым працы або лічбавы індэкс.',
+);
+
 /** German (Deutsch)
  * @author Daniel Werner
  * @author Kghbln
@@ -102,6 +118,14 @@ $messages['ms'] = array(
  */
 $messages['nl'] = array(
 	'parserfun-desc' => 'Voegt een parserfunctie <code>#parse</code> toe voor het parsen van wikitekst, en introduceert het voorvoegsel <code>THIS:</code> voor aan magische variabelen gerelateerde paginagegevens',
+);
+
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'parserfun-desc' => 'Dodaje funkcję analizatora <code>#parse</code> w celu analizowania wikitekstu i wprowadza prefiks <code>THIS:</code> dla informacje strony dotyczących magicznych zmiennych',
+	'parserfun-invalid-caller-mode' => 'Brak prawidłowego trybu operacji lub podano indeks liczbowy.',
 );
 
 /** Piedmontese (Piemontèis)

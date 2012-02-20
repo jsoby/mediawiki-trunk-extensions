@@ -326,6 +326,8 @@ $messages['or'] = array(
  * @author Woytecr
  */
 $messages['pl'] = array(
+	'usersignup' => 'Rejestracja użytkownika',
+	'signupapi-desc' => 'Czyści [[Special:UserLogin|stronę logowania]] z rzeczy związanych z rejestracją i dodaje API służące rejestracji',
 	'signupapi-ok' => 'OK',
 	'signupapi-noname' => 'Nie podano nazwy użytkownika',
 	'signupapi-userexists' => 'Użytkownik już istnieje',

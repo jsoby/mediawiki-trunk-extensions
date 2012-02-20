@@ -25,6 +25,13 @@ $messages['ast'] = array(
 	'hashtables-desc' => 'Funciones analítiques que permiten trabayar con tables hash nun contestu de páxina',
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'hashtables-desc' => 'Функцыі парсэра для працы з гэш-табліцамі ў кантэксьце старонкі',
+);
+
 /** German (Deutsch)
  * @author Daniel Werner
  * @author Kghbln

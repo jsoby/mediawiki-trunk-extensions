@@ -28,10 +28,11 @@ $messages['ast'] = array(
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Jim-by
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
-	'suhosin-desc' => 'Адаптуе налады MediaWiki пад абмежаваньні пашырэньня Suhosin (праект Hardened-PHP)',
+	'suhosin-desc' => 'Адаптуе налады MediaWiki пад абмежаваньні пашырэньня «Suhosin» (праект Hardened-PHP)',
 );
 
 /** German (Deutsch)
@@ -46,6 +47,13 @@ $messages['de'] = array(
  */
 $messages['dsb'] = array(
 	'suhosin-desc' => 'Pśiměrja nastajenja MediaWiki w granicach atiwěrowanego rozšyrjenja "Suhosin" (PHP-projekt)',
+);
+
+/** French (Français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'suhosin-desc' => 'Adapte les paramètres de MediaWiki dans les limites d\'une extension "Suhosin" activée (projet PHP endurci)',
 );
 
 /** Galician (Galego)

@@ -110,6 +110,22 @@ $messages['arz'] = array(
 	'contrib-tracking-button' => 'استمر',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'contributiontracking-desc' => 'Siguimientu de les collaboraciones cola recaudación de fondos de Wikimedia',
+	'contributiontracking' => 'Siguimientu de les collaboraciones',
+	'contrib-tracking-error' => 'Error',
+	'contrib-tracking-error-text' => 'Unviu de formulariu inválidu',
+	'contrib-tracking-submitting' => 'Unviando al procesador de pagos...',
+	'contrib-tracking-continue' => 'Si nun te redirixe de mou automáticu, calca nel botón pa completar la to donación.',
+	'contrib-tracking-redirect' => 'Te redirixirá de mou automáticu pa completar la to donación.',
+	'contrib-tracking-button' => 'Siguir',
+	'contrib-tracking-item-name-onetime' => 'Donación única',
+	'contrib-tracking-item-name-recurring' => 'Donación mensual repetida',
+);
+
 /** Azerbaijani (Azərbaycanca)
  * @author Cekli829
  * @author Vago

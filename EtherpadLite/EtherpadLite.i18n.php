@@ -65,6 +65,7 @@ $messages['fr'] = array(
 	'etherpadlite-invalid-pad-url' => '"$1" n\'est pas une URL ou un nom de bloc Etherpad Lite valide.',
 	'etherpadlite-url-is-not-whitelisted' => '"$1" ne fait pas partie de la liste des serveurs Etherpad Lite autorisés. {{PLURAL:$3|$2 est le seul serveur autorisé|Les serveurs autorisés sont les suivants: $2}}.',
 	'etherpadlite-empty-whitelist' => '"$1" n\'est pas dans la liste des serveurs d\'application Lite autorisés. Il n\'y a pas de serveur dans la liste autorisée.',
+	'etherpadlite-pad-used-more-than-once' => 'Le bloc "$1" a déjà été utilisé sur cette page, vous pouvez avoir plusieurs blocs sur une page, mais seulement s\'ils sont de types différents.',
 );
 
 /** Galician (Galego)

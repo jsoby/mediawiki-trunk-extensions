@@ -24,6 +24,13 @@ $messages['ast'] = array(
 	'previewfunctions-desc' => 'Un conxuntu de funciones analítiques pa manipular la páxina na vista previa',
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'previewfunctions-desc' => 'Набор функцыяў парсэра для маніпуляваньня старонкай у час папярэдняга прагляду',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */

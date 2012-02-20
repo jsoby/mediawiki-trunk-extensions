@@ -49,6 +49,7 @@ $messages['qqq'] = array(
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Jim-by
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
@@ -59,10 +60,10 @@ $messages['be-tarask'] = array(
 	'reassignedits-old' => 'Стары ўдзельнік',
 	'reassignedits-submit' => 'Пераназначыць',
 	'reassignedits-success' => 'Рэдагаваньні «<nowiki>$1</nowiki>» былі прысвоеныя ўдзельніку «<nowiki>$2</nowiki>».',
-	'reassignedits-summary' => 'Пераназначэньне рэдагаваньняў ад аднаго ўдзельніка другому.',
-	'reassignedits-updatelog-title' => 'Абнавіць імя ўдзельніка ў журналах',
+	'reassignedits-summary' => 'Пераназначэньне рэдагаваньняў ад старога ўдзельніка новаму.',
+	'reassignedits-updatelog-title' => 'Абнавіць імя ўдзельніка ў назвах журналаў',
 	'reassignedits-updatelog-user' => 'Абнавіць выканальніка зьменаў у журналах',
-	'right-reassignedits' => 'пераназначэньне рэдагаваньняў ад аднаго ўдзельніка другому',
+	'right-reassignedits' => 'Пераназначэньне рэдагаваньняў ад старога ўдзельніка новаму',
 );
 
 /** Breton (Brezhoneg)

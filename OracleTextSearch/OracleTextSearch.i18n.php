@@ -28,6 +28,14 @@ $messages['af'] = array(
 	'oracletextsearch-desc' => 'Deursoek inhoud/metadata van opgelaaide lêers met behulp van Oracle se teks indekse',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'oracletextsearch' => 'OracleTextSearch',
+	'oracletextsearch-desc' => 'Guetar conteníu/metadatos de los ficheros xubíos usando la indexación de testu Oracle',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Jim-by
  * @author Wizardist

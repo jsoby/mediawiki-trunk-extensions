@@ -17,6 +17,13 @@ $messages['qqq'] = array(
 	'skinpernamespace-desc' => '{{desc}}',
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'skinpernamespace-desc' => 'Дадае магчымасьць назначаць прасторам назваў асобнае афармленьне',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
@@ -29,6 +36,13 @@ $messages['de'] = array(
  */
 $messages['dsb'] = array(
 	'skinpernamespace-desc' => 'Zmóžnja wužywarski powjerch specifiski za mjenjowy rum',
+);
+
+/** French (Français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'skinpernamespace-desc' => 'Permet un habillage par espace de noms',
 );
 
 /** Galician (Galego)

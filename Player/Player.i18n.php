@@ -159,6 +159,18 @@ $messages['arz'] = array(
  * @author Xuacu
  */
 $messages['ast'] = array(
+	'player' => 'Reproductor',
+	'player-desc' => 'Reproducción multimedia empotrada usando complementos normales del navegador y una [[Special:Player|páxina especial]]',
+	'player-title' => 'Reproductor',
+	'player-playertitle' => 'Reproductor: $1',
+	'player-file' => 'Nome del ficheru',
+	'player-play' => 'Reproducir',
+	'player-not-allowed' => 'formatu non permitíu',
+	'player-not-found' => "el ficheru nun s'alcontró",
+	'player-invalid-title' => 'títulu inválidu',
+	'player-clicktoplay' => 'Reproducir $1',
+	'player-goto-player' => 'reproductor',
+	'player-goto-page' => 'Páxina',
 	'player-goto-file' => 'ficheru',
 );
 

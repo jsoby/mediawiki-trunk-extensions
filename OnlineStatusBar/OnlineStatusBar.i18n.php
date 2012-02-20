@@ -65,6 +65,20 @@ $messages['qqq'] = array(
 	'onlinestatusbar-status-hidden' => 'Status for users who mark themselves as hidden (used on preferences only)',
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'onlinestatusbar-desc' => 'Панэль стану, якая адлюстроўвае наяўнасьць карыстальніка на сайце, у залежнасьці ад наладаў',
+	'onlinestatusbar-line' => '$1 зараз',
+	'onlinestatusbar-used' => 'Адлюстроўваць ваш анлайн-статус на вашай старонцы ўдзельніка',
+	'onlinestatusbar-away-time' => 'Колькі хвілінаў чакаць да пераходу ў стан «адыйшоў»:',
+	'onlinestatusbar-status' => 'Перадвызначаны стан, які мусіць выкарыстоўвацца:',
+	'onlinestatusbar-away' => 'Аўтаматычна пераводзіць у стан «адыйшоў» пасьля вызначанага інтэрвалу',
+	'onlinestatusbar-purge' => 'Ачышчаць кэш старонкі ўдзельніка па кожным уваходзе або выхадзе',
+	'prefs-onlinestatus' => 'Анлайн-статус',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */

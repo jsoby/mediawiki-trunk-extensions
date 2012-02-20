@@ -120,6 +120,13 @@ $messages['nl'] = array(
 	'editsectionclearerlink-desc' => 'Verbeter de bruikbaarheid van de paragraafbewerkingverwijzing met "over verwijzing zweven"-handelingen',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'editsectionclearerlink-desc' => 'Zwiększyć użyteczność łącz edycji sekcji przez akcje najechania myszką na sekcje i łącza',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

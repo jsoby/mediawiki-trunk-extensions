@@ -235,6 +235,7 @@ $messages['nl'] = array(
 $messages['pl'] = array(
 	'apiexplorer' => 'Eksplorator API',
 	'apiexplorer-desc' => 'Strona interakcyjnego poznawania dokumentacji API MediaWiki',
+	'apiexplorer-intro' => 'Na tej stronie wyświetlana jest dokumentacja API bieżącegj wiki. Kliknij na funkcji poniżej, aby wyświetlić więcej informacji o parametrach jakie mogą być używane przy każdym wywołaniu funkcji. Zobacz też [http://www.mediawiki.org/wiki/API:Main_page ogólną dokumentację API MediaWiki].',
 	'apiexplorer-loading' => 'Ładowanie funkcji...',
 );
 

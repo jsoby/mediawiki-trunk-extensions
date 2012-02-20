@@ -91,6 +91,24 @@ $messages['arc'] = array(
 	'cooperationstatistics-articles' => '$1 {{PLURAL:$1|ܕܦܐ|ܕܦ̈ܐ}}',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'cooperationstatistics' => 'Estadístiques de cooperación',
+	'cooperationstatistics-desc' => 'Ver les [[Special:CooperationStatistics|estadístiques de cooperación del espaciu de nomes principal]].',
+	'cooperationstatistics-text' => "Ver les estadístiques de cooperación del espaciu de nomes principal.
+De [[MediaWiki:Cooperationstatistics-limit-few-revisors|{{MediaWiki:Cooperationstatistics-limit-few-revisors}}]] a [[MediaWiki:Cooperationstatistics-limit-many-revisors|{{MediaWiki:cooperationstatistics-limit-many-revisors}}+]] revisores.<br />
+Ver tamién les [[Special:MostRevisors|'''páxines con más revisores''']] y les [[Special:MostRevisions|páxines con más revisiones]].",
+	'cooperationstatistics-tablearticle' => 'Cuenta de páxines',
+	'cooperationstatistics-tablevalue' => "Númberu d'editores",
+	'cooperationstatistics-articles' => '$1 {{PLURAL:$1|páxina|páxines}}',
+	'cooperationstatistics-nbusers' => '{{PLURAL:$2|tien|tienen}} $1 {{PLURAL:$1|editor|editores}}',
+	'cooperationstatistics-nblessusers' => '{{PLURAL:$2|tien|tienen}} $1 {{PLURAL:$1|editor|o menos editores}}',
+	'cooperationstatistics-nbmoreusers' => '{{PLURAL:$2|tien|tienen}} $1 o más editores',
+	'cooperationstatistics-legendmore' => 'o más editores.',
+);
+
 /** Bavarian (Boarisch)
  * @author Man77
  */

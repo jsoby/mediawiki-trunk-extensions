@@ -43,6 +43,18 @@ $messages['af'] = array(
 	'mah-undo-mark-text' => 'maak ongedaan',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'markashelpful-desc' => "Ufre una interfaz d'usuariu pa marcar comentarios como útiles",
+	'mah-mark-text' => 'Marcar como útil',
+	'mah-you-marked-text' => "Pienses qu'esto ye útil",
+	'mah-someone-marked-text' => "{{GENDER:$1|$1}} cree qu'esto ye útil",
+	'mah-undo-mark-text' => 'esfacer',
+	'mah-action-error' => 'Hebo un error al facer esta aición',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Wizardist
  */

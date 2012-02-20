@@ -186,15 +186,16 @@ $messages['id'] = array(
 
 /** Japanese (日本語)
  * @author Ohgi
+ * @author Whym
  * @author 青子守歌
  */
 $messages['ja'] = array(
 	'spm_wbs_link' => 'MS Project XML書き出し',
 	'spm_printername_wbs' => 'MS Project書き出し',
-	'spm-name' => 'セマンティックなプロジェクト管理',
-	'semanticprojectmanagement-desc' => 'セマンティックMediaWikiの内部問い合わせのためのプロジェクト管理形式',
+	'spm-name' => 'セマンティックプロジェクト管理',
+	'semanticprojectmanagement-desc' => 'セマンティックMediaWikiのインライン問い合わせのためのプロジェクト管理形式',
 	'semanticprojectmanagement' => 'セマンティックプロジェクトの設定',
-	'right-SPMsetup' => '基礎的なセマンティックなプロジェクト管理設定を編集',
+	'right-SPMsetup' => '基礎的なセマンティックプロジェクト管理設定を編集',
 );
 
 /** Colognian (Ripoarisch)
