@@ -170,6 +170,14 @@ $messages['es'] = array(
 	'dontswitchmeover-pref' => 'No permitir a mi piel ser cambiada cuando la piel por defecto cambie',
 );
 
+/** Estonian (Eesti)
+ * @author Pikne
+ */
+$messages['et'] = array(
+	'dontswitchmeover-desc' => 'Eelistus, millega kasutajad saavad määrata, kas soovivad oma kujundussätte muutmata jätta, kui vaikekujundust muudetakse.',
+	'dontswitchmeover-pref' => 'Ära luba minu kujundust muuta, kui vaikekujundust muudetakse',
+);
+
 /** Basque (Euskara)
  * @author Unai Fdz. de Betoño
  */

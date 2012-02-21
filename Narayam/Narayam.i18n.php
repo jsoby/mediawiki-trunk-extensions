@@ -738,6 +738,7 @@ $messages['es'] = array(
 	'narayam-te' => 'Transliteración telugu',
 	'narayam-te-inscript' => 'Telugu InScript',
 	'narayam-bho' => 'Transliteración Bhojpuri',
+	'narayam-bho-inscript' => 'Teclado InScript Bhojpuri',
 	'narayam-bn-avro' => 'Avro bengalí',
 	'narayam-bn-inscript' => 'Bengalí InScript',
 	'narayam-bn-nkb' => 'NKB bengalí',

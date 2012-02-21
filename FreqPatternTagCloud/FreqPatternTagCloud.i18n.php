@@ -327,18 +327,23 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Woytecr
  */
 $messages['pl'] = array(
+	'freqpatterntagcloud-desc' => '[[Special:FreqPatternTagCloud|Specjalna strona]] do konstruowania chmury znaczników na podstawie właściwości i do wyszukiwania wartości podobnych właściwości',
 	'fptc-categoryname' => 'Kategoria',
+	'fptc-context-menu-browse' => 'Przeglądaj strony z wartością',
 	'fptc-context-menu-similar-tags' => 'Podobne etykiety:',
 	'fptc-form-attribute-name' => 'Właściwość',
 	'fptc-form-submit-button' => 'Wyślij',
 	'fptc-invalid-attribute' => 'Wprowadzona własność jest nieprawidłowa.',
 	'fptc-insufficient-rights-for-maintenance' => 'Musisz zalogować się jako administrator aby wyświetlić tę stronę.',
 	'fptc-refresh-frequent-patterns' => 'Odśwież dane',
+	'fptc-refreshed-frequent-patterns' => 'Odświeżono reguły często używanych wzorców.',
 	'fptc-search-attribute-name' => 'Znajdź właściwość',
 	'fptc-search-button' => 'Szukaj',
+	'fptc-search-suggestion-value' => 'Podobnie do "%s":',
 	'fptc-suggestion' => 'Czy miałeś na myśli',
 	'fptc-no-suggestion' => 'Nie znaleziono podpowiedzi',
 );

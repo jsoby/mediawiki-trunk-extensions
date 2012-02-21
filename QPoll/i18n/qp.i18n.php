@@ -3114,6 +3114,7 @@ $messages['uk'] = array(
 $messages['yi'] = array(
 	'qp_vote_button' => 'שטימען',
 	'qp_source_link' => 'מקור',
+	'qp_stats_link' => 'סטאַטיסטיק',
 );
 
 /** Simplified Chinese (‪中文(简体)‬)

@@ -409,10 +409,9 @@ Vidu [//www.mediawiki.org/wiki/API:Main_page la API-dokumentadon] por pli da det
 $messages['es'] = array(
 	'apisb-desc' => 'Permite depurar llamadas a la [//www.mediawiki.org/wiki/API API de MediaWiki] desde el navegador',
 	'apisandbox' => 'Zona de pruebas API',
-	'apisb-no-js' => "'''Error ''': esta característica requiere JavaScript.",
-	'apisb-intro' => "Utilice está página para experimentar con el '''servicio web API de MediaWiki'''.
-
-Consulte [//www.mediawiki.org/wiki/API:Main_page la documentación API] para más detalles sobre su uso. Ejemplo: [//www.mediawiki.org/wiki/API#A_simple_example accede al contenido de una página principal].  Seleccione una acción para ver más ejemplos.",
+	'apisb-no-js' => "'''Error''': esta característica requiere JavaScript.",
+	'apisb-intro' => "Usa esta página para experimentar con el '''API de servicio web de MediaWiki'''.
+	Para más detalles sobre el uso del API, visita [//www.mediawiki.org/wiki/API:Main_page su documentación].  Ejemplo: [//www.mediawiki.org/wiki/API#A_simple_example obtener el contenido de una Página principal].  Selecciona una acción para ver más ejemplos.",
 	'apisb-api-disabled' => 'La API está desactivada en este sitio.',
 	'apisb-legend-parameters' => 'Parámetros',
 	'apisb-legend-result' => 'Resultado',

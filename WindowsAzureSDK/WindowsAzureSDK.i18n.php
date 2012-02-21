@@ -82,6 +82,13 @@ $messages['nl'] = array(
 	'windowsazuresdk-desc' => 'Biedt de [http://phpazure.codeplex.com/ PHPAzure] SDK gemaakt door [http://www.realdolmen.com/ REALDOLMEN]',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'windowsazuresdk-desc' => 'Zapewnia SDK [http://phpazure.codeplex.com/ PHPAzure] utworzony przez [http://www.realdolmen.com/ REALDOLMEN]',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */

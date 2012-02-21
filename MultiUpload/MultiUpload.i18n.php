@@ -1168,7 +1168,7 @@ $messages['myv'] = array(
  * @author Ricardo gs
  */
 $messages['nah'] = array(
-	'multipleupload' => 'Titlahcuilōlquetzāz',
+	'multipleupload' => 'Nepapan titlahcuilōlquetzaz',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)

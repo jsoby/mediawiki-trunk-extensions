@@ -1955,6 +1955,7 @@ $messages['es'] = array(
 	'articlefeedback-form-panel-expertise-other' => 'La fuente de mi conocimiento no está en esta lista',
 	'articlefeedback-form-panel-helpimprove' => 'Me gustaría ayudar a mejorar Wikipedia, enviarme un correo electrónico (opcional)',
 	'articlefeedback-form-panel-helpimprove-note' => 'Te enviaremos un correo electrónico de confirmación. No compartiremos tu dirección de correo electrónico con terceros por nuestra $1.',
+	'articlefeedback-form-panel-helpimprove-email-placeholder' => 'correo@ejemplo.org',
 	'articlefeedback-form-panel-helpimprove-privacy' => 'Declaración de privacidad de los comentarios',
 	'articlefeedback-form-panel-submit' => 'Enviar calificaciones',
 	'articlefeedback-form-panel-pending' => 'Tu valoración aún no ha sido enviada',
