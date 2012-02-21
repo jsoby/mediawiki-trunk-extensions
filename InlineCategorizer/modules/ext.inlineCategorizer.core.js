@@ -8,20 +8,23 @@
  * Relies on: mw.config (wgFormattedNamespaces, wgNamespaceIds,
  * wgCaseSensitiveNamespaces, wgUserGroups), mw.util.wikiGetlink
  */
-( function( $ ) {
+( function ($) {
 
 	/* Local scope */
 
 	var	catNsId = mw.config.get( 'wgNamespaceIds' ).category,
-		defaultOptions = {
+		isCatNsSensitive = $.inArray( 14, mw.config.get( 'wgCaseSensitiveNamespaces' ) ) !== -1;
+
+	function getDefaultOptions() {
+		return {
 			catLinkWrapper: '<li>',
 			$container: $( '.catlinks' ),
 			$containerNormal: $( '#mw-normal-catlinks' ),
 			categoryLinkSelector: 'li a:not(.icon)',
 			multiEdit: $.inArray( 'user', mw.config.get( 'wgUserGroups' ) ) !== -1,
 			resolveRedirects: true
-		},
-		isCatNsSensitive = $.inArray( 14, mw.config.get( 'wgCaseSensitiveNamespaces' ) ) !== -1;
+		};
+	}
 
 	/**
 	 * @return {String}
@@ -195,7 +198,7 @@
  */
 mw.InlineCategorizer = function( options ) {
 
-	this.options = options = $.extend( defaultOptions, options );
+	this.options = options = $.extend( getDefaultOptions(), options );
 
 	// Save scope in shortcut
 	var	ajaxcat = this;
@@ -1149,4 +1152,4 @@ mw.InlineCategorizer.prototype = {
 	}
 };
 
-} )( jQuery );
+})(jQuery);

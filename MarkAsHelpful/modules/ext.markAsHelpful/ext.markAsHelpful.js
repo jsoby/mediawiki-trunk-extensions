@@ -105,20 +105,22 @@
 
 	// Some live events for the different modes
 
-	/*
-	 * Click Event for marking an item as helpful.
-	 */
-	$( '.markashelpful-mark' ).live( 'click', function() {
-		mah.markItem( $(this), 'mark' );
-	} );
+	$(document).ready( function() {
+		/*
+		 * Click Event for marking an item as helpful.
+		 */
+		$( '.markashelpful-mark' ).live( 'click', function() {
+			mah.markItem( $(this), 'mark' );
+		} );
 
-	/*
-	 * Click Event for removing helpful status from an item.
-	 */
-	$( '.markashelpful-undo' ).live( 'click', function() {
-		mah.markItem( $(this), 'unmark' );
-	} );
+		/*
+		 * Click Event for removing helpful status from an item.
+		 */
+		$( '.markashelpful-undo' ).live( 'click', function() {
+			mah.markItem( $(this), 'unmark' );
+		} );
 
-	// Initialize MarkAsHelpful
-	$( mah.init );
+		// Initialize MarkAsHelpful
+		mah.init();
+	} );
 } ) ( jQuery );

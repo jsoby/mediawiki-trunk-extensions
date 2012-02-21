@@ -112,4 +112,6 @@
 
 } )( jQuery );
 
-$.bindAjaxControls();
+jQuery(document).ready( function() {
+	$.bindAjaxControls();
+} );

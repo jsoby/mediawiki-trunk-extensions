@@ -1,5 +1,5 @@
 /**
- * JavasSript for the Live Translate extension.
+ * JavaScript for the Live Translate extension.
  * @see https://www.mediawiki.org/wiki/Extension:Live_Translate
  * 
  * @licence GNU GPL v3 or later
