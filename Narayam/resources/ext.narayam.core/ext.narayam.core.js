@@ -439,8 +439,9 @@ $.narayam = new ( function() {
 	/**
 	 * Change the current transliteration scheme
 	 * @param name String
+	 * @param callback Function to be called when the scheme is ready/dynamically loaded.- Optional
 	 */
-	this.setScheme = function( name ) {
+	this.setScheme = function( name, callback ) {
 		var recent = $.cookie( 'narayam-scheme' ) || [];
 		if ( typeof recent === "string" ) {
 			recent = recent.split( "," );
@@ -454,10 +455,12 @@ $.narayam = new ( function() {
 		$.cookie( 'narayam-scheme', recent, { path: '/', expires: 30 } );
 		if ( name in schemes ) {
 			currentScheme = schemes[name];
+			if ( callback ) callback.call();
 		} else {
 			// load the rules dynamically.
 			mw.loader.using( "ext.narayam.rules." + name, function() {
 				currentScheme = schemes[name];
+				if ( callback ) callback.call();
 			} );
 		}
 		return true;
