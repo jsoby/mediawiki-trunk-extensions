@@ -3,7 +3,7 @@
  * based on RTS
  * @author Veeven ([[user:Veeven]])
  * @date 2012-01-23
- * @credits Junaid,  Naveen Shankar (because it is partly based on Sanskrit);
+ * @credits Junaid, Naveen Shankar (because it is partly based on Sanskrit);
  * Nagarjuna Venna and others (because it mostly uses RTS)
  * License: GPLv3,  CC-BY-SA 3.0
  */
@@ -148,11 +148,12 @@ var rules = [
 ['స్h', '', 'ష్'], 
 ['స్\'', '', 'శ్'], 
 ['త్\'', '', 'ట్'], 
+['ట్h', '', 'ఠ్'],
 ['ద్\'', '', 'డ్'], 
-['ఢ్h', '', 'ఢ్'], 
+['డ్h', '', 'ఢ్'], 
 ['న్\'', '', 'ణ్'], 
 ['త్h', '', 'థ్'], 
-['ద్h', '', 'థ్'], 
+['ద్h', '', 'ధ్'], 
 ['ప్h', '', 'ఫ్'], 
 ['బ్h', '', 'భ్'], 
 ['ల్\'', '', 'ళ్'], 
