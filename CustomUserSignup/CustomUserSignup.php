@@ -45,5 +45,7 @@ $wgHooks['AddNewAccount'][] = 'CustomUserSignupHooks::addNewAccount';
 $wgCustomUserSignupVersion = 1;
 $wgCustomUserSignupSetBuckets = true;
 // For Account Creation Project
-ClickTrackingHooks::addCampaign($dir. 'modules', 'CustomUserSignup/modules', 'AccountCreationUserBucket' );
+if ( class_exists( 'ClickTrackingHooks' ) ) {
+	ClickTrackingHooks::addCampaign($dir. 'modules', 'CustomUserSignup/modules', 'AccountCreationUserBucket' );
+}
 

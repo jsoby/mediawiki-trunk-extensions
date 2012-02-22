@@ -41,6 +41,4 @@ foreach ( $autoloadClasses as $className => $classFilename ) {
 
 $wgEnableZeroRatedMobileAccessTesting = false;
 
-$wgExtZeroRatedMobileAccess = new ExtZeroRatedMobileAccess();
-
-$wgHooks['BeforePageDisplay'][] = array( &$wgExtZeroRatedMobileAccess, 'beforePageDisplayHTML' );
+$wgHooks['BeforePageDisplay'][] = 'ExtZeroRatedMobileAccess::onBeforePageDisplay';

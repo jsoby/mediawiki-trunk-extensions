@@ -16,6 +16,11 @@ class ExtZeroRatedMobileAccess {
 	private static $forceClickToViewImages;
 	public static $useFormat;
 
+	public static function onBeforePageDisplay( &$out, &$text ) {
+		$ext = new ExtZeroRatedMobileAccess();
+		return $ext->beforePageDisplayHTML( $out, $text );
+	}
+
 	/**
 	 * Handler for the BeforePageDisplay hook
 	 *
