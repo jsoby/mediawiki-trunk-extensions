@@ -18,14 +18,14 @@
 				props = mah.getItemProperties( $(el) );
 				// Create an item reference to place in the loaded items array.
 				thisItem = props.type + props.item;
-	
+
 				// Load once per type+id because user can copy / paste element on the talk page
 				// and load the same item many times.
-				if( $.inArray( thisItem, mah.loadedItems ) === -1 ) {
+				if ( $.inArray( thisItem, mah.loadedItems ) === -1 ) {
 					mah.loadedItems.push( thisItem );
 					mah.loadItem( $( el ) );
 				}
-			}); 
+			});
 		},
 
 		/**
@@ -36,7 +36,7 @@
 			var tag, props;
 
 			tag = $item.attr( 'class' );
-			// Item properties are stored in classname to prevent parser from stripping 
+			// Item properties are stored in classname to prevent parser from stripping
 			// out non html 5 objects. (eg. data-markashelpful-item)
 			props = {
 				// item id
@@ -85,7 +85,7 @@
 				},
 				dataType: 'json'
 			});
-			
+
 		},
 
 		/**
@@ -112,7 +112,7 @@
 				url: mw.util.wikiScript( 'api' ),
 				data: request,
 				success: function () {
-					mah.loadItem( $item );	
+					mah.loadItem( $item );
 				},
 				dataType: 'json'
 			} );
