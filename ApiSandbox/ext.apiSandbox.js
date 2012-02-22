@@ -643,7 +643,11 @@
 				success: function ( data ) {
 					var match = data.match( /<pre>[\s\S]*<\/pre>/ );
 					if ( $.isArray( match ) ) {
+						var time = data.match( /<!-- Served .*?in (\d+(\.\d+)?) secs. -->/ );
 						data = match[0];
+						if ( $.isArray( time ) ) {
+							data += '\n<br/>' + mw.html.escape( mw.msg( 'apisb-request-time', time[1] ) );
+						}
 					} else {
 						// some actions don't honor user-specified format
 						data = '<pre>' + mw.html.escape( data ) + '</pre>';

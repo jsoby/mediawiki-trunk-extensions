@@ -40,6 +40,7 @@ $messages['en'] = array(
 	'apisb-example'           => 'Example',
 	'apisb-examples'          => 'Examples',
 	'apisb-clear'             => 'Clear',
+	'apisb-request-time'      => 'Request time: $1',
 );
 
 /** Message documentation (Message documentation)
@@ -76,6 +77,7 @@ $messages['qqq'] = array(
 	'apisb-example' => 'Button text that will reveal the example list, used if the list contains only 1 entry. See also {{msg-mw|apisb-examples}}',
 	'apisb-examples' => 'Button text that will reveal the example list, used if the list contains multiple entries. See also {{msg-mw|apisb-example}}',
 	'apisb-clear' => 'Title of the button that clears all inputs',
+	'apisb-request-time'      => 'TIme it took to process this request',
 );
 
 /** Afrikaans (Afrikaans)

@@ -40,6 +40,7 @@ $wgResourceModules['ext.apiSandbox'] = array(
 		'apisb-examples',
 		'apisb-clear',
 		'apisb-submit',
+		'apisb-request-time',
 		'parentheses',
 	),
 	'dependencies' => array(
