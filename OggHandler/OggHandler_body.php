@@ -261,9 +261,9 @@ class OggHandler extends MediaHandler {
 
 		global $wgOggThumbLocation;
 		if ( $wgOggThumbLocation !== false ) {
-			$status = $this->runOggThumb( $file->getPath(), $dstPath, $thumbTime );
+			$status = $this->runOggThumb( $file->getLocalRefPath(), $dstPath, $thumbTime );
 		} else {
-			$status = $this->runFFmpeg( $file->getPath(), $dstPath, $thumbTime );
+			$status = $this->runFFmpeg( $file->getLocalRefPath(), $dstPath, $thumbTime );
 		}
 		if ( $status === true ) {
 			return new OggVideoDisplay( $file, $file->getURL(), $dstUrl, $width, $height,
