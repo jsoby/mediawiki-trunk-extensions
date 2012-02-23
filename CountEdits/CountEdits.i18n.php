@@ -423,12 +423,13 @@ No juzgue a los contribuyentes por el número de sus ediciones.",
 
 /** Estonian (Eesti)
  * @author Avjoska
+ * @author Pikne
  * @author Silvar
  */
 $messages['et'] = array(
 	'countedits-username' => 'Kasutajanimi:',
 	'countedits-ok' => 'Otsi',
-	'countedits-nosuchuser' => 'Kasutajat §1 ei ole.',
+	'countedits-nosuchuser' => 'Kasutajat $1 pole.',
 	'countedits-mostactive' => 'Kõige aktiivsemad kaastöötajad',
 	'countedits-nocontribs' => 'Seda wikit ei ole muudetud.',
 );

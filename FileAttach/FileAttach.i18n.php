@@ -110,6 +110,17 @@ $messages['el'] = array(
 	'fileattach-uploadheading' => 'Επισύναψη αρχείου στο $1',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'fileattach-desc' => 'Permite que los archivos sean cargados en la página actual',
+	'fileattach-attachments' => 'Archivos adjuntos',
+	'fileattach-attachfile' => 'Adjuntar archivo',
+	'fileattach-uploadheading' => 'Adjuntar archivo a $1',
+	'fileattach-editcomment' => 'Archivo [[File:$1|$1]] adjunto',
+);
+
 /** French (Français)
  * @author Crochet.david
  * @author Wyz

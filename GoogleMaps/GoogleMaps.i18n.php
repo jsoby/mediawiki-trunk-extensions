@@ -551,6 +551,13 @@ $wgGoogleMapsMessages['az'] = array(
 	'gm-mars' => 'Mars',
 );
 
+/** Bashkir (Башҡортса)
+ * @author Roustammr
+ */
+$wgGoogleMapsMessages['ba'] = array(
+	'gm-desc' => 'Анаһат ҡына вики-тамғалар ярҙамында карта яһарға ярҙам итә',
+);
+
 /** Belarusian (Беларуская)
  * @author Чаховіч Уладзіслаў
  */

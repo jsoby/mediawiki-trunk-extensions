@@ -50,6 +50,13 @@ $messages['dsb'] = array(
 	'editsectionclearerlink-desc' => 'Wužywajobnosć wótkazow za wobźěłowanje wótrězkow pśez akcije p´pólěpšyś, kótarež stoje pśi pśelětowanju z kursorom myše k dispoziciji',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'editsectionclearerlink-desc' => 'Mejorar la usabilidad de los enlaces de la edición de secciones con acciones activables al pasar sobre secciones y enlaces',
+);
+
 /** French (Français)
  * @author Sherbrooke
  */

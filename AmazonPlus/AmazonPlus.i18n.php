@@ -1162,7 +1162,7 @@ $messages['ml'] = array(
 	'amazonplus-none' => 'ഈ ഇനത്തിന്റെ ഒരു പകർപ്പുപോലും വിൽക്കാനില്ല.',
 	'amazonplus-cp-none' => 'ഒന്നുമില്ല',
 	'amazonplus-more' => 'കൂടുതൽ',
-	'amazonplus-less' => 'കുറവ്',
+	'amazonplus-less' => 'സംഗ്രഹം',
 );
 
 /** Mongolian (Монгол)

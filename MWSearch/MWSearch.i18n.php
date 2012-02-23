@@ -141,10 +141,11 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Raimond Spekking
  */
 $messages['de'] = array(
-	'mwsearch-desc' => 'Hintergrundprozess für die Lucene-Suchmaschine',
+	'mwsearch-desc' => 'Ermöglicht einen Hintergrundprozess für die Lucene-Suchmaschine',
 );
 
 /** Zazaki (Zazaki)

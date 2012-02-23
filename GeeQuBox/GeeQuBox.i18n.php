@@ -66,6 +66,13 @@ $messages['dsb'] = array(
 	'geequbox-desc' => 'Napórajo efekty swětłowego kašćika (Lightbox) z pomocu tykaca jQuery lightbox',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'geequbox-desc' => 'Genera efectos de lightbox utilizando el plugin de lightbox jQuery',
+);
+
 /** French (Français)
  * @author IAlex
  */
@@ -150,18 +157,18 @@ $messages['ms'] = array(
 	'geequbox-desc' => "Menjana kesan 'lightbox' dengan menggunakan pemalam lightbox jQuery",
 );
 
-/** Dutch (Nederlands)
- * @author Siebrand
- */
-$messages['nl'] = array(
-	'geequbox-desc' => 'Voegt lightboxeffecten toe met behulp van de jQuery lightboxplug-in',
-);
-
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
 	'geequbox-desc' => 'Genererer lysbokseffekter ved hjelp av utvidelsen jQuery lightbox',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'geequbox-desc' => 'Voegt lightboxeffecten toe met behulp van de jQuery lightboxplug-in',
 );
 
 /** Polish (Polski)

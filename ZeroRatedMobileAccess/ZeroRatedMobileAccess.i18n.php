@@ -299,11 +299,16 @@ $messages['mk'] = array(
  * @author Praveenp
  */
 $messages['ml'] = array(
+	'zero-rated-mobile-access-desc' => 'മൊബൈൽ സേവനദാതാക്കൾക്ക് സൗജന്യ ലഭ്യത നൽകുന്ന സവിശേഷതകൾ നൽകുന്നു',
 	'zero-rated-mobile-access-search' => 'തിരയുക',
 	'zero-rated-mobile-access-language-selection' => 'എല്ലാ ഭാഷകളും',
+	'zero-rated-mobile-access-home-page-selection' => '$1 പ്രധാന താൾ',
+	'zero-rated-mobile-access-home-page-selection-text' => 'അഥവാ താഴെക്കൊടുക്കുന്ന ഭാഷയിലെ പ്രധാന താളിലേയ്ക്ക് പോവുക:',
+	'zero-rated-mobile-access-banner-text' => '$1 നൽകുന്ന സൗജന്യ  {{SITENAME}}',
 	'zero-rated-mobile-access-banner-text-data-charges' => 'തുടരുകയാണെങ്കിൽ ഡേറ്റ ചാർജുകൾ ഈടാക്കപ്പെട്ടേക്കാം: $1 അഥവാ $2',
 	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'ശരി',
 	'zero-rated-mobile-access-banner-text-data-charges-no' => 'വേണ്ട',
+	'zero-rated-mobile-access-click-to-view-image' => 'ഇവിടെ ഞെക്കി ചിത്രം കാണുക, "$1"...',
 );
 
 /** Malay (Bahasa Melayu)

@@ -771,6 +771,7 @@ $messages['lb'] = array(
 	'ts-citegen-Input-title' => 'Donnéeën',
 	'ts-citegen-Option-append-author-link' => "Wikilinken op den Auteur an d'Schabloun derbäisetzen",
 	'ts-citegen-Option-append-newlines' => 'No all Parameter eng nei Zeil ufänken',
+	'ts-citegen-Option-add-references' => "Setzt d'Tagge <ref> ronderëm d'Zitatiouns-Schablounen",
 	'ts-citegen-Option-add-list' => 'Eng Wiki-Lëscht mat Schabloune fir Zitatiounen uleeën',
 	'ts-citegen-Output-title' => 'Resultat',
 	'ts-citegen-Parsers' => 'Parseren',

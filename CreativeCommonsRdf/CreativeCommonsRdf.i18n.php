@@ -59,6 +59,13 @@ $messages['dsb'] = array(
 	'creativecommonsrdf-desc' => 'CreativeCommons RDF-metadaty',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'creativecommonsrdf-desc' => 'Metadatos RDF CreativeCommons',
+);
+
 /** French (Français)
  * @author Jean-Frédéric
  */

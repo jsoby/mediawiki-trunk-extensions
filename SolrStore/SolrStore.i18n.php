@@ -122,6 +122,8 @@ $messages['ia'] = array(
  */
 $messages['lb'] = array(
 	'solrsearch' => 'SolrSich',
+	'solrsearch-title' => 'Sichen',
+	'solrstore-error' => 'Feeler: Iwwerpréift w.e.g. Är Ufro.',
 	'solrstore-searchFieldSets' => 'SolrSich',
 );
 

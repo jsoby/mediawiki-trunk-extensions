@@ -78,10 +78,11 @@ $messages['cs'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Umherirrender
  */
 $messages['de'] = array(
-	'trustedxff-desc' => 'Verarbeitung einer Liste vertrauenswürdiger Proxyadressen ([http://meta.wikimedia.org/wiki/XFF_project XFF-Projekt])',
+	'trustedxff-desc' => 'Ermöglicht die Verarbeitung einer Liste vertrauenswürdiger Proxyadressen ([https://meta.wikimedia.org/wiki/XFF_project XFF-Projekt])',
 );
 
 /** Zazaki (Zazaki)

@@ -60,6 +60,13 @@ $messages['dsb'] = array(
 	'folktagcloud-desc' => 'Pśidawa atribut Semantic MediaWiki za wobznamjenjenje bokow ze swójskimi etiketami a parserowe wobznamjenjujuce słowo, za zwobraznjenje w mrokawje wobznamjenjujucego słowa',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'folktagcloud-desc' => "Agrega una propiedad ''Semantic MediaWiki'' para marcado de páginas con etiquetas definidas por el usuario y una etiqueta de analizador para mostrarlas en una nube de etiquetas",
+);
+
 /** French (Français)
  * @author Sherbrooke
  */

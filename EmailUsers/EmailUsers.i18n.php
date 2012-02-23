@@ -163,12 +163,15 @@ $messages['dsb'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Fitoschido
  */
 $messages['es'] = array(
 	'emailusers-desc' => 'Permite a los usuarios enviar mensajes de correo-e a múltiples destinatarios',
 	'right-sendbatchemail' => 'Enviar mensajes de correo-e a múltiples destinatarios a la vez',
+	'emailusers' => 'Usuarios de correo electrónico',
 	'emailusers-target-reverse' => 'Enviar a todos los usuarios excepto a los seleccionados',
+	'emailusers-norecipient' => 'No hay nadie a quien pueda enviar un correo electrónico.',
 	'emailusers-norecipientselected' => 'No se seleccionó ningún destinatario.',
 	'emailusers-toomanyrecipientsselected' => 'Hay demasiados destinatarios seleccionados ({{PLURAL:$1|$1 máximo|$1 máximo}}).',
 );

@@ -77,7 +77,7 @@ $messages['qqq'] = array(
 	'apisb-example' => 'Button text that will reveal the example list, used if the list contains only 1 entry. See also {{msg-mw|apisb-examples}}',
 	'apisb-examples' => 'Button text that will reveal the example list, used if the list contains multiple entries. See also {{msg-mw|apisb-example}}',
 	'apisb-clear' => 'Title of the button that clears all inputs',
-	'apisb-request-time'      => 'TIme it took to process this request',
+	'apisb-request-time' => 'TIme it took to process this request',
 );
 
 /** Afrikaans (Afrikaans)
@@ -186,6 +186,7 @@ $messages['be-tarask'] = array(
 	'apisb-example' => 'Прыклад',
 	'apisb-examples' => 'Прыклады',
 	'apisb-clear' => 'Ачысьціць',
+	'apisb-request-time' => 'Час апрацоўкі запыту: $1',
 );
 
 /** Bulgarian (Български)
@@ -337,6 +338,7 @@ Die [//www.mediawiki.org/wiki/API:Main_page/de Dokumentation zur API] enthält w
 	'apisb-example' => 'Beispiel',
 	'apisb-examples' => 'Beispiele',
 	'apisb-clear' => 'Leeren',
+	'apisb-request-time' => 'Anfragezeit: $1',
 );
 
 /** German (formal address) (Deutsch (Sie-Form))
@@ -440,6 +442,7 @@ $messages['es'] = array(
 	'apisb-example' => 'Ejemplo',
 	'apisb-examples' => 'Ejemplos',
 	'apisb-clear' => 'Limpiar',
+	'apisb-request-time' => 'Tiempo de solicitud: $1',
 );
 
 /** Estonian (Eesti)
@@ -602,6 +605,7 @@ Reportez-vous à [//www.mediawiki.org/wiki/API:Main_page la documentation de l�
 	'apisb-example' => 'Exemple',
 	'apisb-examples' => 'Exemples',
 	'apisb-clear' => 'Effacer',
+	'apisb-request-time' => 'Durée de la demande: $1',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -668,6 +672,7 @@ Consulte a [//www.mediawiki.org/wiki/API:Main_page documentación da API] para o
 	'apisb-example' => 'Exemplo',
 	'apisb-examples' => 'Exemplos',
 	'apisb-clear' => 'Limpar',
+	'apisb-request-time' => 'Duración da solicitude: $1',
 );
 
 /** Hebrew (עברית)
@@ -707,6 +712,7 @@ $messages['he'] = array(
 	'apisb-example' => 'דוגמה',
 	'apisb-examples' => 'דוגמאות',
 	'apisb-clear' => 'ריקון',
+	'apisb-request-time' => 'זמן בקשה: $1',
 );
 
 /** Hindi (हिन्दी)
@@ -766,6 +772,7 @@ Hlej [//www.mediawiki.org/wiki/API:Main_page API-dokumentaciju] za dalše podrob
 	'apisb-example' => 'Přikład',
 	'apisb-examples' => 'Přikłady',
 	'apisb-clear' => 'Wuprózdnić',
+	'apisb-request-time' => 'Naprašowanski čas: $1',
 );
 
 /** Hungarian (Magyar)
@@ -841,6 +848,7 @@ Consulta [//www.mediawiki.org/wiki/API:Main_page le documentation del API] pro u
 	'apisb-example' => 'Exemplo',
 	'apisb-examples' => 'Exemplos',
 	'apisb-clear' => 'Rader',
+	'apisb-request-time' => 'Duration del requesta: $1',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -1134,6 +1142,7 @@ $messages['mk'] = array(
 	'apisb-example' => 'Пример',
 	'apisb-examples' => 'Примери',
 	'apisb-clear' => 'Исчисти',
+	'apisb-request-time' => 'Време за барањето: $1',
 );
 
 /** Malayalam (മലയാളം)
@@ -1194,6 +1203,7 @@ Contoh: [//www.mediawiki.org/wiki/API#A_simple_example dapatkan kandungan Laman 
 	'apisb-example' => 'Contoh',
 	'apisb-examples' => 'Contoh',
 	'apisb-clear' => 'Padamkan',
+	'apisb-request-time' => 'Waktu pemohonan: $1',
 );
 
 /** Norwegian (bokmål) (Norsk (bokmål))
@@ -1260,6 +1270,7 @@ Zie de [//www.mediawiki.org/wiki/API:Main_page API-documentatie] voor verdere de
 	'apisb-example' => 'Voorbeeld',
 	'apisb-examples' => 'Voorbeelden',
 	'apisb-clear' => 'Leegmaken',
+	'apisb-request-time' => 'Verzoektijd: $1',
 );
 
 /** Oriya (ଓଡ଼ିଆ)
@@ -1734,13 +1745,16 @@ $messages['ta'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
-	'apisb-parameters' => 'పరామితులు',
-	'apisb-result' => 'ఫలితం',
+	'apisb-legend-parameters' => 'పరామితులు',
+	'apisb-legend-result' => 'ఫలితం',
 	'apisb-select-action' => 'చర్యను ఎంచుకోండి',
+	'apisb-params-desc' => 'వివరణ',
 	'apisb-loading' => 'లోడవుతోంది...',
 	'apisb-ns-main' => '(మొదటి)',
 	'apisb-query-list' => 'జాబితాలు',
 	'apisb-query-meta' => 'మెటా సమాచారం',
+	'apisb-example' => 'ఉదాహరణ',
+	'apisb-examples' => 'ఉదాహరణలు',
 );
 
 /** Tagalog (Tagalog)

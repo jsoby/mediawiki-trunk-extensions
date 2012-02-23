@@ -57,6 +57,17 @@ $messages['dsb'] = array(
 	'etherpadlite-pad-used-more-than-once' => 'Pisańska płonina "$1" jo se južo do togo na toś tom boku wužyła; móžoš wjele pisańskich płoninow na boku měś, ale jano, jolic su rozdźělne płoniny-',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'etherpadlite-desc' => 'Añade la etiqueta del analizador &lt;eplite&gt; para incrustar uno o varios bloques Etherpad Lite (que están alojados en servidor/es Etherpad Lite locales o externos) en las páginas',
+	'etherpadlite-invalid-pad-url' => '"$1" no es un nombre válido de dirección URL o nombre de bloque de Etherpad Lite.',
+	'etherpadlite-url-is-not-whitelisted' => '"$1" no está en la lista blanca de servidores de Etherpad Lite permitidos.  {{PLURAL:$3|$2  es el único servidor permitido|Los servidores permitidos son los siguientes:  $2}}.',
+	'etherpadlite-empty-whitelist' => '"$1" no está en la lista blanca de servidores de Etherpad Lite permitidos. No hay servidores autorizados en la lista blanca.',
+	'etherpadlite-pad-used-more-than-once' => 'El bloque "$1" ya ha sido utilizado antes en esta página; puede tener muchos bloques en una página, pero sólo si son bloques diferentes.',
+);
+
 /** French (Français)
  * @author Gomoko
  */

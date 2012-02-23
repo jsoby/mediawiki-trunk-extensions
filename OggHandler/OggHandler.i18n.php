@@ -1066,6 +1066,13 @@ Por favor <a href="http://www.mediawiki.org/wiki/Extension:OggHandler/Client_dow
  */
 $messages['et'] = array(
 	'ogg-desc' => 'Ogg Theora ja Vorbis failide töötleja JavaScript-esitajaga.',
+	'ogg-short-audio' => '$1-tüüpi Ogg-helifail, $2',
+	'ogg-short-video' => '$1-tüüpi Ogg-videofail, $2',
+	'ogg-short-general' => '$1-tüüpi Ogg-fail, $2',
+	'ogg-long-audio' => '$1-tüüpi Ogg-helifail, kestus: $2, $3',
+	'ogg-long-video' => '$1-tüüpi Ogg-videofail, kestus: $2, $4×$5 pikslit, $3',
+	'ogg-long-multiplexed' => 'Ogg-liitfail (heli ja video), $1, kestus: $2, $4×$5 pikslit, $3',
+	'ogg-long-general' => 'Ogg-fail, kestus: $2, $3',
 	'ogg-long-error' => '(Vigane Ogg-fail: $1)',
 	'ogg-play' => 'Esita',
 	'ogg-pause' => 'Paus',
@@ -1074,6 +1081,12 @@ $messages['et'] = array(
 	'ogg-play-sound' => 'Esita heli',
 	'ogg-no-player' => 'Kahjuks ei paista su süsteemis olevat ühtki ühilduvat esitustarkvara.
 Palun <a href="http://www.mediawiki.org/wiki/Extension:OggHandler/Client_download">laadi tarkvara alla</a>.',
+	'ogg-no-xiphqt' => 'Paistab, et sul pole QuickTime\'i komponenti XiphQT.
+Selleta ei saa QuickTime Ogg-faile esitada.
+Palun <a href="http://www.mediawiki.org/wiki/Extension:OggHandler/Client_download">laadi XiphQT alla</a> või vali teine esitaja.',
+	'ogg-player-videoElement' => 'Võrgulehitseja omatugi',
+	'ogg-player-oggPlugin' => 'Võrgulehitseja lisa',
+	'ogg-player-thumbnail' => 'Liikumatu pilt',
 	'ogg-player-soundthumb' => 'Mängijat ei ole',
 	'ogg-player-selected' => '(valitud)',
 	'ogg-use-player' => 'Kasuta mängijat:',
@@ -1081,6 +1094,8 @@ Palun <a href="http://www.mediawiki.org/wiki/Extension:OggHandler/Client_downloa
 	'ogg-dismiss' => 'Sule',
 	'ogg-download' => 'Laadi fail alla',
 	'ogg-desc-link' => 'Info faili kohta',
+	'ogg-oggThumb-version' => 'OggHandler vajab oggThumbi versiooni $1 või hilisemat.',
+	'ogg-oggThumb-failed' => 'oggThumbil ei õnnestunud pisipildi loomine.',
 );
 
 /** Basque (Euskara)

@@ -200,11 +200,30 @@ Pšikłady:
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Mor
  */
 $messages['es'] = array(
+	'flagpage' => 'Marcar una página',
+	'flagpage-desc' => 'Marcar la página con plantillas predefinidas',
+	'flagpage-templatelist' => '<!--
+Editar esta página para configurar la plantillas a utilizar.
+Ejemplos:
+* [[Template:Unsourced|La página no cita ninguna referencia]]
+* [[Template:NPOV|La página está escrita en forma sesgada]]
+* [[Template:Delete|La página debería suprimirse]]
+-->',
 	'flagpage-nopageselectedtitle' => 'No hay página seleccionada',
 	'flagpage-nopageselected' => 'No ha especificado una página',
+	'flagpage-emptylisttitle' => 'No hay plantillas configuradas',
+	'flagpage-emptylist' => 'Necesita configurar sus listas de plantillas. Editar [[{{ns:8}}:flagpage-templatelist]] para hacerlo ahora.',
+	'flagpage-preview' => 'Vista previa de la plantilla seleccionada:',
+	'flagpage-confirmsave' => 'Confirme sus cambios.',
+	'flagpage-submitbutton' => 'Guardar la página con esta plantilla',
+	'flagpage-nonexistent' => 'La página "$1" no existe. Quizás ha sido [{{fullurl:Special:Log|page=$1}} movida o eliminada].',
+	'flagpage-summary' => 'Plantilla [[$1]] añadida utilizando FlagPage',
+	'flagpage-success' => '[[$1]] ha sido añadida a la página [[$2]].',
+	'flagpage-tab' => 'Marcar',
 );
 
 /** Persian (فارسی)

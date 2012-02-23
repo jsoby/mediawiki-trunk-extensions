@@ -72,6 +72,15 @@ $messages['dsb'] = array(
 	'elm-easyref-close' => 'Zacyniś',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'elm-easyref-desc' => 'Agregar campo emergente para mostrar el contenido de la referencia',
+	'elm-easyref-ref' => 'Referencia $1',
+	'elm-easyref-close' => 'Cerrar',
+);
+
 /** French (Français)
  * @author Sherbrooke
  */

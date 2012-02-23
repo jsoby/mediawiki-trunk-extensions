@@ -73,6 +73,13 @@ $messages['dsb'] = array(
 	'dublincorerdf-desc' => 'Dublin Core RDF-metadaty',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'dublincorerdf-desc' => 'Metadatos RDF Dublin Core',
+);
+
 /** French (Français)
  * @author Jean-Frédéric
  */

@@ -291,6 +291,7 @@ Sie können auch die [[Special:Favoritelist/edit|Standardseite]] zum Bearbeiten 
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Dferg
  * @author Mor
  */
@@ -298,14 +299,54 @@ $messages['es'] = array(
 	'favorites-desc' => 'Creando una lista de favoritos',
 	'favoritethis' => 'Marcar esta página como favorita',
 	'prefs-favoritelist' => 'Favoritos',
+	'prefs-favoritelist-token' => 'Credencial de los favoritos:',
 	'prefs-advancedfavoritelist' => 'Opciones avanzadas',
+	'favoritelist' => 'Mis Favoritos',
+	'myfavoritelist' => 'Mis Favoritos',
 	'favoritelistfor' => "(para '''$1''')",
+	'nofavoritelist' => 'No tienes ninguna página en tu lista de favoritos.',
+	'favoritelistanontext' => 'Por favor,  $1 para ver o editar elementos en tus Favoritos.',
+	'favoritenologin' => 'No ha iniciado sesión',
+	'favoritenologintext' => 'Debes [[Special:UserLogin|iniciar sesión]] para modificar tu lista de favoritos.',
 	'addedfavorite' => 'Añadido a favoritos',
+	'addedfavoritetext' => 'La página "[[:$1]]" se ha agregado a su [[Special:Favoritelist|lista de favoritos]].',
 	'removedfavorite' => 'Quitar de Favoritos',
+	'removedfavoritetext' => 'La página "[[:$1]]" ha sido eliminada de su [[Special:Favoritelist|lista de favoritos]].',
+	'favorite' => 'Favorito',
+	'favoritethispage' => 'Marcar esta página como favorita',
+	'unfavorite' => 'Suprimir de la lista de favoritos',
+	'unfavoritethispage' => 'Dejar de poner en lista de favoritos',
 	'favoritelist-options' => 'Opciones de Favoritos',
+	'favoriteing' => 'Poniendo en lista de Favoritos...',
+	'unfavoriteing' => 'Quitando de la lista de favoritos...',
+	'tooltip-pt-favoritelist' => 'La lista de páginas cuyos cambios está supervisando',
 	'tooltip-ca-favorite' => 'Añadir esta página a tus favoritos',
 	'tooltip-ca-unfavorite' => 'Eliminar esta página de tus favoritos',
+	'tooltip-favorite' => 'Añadir esta página a sus Favoritos.',
+	'favoritelistall2' => 'todos',
+	'favoritelistedit-numitems' => 'Su lista de Favoritos contiene  {{PLURAL:$1|1 título| $1 títulos}}.',
+	'favoritelistedit-noitems' => 'Su lista de favoritos no contiene títulos.',
 	'favoritelistedit-normal-title' => 'Editar favoritos',
+	'favoritelistedit-normal-legend' => 'Quitar títulos de su lista de Favoritos',
+	'favoritelistedit-normal-explain' => 'A continuación se listan las páginas de su lista de Favoritos.
+Para quitar un título, marque la casilla junto a él, y pulse "{{int:Favoritelistedit-normal-submit}}".
+También puede [[Special:Favoritelist/raw|editar la lista en bloque]].',
+	'favoritelistedit-normal-submit' => 'Quitar títulos',
+	'favoritelistedit-normal-done' => '{{PLURAL:$1|1 título fue| $1 títulos fueron}} quitados de su lista de Favoritos:',
+	'favoritelistedit-raw-title' => 'Editar lista de Favoritos en bloque',
+	'favoritelistedit-raw-legend' => 'Editar lista de Favoritos en bloque',
+	'favoritelistedit-raw-explain' => 'A continuación se listan los títulos de su lista de Favoritos. Esta lista puede editarse añadiendo o eliminando títulos de la lista;
+un título por línea.
+Cuando acabe, pulse "{{int:Favoritelistedit-raw-submit}}".
+También puede [[Special:Favoritelist/edit|usar el editor estándar]].',
+	'favoritelistedit-raw-titles' => 'Títulos:',
+	'favoritelistedit-raw-submit' => 'Actualizar lista de Favoritos',
+	'favoritelistedit-raw-done' => 'Se ha actualizado su lista de Favoritos.',
+	'favoritelistedit-raw-added' => '{{PLURAL:$1|1 título fue añadido| $1 títulos fueron añadidos}}:',
+	'favoritelistedit-raw-removed' => '{{PLURAL:$1|1 título fue eliminado| $1 títulos fueron eliminados}}:',
+	'favoritelisttools-view' => 'Ver lista de Favoritos',
+	'favoritelisttools-edit' => 'Ver y editar la lista de Favoritos',
+	'favoritelisttools-raw' => 'Editar lista de favoritos en bloque',
 );
 
 /** French (Français)

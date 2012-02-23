@@ -410,21 +410,35 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Dferg
  * @author Fitoschido
  * @author Mor
  */
 $messages['es'] = array(
 	'e-mailpage' => 'Página de correo electrónico',
+	'ea-desc' => 'Enviar el procesado de una página HTML a una dirección o lista de direcciones de correo electrónico mediante [http://phpmailer.sourceforge.net phpmailer]',
+	'ea-heading' => 'Enviando por correo electrónico la página "[[$1]]"',
 	'ea-group-info' => 'Además puedes enviar la página a los miembros de un grupo',
 	'ea-pagesend' => 'Página «$1» enviada desde $2',
+	'ea-nopage' => 'No se especificó ninguna página para enviar, por favor utilice el enlace de correo electrónico de la barra lateral o las acciones de página.',
+	'ea-norecipients' => '¡No se han encontrado direcciones de correo electrónico válidas!',
+	'ea-listrecipients' => 'Lista de  {{PLURAL:$1| destinatario| $1  destinatarios}}',
+	'ea-error' => "'''Error al enviar [[$1]]:''' ''$2''",
 	'ea-denied' => 'Acceso denegado',
+	'ea-sent' => "Página [[$1]] enviada correctamente a '''$2'''  {{PLURAL:$2|destinatario|destinatarios}} por [[User:$3|$3]].",
+	'ea-compose' => 'Redactar contenido',
+	'ea-show' => 'Ver lista de destinatarios',
 	'ea-from' => 'De:',
 	'ea-to' => 'Para:',
+	'ea-to-info' => 'Las direcciones de correo electrónico pueden separarse con uno o más caracteres de punto y coma, coma, asterisco o salto de línea',
 	'ea-cc' => 'CC (con copia):',
 	'ea-send' => 'Enviar',
 	'ea-subject' => 'Asunto:',
 	'ea-message' => 'Mensaje:',
+	'ea-message-info' => 'Anteponer el contenido con mensaje de wikitexto opcional',
+	'ea-style' => 'Estilo:',
+	'ea-selectcss' => 'Puede seleccionar una hoja de estilos',
 	'ea-data' => 'Fecha',
 	'ea-selectrecord' => 'Estas plantillas se pueden utilizar para rellenar los campos en el contenido del mensaje',
 	'ea-allusers' => 'Todos los usuarios',

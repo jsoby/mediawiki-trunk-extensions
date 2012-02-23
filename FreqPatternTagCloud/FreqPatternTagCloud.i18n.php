@@ -151,6 +151,26 @@ $messages['dsb'] = array(
 	'fptc-no-suggestion' => 'Žedne naraźenja njenamakane',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'freqpatterntagcloud-desc' => '[[Special:FreqPatternTagCloud|Página especial]] para crear una nube de etiquetas basadas en propiedades y para buscar valores de propiedades similares',
+	'fptc-categoryname' => 'Categoría',
+	'fptc-context-menu-browse' => 'Navegar por páginas con este valor',
+	'fptc-context-menu-similar-tags' => 'Etiquetas similares:',
+	'fptc-form-attribute-name' => 'Propiedad:',
+	'fptc-form-submit-button' => 'Enviar',
+	'fptc-invalid-attribute' => 'La propiedad especificada no es válida.',
+	'fptc-insufficient-rights-for-maintenance' => 'Usted debe iniciar sesión como administrador para ver esta página.',
+	'fptc-refresh-frequent-patterns' => 'Actualizar datos',
+	'fptc-search-attribute-name' => 'Buscar propiedad',
+	'fptc-search-button' => 'Buscar',
+	'fptc-search-suggestion-value' => 'Similar a "%s":',
+	'fptc-suggestion' => 'Quizás quiso decir:',
+	'fptc-no-suggestion' => 'No hay sugerencias encontradas',
+);
+
 /** French (Français)
  * @author Gomoko
  */
