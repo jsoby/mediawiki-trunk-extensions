@@ -50,6 +50,10 @@ $wgNarayamUseBetaMapping = false;
 // Array mapping language codes and scheme names to module names
 // Custom schemes can be added here
 $wgNarayamSchemes = array(
+	'ahr' => array(
+		'ahr' => 'ext.narayam.rules.ahr',
+		'ahr-inscript' => 'ext.narayam.rules.ahr-inscript',
+	),
 	'am' => array(
 		'am' => array( 'ext.narayam.rules.am', 'beta' ),
 	),
@@ -109,7 +113,7 @@ $wgNarayamSchemes = array(
 	),
 	'mr' => array(
 		'mr' => 'ext.narayam.rules.mr',
-		'mr-inscript' => 'ext.narayam.rules.mr',
+		'mr-inscript' => 'ext.narayam.rules.mr-inscript',
 	),
 	'ne' => array(
 		'ne' => array( 'ext.narayam.rules.ne', 'beta' ),
@@ -207,6 +211,8 @@ $wgResourceModules['ext.narayam.core'] = $narayamTpl + array(
 		'narayam-help',
 		'narayam-toggle-ime',
 		'narayam-more-imes',
+		'narayam-ahr',
+		'narayam-ahr-inscript',
 		'narayam-am',
 		'narayam-as',
 		'narayam-as-avro',
@@ -265,6 +271,15 @@ $wgResourceModules['ext.narayam.core'] = $narayamTpl + array(
 		'jquery.textSelection',
 		'jquery.cookie',
 	),
+);
+
+$wgResourceModules['ext.narayam.rules.ahr'] = $narayamTpl + array(
+	'scripts' => 'resources/ext.narayam.rules.ahr.js',
+	'dependencies' => 'ext.narayam.rules.mr',
+);
+$wgResourceModules['ext.narayam.rules.ahr-inscript'] = $narayamTpl + array(
+	'scripts' => 'resources/ext.narayam.rules.ahr-inscript.js',
+	'dependencies' => 'ext.narayam.rules.mr-inscript.js',
 );
 $wgResourceModules['ext.narayam.rules.am'] = $narayamTpl + array(
 	'scripts' => 'resources/ext.narayam.rules.am.js',
@@ -474,4 +489,3 @@ $wgResourceModules['ext.narayam.rules.tcy'] = $narayamTpl + array(
 	'scripts' => 'resources/ext.narayam.rules.tcy.js',
 	'dependencies' => 'ext.narayam.rules.kn',
 );
-
