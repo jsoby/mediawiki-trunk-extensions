@@ -69,10 +69,10 @@ class ClickTrackingHooks {
 	 * @return Boolean: always true
 	 */
 	public static function beforePageDisplay( $out, $skin ) {
-		global $wgClickTrackThrottle;
+		global $wgClickTrackSidebar, $wgClickTrackThrottle;
 		$out->addModules( 'ext.UserBuckets' );
 
-		if ( $wgClickTrackThrottle >= 0 && rand() % $wgClickTrackThrottle == 0 ) {
+		if ( $wgClickTrackSidebar && $wgClickTrackThrottle >= 0 && rand() % $wgClickTrackThrottle == 0 ) {
 			$out->addModules( 'ext.clickTracking' );
 		}
 		return true;

@@ -31,6 +31,9 @@ $wgClickTrackingLog = false;
 // Whether to log clicks to the database. If this is enabled and a log file is configured, events will be logged to both
 $wgClickTrackingDatabase = true;
 
+// If true, apply clicktracking to the links in the sidebar
+$wgClickTrackSidebar = false;
+
 /* Setup */
 
 $wgExtensionCredits['other'][] = array(
