@@ -44,6 +44,8 @@ $wgHooks['AddNewAccount'][] = 'CustomUserSignupHooks::addNewAccount';
 
 $wgCustomUserSignupVersion = 1;
 $wgCustomUserSignupSetBuckets = true;
+// If true, log each account creation to ClickTracking
+$wgCustomUserSignupTrackAccountCreations = false;
 // For Account Creation Project
 if ( class_exists( 'ClickTrackingHooks' ) ) {
 	ClickTrackingHooks::addCampaign($dir. 'modules', 'CustomUserSignup/modules', 'AccountCreationUserBucket' );

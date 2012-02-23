@@ -116,7 +116,7 @@ class CustomUserSignupHooks {
 	}
 
 	public static function addNewAccount( $user, $byEmail ){
-		global $wgRequest, $wgTitle;
+		global $wgRequest, $wgTitle, $wgCustomUserSignupTrackAccountCreations;
 		$buckets = ClickTrackingHooks::unpackBucketInfo();
 		if(isset($buckets['AccountCreation'])   && $buckets['AccountCreation'][0] != "none"){
 			
@@ -126,7 +126,7 @@ class CustomUserSignupHooks {
 					time() + 60 * 60 * 24 * 365 , '/' );
 					
 			$session = $wgRequest->getCookie( 'clicktracking-session', "" );
-			if ( $session !== null ) {
+			if ( $session !== null && $wgCustomUserSignupTrackAccountCreations ) {
 				$params = new FauxRequest( array(
 					'action' => 'clicktracking',
 					'eventid' => 'account-created',
