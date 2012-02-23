@@ -450,7 +450,7 @@ class WikiArticleFeeds{
 
 		# Push feed header
 		$tempWgVersion = $wgVersion;
-		$wgVersion .= ' via WikiArticleFeeds ' . VERSION;
+		$wgVersion .= ' via WikiArticleFeeds ' . EXTENSION_WIKIARTICLEFEEDS_VERSION;
 		$feed->outHeader();
 		$wgVersion = $tempWgVersion;
 
