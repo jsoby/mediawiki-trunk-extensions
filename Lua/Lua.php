@@ -2,7 +2,7 @@
 /**
  * Lua parser extensions for MediaWiki
  *
- * @author Fran Rogers
+ * @author Fran McCrory
  * @ingroup Extensions
  * @license See 'COPYING'
  * @file
@@ -11,7 +11,7 @@
 $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'Lua parser extensions',
-	'author'         => 'Fran Rogers',
+	'author'         => 'Fran McCrory',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:Lua',
 	'descriptionmsg' => 'lua_desc',
 );

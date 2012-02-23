@@ -1,6 +1,6 @@
 #!/usr/bin/env lua
 -- Lua parser extensions for MediaWiki - Wrapper for Lua interpreter
--- (c) 2008 Fran Rogers - see 'COPYING' for license
+-- (c) 2008 Fran McCrory - see 'COPYING' for license
 
 -- Creates a new sandbox environment for scripts to safely run in.
 function make_sandbox()

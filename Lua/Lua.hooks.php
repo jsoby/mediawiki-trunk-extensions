@@ -2,7 +2,7 @@
 /**
  * Lua parser extensions for MediaWiki - Hooks
  *
- * @author Fran Rogers
+ * @author Fran McCrory
  * @ingroup Extensions
  * @license See 'COPYING'
  * @file
