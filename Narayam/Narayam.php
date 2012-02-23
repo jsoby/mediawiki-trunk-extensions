@@ -279,7 +279,7 @@ $wgResourceModules['ext.narayam.rules.ahr'] = $narayamTpl + array(
 );
 $wgResourceModules['ext.narayam.rules.ahr-inscript'] = $narayamTpl + array(
 	'scripts' => 'resources/ext.narayam.rules.ahr-inscript.js',
-	'dependencies' => 'ext.narayam.rules.mr-inscript.js',
+	'dependencies' => 'ext.narayam.rules.mr-inscript',
 );
 $wgResourceModules['ext.narayam.rules.am'] = $narayamTpl + array(
 	'scripts' => 'resources/ext.narayam.rules.am.js',
