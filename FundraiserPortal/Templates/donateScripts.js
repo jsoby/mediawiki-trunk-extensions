@@ -38,11 +38,9 @@ function getDonateButton() {
         }
 }
 
-jQuery( document ).ready( function() {
-	var wgDonateButton = getDonateButton();
+var wgDonateButton = getDonateButton();
 
-	if ( ! wgDonateButton ) {
-			var wgDonateButton = pickDonateButton();
-			setDonateButton( wgDonateButton );
-	}
-} );
+if ( ! wgDonateButton ) {
+        var wgDonateButton = pickDonateButton();
+        setDonateButton( wgDonateButton );
+}
