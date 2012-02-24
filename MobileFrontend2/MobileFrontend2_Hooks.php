@@ -27,9 +27,7 @@ class MobileFrontend2_Hooks {
 	/**
 	 * Adds jump back a section links to content blocks
 	 *
-	 * @todo broken, see mobile main page
-	 *
-	 * @param $parser MobileFrontend2_Parser
+	 * @param $parser Parser
 	 * @param $i int
 	 * @param $section string
 	 * @param $showEditLink bool
@@ -52,7 +50,7 @@ class MobileFrontend2_Hooks {
 		$section = "<div section_id=\"$i\" id=\"section-$i\" class=\"mf2-section-container\">"
 			. substr( $section, 0, $headerLength )
 			. '<div class="mf2-content-block">'
-			. substr( $section, $headerLength ) . "\n\n"
+			. substr( $section, $headerLength ) . "\n"
 			. '<div class="mf2-section-anchor">'
 				. '<a href="#section-' . $i . '">'
 			. wfMessage( 'mobile-frontend2-back-to-top-of-section' )->escaped()
@@ -135,6 +133,8 @@ class MobileFrontend2_Hooks {
 			$title = Title::newFromText( wfMsgForContent( 'mainpage-mobile' ) );
 			RequestContext::getMain()->setTitle( $title );
 			MobileFrontend2_Options::setMainPage( true );
+
+			MobileFrontend2::handleOptions( $title, $request, $output );
 		}
 
 		return true;

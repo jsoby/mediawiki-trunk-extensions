@@ -25,6 +25,7 @@ $wgExtensionCredits['other'][] = array(
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['MobileFrontend2'] = $dir . 'MobileFrontend2.i18n.php';
 
+$wgAutoloadClasses['MobileFrontend2'] = $dir . 'MobileFrontend2.class.php';
 $wgAutoloadClasses['MobileFrontend2_Detection'] = $dir . 'MobileFrontend2_Detection.php';
 $wgAutoloadClasses['MobileFrontend2_Hooks'] = $dir . 'MobileFrontend2_Hooks.php';
 $wgAutoloadClasses['MobileFrontend2_Options'] = $dir . 'MobileFrontend2_Options.php';

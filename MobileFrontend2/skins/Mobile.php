@@ -64,6 +64,7 @@ class SkinMobile extends SkinTemplate {
 
 		// Mobile stuff
 		$tpl->setRef( 'mobilelogopath', $wgMobileFrontend2Logo );
+		$tpl->set( 'disableimagesurl', $request->escapeAppendQuery( 'disableImages=true' ) );
 
 		# Add a <div class="mw-content-ltr/rtl"> around the body text
 		# not for special pages or file pages AND only when viewing AND if the page exists
@@ -207,7 +208,7 @@ class MobileTemplate extends BaseTemplate {
 	<!-- footer -->
 	<div id="footer">
 		<div id="innerFooter">
-			<a href="#"><?php $this->msg( 'mobile-frontend2-regular-site' ) ?></a> | <a href="#"><?php $this->msg( 'mobile-frontend2-disable-images' ) ?></a>
+			<a href="#"><?php $this->msg( 'mobile-frontend2-regular-site' ) ?></a> | <a href="<?php $this->text( 'disableimagesurl' ) ?>"><?php $this->msg( 'mobile-frontend2-disable-images' ) ?></a>
 
 			<div id="perm">
 				<a href="#"><?php $this->msg( 'mobile-frontend2-perm-stop-redirect' ) ?></a>

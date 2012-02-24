@@ -66,6 +66,11 @@ class MobileFrontend2_PostParse {
 		// Remove the TOC
 		$this->removeToc();
 
+		// Remove images
+		if ( MobileFrontend2_Options::getDisableImages() ) {
+		//	$this-removeImages();
+		}
+
 		// Render the now manipulated HTML
 		$this->render();
 	}
@@ -79,6 +84,10 @@ class MobileFrontend2_PostParse {
 		if ( $element !== null ) {
 			$element->parentNode->removeChild( $element );
 		}
+	}
+
+	protected function removeImages() {
+		$elements = $this->dom->getElementsByTagName( 'img' );
 	}
 
 	/**

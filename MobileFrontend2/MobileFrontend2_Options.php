@@ -32,6 +32,13 @@ class MobileFrontend2_Options {
 	protected static $mainPage = false;
 
 	/**
+	 * Should images be stripped from output
+	 *
+	 * @var bool
+	 */
+	protected static $disableImages = false;
+
+	/**
 	 * Detects options based on user preferences
 	 */
 	public static function detect() {
@@ -41,6 +48,8 @@ class MobileFrontend2_Options {
 		self::$hideLogo = $request->getBool( 'hidelogo' );
 		// TODO: Previously this was lumped into hidelogo. Notify mobile team
 		self::$hideFooter = $request->getBool( 'hidefooter' );
+
+		self::$disableImages = $request->getCookie( 'mf2-disableimages', null, false );
 
 		// TODO: Hook for Wikimedia
 	}
@@ -78,5 +87,12 @@ class MobileFrontend2_Options {
 	 */
 	public static function getMainPage() {
 		return self::$mainPage;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public static function getDisableImages() {
+		return self::$disableImages;
 	}
 }
