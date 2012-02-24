@@ -159,7 +159,7 @@ For more information, please visit the $1.',
 	'moodbar-log-hide' => 'hid [[$1]]',
 	'moodbar-log-feedback' => 'MoodBar Feedback [[$1]]',
 	'moodbar-log-restore' => 'restored the visibility for [[$1]]',
-	'moodbar-log-reason' => '$1: $2',
+	'moodbar-log-reason' => '$1',
         //Feedback Response
 	'moodbar-response-terms' => 'By submitting, you agree to transparency under these $1.',
 	'moodbar-response-link' => 'terms',
@@ -335,7 +335,7 @@ $3 is commenter user talk page, $4 is time, $5 is commenter user page, $6 is com
 * $1 is a link to a feedback item.',
 	'moodbar-log-restore' => 'Log Action text for restoring feedback [[$1]] is link to feedback item',
 	'moodbar-log-reason' => '{{optional}}
-Text for log reason. $1 is moodbar type, $2 is moodbar comment',
+Text for log reason. $1 is moodbar type',
 	'moodbar-response-terms' => 'Text of the user license agreement. Parameters:
 * $1 {{msg-mw|moodbar-response-link}}',
 	'moodbar-response-link' => 'Terms of Use Text',
