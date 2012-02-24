@@ -79,7 +79,7 @@ class ContributionTracking extends UnlistedSpecialPage {
 		$repost = ContributionTrackingProcessor::getRepostFields( $params );
 
 		#$wgOut->addWikiText( "{{2009/Donate-banner/$language}}" );
-		$wgOut->addHTML( $this->msgWiki( 'contrib-tracking-submitting' ) );
+		$wgOut->addHTML( $this->ct_msgWiki( 'contrib-tracking-submitting' ) );
 
 		// Output the repost form
 		$output = '<form method="post" name="contributiontracking" action="' . $repost['action'] . '">';
@@ -88,12 +88,12 @@ class ContributionTracking extends UnlistedSpecialPage {
 			$output .= '<input type="hidden" name="' . htmlspecialchars( $key ) . '" value="' . htmlspecialchars( $value ) . '" />';
 		}
 
-		$output .= $this->msgWiki( 'contrib-tracking-redirect' );
+		$output .= $this->ct_msgWiki( 'contrib-tracking-redirect' );
 
 		// Offer a button to post the form if the user has no Javascript support
 		$output .= '<noscript>';
-		$output .= $this->msgWiki( 'contrib-tracking-continue' );
-		$output .= '<input type="submit" value="' . $this->msg( 'contrib-tracking-button' ) . '" />';
+		$output .= $this->ct_msgWiki( 'contrib-tracking-continue' );
+		$output .= '<input type="submit" value="' . $this->ct_msg( 'contrib-tracking-button' ) . '" />';
 		$output .= '</noscript>';
 
 		$output .= '</form>';
@@ -104,11 +104,11 @@ class ContributionTracking extends UnlistedSpecialPage {
 		$wgOut->addHTML( '<script type="text/javascript">document.contributiontracking.submit();</script>' );
 	}
 
-	function msg() {
+	function ct_msg() {
 		return wfMsgExt( func_get_arg( 0 ), array( 'escape', 'language' => $this->lang ) );
 	}
 
-	function msgWiki( $key ) {
+	function ct_msgWiki( $key ) {
 		return wfMsgExt( $key, array( 'parse', 'language' => $this->lang ) );
 	}
 
