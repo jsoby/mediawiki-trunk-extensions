@@ -11,8 +11,14 @@ class SkinSchulenburg extends Skin {
 		return "{$this->path}/main.js";
 	}
 
-	function outputPage( OutputPage $out ) {
+	function outputPage( OutputPage $out = null ) {
 		global $wgContLang, $wgSchulenburgSkinPath, $wgScriptPath;
+
+		if ( !$out ) {
+			// MW 1.19
+			$out = $this->getOutput();
+		}
+
 		$lang = $wgContLang->getCode();
 		$this->path = $wgSchulenburgSkinPath ? $wgSchulenburgSkinPath : "{$wgScriptPath}/extensions/skins/Schulenburg";
 		$this->out = $out;

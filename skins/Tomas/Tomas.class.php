@@ -11,8 +11,14 @@ class SkinTomas extends Skin {
 		return "{$this->path}/main.js";
 	}
 
-	function outputPage( OutputPage $out ) {
+	function outputPage( OutputPage $out = null ) {
 		global $wgContLang, $wgTomasSkinPath, $wgScriptPath;
+
+		if ( !$out ) {
+			// MW 1.19
+			$out = $this->getOutput();
+		}
+
 		$lang = $wgContLang->getCode();
 		$this->path = $wgTomasSkinPath ? $wgTomasSkinPath : "{$wgScriptPath}/extensions/skins/Tomas";
 		$this->out = $out;

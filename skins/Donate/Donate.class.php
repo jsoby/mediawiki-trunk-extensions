@@ -11,8 +11,14 @@ class SkinDonate extends Skin {
 		return "{$this->path}/main.js";
 	}
 
-	function outputPage( OutputPage $out ) {
+	function outputPage( OutputPage $out = null ) {
 		global $wgContLang, $wgDonateSkinPath, $wgScriptPath;
+
+		if ( !$out ) {
+			// MW 1.19
+			$out = $this->getOutput();
+		}
+
 		$lang = $wgContLang->getCode();
 		$this->path = $wgDonateSkinPath ? $wgDonateSkinPath : "{$wgScriptPath}/extensions/skins/Donate";
 		$this->out = $out;
