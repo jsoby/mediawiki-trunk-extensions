@@ -163,6 +163,13 @@ $messages['pt'] = array(
 	'categorysortheaders-desc' => 'Permite especificar cabeçalhos de ordenação personalizados, com vários caracteres, nas páginas de categoria. <!--<nowiki>[[category:Foo|^Header^Invisible part of sortkey]]</nowiki>-->',
 );
 
+/** Russian (Русский)
+ * @author Ignatus
+ */
+$messages['ru'] = array(
+	'categorysortheaders-desc' => 'Позволяет задать пользовательские многосимвольные заголовки сортировки «по первым буквам» для списка страниц в категориях с помощью синтаксиса вида <nowiki>[[category:ИмяКатегории|^Заголовок^ невидимая часть ключа сортировки]]</nowiki>',
+);
+
 /** Ukrainian (Українська)
  * @author Sodmy
  */

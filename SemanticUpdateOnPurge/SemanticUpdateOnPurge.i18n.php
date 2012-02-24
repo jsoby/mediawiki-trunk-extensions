@@ -30,7 +30,7 @@ $messages['ast'] = array(
  * @author Kghbln
  */
 $messages['de'] = array(
-	'suop-desc' => 'Aktualisiert die semantischen Attribute auf einer Wiki-Seite, wenn deren Seitencache durch die Aktion „purge“ geleert wird',
+	'suop-desc' => "Ermöglicht das Aktualisieren der Werte semantischer Attribute auf einer Wikiseite, sobald der Seitencache mit der Aktion ''„purge“'' geleert wird",
 );
 
 /** Lower Sorbian (Dolnoserbski)

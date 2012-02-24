@@ -1065,7 +1065,7 @@ Por favor <a href="http://www.mediawiki.org/wiki/Extension:OggHandler/Client_dow
  * @author Silvar
  */
 $messages['et'] = array(
-	'ogg-desc' => 'Ogg Theora ja Vorbis failide töötleja JavaScript-esitajaga.',
+	'ogg-desc' => 'Theora- ja Vorbis-tüüpi Ogg-faildie käsitseja JavaScript-esitajaga',
 	'ogg-short-audio' => '$1-tüüpi Ogg-helifail, $2',
 	'ogg-short-video' => '$1-tüüpi Ogg-videofail, $2',
 	'ogg-short-general' => '$1-tüüpi Ogg-fail, $2',

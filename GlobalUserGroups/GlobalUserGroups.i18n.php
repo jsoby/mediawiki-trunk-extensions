@@ -56,6 +56,13 @@ $messages['dsb'] = array(
 	'globalusergroups-desc' => 'Zmóžnja wužywanje definěrowanych lokalnych wužywarskich kupkow ako globalne kupki',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'globalusergroups-desc' => 'Permite el uso de grupos de usuarios locales definidos como grupos globales',
+);
+
 /** French (Français)
  * @author Gomoko
  */

@@ -47,6 +47,13 @@ $messages['dsb'] = array(
 	'hashtables-desc' => 'Parserowe funkcije, kótarež zmóžnjaju asociatiwne datowe póla na wikibokach',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'hashtables-desc' => "Funciones de analizador (parser) que permiten trabajar con tablas ''hash'' en el contexto de una página dada",
+);
+
 /** French (Français)
  * @author Gomoko
  */

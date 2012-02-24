@@ -571,7 +571,10 @@ Si has iniciado sesión, puedes desactivar este aviso en la sección «Edición�
  * @author Pikne
  */
 $messages['et'] = array(
+	'vector' => 'Vector-kujunduse kasutajaliidese täiustused',
+	'vector-desc' => 'Täiustab Vector-kujunduse kasutajaliidese elemente.',
 	'vector-collapsiblenav-preference' => 'Luba Vektori-kujundusega navigeerimismenüü üksusi peita',
+	'vector-collapsiblenav-more' => 'Veel keeli',
 	'vector-editwarning-warning' => 'Sellelt leheküljelt lahkumise tõttu võivad tehtud muudatused kaotsi minna.
 Kui oled sisse loginud, saad selle hoiatuse eelistuste alaosas "Toimetamine" keelata.',
 	'vector-editwarning-preference' => 'Hoiata mind, kui lahkun redigeerimisleheküljelt muudatusi salvestamata',
@@ -925,7 +928,7 @@ No nakastrekka, mabalin mo nga ikkaten daytoy a ballaag idiay "Panagurnos" a pas
 	'vector-editwarning-preference' => 'Pakaunaannak no pumanawak iti inurnos a panid a saan a naidulin dagiti sinukatan',
 	'vector-simplesearch-search' => 'Biruken',
 	'vector-simplesearch-containing' => 'naglaon ti...',
-	'vector-noexperiments-preference' => 'Saannak nga iraman kadagiti eksperimentoa langa',
+	'vector-noexperiments-preference' => 'Saannak nga iraman kadagiti eksperimento a langa',
 );
 
 /** Ido (Ido)

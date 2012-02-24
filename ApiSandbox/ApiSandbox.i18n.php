@@ -1568,6 +1568,7 @@ $messages['ru'] = array(
 	'apisb-example' => 'Пример',
 	'apisb-examples' => 'Примеры',
 	'apisb-clear' => 'Очистить',
+	'apisb-request-time' => 'Время запроса: $1',
 );
 
 /** Sanskrit (संस्कृतम्)

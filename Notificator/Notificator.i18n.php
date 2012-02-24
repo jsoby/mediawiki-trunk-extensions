@@ -477,6 +477,7 @@ $messages['pt'] = array(
 
 /** Russian (Русский)
  * @author Eleferen
+ * @author Ignatus
  */
 $messages['ru'] = array(
 	'notificator' => 'Notificator',
@@ -485,6 +486,7 @@ $messages['ru'] = array(
 	'notificator-e-mail-address' => 'адрес электронной почты',
 	'notificator-notify' => 'Уведомление',
 	'notificator-notify-address-or-name' => 'Уведомление $1',
+	'notificator-revs-not-from-same-title' => 'Идентификаторы правок не от одного названия/не от одной страницы',
 	'notificator-return-to' => 'Вернуться к',
 	'notificator-special-page-accessed-directly' => 'Нельзя получить доступ к этой специальной странице. Она предназначена для использования через кнопку Notificator.',
 	'notificator-e-mail-address-invalid' => 'Предоставленный адрес электронной почты является недопустимым.',

@@ -114,3 +114,10 @@ $messages['pms'] = array(
 	'namespacepaths-desc' => 'A përmët che ij përcors ëd le vos a sio butà an corëspondensa con jë spassi nominaj ëd la wiki. Për esempi: Fé corësponde dle pàgine com Agiut:A a/help/Pàgina nopà che /wiki/Agiut:Pàgina.',
 );
 
+/** Russian (Русский)
+ * @author Ignatus
+ */
+$messages['ru'] = array(
+	'namespacepaths-desc' => 'Позволяет настраивать пути к статьям для сопоставления пространствам имен вики. Пример: странице Help:Page сопоставляется /help/Page, а не/wiki/Help:Page.',
+);
+

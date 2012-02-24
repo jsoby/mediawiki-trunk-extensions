@@ -700,11 +700,13 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Fitoschido
  * @author Manuelt15
  */
 $messages['es'] = array(
+	'inlinecategorizer-desc' => 'Módulo de JavaScript que permite modificar, agregar y eliminar enlaces de categorías directamente desde una página',
 	'inlinecategorizer-add-category' => 'Agregar categoría',
 	'inlinecategorizer-add-category-submit' => 'Agregar',
 	'inlinecategorizer-add-category-summary' => 'Añadir categoría «$1»',

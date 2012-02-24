@@ -48,6 +48,13 @@ $messages['dsb'] = array(
 	'interfaceconcurrency-desc' => 'Staja backend za wužywarksi powjerch k dispoziciji, kótaryž pokazujo, kótare resurse se wužywaju.',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'interfaceconcurrency-desc' => 'Ofrece un sistema (backend) para la interfaz de usuario que muestra los recursos que están en uso',
+);
+
 /** French (Français)
  * @author Gomoko
  */

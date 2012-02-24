@@ -1872,9 +1872,7 @@ $messages['et'] = array(
 	'openidchoosepassword' => 'Parool:',
 	'openidconvertyourstext' => 'See on juba Sinu avatud ID.',
 	'openidconvertothertext' => 'See on kellegi teise avatud ID.',
-	'openidalreadyloggedin' => "'''Sa oled juba sisse logitud, $1!'''
-
-Kui soovid kasutada avatud ID-d tulevikus sisselogimiseks, võid [[Special:OpenIDConvert|konvertida oma konto, kasutamaks avatud ID-d]].",
+	'openidalreadyloggedin' => 'Oled juba sisse loginud.',
 	'openidnousername' => 'Kasutajanimi määratlemata.',
 	'openidbadusername' => 'Märgitud kasutajanimi on vigane.',
 	'openiddelete-button' => 'Kinnita',
@@ -5158,6 +5156,7 @@ $messages['roa-tara'] = array(
  * @author Adata80
  * @author Aleksandrit
  * @author Ferrer
+ * @author Ignatus
  * @author Kaganer
  * @author Lockal
  * @author Putnik
@@ -5181,7 +5180,12 @@ $messages['ru'] = array(
 	'openidfailure' => 'Проверка неудачна',
 	'openidfailuretext' => 'Проверка адреса OpenID завершилась неудачей. Сообщение об ошибке: «$1»',
 	'openidsuccess' => 'Проверка прошла успешно',
-	'openidsuccesstext' => 'Проверка адреса OpenID прошла успешно.',
+	'openidsuccesstext' => "'''Успешная проверка. Вы вошли как $1.'''
+
+Ваш идентификатор OpenID: ''$2''.
+
+Этот и возможные дальнейшие идентификаторы OpenID могут быть настроены на [[Special:Preferences#prefsection-openid|вкладке OpenID]] в ваших настройках.<br />
+Необязательный пароль к учётной записи может быть добавлен в вашем [[Special:Preferences#prefsection-personal|профиле пользователя]].",
 	'openidusernameprefix' => 'УчастникOpenID',
 	'openidserverlogininstructions' => 'Введите ниже свой пароль, чтобы войти на $3 как участник $2 (личная страница $1 — это ваш OpenID URL).',
 	'openidtrustinstructions' => 'Отметьте, если вы хотите предоставить доступ к данным для $1.',
@@ -5195,7 +5199,7 @@ $messages['ru'] = array(
 	'openidemail' => 'Адрес эл. почты',
 	'openidlanguage' => 'Язык',
 	'openidtimezone' => 'Часовой пояс',
-	'openidchooselegend' => 'Выбор имени пользователя',
+	'openidchooselegend' => 'Выбор имени пользователя и учётной записи',
 	'openidchooseinstructions' => 'Каждый участник должен иметь псевдоним;
 вы можете выбрать один из представленных ниже.',
 	'openidchoosenick' => 'Ваш ник ($1)',
@@ -5213,6 +5217,9 @@ $messages['ru'] = array(
 	'openidconvertyourstext' => 'Это уже ваш OpenID.',
 	'openidconvertothertext' => 'Это чужой OpenID.',
 	'openidalreadyloggedin' => 'Вы уже вошли.',
+	'openidalreadyloggedintext' => "''' Вы уже вошли,  $1!'''
+
+Вы можете управлять (просматривать, удалять, добавлять) записи OpenID на [[Special:Preferences#prefsection-openid|вкладке OpenID]] в ваших предпочтениях.",
 	'openidnousername' => 'Не указано имя участника.',
 	'openidbadusername' => 'Указано неверное имя участника.',
 	'openidautosubmit' => 'Эта страница содержит форму, которая должна быть автоматически отправлена, если у вас включён JavaScript.
@@ -5223,10 +5230,8 @@ $messages['ru'] = array(
 OpenID позволяет вам заходить на различные веб-сайты без указания разных паролей для них
 (подробнее см. [//ru.wikipedia.org/wiki/OpenID статью об OpenID в Википедии]).
 
-Если вы уже имеете учётную запись на {{SITENAME}}, вы можете [[Special:UserLogin|войти]] как обычно, используя своё имя учётной записи и пароль.
-Чтобы использовать в дальнейшем OpenID, вы можете [[Special:OpenIDConvert|преобразовать вашу учётную запись в OpenID]], после того, как вы вошли обычным образом.
-
 Существует множество [//openid.net/get/ общедоступных провайдеров OpenID], возможно, вы уже имеете учётную запись OpenID на другом сайте.',
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}} позволяет вам войти ''только'' с использованием OpenID.",
 	'openidupdateuserinfo' => 'Обновить мою личную информацию:',
 	'openiddelete' => 'Удалить OpenID',
 	'openiddelete-text' => 'Нажав на кнопку «{{int:openiddelete-button}}», Вы удалите OpenID $1 из своей учётной записи.
@@ -5238,6 +5243,7 @@ OpenID позволяет вам заходить на различные веб
 У вас не будет возможности войти в систему без OpenID.',
 	'openiddelete-sucess' => 'OpenID успешно удалён из Вашей учётной записи.',
 	'openiddelete-error' => 'Произошла ошибка при удалении OpenID из Вашей учётной записи.',
+	'openid-openids-were-not-merged' => 'OpenID(s) не были объединены при слиянии учетных записей.',
 	'openid-prefstext' => 'Параметры [//openid.net/ OpenID]',
 	'openid-pref-hide' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Обновлять следующую информацию обо мне через OpenID каждый раз, когда я представляюсь системе:',
@@ -5253,7 +5259,10 @@ OpenID позволяет вам заходить на различные веб
 	'openid-provider-label-aol' => 'Введите ваше имя в AOL',
 	'openid-provider-label-other-username' => 'Введите ваше имя участника $1',
 	'openid-dashboard-title' => 'панель OpenID',
+	'openid-dashboard-title-admin' => 'Панель OpenID (администратор)',
 	'openid-dashboard-number-openid-users' => 'Чисто пользователей с OpenID',
+	'openid-dashboard-number-openids-in-database' => 'Число OpenID (всего)',
+	'openid-dashboard-number-users-without-openid' => 'Чисто пользователей без OpenID',
 );
 
 /** Rusyn (Русиньскый)

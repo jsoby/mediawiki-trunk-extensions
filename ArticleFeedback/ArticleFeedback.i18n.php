@@ -3137,30 +3137,31 @@ $3
 /** Hindi (हिन्दी)
  * @author Ansumang
  * @author Mayur
+ * @author Siddhartha Ghai
  * @author Vibhijain
  */
 $messages['hi'] = array(
 	'articlefeedback' => 'लेख प्रतिक्रिया डैशबोर्ड',
 	'articlefeedback-desc' => 'लेख सुझाव प्रतिक्रिया',
-	'articlefeedback-survey-question-origin' => 'आप कौनसे पृष्ठ पर थे जब आपने यह सर्वेक्षण शुरु किया था?',
-	'articlefeedback-survey-question-whyrated' => 'कृपया हमें बताये कि आपने क्यों आज इस पृष्ठ का मूल्यांकन किया (सभी लागु होने वाले विकल्प चुने):',
+	'articlefeedback-survey-question-origin' => 'आप कौनसे पृष्ठ पर थे जब आपने यह सर्वेक्षण शुरू किया था?',
+	'articlefeedback-survey-question-whyrated' => 'कृपया हमें बताये कि आपने क्यों आज इस पृष्ठ का मूल्यांकन किया (लागू होने वाले सभी विकल्प चुनें):',
 	'articlefeedback-survey-answer-whyrated-contribute-rating' => 'मैं पृष्ठ की समग्र रेटिंग के लिए योगदान करना चाहता था',
 	'articlefeedback-survey-answer-whyrated-development' => 'मुझे आशा है कि मेरी रेटिंग पृष्ठ के सकारात्मक विकास को प्रभावित करेगी',
 	'articlefeedback-survey-answer-whyrated-contribute-wiki' => 'मैं {{SITENAME}} को योगदान करना चाहता था।',
 	'articlefeedback-survey-answer-whyrated-sharing-opinion' => 'मुझे मेरे विचार साझा करना पसन्द है।',
-	'articlefeedback-survey-answer-whyrated-didntrate' => 'मैंने मूल्यांकन आज नहीं प्रदान की थी, लेकिन सुविधा पर प्रतिक्रिया देना चाहता था।',
+	'articlefeedback-survey-answer-whyrated-didntrate' => 'मैंने मूल्यांकन आज नहीं प्रदान किया था, लेकिन सुविधा पर प्रतिक्रिया देना चाहता था।',
 	'articlefeedback-survey-answer-whyrated-other' => 'अन्य',
 	'articlefeedback-survey-question-useful' => 'क्या आपको लगता है कि आपके द्वारा प्रदान की रेटिंग उपयोगी और स्पष्ट हैं?',
 	'articlefeedback-survey-question-useful-iffalse' => 'क्यों?',
 	'articlefeedback-survey-question-comments' => 'क्या आपकी कोई अतिरिक्त टिप्पणियाँ है?',
 	'articlefeedback-survey-submit' => 'भेजें',
-	'articlefeedback-survey-title' => 'कृपया कुछ सवालों के जवाब देवें',
+	'articlefeedback-survey-title' => 'कृपया कुछ प्रश्नों के उत्तर दें',
 	'articlefeedback-survey-thanks' => 'सर्वेक्षण को भरने के लिए धन्यवाद।',
-	'articlefeedback-survey-disclaimer' => 'इस सुविधा को बेहतर बनाने में मदद करने के लिए, आपकी प्रतिक्रिया गुमनाम विकिपीडिया समुदाय के साथ साझा किया जा सकता है।',
+	'articlefeedback-survey-disclaimer' => 'जमा करने का अर्थ है कि आप $1 के तहत पारदर्शिता के लिये सहमत हैं।',
 	'articlefeedback-survey-disclaimerlink' => 'शर्तें',
 	'articlefeedback-error' => 'कोई त्रुटि उत्पन्न हुई। कृपया बाद में पुन: प्रयास करें।',
-	'articlefeedback-form-switch-label' => 'इस पन्ने का मूल्यांकन करे।',
-	'articlefeedback-form-panel-title' => 'इस पन्ने का मूल्यांकन करे।',
+	'articlefeedback-form-switch-label' => 'इस पन्ने का मूल्यांकन करें।',
+	'articlefeedback-form-panel-title' => 'इस पन्ने का मूल्यांकन करें।',
 	'articlefeedback-form-panel-explanation' => 'यह क्या है?',
 	'articlefeedback-form-panel-explanation-link' => 'परियोजना:विकिपीडिया आकलन',
 	'articlefeedback-form-panel-clear' => 'यह रेटिंग हटाये।',
@@ -3172,7 +3173,7 @@ $messages['hi'] = array(
 	'articlefeedback-form-panel-helpimprove' => 'मैं विकिपीडिया में सुधार करने में मदद करना चाहता हूँ, मुझे एक ई-मेल भेजें (वैकल्पिक)।',
 	'articlefeedback-form-panel-helpimprove-note' => 'हम आपको एक पुष्टिकरण ई-मेल भेज देंगे। हम आपका पता किसी के साथ साझा नहीं करेंगे।$1',
 	'articlefeedback-form-panel-helpimprove-privacy' => 'गोपनीयता नीति',
-	'articlefeedback-form-panel-submit' => 'मूल्याँकन जमा करे।',
+	'articlefeedback-form-panel-submit' => 'मूल्याँकन जमा करें।',
 	'articlefeedback-form-panel-pending' => 'आपके मूल्यांकन अभी तक जमा नहीं किये गये।',
 	'articlefeedback-form-panel-success' => 'सफलतापूर्वक सहेजा गया',
 	'articlefeedback-form-panel-expiry-title' => 'आपके मूल्यांकन की अवधि समाप्त हो गयी है।',
@@ -3196,7 +3197,7 @@ $messages['hi'] = array(
 	'articlefeedback-field-complete-tooltip-3' => 'महत्वपूर्ण जानकारी शामिल है, लेकिन अंतराल के साथ',
 	'articlefeedback-field-complete-tooltip-4' => 'सबसे महत्वपूर्ण जानकारी शामिल है।',
 	'articlefeedback-field-complete-tooltip-5' => 'व्यापक कवरेज',
-	'articlefeedback-field-objective-label' => 'उद्देश्य',
+	'articlefeedback-field-objective-label' => 'निष्पक्षता',
 	'articlefeedback-field-objective-tip' => 'क्या आपको लगता है कि  यह पृष्ठ समस्त प्रतिनिधित्व मुद्दों पर निष्पक्ष है।',
 	'articlefeedback-field-objective-tooltip-1' => 'काफि पक्षपाती',
 	'articlefeedback-field-objective-tooltip-2' => 'उदारवादी पूर्वाग्रह',
@@ -3213,14 +3214,14 @@ $messages['hi'] = array(
 	'articlefeedback-pitch-reject' => 'शायद बाद में',
 	'articlefeedback-pitch-or' => 'या',
 	'articlefeedback-pitch-thanks' => 'धन्यवाद! आपका मूल्याँकन सहेजा गया।',
-	'articlefeedback-pitch-survey-message' => 'कृपया एक संक्षिप्त सर्वेक्षण को पूरा करने के लिए एक क्षण लेवें',
+	'articlefeedback-pitch-survey-message' => 'कृपया एक संक्षिप्त सर्वेक्षण को पूरा करने के लिए एक क्षण लें',
 	'articlefeedback-pitch-survey-accept' => 'सर्वेक्षण शुरू',
 	'articlefeedback-pitch-join-message' => 'क्या आप एक खाता बनाना चाहते हैं?',
 	'articlefeedback-pitch-join-body' => 'एक खाता से आपको आपके संपादन के ट्रैक रखने, विचार विमर्श में शामिल होने और समुदाय का एक हिस्सा बनने में मदद मिलेगी।',
 	'articlefeedback-pitch-join-accept' => 'नया खाता बनाएँ',
 	'articlefeedback-pitch-join-login' => 'सत्रारंभ',
 	'articlefeedback-pitch-edit-message' => 'क्या आप जानते थे कि आप इस पृष्ठ को संपादित कर सकते हैं?',
-	'articlefeedback-pitch-edit-accept' => 'यह पृष्ठ संपादन करें',
+	'articlefeedback-pitch-edit-accept' => 'यह पृष्ठ सम्पादित करें',
 	'articlefeedback-survey-message-success' => 'सर्वेक्षण को भरने के लिए धन्यवाद।',
 	'articlefeedback-survey-message-error' => 'कोई त्रुटि उत्पन्न हुई। कृपया बाद में पुन: प्रयास करें।',
 	'articlefeedback-privacyurl' => 'http://wikimediafoundation.org/wiki/Feedback_privacy_statement',
@@ -3228,15 +3229,36 @@ $messages['hi'] = array(
 	'articleFeedback-table-caption-dailyhighs' => 'सर्वोच्च रेटिंग वाले पृष्ठ:$1',
 	'articleFeedback-table-caption-dailylows' => 'निम्नतम् रेटिंग वाले पृष्ठ:$1',
 	'articleFeedback-table-caption-weeklymostchanged' => 'इस सप्ताह के सबसे अधिक बदलाव',
-	'articleFeedback-table-caption-recentlows' => 'हाल ही के चढ़ाव',
+	'articleFeedback-table-caption-recentlows' => 'हाल ही की न्यूनतम रेटिंग',
 	'articleFeedback-table-heading-page' => 'पृष्ठ',
 	'articleFeedback-table-heading-average' => 'औसत',
-	'articleFeedback-copy-above-highlow-tables' => 'यह एक प्रायोगिक सुविधा है।  कृपया अपनी राय  [$1 चर्चा पृष्ठ] पर अवश्य दें',
+	'articleFeedback-copy-above-highlow-tables' => 'यह एक प्रायोगिक सुविधा है।  कृपया अपनी राय  [$1 चर्चा पृष्ठ] पर अवश्य दें।',
 	'articlefeedback-dashboard-bottom' => "'''नोट''': हम इन डैशबोर्ड्स में लेख सरफेसिंग के विभिन्न तरीकों का प्रयोग करेंगे। वर्तमान में डैशबोर्ड्स निम्न लेख शामिल किये हुए है-
-*उच्चतम एवं निम्नतम रेटिंग वाले पृष्ठ: जिन लेखों ने पिछ्हले २४ घन्टों में १० से अधिक रेटिंग प्राप्त की हैं, पिछले २४ घन्टों में प्राप्त रेटिंग के औसत से औसत मान निकाला जाता  है।
-*हाल ही के उतार:जिन लेखों ने ७०% या २ से कम रेटिंग पिछले २४ घण्टों में प्राप्त की है। केवल पिछले २४ घण्टों में १० से अधिक रेटिंग प्राप्त करने वाले लेख शामिल किये गये है।",
+*उच्चतम एवं निम्नतम रेटिंग वाले पृष्ठ: जिन लेखों ने पिछ्हले २४ घंटों में १० से अधिक रेटिंग प्राप्त की हैं। पिछले २४ घंटों में प्राप्त रेटिंग के औसत से औसत मान निकाला जाता  है।
+*हाल ही के उतार: जिन लेखों ने ७०% या २ से कम रेटिंग पिछले २४ घंटों में प्राप्त की है। केवल पिछले २४ घण्टों में १० से अधिक रेटिंग प्राप्त करने वाले लेख शामिल किये गये है।",
 	'articlefeedback-disable-preference' => 'लेख प्रतिक्रिया विजेट पृष्ठों पर न दिखाएँ',
-	'articlefeedback-emailcapture-response-body' => 'नमस्कार!!एन!एन!{{SITENAME}} को बेहतर बनाने के लिए मदद करने में रुचि व्यक्त करने के लिए धन्यवाद.!एन!एन!कृपया नीचे दिए गए लिंक पर क्लिक करके अपने ई-मेल की पुष्टि करने के लिए एक क्षण ले:!एन!एन!$1!एन!एन!तुम भी यात्रा कर सकते हैं:!एन!एन!$2!एन!एन!और निम्नलिखित पुष्टिकरण कोड प्रविष्ट करें:!एन!एन!$3!एन!एन!हम शीघ्र ही आपको {{SITENAME}} में सुधार कैसे मदद कर सकते हैं के साथ संपर्क में हो जाएगा.!एन!एन!यदि आप इस अनुरोध को आरंभ नहीं किया है, कृपया इस ई-मेल पर ध्यान न दें और हम तुम कुछ और नहीं भेजेंगे.!एन!एन!शुभकामनाएं, और आपको धन्यवाद!एन!{{SITENAME}} टीम',
+	'articlefeedback-emailcapture-response-body' => 'नमस्कार!
+
+{{SITENAME}} को बेहतर बनाने में रुचि व्यक्त करने के लिए धन्यवाद।
+
+कृपया नीचे दिए गए लिंक पर क्लिक कर के अपने ई-मेल की पुष्टि करने के लिए एक क्षण लें:
+
+$1
+
+आप निम्न लिंक पर भी जा सकते हैं:
+
+$2
+
+और निम्नलिखित पुष्टिकरण कोड प्रविष्ट कर सकते हैं:
+
+$3
+
+हम शीघ्र ही {{SITENAME}} में सुधार करने सम्बंधित जानकारी के साथ आपसे संपर्क करेंगे।
+
+यदि आपने यह अनुरोध आरंभ नहीं किया था, कृपया इस ई-मेल पर ध्यान न दें और हम आपको और कुछ नहीं भेजेंगे।
+
+शुभकामनाएँ, और आपका धन्यवाद!
+{{SITENAME}} टीम',
 );
 
 /** Croatian (Hrvatski)

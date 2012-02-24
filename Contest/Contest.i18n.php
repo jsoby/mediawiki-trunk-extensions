@@ -6192,15 +6192,16 @@ $messages['roa-tara'] = array(
 /** Russian (Русский)
  * @author DCamer
  * @author Eugrus
+ * @author Ignatus
  * @author Kaganer
  * @author Ole Yves
  */
 $messages['ru'] = array(
-	'contest-desc' => 'Позволяет пользователям участвовать в конкурсах. Жури может обсуждать и голосовать за материалы',
+	'contest-desc' => 'Позволяет пользователям участвовать в конкурсах. Жюри может обсуждать и голосовать за материалы',
 	'contest-toplink' => 'Мои конкурсы',
 	'right-contestadmin' => 'Управление конкурсами',
 	'right-contestant' => 'Участие в конкурсах',
-	'right-contestjudge' => 'Жури конкурса',
+	'right-contestjudge' => 'Жюри конкурса',
 	'action-contestadmin' => 'управление конкурсами',
 	'action-contestant' => 'участвовать в конкурсах',
 	'action-contestjudge' => 'оценить участвующих в конкурсе',
@@ -6217,7 +6218,7 @@ $messages['ru'] = array(
 	'contest-prefs-showtoplink' => 'Показывать ссылку на [[Special:MyContests|Мои конкурсы]] в меню пользователя.',
 	'contest-status-draft' => 'Черновик (отключен)',
 	'contest-status-active' => 'Активен (включен)',
-	'contest-status-expired' => 'Прошел (включен, достиг даты окончания)',
+	'contest-status-expired' => 'Прошёл (включен, достиг даты окончания)',
 	'contest-status-finished' => 'Завершён (отключен)',
 	'special-contest' => 'Просмотр конкурса',
 	'special-contests' => 'Управление конкурсами',
@@ -6323,10 +6324,10 @@ $messages['ru'] = array(
 	'contest-contest-reminder-send' => 'Отправить напоминание',
 	'contest-contest-reminder-cancel' => 'Отмена',
 	'contest-contest-reminder-sending' => 'Отправка…',
-	'contest-contest-reminder-success' => 'Успешно отправлено уведомительное электронное письмо $1 участникам конкурсов',
+	'contest-contest-reminder-success' => 'Успешно отправлено уведомление $1 {{PLURAL:$1|участнику|участникам|участникам}} конкурсов',
 	'contest-contest-reminder-close' => 'Закрыть',
 	'contest-contest-reminder-retry' => 'Повторить отправку',
-	'contest-contest-reminder-failed' => 'Не удалось отправить уведомительные электронные письма.',
+	'contest-contest-reminder-failed' => 'Не удалось отправить {{PLURAL:$1|уведомительное электронное письмо|уведомительные электронные письма}}.',
 	'contest-contest-reminder-subject' => 'Тема:',
 	'contest-contestant-id' => 'ID',
 	'contest-contestant-challenge-name' => 'Название задачи',

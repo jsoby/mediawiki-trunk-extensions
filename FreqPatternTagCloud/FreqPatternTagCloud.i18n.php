@@ -164,6 +164,7 @@ $messages['es'] = array(
 	'fptc-invalid-attribute' => 'La propiedad especificada no es válida.',
 	'fptc-insufficient-rights-for-maintenance' => 'Usted debe iniciar sesión como administrador para ver esta página.',
 	'fptc-refresh-frequent-patterns' => 'Actualizar datos',
+	'fptc-refreshed-frequent-patterns' => 'Se actualizaron las reglas de modelos frecuentes',
 	'fptc-search-attribute-name' => 'Buscar propiedad',
 	'fptc-search-button' => 'Buscar',
 	'fptc-search-suggestion-value' => 'Similar a "%s":',
