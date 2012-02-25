@@ -33,7 +33,7 @@ Return to [[{{int:mainpage}}]].',
 This helps remove repetitive text such as categories and metadata.
 To '''append''' is to add to the end of text, while to '''prepend''' means to add to the beginning of text.
 Especially for descriptions, make sure you give a few linebreaks before/after the text.",
-		
+
 	'uploadlocal_error_exists' => 'The file $1 already exists.',
 	'uploadlocal_error_empty' => 'The file you submitted was empty.',
 	'uploadlocal_error_missing' => 'The file is missing an extension.',
@@ -44,8 +44,8 @@ Especially for descriptions, make sure you give a few linebreaks before/after th
 	'uploadlocal_error_verify' => 'This file did not pass file verification: $1.',
 	'uploadlocal_error_hook' => 'The modification you tried to make was aborted by an extension hook.',
 	'uploadlocal_error_unknown' => 'An unknown error occurred.',
-		
-	'right-uploadlocal' => 'Upload files from the local machine'
-	'action-uploadlocal' => 'upload files from the local machine'
+
+	'right-uploadlocal' => 'Upload files from the local machine',
+	'action-uploadlocal' => 'upload files from the local machine',
 );
 
