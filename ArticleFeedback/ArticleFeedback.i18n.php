@@ -148,6 +148,7 @@ The {{SITENAME}} team',
  * @author Minh Nguyen
  * @author Mormegil
  * @author Nedergard
+ * @author Nemo bis
  * @author Nike
  * @author Praveenp
  * @author Purodha
@@ -178,7 +179,7 @@ Please visit http://prototype.wikimedia.org/articleassess/Main_Page for a protot
 	'articlefeedback-survey-title' => 'This text appears in the title bar of the survey dialog.',
 	'articlefeedback-survey-thanks' => 'This text appears when the user has successfully submitted the survey.',
 	'articlefeedback-survey-disclaimer' => 'This text appears on the survey form below the comment field and above the submit button. $1 is a link pointing to the privacy policy. The link text is in the {{msg-mw|articlefeedback-survey-disclaimerlink}} message.',
-	'articlefeedback-survey-disclaimerlink' => 'Used in {{msg-mw|Articlefeedback-survey-disclaimer}}.',
+	'articlefeedback-survey-disclaimerlink' => 'Label of the link in {{msg-mw|Articlefeedback-survey-disclaimer}}.',
 	'articlefeedback-form-panel-explanation' => '{{Identical|What is this}}',
 	'articlefeedback-form-panel-explanation-link' => 'Do not translate "Project:". Also translate the "ArticleFeedback" special page name at [[Special:AdvancedTranslate]].',
 	'articlefeedback-form-panel-helpimprove' => 'This message should use {{SITENAME}}.',
@@ -3219,7 +3220,7 @@ $messages['hi'] = array(
 	'articlefeedback-pitch-join-message' => 'क्या आप एक खाता बनाना चाहते हैं?',
 	'articlefeedback-pitch-join-body' => 'एक खाता से आपको आपके संपादन के ट्रैक रखने, विचार विमर्श में शामिल होने और समुदाय का एक हिस्सा बनने में मदद मिलेगी।',
 	'articlefeedback-pitch-join-accept' => 'नया खाता बनाएँ',
-	'articlefeedback-pitch-join-login' => 'सत्रारंभ',
+	'articlefeedback-pitch-join-login' => 'लॉग इन',
 	'articlefeedback-pitch-edit-message' => 'क्या आप जानते थे कि आप इस पृष्ठ को संपादित कर सकते हैं?',
 	'articlefeedback-pitch-edit-accept' => 'यह पृष्ठ सम्पादित करें',
 	'articlefeedback-survey-message-success' => 'सर्वेक्षण को भरने के लिए धन्यवाद।',
@@ -4290,6 +4291,7 @@ $messages['kiu'] = array(
 );
 
 /** Korean (한국어)
+ * @author Freebiekr
  * @author Klutzy
  * @author Kwj2772
  * @author Ricolyuki
@@ -4311,6 +4313,8 @@ $messages['ko'] = array(
 	'articlefeedback-survey-submit' => '제출',
 	'articlefeedback-survey-title' => '몇 가지 질문에 답해 주시기 바랍니다.',
 	'articlefeedback-survey-thanks' => '설문에 응해 주셔서 감사합니다.',
+	'articlefeedback-survey-disclaimer' => '당신은 $1에 따라 공개하는 데 동의하면 제출하십시오.',
+	'articlefeedback-survey-disclaimerlink' => '이용 약관',
 	'articlefeedback-error' => '오류가 발생했습니다. 나중에 다시 시도해주세요.',
 	'articlefeedback-form-switch-label' => '문서 평가하기',
 	'articlefeedback-form-panel-title' => '문서 평가하기',
@@ -4323,7 +4327,7 @@ $messages['ko'] = array(
 	'articlefeedback-form-panel-expertise-hobby' => '개인적으로 큰 관심이 있습니다',
 	'articlefeedback-form-panel-expertise-other' => '기타',
 	'articlefeedback-form-panel-helpimprove' => '위키백과 개선을 위한 이메일을 받습니다(선택사항)',
-	'articlefeedback-form-panel-helpimprove-note' => '확인 메일을 보냈습니다. 이 메일 주소는 어디에도 공개되지 않습니다. $1',
+	'articlefeedback-form-panel-helpimprove-note' => '확인 메일을 보낼 것입니다. 당신의 이메일 주소를  $1에 따라 외부와 공유하지 않겠습니다.',
 	'articlefeedback-form-panel-helpimprove-privacy' => '피드백 개인정보 정책',
 	'articlefeedback-form-panel-submit' => '평가 제출',
 	'articlefeedback-form-panel-pending' => '평가를 제출하지 않았습니다',
@@ -4337,12 +4341,32 @@ $messages['ko'] = array(
 	'articlefeedback-report-ratings' => '평가 $1개',
 	'articlefeedback-field-trustworthy-label' => '신뢰성',
 	'articlefeedback-field-trustworthy-tip' => '이 문서를 뒷받침하는 충분한 출처가 있고, 그 출처가 믿을 수 있다고 생각하시나요?',
+	'articlefeedback-field-trustworthy-tooltip-1' => '평판이 좋은 출처 부재',
+	'articlefeedback-field-trustworthy-tooltip-2' => '평판이 좋은 출처 부족',
+	'articlefeedback-field-trustworthy-tooltip-3' => '평판이 좋은 출처 적당',
+	'articlefeedback-field-trustworthy-tooltip-4' => '평판이 좋은 출처 다수',
+	'articlefeedback-field-trustworthy-tooltip-5' => '평판이 좋은 출처 상당수',
 	'articlefeedback-field-complete-label' => '완전성',
 	'articlefeedback-field-complete-tip' => '이 문서에서 다루어야 하는 내용을 충분히 담고 있다고 생각하시나요?',
+	'articlefeedback-field-complete-tooltip-1' => '정보 대부분이 없음',
+	'articlefeedback-field-complete-tooltip-2' => '정보 일부 포함',
+	'articlefeedback-field-complete-tooltip-3' => '주요 정보 있지만 빠진 것도 있음',
+	'articlefeedback-field-complete-tooltip-4' => '주요 정보 대부분 포함',
+	'articlefeedback-field-complete-tooltip-5' => '광범위하게 다룸',
 	'articlefeedback-field-objective-label' => '객관성',
 	'articlefeedback-field-objective-tip' => '이 문서는 여러 관점을 공정하게 다루고 있다고 생각하시나요?',
-	'articlefeedback-field-wellwritten-label' => '가독성',
+	'articlefeedback-field-objective-tooltip-1' => '매우 편향됨',
+	'articlefeedback-field-objective-tooltip-2' => '편향이 적당함',
+	'articlefeedback-field-objective-tooltip-3' => '편향이 아주 적음',
+	'articlefeedback-field-objective-tooltip-4' => '명백한 편향이 없음',
+	'articlefeedback-field-objective-tooltip-5' => '편향이 전혀 없음',
+	'articlefeedback-field-wellwritten-label' => '글의 짜임새',
 	'articlefeedback-field-wellwritten-tip' => '이 문서가 짜임새있게 잘 구성되어있다고 생각하시나요?',
+	'articlefeedback-field-wellwritten-tooltip-1' => '이해할 수 없음',
+	'articlefeedback-field-wellwritten-tooltip-2' => '이해하기 어려움',
+	'articlefeedback-field-wellwritten-tooltip-3' => '적당하게 명확함',
+	'articlefeedback-field-wellwritten-tooltip-4' => '매우 명확함',
+	'articlefeedback-field-wellwritten-tooltip-5' => '아주 명확함',
 	'articlefeedback-pitch-reject' => '나중에 평가하기',
 	'articlefeedback-pitch-or' => '또는',
 	'articlefeedback-pitch-thanks' => '감사합니다! 평가가 저장되었습니다.',
@@ -4357,6 +4381,7 @@ $messages['ko'] = array(
 	'articlefeedback-survey-message-success' => '설문을 작성해 주셔서 감사합니다.',
 	'articlefeedback-survey-message-error' => '오류가 발생했습니다.
 잠시 후 다시 시도해주세요.',
+	'articlefeedback-privacyurl' => 'http://wikimediafoundation.org/wiki/Feedback_privacy_statement',
 	'articleFeedback-table-caption-dailyhighsandlows' => '오늘의 최고값과 최저값',
 	'articleFeedback-table-caption-dailyhighs' => '가장 높은 평가를 받은 문서: $1',
 	'articleFeedback-table-caption-dailylows' => '가장 낮은 평가를 받은 문서: $1',

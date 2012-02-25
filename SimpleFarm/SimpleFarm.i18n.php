@@ -90,6 +90,13 @@ $messages['ia'] = array(
 	'simplefarm-desc' => 'Extension de ferma wiki simple ma potente sin paginas de configuration special',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'simplefarm-desc' => 'Einfach, an awer ëmfangräich Wiki-Farm-Erweiderung ouni komplex Konfiguratiounssäiten',
+);
+
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */

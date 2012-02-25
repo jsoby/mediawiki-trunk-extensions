@@ -958,6 +958,7 @@ Per ulteriori dettagli di utilizzo delle API, fai riferimento alla [//www.mediaw
 );
 
 /** Korean (한국어)
+ * @author Freebiekr
  * @author Kwj2772
  */
 $messages['ko'] = array(
@@ -992,6 +993,7 @@ $messages['ko'] = array(
 	'apisb-example' => '예시',
 	'apisb-examples' => '예시',
 	'apisb-clear' => '지우기',
+	'apisb-request-time' => '요청 처리 시간: $1',
 );
 
 /** Colognian (Ripoarisch)

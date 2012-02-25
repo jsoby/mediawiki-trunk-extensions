@@ -478,6 +478,8 @@ $messages['lb'] = array(
 	'lua_extension_notfound' => 'Lua-Erweiderung net configuréiert',
 	'lua_interp_notfound' => 'Lua-Interpreter net fonnt',
 	'lua_error_internal' => 'Interne Feeler',
+	'lua_overflow_loc' => 'Maximal Zuel vun Zeile fir de Code erreecht',
+	'lua_overflow_time' => "Maximal Zäit fir d'Duerchféieren erreecht",
 );
 
 /** Macedonian (Македонски)
