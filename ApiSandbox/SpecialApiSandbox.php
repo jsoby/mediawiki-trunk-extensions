@@ -88,9 +88,9 @@ class SpecialApiSandbox extends SpecialPage {
 <table class="api-sandbox-options">
 	<tbody>
 		<tr>
-			<th><label for="api-sandbox-format">Format</label></th>
-			<th><label for="api-sandbox-action">Action</label></th>
-			<th class="api-sandbox-docs-col">Documentation</th>
+			<th><label for="api-sandbox-format">' . wfMessage( 'apisb-label-format' )->escaped() . '</label></th>
+			<th><label for="api-sandbox-action">' . wfMessage( 'apisb-label-action' )->escaped() . '</label></th>
+			<th class="api-sandbox-docs-col">' . wfMessage( 'apisb-label-doc' )->escaped() . '</th>
 		</tr>
 		<tr>
 			<td>' . self::getSelect( 'format', $formatOptions, 'json' ) . '</td>

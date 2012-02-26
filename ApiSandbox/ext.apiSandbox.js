@@ -352,7 +352,7 @@
 						)
 					)
 					.append( $( '<td class="api-sandbox-params-value"></td>' ).html( this.input( param, name ) ) )
-					.append( $( '<td>' ).html( smartEscape( param.description ) ) )
+					.append( $( '<td class="mw-content-ltr" dir="ltr">' ).html( smartEscape( param.description ) ) )
 					.appendTo( $tbody );
 			}
 			this.$container.html( $table );
