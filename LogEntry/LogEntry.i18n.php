@@ -199,6 +199,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  */
 $messages['es'] = array(
@@ -206,7 +207,7 @@ $messages['es'] = array(
 	'logentry-parserhook-desc' => 'Esta extensión de etiqueta provee un formulario para añadir/preprocesar a páginas de registro',
 	'logentry-specialpage-desc' => 'Esta extensión de etiqueta provee un proceso para añadir a páginas de registro',
 	'logentry' => 'LogEntry',
-	'logentry-invalidpage' => 'Página inválida',
+	'logentry-invalidpage' => 'Página inválida: $1',
 	'logentry-invalidtoken' => 'Ficha inválida',
 );
 

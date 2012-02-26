@@ -259,6 +259,7 @@ Kit da deuler ur sell war [//www.mediawiki.org/wiki/API:Main_page titouroù an A
 	'apisb-example' => 'Skouer',
 	'apisb-examples' => 'Skouerioù',
 	'apisb-clear' => 'Riñsañ',
+	'apisb-request-time' => 'Pad ar goulenn: $1',
 );
 
 /** Catalan (Català)
@@ -1277,7 +1278,7 @@ Zie de [//www.mediawiki.org/wiki/API:Main_page API-documentatie] voor verdere de
 	'apisb-query-meta' => 'Metaigegevens',
 	'apisb-example' => 'Voorbeeld',
 	'apisb-examples' => 'Voorbeelden',
-	'apisb-clear' => 'Leegmaken',
+	'apisb-clear' => 'Wissen',
 	'apisb-request-time' => 'Verzoektijd: $1',
 );
 
@@ -1396,12 +1397,16 @@ $messages['ps'] = array(
 	'apisb-legend-result' => 'پايله',
 	'apisb-result-request-url' => 'د URL غوښتنه کول:',
 	'apisb-select-action' => 'چاره ټاکل',
-	'apisb-select-value' => 'ارزښت ټاکل',
+	'apisb-select-value' => '(ارزښت ټاکل)',
+	'apisb-docs-more' => 'نور لوستل',
 	'apisb-loading' => 'د برسېرېدلو په حال کې...',
 	'apisb-ns-main' => '(آرنی)',
 	'apisb-submit' => 'غوښته کول',
 	'apisb-query-prop' => 'ځانتياوې',
 	'apisb-query-list' => 'لړليکونه',
+	'apisb-example' => 'بېلګه',
+	'apisb-examples' => 'بېلګې',
+	'apisb-clear' => 'سپينول',
 );
 
 /** Portuguese (Português)

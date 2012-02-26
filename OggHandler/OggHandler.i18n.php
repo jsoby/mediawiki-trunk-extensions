@@ -377,6 +377,7 @@ $messages['az'] = array(
 
 /** Bashkir (Башҡортса)
  * @author Haqmar
+ * @author Roustammr
  * @author Рустам Нурыев
  */
 $messages['ba'] = array(
@@ -402,6 +403,7 @@ $messages['ba'] = array(
 	'ogg-use-player' => 'Ҡулланыласаҡ уйнатыусы:',
 	'ogg-more' => 'Тағы...',
 	'ogg-dismiss' => 'Ябырға',
+	'ogg-desc-link' => 'Был файл тураһында',
 );
 
 /** Southern Balochi (بلوچی مکرانی)

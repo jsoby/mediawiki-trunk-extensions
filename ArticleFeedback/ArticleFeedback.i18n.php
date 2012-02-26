@@ -4390,7 +4390,32 @@ $messages['ko'] = array(
 	'articleFeedback-table-heading-page' => '문서',
 	'articleFeedback-table-heading-average' => '평균',
 	'articleFeedback-copy-above-highlow-tables' => '실험적인 기능입니다. 기능에 대한 의견을 [$1 토론란]에 남겨 주세요.',
+	'articlefeedback-dashboard-bottom' => "'''알림''': 우리는 이 평가 상자에서 문서를 다양하게 나타내는 실험을 계속할 것입니다. 지금 평가 상자는 다음 문서를 나타냅니다:
+* 최고/최저 평가를 받은 문서: 지난 24시간 이내에 평가를 10번 이상 받은 문서로  제출된 평가 모두의 산술평균을 구해 평균으로 합니다. 
+* 최근 낮은 평가를 받은 문서: 지난 24시간 이내에 분류에 상관 없이 70%이상이 낮게(별 2개 이하) 평가한 문서로  평가를 10번 이상 받은 문서만 나타납니다.",
 	'articlefeedback-disable-preference' => '문서에 평가 도구 표시하지 않기',
+	'articlefeedback-emailcapture-response-body' => '안녕하세요!
+
+{{SITENAME}} 개선하는 것을 돕는 데 관심을 보여주어서 감사합니다.
+
+잠시 시간을 내어 아래의 링크를 클릭하여 이메일을 확인해 주십시오:
+
+$1
+
+다음 웹사이트를 방문할 수도 있습니다:
+
+$2
+
+그리고 다음 확인 코드를 입력하십시오:
+
+$3
+
+곧 {{SITENAME}} 개선을 어떻게 도울지와 관련해 연락하겠습니다.
+
+이 요청을 하지 않았다면 이 메일을 무시하세요. 그러면 그 밖의 어떤 것도 보내지 않을 것입니다.
+
+감사합니다.
+{{SITENAME}}팀',
 );
 
 /** Colognian (Ripoarisch)
@@ -6215,7 +6240,12 @@ $messages['ps'] = array(
 	'articlefeedback-survey-answer-whyrated-other' => 'نور',
 	'articlefeedback-survey-question-useful-iffalse' => 'ولې؟',
 	'articlefeedback-survey-submit' => 'سپارل',
+	'articlefeedback-form-switch-label' => 'دا مخ ارزول',
+	'articlefeedback-form-panel-title' => 'دا مخ ارزول',
 	'articlefeedback-form-panel-explanation' => 'دا څه دی؟',
+	'articlefeedback-form-panel-submit' => 'ارزونې سپارل',
+	'articlefeedback-form-panel-success' => 'بريالی خوندي شو',
+	'articlefeedback-report-panel-title' => 'مخ ارزونه',
 	'articlefeedback-field-complete-label' => 'بشپړ',
 	'articlefeedback-field-wellwritten-label' => 'ښه ليکل شوی',
 	'articlefeedback-pitch-reject' => 'کېدای شي وروسته',

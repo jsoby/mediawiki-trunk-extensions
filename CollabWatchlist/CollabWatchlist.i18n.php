@@ -1134,11 +1134,12 @@ $messages['pdc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Sp5uhe
  * @author Woytecr
  */
 $messages['pl'] = array(
-	'collabwatchlisttagselect' => 'Etykieta',
+	'collabwatchlisttagselect' => 'Znacznik',
 	'collabwatchlisttagcomment' => 'Komentarz',
 	'collabwatchlisttools-view' => 'Wyświetl',
 	'collabwatchlisttools-edit' => 'Edytuj kategorie',
