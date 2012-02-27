@@ -22,4 +22,6 @@ window.raRecordForms = function () {
 		}
 	}
 };
-jQuery( '#editform' ).submit( raRecordForms );
+jQuery( document ).ready( function( $ ) {
+	$( '#editform' ).submit( raRecordForms );
+} );
