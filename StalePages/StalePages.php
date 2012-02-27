@@ -20,7 +20,7 @@ $wgExtensionCredits['specialpage'][] = array(
 
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['Stalepages'] = $dir . 'StalePages.i18n.php';
-$wgExtensionMessagesFiles['StalepagesAlias'] = $dir . 'Stalepages.alias.php';
+$wgExtensionMessagesFiles['StalepagesAlias'] = $dir . 'StalePages.alias.php';
 $wgAutoloadClasses['Stalepages'] = $dir . 'StalePages_body.php';
 $wgSpecialPages['StalePages'] = 'Stalepages';
 
