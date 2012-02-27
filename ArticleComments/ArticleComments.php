@@ -22,6 +22,8 @@
  *         <comments />
  *     Note: Typically this would be placed at the end of the article text.
  * Version Notes:
+ *     version 0.6.1:
+ *         Added internationalisation for special page names.
  *     version 0.6:
  *         Added comments inside <comment> tags instead of article-comments-new-comment message.
  *     version 0.5.1:
@@ -85,13 +87,15 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'ArticleComments',
 	'author' => array( 'Jim R. Wilson', 'Platonides' ),
-	'version' => '0.6',
+	'version' => '0.6.1',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:ArticleComments',
 	'descriptionmsg' => 'article-comments-desc',
 );
 
 # Add extension internationalization messages
-$wgExtensionMessagesFiles['ArticleComments'] = dirname( __FILE__ ) . '/ArticleComments.i18n.php';
+$dir = dirname( __FILE__ ) . '/';
+$wgExtensionMessagesFiles['ArticleComments'] = $dir . 'ArticleComments.i18n.php';
+$wgExtensionMessagesFiles['ArticleCommentsAlias'] = $dir . 'ArticleComments.alias.php';
 
 # Attach hooks
 $wgHooks['ParserFirstCallInit'][] = 'wfArticleCommentsParserSetup';
@@ -117,6 +121,8 @@ $wgArticleCommentsNSDisplayList = array();
 
 # Sets up special page to handle comment submission
 $wgSpecialPages['ProcessComment'] = 'SpecialProcessComment';
+
+// @todo FIXME: Put hooks and class in separate files and use autoloader.
 
 # Sets up the ArticleComments Parser hook for <comments />
 function wfArticleCommentsParserSetup( &$parser ) {

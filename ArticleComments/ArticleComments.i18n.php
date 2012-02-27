@@ -67,6 +67,7 @@ $messages['qqq'] = array(
 	'article-comments-commenter-said' => '$1 is a value filled into a form field by a commenter. It is not necessarily related to any wiki user name.',
 	'article-comments-summary' => '$1 is a value filled into a form field by a commenter. It is not necessarily related to any wiki user name.',
 	'article-comments-comment-bad-mode' => '{{doc-important|Do not translate the words "plain", "normal" and "wiki".}}',
+	'processcomment' => 'Special page title and link description on Special:SpecialPages.',
 );
 
 /** Afrikaans (Afrikaans)
