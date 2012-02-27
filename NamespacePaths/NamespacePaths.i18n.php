@@ -19,42 +19,42 @@ $messages['en'] = array(
  * @author Xuacu
  */
 $messages['ast'] = array(
-	'namespacepaths-desc' => 'Permite casar caminos d\'artículu personalizaos con espacios de nomes de la wiki. P. ex.: casar páxines como "Ayuda:A" con "/ayuda/Páxina" y non con "/wiki/Ayuda:Páxina".',
+	'namespacepaths-desc' => 'Permite casar caminos d\'artículu personalizaos con espacios de nomes de la wiki. P. ex.: casar páxines como "Ayuda:Páxina" con "/ayuda/Páxina" y non con "/wiki/Ayuda:Páxina".',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  */
 $messages['be-tarask'] = array(
-	'namespacepaths-desc' => 'Дазваляе нестандартныя шляхі да артыкулаў у прасторах назваў вікі. Напрыклад: Help:A ў /help/Старонка замест /wiki/Help:Старонка.',
+	'namespacepaths-desc' => 'Дазваляе нестандартныя шляхі да артыкулаў у прасторах назваў вікі. Напрыклад: Help:Старонка ў /help/Старонка замест /wiki/Help:Старонка.',
 );
 
 /** German (Deutsch)
  * @author Kghbln
  */
 $messages['de'] = array(
-	'namespacepaths-desc' => 'Ermöglicht für Namensräume die Darstellung benutzerdefinierter Pfade zu Artikeln',
+	'namespacepaths-desc' => 'Ermöglicht die Erstellung benutzerdefinierter Pfade zu Seiten in anderen Namensräumen',
 );
 
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
-	'namespacepaths-desc' => 'Zmóžnja zwobraznjenje swójskich sćažkow k nastawkam za mjenjowe rumy wikija. Na pś. Zwobraznjenje bokow ako Help:A do /help/Page město /wiki/Help:Page.',
+	'namespacepaths-desc' => 'Zmóžnja zwobraznjenje swójskich sćažkow k nastawkam za mjenjowe rumy wikija. Na pś. Zwobraznjenje bokow ako Help:Page do /help/Page město /wiki/Help:Page.',
 );
 
 /** French (Français)
  * @author Gomoko
  */
 $messages['fr'] = array(
-	'namespacepaths-desc' => "Permet à des chemins d'article personnalisés d'être mis en correspondance avec les espaces de noms du wiki. Par ex.: Faire correspondre des pages comme Aide:A à /aide/Page au lieu de /wiki/Aide:Page.",
+	'namespacepaths-desc' => "Permet à des chemins d'article personnalisés d'être mis en correspondance avec les espaces de noms du wiki. Par ex.: Faire correspondre des pages comme Aide:Page à /aide/Page au lieu de /wiki/Aide:Page.",
 );
 
 /** Galician (Galego)
  * @author Toliño
  */
 $messages['gl'] = array(
-	'namespacepaths-desc' => 'Permite poñer en correspondencia rutas de artigo personalizadas cos espazos de nomes do wiki. Por exemplo: páxinas como "Axuda:A" en "/axuda/Páxina" no canto de "/wiki/Axuda:Páxina".',
+	'namespacepaths-desc' => 'Permite poñer en correspondencia rutas de artigo personalizadas cos espazos de nomes do wiki. Por exemplo: páxinas como "Axuda:Páxina" en "/axuda/Páxina" no canto de "/wiki/Axuda:Páxina".',
 );
 
 /** Hebrew (עברית)
@@ -75,28 +75,28 @@ $messages['hsb'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
-	'namespacepaths-desc' => 'Permitte personalisar le camminos de articulos e facer los corresponder a spatios de nomines del wiki. P.ex.: paginas como Adjuta:A pote haber le cammino /adjuta/Pagina in loco de /wiki/Adjuta:Pagina.',
+	'namespacepaths-desc' => 'Permitte personalisar le camminos de articulos e facer los corresponder a spatios de nomines del wiki. P.ex.: paginas como Adjuta:Pagina pote haber le cammino /adjuta/Pagina in loco de /wiki/Adjuta:Pagina.',
 );
 
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'namespacepaths-desc' => 'Määd_et müjjelesch, beshtemmpte Paade för Atikelle op Namensreum em Wiki ömzelänke. För e Beishpell <code lang="en">Hölp:A</code> op <code lang="en">/hölp/Sigg</code> shtadd_op <code lang="en">/wiki/Hölp:Sigg</code>.',
+	'namespacepaths-desc' => 'Määd_et müjjelesch, beshtemmpte Paade för Atikelle op Namensreum em Wiki ömzelänke. För e Beishpell <code lang="en">Hölp:Page</code> op <code lang="en">/hölp/Sigg</code> shtadd_op <code lang="en">/wiki/Hölp:Sigg</code>.',
 );
 
 /** Macedonian (Македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'namespacepaths-desc' => 'Овозможува патеки на статии по ваш избор да се пресликаат во именски простори во викито. На пр.: Прелискување на страници како Help:A to /help/Page наместо /wiki/Help:Page.',
+	'namespacepaths-desc' => 'Овозможува патеки на статии по ваш избор да се пресликаат во именски простори во викито. На пр.: Прелискување на страници како Help:Page to /help/Page наместо /wiki/Help:Page.',
 );
 
 /** Dutch (Nederlands)
  * @author Siebrand
  */
 $messages['nl'] = array(
-	'namespacepaths-desc' => 'Maakt het mogelijk aangepaste artikelpaden toe te wijzen aan naamruimten in de wiki. Bijvoorbeeld: pagina\'s als "Help:A" kunnen het pad "/help/Pagina" krijgen in plaats van "/wiki/Help:Pagina".',
+	'namespacepaths-desc' => 'Maakt het mogelijk aangepaste artikelpaden toe te wijzen aan naamruimten in de wiki. Bijvoorbeeld: pagina\'s als "Help:Pagina" kunnen het pad "/help/Pagina" krijgen in plaats van "/wiki/Help:Pagina".',
 );
 
 /** Polish (Polski)
@@ -111,7 +111,7 @@ $messages['pl'] = array(
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'namespacepaths-desc' => 'A përmët che ij përcors ëd le vos a sio butà an corëspondensa con jë spassi nominaj ëd la wiki. Për esempi: Fé corësponde dle pàgine com Agiut:A a/help/Pàgina nopà che /wiki/Agiut:Pàgina.',
+	'namespacepaths-desc' => 'A përmët che ij përcors ëd le vos a sio butà an corëspondensa con jë spassi nominaj ëd la wiki. Për esempi: Fé corësponde dle pàgine com Agiut:Pàgina a/help/Pàgina nopà che /wiki/Agiut:Pàgina.',
 );
 
 /** Russian (Русский)

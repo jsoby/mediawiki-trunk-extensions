@@ -585,9 +585,12 @@ $messages['kk-arab'] = array(
 	'crossnamespacelinkstext' => '«$1» بەتٸ: «$3» ەسٸم اياسىنا $2 سٸلتەمە',
 );
 
-/** Kazakh (Cyrillic script) (‪Қазақша (кирил)‬) */
+/** Kazakh (Cyrillic script) (‪Қазақша (кирил)‬)
+ * @author Kaztrans
+ */
 $messages['kk-cyrl'] = array(
 	'crossnamespacelinks' => 'Басқа есім аясына сілтейтін беттер',
+	'crossnamespacelinks-desc' => '{{SITENAME}} жобасында болуы тиіс емес [[Special:CrossNamespaceLinks|есім кеңістіктері аралығындағы сілтемелерді тізімдейді]]',
 	'crossnamespacelinks-summary' => 'Бұл бетте негізгі есім аясындағы беттегі басқа есім аялырындағы ({{ns:special}}, {{ns:talk}}, {{ns:project}} және {{ns:template}} есім аяларынан тыс) беттерге сілтеме тізімі беріледі. Осындай сілтемелерді қолдануға ұсынылмайды.',
 	'crossnamespacelinkstext' => '«$1» беті: «$3» есім аясына $2 сілтеме',
 );
@@ -772,6 +775,17 @@ $messages['nan'] = array(
 	'crossnamespacelinkstext' => '$1: $2 ê liân-kiat kàu $3',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Harald Khan
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'crossnamespacelinks' => 'Lenker mellom navnerom',
+	'crossnamespacelinks-desc' => '[[Special:CrossNamespaceLinks|Lister opp lenker mellom navnerom]] som ikke burde finnes på {{SITENAME}}',
+	'crossnamespacelinks-summary' => 'Denne siden gir ei liste over lenker fra sider i hovednavnerommet til sider i andre navnerom (utenom navnerommene {{ns:special}}, {{ns:talk}}, {{ns:project}} og {{ns:template}}), som det er frarådd å bruke.',
+	'crossnamespacelinkstext' => '$1: $2 {{PLURAL:$2|lenke|lenker}} til $3',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -810,17 +824,6 @@ $messages['nn'] = array(
 	'crossnamespacelinks-desc' => '[[Special:CrossNamespaceLinks|Listar opp lenkjer mellom namnerom]] som ikkje burde vera til på {{SITENAME}}',
 	'crossnamespacelinks-summary' => 'Denne sida gjev ei lista over lenkjer frå sider i hovudnamnerommet til sider i andre namnerom (utanom namneromma {{ns:special}}, {{ns:talk}}, {{ns:project}} og {{ns:template}}), som det er frårådd å nytta.',
 	'crossnamespacelinkstext' => '$1:  {{PLURAL:$2|éi lenkja|$2 lenkjer}} til $3',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Harald Khan
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'crossnamespacelinks' => 'Lenker mellom navnerom',
-	'crossnamespacelinks-desc' => '[[Special:CrossNamespaceLinks|Lister opp lenker mellom navnerom]] som ikke burde finnes på {{SITENAME}}',
-	'crossnamespacelinks-summary' => 'Denne siden gir ei liste over lenker fra sider i hovednavnerommet til sider i andre navnerom (utenom navnerommene {{ns:special}}, {{ns:talk}}, {{ns:project}} og {{ns:template}}), som det er frarådd å bruke.',
-	'crossnamespacelinkstext' => '$1: $2 {{PLURAL:$2|lenke|lenker}} til $3',
 );
 
 /** Northern Sotho (Sesotho sa Leboa)

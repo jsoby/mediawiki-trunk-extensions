@@ -52,6 +52,7 @@ $messages['en'] = array(
  * @author MaxSem
  * @author Purodha
  * @author Raymond
+ * @author SPQRobin
  */
 $messages['qqq'] = array(
 	'apisb-desc' => '{{desc}}',
@@ -63,7 +64,7 @@ $messages['qqq'] = array(
 	'apisb-result-request-url' => 'Used as "label" for a read-only form field containing the exact URL that was (or is going to be) loaded.',
 	'apisb-result-request-post' => 'Used as "label" for a ready-only form field containing the POST query parameters of the HTTP request made',
 	'apisb-label-format' => 'Label text for selecting the output format (json, xml, php, ...)',
-	'apisb-label-action' => 'Label text for selecting the action (query, edit, ...)',
+	'apisb-label-action' => 'Label text for selecting the action (query, edit, ...). The default text in the select list is {{msg-mw|apisb-select-action}}.',
 	'apisb-label-doc' => 'Label text of information about the selected action',
 	'apisb-select-action' => 'This is the placeholder text in the "select" dropdown menu containing options with various action modules.',
 	'apisb-select-query' => 'This is the placeholder text in the "select" dropdown menu containing options with various query types.',
@@ -173,6 +174,9 @@ $messages['be-tarask'] = array(
 	'apisb-legend-generator-parameters' => 'Генэратар',
 	'apisb-result-request-url' => 'URL-адрас запыту:',
 	'apisb-result-request-post' => 'POST-зьвесткі:',
+	'apisb-label-format' => 'Фармат',
+	'apisb-label-action' => 'Дзеяньне',
+	'apisb-label-doc' => 'Дакумэнтацыя',
 	'apisb-select-action' => 'Выбраць дзеяньне',
 	'apisb-select-query' => '(выбраць чаргу)',
 	'apisb-select-value' => '(выбраць значэньне)',
@@ -326,6 +330,9 @@ Die [//www.mediawiki.org/wiki/API:Main_page/de Dokumentation zur API] enthält w
 	'apisb-legend-generator-parameters' => 'Generator',
 	'apisb-result-request-url' => 'Anforderungs-URL:',
 	'apisb-result-request-post' => 'POST-Daten:',
+	'apisb-label-format' => 'Format',
+	'apisb-label-action' => 'Aktion',
+	'apisb-label-doc' => 'Dokumentation',
 	'apisb-select-action' => 'Vorgang auswählen',
 	'apisb-select-query' => '(Abfrage auswählen)',
 	'apisb-select-value' => '(Wert auswählen)',
@@ -354,6 +361,36 @@ Die [//www.mediawiki.org/wiki/API:Main_page/de Dokumentation zur API] enthält w
 $messages['de-formal'] = array(
 	'apisb-intro' => "Diese Seite können Sie für Versuche mit der '''MediaWiki-API''' verwenden.
 Die [//www.mediawiki.org/wiki/API:Main_page/de Dokumentation zur API] enthält weitere Hinweise zu ihrer Nutzung. Beispiel: [//www.mediawiki.org/wiki/API:Main_page/de#Beispiel Den Inhalt der Hauptseite abrufen]. Für weitere Beispiele eine der verfügbaren Aktionen auswählen.",
+);
+
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'apisandbox' => 'API-grajkanišćo',
+	'apisb-api-disabled' => 'API jo se na toś tom sedle znjemóžnił.',
+	'apisb-legend-parameters' => 'Parametry',
+	'apisb-legend-result' => 'Wuslědk',
+	'apisb-legend-generic-parameters' => 'Powšykne parametry',
+	'apisb-legend-generator-parameters' => 'Generator',
+	'apisb-result-request-post' => 'POST-daty:',
+	'apisb-label-format' => 'Format',
+	'apisb-label-action' => 'Akcija',
+	'apisb-label-doc' => 'Dokumentacija',
+	'apisb-select-action' => 'akciju wubraś',
+	'apisb-select-query' => '(napšašowanje wubraś)',
+	'apisb-select-value' => '(gódnotu wubraś)',
+	'apisb-docs-more' => 'dalšne informacije',
+	'apisb-params-param' => 'Parameter',
+	'apisb-params-input' => 'Zapódaśe',
+	'apisb-params-desc' => 'Wopisanje',
+	'apisb-loading' => 'Zacytujo se...',
+	'apisb-ns-main' => '(Nastawki)',
+	'apisb-query-prop' => 'Kakosći',
+	'apisb-query-list' => 'Lisćiny',
+	'apisb-example' => 'Pśikład',
+	'apisb-examples' => 'Pśikłady',
+	'apisb-clear' => 'Wuprozniś',
 );
 
 /** Greek (Ελληνικά)
@@ -430,6 +467,9 @@ $messages['es'] = array(
 	'apisb-legend-generator-parameters' => 'Generador',
 	'apisb-result-request-url' => 'URL solicitante:',
 	'apisb-result-request-post' => 'Datos POST:',
+	'apisb-label-format' => 'Formato',
+	'apisb-label-action' => 'Acción',
+	'apisb-label-doc' => 'Documentación',
 	'apisb-select-action' => 'Selecciona acción',
 	'apisb-select-query' => '(Seleccione la consulta)',
 	'apisb-select-value' => '(Seleccione el valor)',
@@ -578,6 +618,7 @@ $messages['fi'] = array(
  * @author Grondin
  * @author IAlex
  * @author Jean-Frédéric
+ * @author Tpt
  * @author Verdy p
  */
 $messages['fr'] = array(
@@ -593,6 +634,9 @@ Reportez-vous à [//www.mediawiki.org/wiki/API:Main_page la documentation de l�
 	'apisb-legend-generator-parameters' => 'Générateur',
 	'apisb-result-request-url' => 'Requête URL :',
 	'apisb-result-request-post' => 'données POST :',
+	'apisb-label-format' => 'Format',
+	'apisb-label-action' => 'Action',
+	'apisb-label-doc' => 'Documentation',
 	'apisb-select-action' => 'Sélectionner une action',
 	'apisb-select-query' => '(choisir la requête)',
 	'apisb-select-value' => '(choisir la valeur)',
@@ -660,6 +704,9 @@ Consulte a [//www.mediawiki.org/wiki/API:Main_page documentación da API] para o
 	'apisb-legend-generator-parameters' => 'Xerador',
 	'apisb-result-request-url' => 'URL da solicitude:',
 	'apisb-result-request-post' => 'Datos POST:',
+	'apisb-label-format' => 'Formato',
+	'apisb-label-action' => 'Acción',
+	'apisb-label-doc' => 'Documentación',
 	'apisb-select-action' => 'Seleccionar unha acción',
 	'apisb-select-query' => '(seleccione a consulta)',
 	'apisb-select-value' => '(seleccione o valor)',
@@ -700,6 +747,9 @@ $messages['he'] = array(
 	'apisb-legend-generator-parameters' => 'מחולל',
 	'apisb-result-request-url' => 'כתובת ה-URL של הבקשה:',
 	'apisb-result-request-post' => 'נתוני POST:',
+	'apisb-label-format' => 'תסדיר',
+	'apisb-label-action' => 'פעולה',
+	'apisb-label-doc' => 'תיעוד',
 	'apisb-select-action' => 'בחירת פעולה',
 	'apisb-select-query' => '(בחירת שאילתה)',
 	'apisb-select-value' => '(בחירת ערך)',
@@ -760,6 +810,9 @@ Hlej [//www.mediawiki.org/wiki/API:Main_page API-dokumentaciju] za dalše podrob
 	'apisb-legend-generator-parameters' => 'Generator',
 	'apisb-result-request-url' => 'URL naprašowanja:',
 	'apisb-result-request-post' => 'POST-daty:',
+	'apisb-label-format' => 'Format',
+	'apisb-label-action' => 'Akcija',
+	'apisb-label-doc' => 'Dokumentacija',
 	'apisb-select-action' => 'Akciju wubrać',
 	'apisb-select-query' => '(naprašowanje wubrać)',
 	'apisb-select-value' => '(Hódnotu wubrać)',
@@ -1132,6 +1185,9 @@ $messages['mk'] = array(
 	'apisb-legend-generator-parameters' => 'Создавач',
 	'apisb-result-request-url' => 'URL на барањето:',
 	'apisb-result-request-post' => 'POST-податоци:',
+	'apisb-label-format' => 'Формат',
+	'apisb-label-action' => 'Дејство',
+	'apisb-label-doc' => 'Документација',
 	'apisb-select-action' => 'Одберете дејство',
 	'apisb-select-query' => '(изберете барање)',
 	'apisb-select-value' => '(изерете вредност)',
@@ -1193,6 +1249,9 @@ Contoh: [//www.mediawiki.org/wiki/API#A_simple_example dapatkan kandungan Laman 
 	'apisb-legend-generator-parameters' => 'Penjana',
 	'apisb-result-request-url' => 'URL permohonan:',
 	'apisb-result-request-post' => 'Data POST:',
+	'apisb-label-format' => 'Format',
+	'apisb-label-action' => 'Tindakan',
+	'apisb-label-doc' => 'Dokumentasi',
 	'apisb-select-action' => 'Pilih tindakan',
 	'apisb-select-query' => '(pilih pertanyaan)',
 	'apisb-select-value' => '(pilih nilai)',
@@ -1260,7 +1319,10 @@ Zie de [//www.mediawiki.org/wiki/API:Main_page API-documentatie] voor verdere de
 	'apisb-legend-generator-parameters' => 'Generator',
 	'apisb-result-request-url' => 'Verzoek-URL:',
 	'apisb-result-request-post' => 'POST-gegevens:',
-	'apisb-select-action' => 'Handeling selecteren',
+	'apisb-label-format' => 'Indeling',
+	'apisb-label-action' => 'Handeling',
+	'apisb-label-doc' => 'Documentatie',
+	'apisb-select-action' => '(handeling selecteren)',
 	'apisb-select-query' => '(selecteer zoekopdracht)',
 	'apisb-select-value' => '(selecteer waarde)',
 	'apisb-docs-more' => 'meer lezen',

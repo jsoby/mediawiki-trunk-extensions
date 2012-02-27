@@ -40,6 +40,14 @@ $messages['ast'] = array(
 	'sii-imageinput-loading' => 'Cargando la imaxe...',
 );
 
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author Renessaince
+ */
+$messages['be-tarask'] = array(
+	'sii-desc' => 'Дадае ўвод выявы, якая выштурхвае выявы зь Вікіпэдыі ў [https://www.mediawiki.org/wiki/Extension:Semantic_Forms сэмантычныя формы]',
+	'sii-imageinput-loading' => 'Загрузка выявы…',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */

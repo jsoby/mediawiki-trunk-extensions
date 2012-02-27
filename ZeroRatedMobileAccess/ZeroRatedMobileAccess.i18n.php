@@ -203,7 +203,7 @@ $messages['gl'] = array(
 	'zero-rated-mobile-access-home-page-selection-text' => 'Ou vaia á páxina principal na seguinte lingua:',
 	'zero-rated-mobile-access-banner-text' => '{{SITENAME}} gratis desde $1',
 	'zero-rated-mobile-access-banner-text-data-charges' => 'Poden aplicarse tarifas de datos se continúa: $1 ou $2',
-	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'Si',
+	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'si',
 	'zero-rated-mobile-access-banner-text-data-charges-no' => 'non',
 	'zero-rated-mobile-access-click-to-view-image' => 'Prema para ver a imaxe, "$1"...',
 );
