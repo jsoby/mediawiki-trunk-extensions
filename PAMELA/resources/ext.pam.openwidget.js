@@ -1,5 +1,5 @@
 /**
- * JavasSript for PAMELA openwidget.
+ * JavaScript for PAMELA openwidget.
  * @see http://www.mediawiki.org/wiki/Extension:PAMELA
  * 
  * @licence GNU GPL v3

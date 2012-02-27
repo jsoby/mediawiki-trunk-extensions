@@ -1,5 +1,5 @@
 /**
- * JavasSript for the Ratings extension.
+ * JavaScript for the Ratings extension.
  * @see http://www.mediawiki.org/wiki/Extension:Ratings
  * 
  * @licence GNU GPL v3 or later

@@ -1,5 +1,5 @@
 /**
- * JavasSript for the Microsoft translation functionality in the Live Translate extension.
+ * JavaScript for the Microsoft translation functionality in the Live Translate extension.
  * @see http://www.mediawiki.org/wiki/Extension:Live_Translate
  * 
  * @licence GNU GPL v3 or later

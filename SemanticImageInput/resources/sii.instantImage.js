@@ -1,5 +1,5 @@
 /**
- * JavasSript for the Semantic Image Input MediaWiki extension.
+ * JavaScript for the Semantic Image Input MediaWiki extension.
  * 
  * TODO: this was written in a sprint; could be made less evil.
  * 

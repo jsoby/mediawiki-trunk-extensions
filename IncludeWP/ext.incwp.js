@@ -1,5 +1,5 @@
 /**
- * JavasSript for the IncludeWP  extension.
+ * JavaScript for the IncludeWP  extension.
  * @see http://www.mediawiki.org/wiki/Extension:Push
  * 
  * @author Jeroen De Dauw <jeroendedauw at gmail dot com>

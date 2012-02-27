@@ -1,5 +1,5 @@
 /**
- * JavasSript for PAMELA extension.
+ * JavaScript for PAMELA extension.
  * @see http://www.mediawiki.org/wiki/Extension:PAMELA
  * 
  * @licence GNU GPL v3

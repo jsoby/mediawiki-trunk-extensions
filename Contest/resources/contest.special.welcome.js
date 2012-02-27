@@ -1,5 +1,5 @@
 /**
- * JavasSript for the Contest MediaWiki extension.
+ * JavaScript for the Contest MediaWiki extension.
  * @see https://www.mediawiki.org/wiki/Extension:Contest
  *
  * @licence GNU GPL v3 or later

@@ -1,5 +1,5 @@
 /**
- * JavasSript for PAMELA listwidget.
+ * JavaScript for PAMELA listwidget.
  * @see http://www.mediawiki.org/wiki/Extension:PAMELA
  * 
  * @licence GNU GPL v3
