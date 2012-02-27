@@ -89,8 +89,8 @@ $wgNarayamSchemes = array(
 		'gom-deva-inscript' => array( 'ext.narayam.rules.gom-deva-inscript', 'beta' ),
 	),
 	'gu' => array(
-		'gu' => array( 'ext.narayam.rules.gu', 'beta' ),
-		'gu-inscript' => array( 'ext.narayam.rules.gu-inscript', 'beta' ),
+		'gu' => 'ext.narayam.rules.gu',
+		'gu-inscript' => 'ext.narayam.rules.gu-inscript',
 	),
 	'he' => array(
 		'he-standard-2011-extonly' =>  array( 'ext.narayam.rules.he-standard-2011-extonly', 'beta' ),
