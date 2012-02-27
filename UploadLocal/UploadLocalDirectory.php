@@ -63,6 +63,8 @@ class UploadLocalDirectory {
 	function showForm() {
 		global $wgOut;
 		
+		$wgOut->setPageTitle( wfMsg('specialuploadlocal') );
+		
 		$wgOut->addWikitext( wfMsg( 'uploadlocaltext' ) );
 		
 		$titleObj = Title::makeTitle( NS_SPECIAL, 'UploadLocal' );
