@@ -12,7 +12,7 @@ $messages = array();
  * @author Daniel Friesen
  */
 $messages['en'] = array(
-	'namespacepaths-desc' => 'Allows custom article paths to be mapped to namespaces of the wiki. Eg: Mapping pages like Help:A to /help/Page instead of /wiki/Help:Page.',
+	'namespacepaths-desc' => 'Allows custom article paths to be mapped to namespaces; for example mapping pages like Help:Page to /help/Page instead of /wiki/Help:Page',
 );
 
 /** Asturian (Asturianu)
