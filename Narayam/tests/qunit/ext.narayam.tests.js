@@ -68,11 +68,11 @@ test( "-- Simple character functions", function() {
 	equals( $.narayam.lastNChars( "foobarbaz", 5, 2 ), "ba", "lastNChars works with short buffer." );
 	equals( $.narayam.lastNChars( "foobarbaz", 2, 5 ), "fo", "lastNChars works with long buffer." );
 
-	equals( $.narayam.firstDivergence( "abc", "abc" ), -1 );
-	equals( $.narayam.firstDivergence( "a", "b" ), 0 );
-	equals( $.narayam.firstDivergence( "a", "bb" ), 0 );
-	equals( $.narayam.firstDivergence( "abc", "abd" ), 2 );
-	equals( $.narayam.firstDivergence( "abcd", "abd" ), 2 );
+	equals( $.narayam.firstDivergence( "abc", "abc" ), -1, "firstDivergence - equal strings" );
+	equals( $.narayam.firstDivergence( "a", "b" ), 0, "firstDivergence - different one-letter strings" );
+	equals( $.narayam.firstDivergence( "a", "bb" ), 0, "firstDivergence - different strings, different lengths" );
+	equals( $.narayam.firstDivergence( "abc", "abd" ), 2, "firstDivergence - different strings with equal beginnings" );
+	equals( $.narayam.firstDivergence( "abcd", "abd" ), 2, "firstDivergence - different strings, equal beginnings, different lengths" );	
 	teardown();
 } );
 
