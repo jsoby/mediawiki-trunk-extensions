@@ -6,6 +6,10 @@
 	$inProgressDir = @readlink( '/a/static/downloads/in_progress' );
 	$inProgressText = $inProgressDir ? 
 		htmlspecialchars( date( 'F Y', strtotime( basename( $inProgressDir ) . '-01' ) ) ) : false;
+
+	# Show browsing link to the HTML dumps.
+	# Disable them when they are not generated
+	$enableBrowsing = false;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
@@ -126,6 +130,7 @@ a:hover {
 <ul>
 	<li><strong><a href="/downloads/<?php echo $encCurrentBase; ?>">Downloads</a></strong></li>
 </ul>
+<?php if( $enableBrowsing ) { ?>
 <h2>Browse</h2>
 <p>Try before you download, click on a language code below.</p>
 
@@ -148,6 +153,7 @@ foreach ( $wikipedias as $db ) {
 }
 ?>
 </p>
+<?php } // enableBrowsings ?>
 		<div class="visualClear"></div>
 	</div>
 </div>
