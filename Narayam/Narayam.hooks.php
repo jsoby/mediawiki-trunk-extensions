@@ -37,6 +37,12 @@ class NarayamHooks {
 			'localBasePath' => dirname( __FILE__ ),
 			'remoteExtPath' => 'Narayam',
 		);
+		$testModules['qunit']['ext.narayam.rules.tests'] = array(
+			'scripts' => array( 'tests/qunit/ext.narayam.rules.tests.js' ),
+			'dependencies' => array( 'ext.narayam.core' ),
+			'localBasePath' => dirname( __FILE__ ),
+			'remoteExtPath' => 'Narayam',
+		);
 		return true;
 	}
 
