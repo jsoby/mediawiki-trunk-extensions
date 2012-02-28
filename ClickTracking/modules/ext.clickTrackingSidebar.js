@@ -1,5 +1,5 @@
 /*
- * JavaScript for ClickTracking extension
+ * JavaScript for sidebar ClickTracking campaign
  */
 
 jQuery( function( $ ) {

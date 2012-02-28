@@ -75,8 +75,8 @@ $wgResourceModules['jquery.clickTracking'] = array(
 	'scripts' => 'jquery.clickTracking.js',
 	'dependencies' => 'jquery.cookie',
 ) + $ctResourceTemplate;
-$wgResourceModules['ext.clickTracking'] = array(
-	'scripts' => 'ext.clickTracking.js',
+$wgResourceModules['ext.clickTrackingSidebar'] = array(
+	'scripts' => 'ext.clickTrackingSidebar.js',
 	'dependencies' => 'jquery.clickTracking',
 ) + $ctResourceTemplate;
 $wgResourceModules['ext.UserBuckets'] = array(
