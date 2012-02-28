@@ -4,11 +4,11 @@
  * 'Parser Fun' adds a parser function '#parse' for parsing wikitext and introduces the
  * 'THIS:' prefix for page information related magic variables
  * 
- * Documentation: http://www.mediawiki.org/wiki/Extension:Parser_Fun
- * Support:       http://www.mediawiki.org/wiki/Extension_talk:Parser_Fun
- * Source code:   http://svn.wikimedia.org/viewvc/mediawiki/trunk/extensions/ParserFun
+ * Documentation: https://www.mediawiki.org/wiki/Extension:Parser_Fun
+ * Support:       https://www.mediawiki.org/wiki/Extension_talk:Parser_Fun
+ * Source code:   https://svn.wikimedia.org/viewvc/mediawiki/trunk/extensions/ParserFun
  * 
- * @version: 0.2
+ * @version: 0.3 alpha
  * @license: ISC license
  * @author:  Daniel Werner < danweetz@web.de >
  *
@@ -27,7 +27,7 @@ if ( ! defined( 'Validator_VERSION' ) ) {
 
 // Only initialize the extension when Validator extension is present:
 if ( ! defined( 'Validator_VERSION' ) ) {
-	die( '<p><b>Error:</b> You need to have <a href="http://www.mediawiki.org/wiki/Extension:Validator">Validator</a> installed in order to use <a href="http://www.mediawiki.org/wiki/Extension:Parse">Parse</a>.</p>' );
+	die( '<p><b>Error:</b> You need to have <a href="https://www.mediawiki.org/wiki/Extension:Validator">Validator</a> installed in order to use <a href="https://www.mediawiki.org/wiki/Extension:Parse">Parse</a>.</p>' );
 }
 
 
@@ -37,7 +37,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name'           => 'Parser Fun',
 	'descriptionmsg' => 'parserfun-desc',
 	'version'        => ExtParserFun::VERSION,
-	'author'         => '[http://www.mediawiki.org/wiki/User:Danwe Daniel Werner]',
+	'author'         => '[https://www.mediawiki.org/wiki/User:Danwe Daniel Werner]',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:Parser_Fun',
 );
 
@@ -78,7 +78,7 @@ class ExtParserFun {
 	 * 
 	 * @var string
 	 */
-	const VERSION = '0.3';
+	const VERSION = '0.3 alpha';
 
 	static function init( Parser &$parser ) {
 		if( self::isEnabledFunction( 'this' ) ) {
@@ -93,7 +93,7 @@ class ExtParserFun {
 	 * 
 	 * @since 0.2
 	 * 
-	 * @param type $word
+	 * @param string $word
 	 * @return bool
 	 */
 	static function isEnabledFunction( $word ) {
@@ -106,7 +106,7 @@ class ExtParserFun {
 	 *
 	 * @since 0.1
 	 * 
-	 * @return boolean
+	 * @return string
 	 */
 	static function getDir() {		
 		static $dir = null;

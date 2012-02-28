@@ -22,7 +22,7 @@ class ParserFunCaller extends ParserHook {
 	 */	
 	public static function staticInit( Parser &$parser ) {
 		global $egParserFunEnabledFunctions;
-		if( in_array( ExtParserFun::MAG_CALLER, $egParserFunEnabledFunctions ) ) {
+		if( in_array( 'caller', $egParserFunEnabledFunctions ) ) {
 			// only register function if not disabled by configuration
 			$instance = new self;
 			$instance->init( $parser );
@@ -37,7 +37,7 @@ class ParserFunCaller extends ParserHook {
 	 * @return string
 	 */
 	protected function getName() {
-		return 'CALLER';
+		return 'caller';
 	}
 	
 	/**

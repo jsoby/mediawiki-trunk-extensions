@@ -19,9 +19,9 @@ The 'Parser Fun' extension Enhances MediaWiki with the following features:
     as well as their URL-encoded equivalents ending with 'EE'.
     It is possible for other extensions to support the 'THIS:' prefix, currently:
     - All 'Subpage Fun' extension variables:
-      http://www.mediawiki.org/wiki/Extension:Subpage_Fun
+      https://www.mediawiki.org/wiki/Extension:Subpage_Fun
 
-* Website: http://www.mediawiki.org/wiki/Extension:Parser_Fun
+* Website: https://www.mediawiki.org/wiki/Extension:Parser_Fun
 * Author:  Daniel Werner < danweetz@web.de >
 
 
@@ -44,4 +44,4 @@ You can get it at: http://www.mediawiki.org/wiki/Extension:Validator
 If you have bug reports or feature requests, please add them to the 'Parser Fun'
 Talk page [0]. You can also send them to Daniel Werner < danweetz@web.de >
 
-[0] http://www.mediawiki.org/w/index.php?title=Extension_talk:Parser_Fun
+[0] https://www.mediawiki.org/w/index.php?title=Extension_talk:Parser_Fun

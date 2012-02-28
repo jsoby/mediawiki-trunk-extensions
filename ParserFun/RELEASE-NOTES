@@ -1,6 +1,9 @@
  'Parser Fun' Changelog:
  =======================
  
+ * Version 0.3
+   ~~ THIS IS NOT A FINAL RELEASE YET ~~
+ 
  * December 9, 2011 -- Version 0.2
    - New parser function/variable 'CALLER' to return a templates caller. Comes with the following parameters:
       + <1>/mode - can be the level of the call stack to return (if negative the value will be returned from the
