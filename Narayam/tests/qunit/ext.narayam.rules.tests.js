@@ -70,7 +70,20 @@ var narayamTest = function( options ) {
 narayamTest( {
 	description: 'Malayalam Transliteration test',
 	tests: [
+		{ input: 'a', output: 'അ', description: 'Malayalam a' },
 		{ input: 'ra', output: 'ര', description: 'Malayalam ra' },
+		{ input: 'p', output: 'പ്', description: 'Malayalam p' },
+		{ input: 'kh', output: 'ഖ്', description: 'Malayalam kh' },
+		{ input: 'nch', output: 'ഞ്ച്', description: 'Malayalam nch' },
+		{ input: 'au', output: 'ഔ', description: 'Malayalam au' },
+		{ input: 'maU', output: 'മൌ', description: 'Malayalam aU' },
+		{ input: 'kshau', output: 'ക്ഷൗ', description: 'Malayalam kshau' },
+		{ input: 'ram', output: 'രം', description: 'Malayalam ram' },
+		{ input: 'rama', output: 'രമ', description: 'Malayalam rama' },
+		{ input: 'baH', output: 'ബഃ', description: 'baH' },
+		{ input: 'bah', output: 'ബഹ്', description: 'bah' },
+		{ input: 'ai', output: 'ഐ', description: 'ai' },
+		{ input: 'lai', output: 'ലൈ', description: 'lai' },
 		{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' }
 	],
 	scheme: 'ml',
