@@ -345,7 +345,10 @@ $messages['be-tarask'] = array(
  */
 $messages['bg'] = array(
 	'storyboard-language' => 'Език',
+	'storyboard-charactersleft' => '$1 оставащи символи',
+	'storyboard-done' => 'Готово',
 	'storyboard-deletestory' => 'Премахване',
+	'storyboard-storydeletionconfirm' => 'Необходимо е потвърждение, че желаете перманентно да изтриете тази история.',
 );
 
 /** Breton (Brezhoneg)

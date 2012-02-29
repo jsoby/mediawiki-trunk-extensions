@@ -47,6 +47,13 @@ $messages['dsb'] = array(
 	'localjquery-desc' => 'jQuery z [[MediaWiki:JQuery.js]] z pomocu ResourceLoader zacytaś',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'localjquery-desc' => 'Cargar jQuery desde [[MediaWiki:JQuery.js]] (con ResourceLoader)',
+);
+
 /** French (Français)
  * @author Od1n
  */

@@ -43,6 +43,13 @@ $messages['dsb'] = array(
 	'namespacepaths-desc' => 'Zmóžnja zwobraznjenje swójskich sćažkow k nastawkam za mjenjowe rumy wikija. Na pś. Zwobraznjenje bokow ako Help:Page do /help/Page město /wiki/Help:Page.',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'namespacepaths-desc' => 'Permite poner en correspondencia rutas personalizadas de artículo con los espacios de nombres del wiki. Por ejemplo: haciendo corresponder páginas como Help:Page en /help/Page en lugar de /wiki/Help:Page.',
+);
+
 /** French (Français)
  * @author Gomoko
  */
@@ -68,7 +75,7 @@ $messages['he'] = array(
  * @author Michawiki
  */
 $messages['hsb'] = array(
-	'namespacepaths-desc' => 'Zmóžnja zwobraznjenje swójskich pućow k nastawkam za mjenowe rumy',
+	'namespacepaths-desc' => 'Zmóžnja zwobraznjenje swójskich pućow k nastawkam za mjenowe rumy; na přikład zwobraznjnje stronow kaž Help:Page do /help/Page město /wiki/Help:Page.',
 );
 
 /** Interlingua (Interlingua)

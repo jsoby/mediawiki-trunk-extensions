@@ -325,19 +325,24 @@ $messages['dsb'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Fitoschido
  */
 $messages['es'] = array(
 	'livetranslate-desc' => 'Permite la traducción instantánea de contenido utilizando el servicio de Google Translate',
 	'right-managetms' => '[[Special:SpecialLiveTranslate|Modificar]] la lista de memorias de traducción',
+	'action-managetms' => 'Administrar las memorias de traducción',
 	'group-tmxadmin' => 'Administradores de TMX',
-	'group-tmxadmin-member' => 'Administrador de TMX',
+	'group-tmxadmin-member' => '{{GENDER:$1|administrador|administradora}} de TMX',
+	'grouppage-tmxadmin' => '{{ns:project}}:Administradores de TMX',
 	'livetranslate-translate-to' => 'Traducir esta página a',
 	'livetranslate-button-translate' => 'Traducir',
 	'livetranslate-button-translating' => 'Traduciendo...',
 	'livetranslate-button-revert' => 'Mostrar original',
 	'livetranslate-dictionary-error' => 'No se pudo obtener el diccionario de traducción instantánea. Ninguna palabra será tratada especialmente durante el proceso de traducción.',
 	'livetranslate-dictionary-empty' => 'No hay palabras en el diccionario aún. Pulsa en la pestaña «editar» para añadir algunas.',
+	'livetranslate-dictionary-count' => 'Hay $1 {{PLURAL:$1|palabra|palabras}} en {{PLURAL:$2|un idioma|varios idiomas}}. Haga clic en la ficha "Modificar" para agregar más.',
+	'livetranslate-dictionary-unallowed-langs' => '{{PLURAL:$2|Este idioma no está establecido como destino de traducción válido|Estos idiomas no están establecidos como destinos de traducción válidos}}: $1. Modifique los idiomas permitidos en la configuración de su wiki o elimínelos del diccionario.',
 	'livetranslate-dictionary-goto-edit' => 'Modificar las memorias de traducción.',
 	'special-livetranslate' => 'Traducción instantánea',
 	'livetranslate-tmtype-ltf' => 'Formato de traducción instantánea',
@@ -353,6 +358,7 @@ $messages['es'] = array(
 	'livetranslate-special-current-tms' => 'Memorias de traducción existentes',
 	'livetranslate-special-tms-update' => 'Actualizar memorias de traducción',
 	'livetranslate-special-update' => 'Actualizar memorias de traducción',
+	'livetranslate-importtms-param-miscmatch' => 'Discrepancia entre la cantidad de ubicaciones y los tipos',
 );
 
 /** Basque (Euskara)

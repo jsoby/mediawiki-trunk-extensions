@@ -126,6 +126,14 @@ $messages['nl'] = array(
 Hiervoor worden de componenten [http://www.destroydrop.com/javascripts/tree dTree] en [http://www.htmldog.com/articles/suckerfish/dropdowns/ Son of Suckerfish] gebruikt",
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'treeandmenu-desc' => 'Dodaje funkcje analizator składni <code><nowiki>#tree</nowiki></code> i <code><nowiki>#menu</nowiki></code>, które zawierają listy punktowane do wyświetlenia jako zwijanej drzewidoki lub menu rozwijane.
+Drzewidoki używają generowanych przez JavaScript menu drzewiastych [http://www.destroydrop.com/javascripts/tree dTree], a menu rozwijane wykorzystują [http://www.htmldog.com/articles/suckerfish/dropdowns/ Son of Suckerfish]',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

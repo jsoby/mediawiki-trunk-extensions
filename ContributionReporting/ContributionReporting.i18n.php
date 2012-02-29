@@ -450,6 +450,7 @@ $messages['ast'] = array(
 	'contribstats-desc' => 'Amosar les estadístiques de les contribuciones feches a la Fundación Wikimedia',
 	'contribstats-daily-totals' => '{{PLURAL:$1|Total de güei|Totales diarios de los caberos $1 díes}}',
 	'contribstats-monthly-totals' => "{{PLURAL:$1|Total d'esti mes|Total mensual de los caberos $1 meses}}",
+	'contribstats-month-range-totals' => '{{PLURAL:$1|Total pa $1 mes|Total mensual pa $1 meses}}',
 	'contribstats-currency-range-totals' => 'Dineru total (de $1 a $2)',
 	'contribstats-contribution-range-breakdown' => 'Detalle de les contribuciones por valor (de $1 a $2)',
 	'contribstats-currency-totals' => 'Dineru total del añu fiscal $1',

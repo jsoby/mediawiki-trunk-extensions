@@ -159,6 +159,13 @@ $messages['nl'] = array(
 	'resumableupload-desc' => 'Ondersteuning voor het hervatten van uploads',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'resumableupload-desc' => 'Obsługa przesyłania z możliwością wznowienia',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

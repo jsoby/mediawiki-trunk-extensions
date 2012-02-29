@@ -264,6 +264,16 @@ $messages['ja'] = array(
 	'zero-rated-mobile-access-search' => '検索する',
 );
 
+/** Korean (한국어)
+ * @author Kwj2772
+ */
+$messages['ko'] = array(
+	'zero-rated-mobile-access-search' => '검색',
+	'zero-rated-mobile-access-language-selection' => '모든 언어',
+	'zero-rated-mobile-access-banner-text-data-charges-yes' => '예',
+	'zero-rated-mobile-access-banner-text-data-charges-no' => '아니오',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */

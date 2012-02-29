@@ -66,6 +66,15 @@ $messages['be-tarask'] = array(
 	'right-reassignedits' => 'Пераназначэньне рэдагаваньняў ад старога ўдзельніка новаму',
 );
 
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+$messages['bg'] = array(
+	'reassignedits-error-invalid' => 'Потребителското име „<nowiki>$1</nowiki>“ е невалидно.',
+	'reassignedits-new' => 'Ново потребителско име',
+	'reassignedits-old' => 'Старо потребителско име',
+);
+
 /** Breton (Brezhoneg)
  * @author Fulup
  */
