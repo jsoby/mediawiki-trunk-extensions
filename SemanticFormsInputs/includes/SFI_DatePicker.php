@@ -74,22 +74,16 @@ class SFIDatePicker extends SFFormInput {
 	static private function setup() {
 
 		global $wgOut, $wgLang;
-//		global $sfgScriptPath, $sfigSettings;
 
 		static $hasRun = false;
 
 		if ( !$hasRun ) {
 			$hasRun = true;
 			
-//			$wgOut->addExtensionStyle( $sfgScriptPath . '/skins/jquery-ui/base/jquery.ui.datepicker.css' );
-//			$wgOut->addExtensionStyle( $sfgScriptPath . '/skins/jquery-ui/base/jquery.ui.theme.css' );
-//			$wgOut->addScript( '<script type="text/javascript" src="' . $sfgScriptPath . '/libs/jquery-ui/jquery.ui.datepicker.min.js"></script> ' );
-//			$wgOut->addScript( '<script type="text/javascript" src="' . $sfigSettings->scriptPath . '/libs/datepicker.js"></script> ' );
-
 			// set localized messages (use MW i18n, not jQuery i18n)
 			$jstext =
-//				"mw.loader.using('ext.semanticformsinputs.datepicker', function(){\n" .
-				"	jQuery.datepicker.regional['wiki'] = {\n"
+				"mw.loader.using('ext.semanticformsinputs.datepicker', function(){\n"
+				. "	jQuery.datepicker.regional['wiki'] = {\n"
 				. "		closeText: '" . Xml::escapeJsString( wfMsg( 'semanticformsinputs-close' ) ) . "',\n"
 				. "		prevText: '" . Xml::escapeJsString( wfMsg( 'semanticformsinputs-prev' ) ) . "',\n"
 				. "		nextText: '" . Xml::escapeJsString( wfMsg( 'semanticformsinputs-next' ) ) . "',\n"
@@ -150,8 +144,8 @@ class SFIDatePicker extends SFFormInput {
 				. "		isRTL: " . ( $wgLang->isRTL() ? "true" : "false" ) . ",\n"
 				. "		showMonthAfterYear: false,\n"
 				. "		yearSuffix: ''};\n"
-				. "	jQuery.datepicker.setDefaults(jQuery.datepicker.regional['wiki']);\n";
-//				. "});\n";
+				. "	jQuery.datepicker.setDefaults(jQuery.datepicker.regional['wiki']);\n"
+				. "});\n";
 
 			$wgOut->addScript( Html::inlineScript(  $jstext ) );
 			
