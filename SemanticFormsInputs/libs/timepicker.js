@@ -16,7 +16,7 @@
  *		format: (String) a format string (unused) (do we even need it?)
  *
  */
-function SFI_TP_init( inputID, params ) { // minTime, maxTime, interval, format
+window.SFI_TP_init = function( inputID, params ) { // minTime, maxTime, interval, format
 
 	var inputIDshow = inputID + '_show';
 

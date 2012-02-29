@@ -16,7 +16,7 @@
  * @return (Boolean) true, if the input's value matches the regular expression in
  *         retext, false otherwise; the value is inverted if inverse is true
  */
-function SFI_RE_validate ( input_id, params ) { //input_number, retext, inverse, message, multiple
+window.SFI_RE_validate = function( input_id, params ) { //input_number, retext, inverse, message, multiple
 
 	var match;
 	var message;

@@ -5,7 +5,7 @@
  *
  */
 
-function SFI_DP_init ( input_id, params ) {
+window.SFI_DP_init = function ( input_id, params ) {
 
 	var inputShow = jQuery( '#' + input_id );
 	inputShow.attr( 'id', input_id + '_show' );

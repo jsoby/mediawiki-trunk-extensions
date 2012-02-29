@@ -9,7 +9,7 @@
  * @author Jeroen de Dauw 
  * @author Sanyam Goyal
  * 
- * @version 0.5
+ * @version 0.6 alpha
  */
 
 /**
@@ -23,15 +23,19 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'This file is part of a MediaWiki extension, it is not a valid entry point.' );
 }
 
+if ( version_compare( $wgVersion, '1.17', 'lt' ) ) {
+	die( '<b>Error:</b> This version of <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Forms_Inputs">Semantic Forms Inputs</a> is only compatible with MediaWiki 1.17 or above. You need to upgrade MediaWiki first.' );
+}
+
 if ( !defined( 'SF_VERSION' ) ) {
 	die( '<b>Error:</b> <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Forms_Inputs">Semantic Forms Inputs</a> is a Semantic Forms extension. You need to install <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Forms">Semantic Forms</a> first.' );
 }
 
-if ( version_compare( SF_VERSION, '2.3.1', 'lt' ) ) {
-	die( '<b>Error:</b> This version of <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Forms_Inputs">Semantic Forms Inputs</a> is only compatible with Semantic Forms 2.3.1 or above. You need to upgrade <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Forms">Semantic Forms</a> first.' );
+if ( version_compare( SF_VERSION, '2.4.1-alpha', 'lt' ) ) {
+	die( '<b>Error:</b> This version of <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Forms_Inputs">Semantic Forms Inputs</a> is only compatible with Semantic Forms 2.4.1 or above. You need to upgrade <a href="https://www.mediawiki.org/wiki/Extension:Semantic_Forms">Semantic Forms</a> first.' );
 }
 
-define( 'SFI_VERSION', '0.5' );
+define( 'SFI_VERSION', '0.6 alpha' );
 
 // create and initialize settings
 $sfigSettings = new SFISettings();
@@ -60,6 +64,55 @@ $wgAutoloadClasses['SFITimePicker'] = $dir . '/includes/SFI_TimePicker.php';
 $wgAutoloadClasses['SFIDateTimePicker'] = $dir . '/includes/SFI_DateTimePicker.php';
 $wgAutoloadClasses['SFIMenuSelect'] = $dir . '/includes/SFI_MenuSelect.php';
 $wgAutoloadClasses['SFIRegExp'] = $dir . '/includes/SFI_RegExp.php';
+
+$wgResourceModules['ext.semanticformsinputs.datepicker'] = array(
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'SemanticFormsInputs',
+	'scripts' => 'libs/datepicker.js',
+	'dependencies' => array(
+		'jquery.ui.datepicker',
+		'ext.semanticforms.main'
+	),
+);
+
+$wgResourceModules['ext.semanticformsinputs.timepicker'] = array(
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'SemanticFormsInputs',
+	'scripts' => 'libs/timepicker.js',
+	'styles' => 'skins/SFI_Timepicker.css',
+	'dependencies' => array(
+		'ext.semanticforms.main'
+	),
+);
+
+$wgResourceModules['ext.semanticformsinputs.datetimepicker'] = array(
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'SemanticFormsInputs',
+	'scripts' => 'libs/datetimepicker.js',
+	'dependencies' => array(
+		'ext.semanticformsinputs.timepicker',
+		'ext.semanticformsinputs.datepicker'
+	),
+);
+
+$wgResourceModules['ext.semanticformsinputs.menuselect'] = array(
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'SemanticFormsInputs',
+	'scripts' => 'libs/menuselect.js',
+	'styles' => 'skins/SFI_Menuselect.css',
+	'dependencies' => array(
+		'ext.semanticforms.main'
+	),
+);
+
+$wgResourceModules['ext.semanticformsinputs.regexp'] = array(
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'SemanticFormsInputs',
+	'scripts' => 'libs/regexp.js',
+	'dependencies' => array(
+		'ext.semanticforms.main'
+	),
+);
 
 /**
  * Class to encapsulate all settings

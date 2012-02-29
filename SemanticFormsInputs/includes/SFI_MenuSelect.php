@@ -64,18 +64,23 @@ class SFIMenuSelect extends SFFormInput {
 	*/
 	static private function setup() {
 
-		global $wgOut;
-		global $sfigSettings;
+		global $wgHooks;
 
 		static $hasRun = false;
 
 		if ( !$hasRun ) {
 			$hasRun = true;
-			$wgOut->addScript( '<script type="text/javascript">sfigScriptPath="' . $sfigSettings->scriptPath . '";</script> ' );
-			$wgOut->addScript( '<script type="text/javascript" src="' . $sfigSettings->scriptPath . '/libs/menuselect.js"></script> ' );
-			$wgOut->addExtensionStyle( $sfigSettings->scriptPath . '/skins/SFI_Menuselect.css' );
+
+			$wgHooks['MakeGlobalVariablesScript'][] = 'SFIMenuSelect::setGlobalVariables';
+			
 		}
 
+	}
+	
+	static public function setGlobalVariables( &$vars ) {
+		global $sfigSettings;
+		$vars['sfigScriptPath'] = $sfigSettings->scriptPath;
+		return true;
 	}
 	
 	/**
@@ -142,22 +147,33 @@ class SFIMenuSelect extends SFFormInput {
 
 	/**
 	 * Returns the set of parameters for this form input.
-	 * 
-	 * TODO: Specify parameters specific for menuselect.
 	 */
 	public static function getParameters() {
 		$params = parent::getParameters();
-		$params[] = array(
+		$params['structure'] = array(
 			'name' => 'structure',
 			'type' => 'text',
 			'description' => wfMsg( 'semanticformsinputs-menuselect-structure' ),
 			'default' => "* item 1\n** item 11\n** item 12\n* item 2\n** item 21\n** item 22"
 		);
-		$params[] = array(
+		$params[$sfigSettings->menuSelectDisableInputField?'enable input field':'disable input field'] = array(
 			'name' => $sfigSettings->menuSelectDisableInputField?'enable input field':'disable input field',
 			'type' => 'boolean',
 			'description' => wfMsg( 'semanticformsinputs-menuselect-enableinputfield' ),
 		);
 		return $params;
 	}	
+
+	/**
+	 * Returns the names of the resource modules this input type uses.
+	 * 
+	 * Returns the names of the modules as an array or - if there is only one 
+	 * module - as a string.
+	 * 
+	 * @return null|string|array
+	 */
+	public function getResourceModuleNames() {
+		return 'ext.semanticformsinputs.menuselect';
+	}
+
 }

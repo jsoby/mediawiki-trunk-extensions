@@ -6,7 +6,7 @@
  */
 
 
-function SFI_DTP_init ( inputId, params ) {
+window.SFI_DTP_init = function( inputId, params ) {
 
 	var input = jQuery( '#' + inputId );
 	

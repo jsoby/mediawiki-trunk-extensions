@@ -10,7 +10,7 @@
  *
  * @param inputID ( String ) the id of the input to initialize
  */
-function SFI_MS_init( inputID, params ) {
+window.SFI_MS_init = function( inputID, params ) {
 
 	var inputShow = jQuery('#' + inputID + "_show");
 
