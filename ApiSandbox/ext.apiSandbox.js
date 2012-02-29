@@ -516,10 +516,6 @@
 			.appendTo( '#api-sandbox-parameters' )
 			.add( $submit )
 			.click( function ( e ) {
-				// Don't do default action (crawl up to <form> and trigger a submit).
-				// That would submit it twice (bug 34790)
-				e.preventDefault();
-
 				$form.submit();
 			} )
 			.button({ disabled: true });
@@ -606,9 +602,6 @@
 		$form.submit( function ( e ) {
 			var url, params, mustBePosted;
 
-			// Prevent browser from submitting the form
-			// and reloading the page to the action-url.
-			// We're doing it with AJAX instead, below.
 			e.preventDefault();
 
 			if ( $submit.button( 'option', 'disabled' ) === true ) {
@@ -630,7 +623,6 @@
 			}
 
 			showLoading( $output );
-
 			if ( mustBePosted ) {
 				$requestUrl.val( url );
 				if ( params.length > 0 ) {
