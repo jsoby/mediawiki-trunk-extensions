@@ -78,7 +78,7 @@ function efAssertEditHook( $editpage ) {
  * @param $editPage EditPage
  * @param $textBox
  * @param $result array
- * @return bool|mixed
+ * @return bool
  */
 function efAssertApiEditHook( $editPage, $textBox, &$result ) {
 	global $wgRequest;
@@ -117,7 +117,7 @@ function efAssertApiEditGetAllowedParams( &$module, &$params ) {
 		return true;
 	}
 
-	$options = array_keys( AssertEdit::$msAssert );
+	$options = array_keys( AssertEdit::getAssertions() );
 	$params['assert'][ApiBase::PARAM_TYPE] = $options;
 	$params['nassert'][ApiBase::PARAM_TYPE] = $options;
 
