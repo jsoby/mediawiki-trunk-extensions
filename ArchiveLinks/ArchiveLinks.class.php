@@ -25,7 +25,7 @@ class ArchiveLinks {
 		$db_slave = wfGetDB( DB_SLAVE );
 		$db_result = array();
 
-		$db_master->begin();
+		$db_master->begin( __METHOD__ );
 
 		if ( !isset( $wgArchiveLinksConfig['global_rearchive_time'] ) ) {
 			//30 days or 2,592,000 seconds...
@@ -127,7 +127,7 @@ class ArchiveLinks {
 			}
 		}
 
-		$db_master->commit();
+		$db_master->commit( __METHOD__ );
 
 		return true;
 	}

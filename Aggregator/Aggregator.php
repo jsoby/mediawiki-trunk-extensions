@@ -229,13 +229,13 @@ class Aggregator {
 		wfDebug( "$fname saving items from $url\n" );
 
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->begin();
+		$dbw->begin( __METHOD__ );
 
 		$this->clearItems( $dbw, $url );
 		$this->insertItems( $dbw, $url, $items );
 		$this->touchFeed( $dbw, $url );
 
-		$dbw->commit();
+		$dbw->commit( __METHOD__ );
 	}
 
 	private function clearItems( $dbw, $url ) {
