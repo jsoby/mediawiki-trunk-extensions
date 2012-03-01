@@ -47,18 +47,20 @@ class ApiFeedbackDashboardResponse extends ApiBase {
 			$this->disableUserTalkEmailNotification();
 
 			$id = intval( $item->getProperty( 'id' ) );
-			$api = new ApiMain( new FauxRequest( array(
-				'action' => 'edit',
-				'title'  => $talkPage->getFullText(),
-				'appendtext' => ( $talkPage->exists() ? "\n\n" : '' ) . 
-						$feedback_link . "\n" . 
-						'<span id="feedback-dashboard-response-' . $id . '"></span>' . "\n\n" . 
-						$response . "\n\n~~~~\n\n" .
-						'<span class="markashelpful-mbresponse-' . $id . '">&#160;</span>',
-				'token'  => $params['token'],
-				'summary' => $summary,
-				'notminor' => true,
-			), true, array( 'wsEditToken' => $wgRequest->getSessionData( 'wsEditToken' ) ) ), true );
+			$api = new ApiMain( new DerivativeRequest(
+				$wgRequest, 
+				array(
+					'action' => 'edit',
+					'title'  => $talkPage->getFullText(),
+					'appendtext' => ( $talkPage->exists() ? "\n\n" : '' ) . 
+							$feedback_link . "\n" . 
+							'<span id="feedback-dashboard-response-' . $id . '"></span>' . "\n\n" . 
+							$response . "\n\n~~~~\n\n" .
+							'<span class="markashelpful-mbresponse-' . $id . '">&#160;</span>',
+					'token'  => $params['token'],
+					'summary' => $summary,
+					'notminor' => true,
+				), true, array( 'wsEditToken' => $wgRequest->getSessionData( 'wsEditToken' ) ) ), true );
 
 			$api->execute();
 
