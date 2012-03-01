@@ -60,7 +60,8 @@ class ApiFeedbackDashboardResponse extends ApiBase {
 					'token'  => $params['token'],
 					'summary' => $summary,
 					'notminor' => true,
-				), true, array( 'wsEditToken' => $wgRequest->getSessionData( 'wsEditToken' ) ) ), true );
+				), true),
+			true );
 
 			$api->execute();
 
