@@ -24,8 +24,8 @@ $wgSpecialPageGroups['ApiSandbox'] = 'wiki';
 $wgResourceModules['ext.apiSandbox'] = array(
 	'scripts' => 'ext.apiSandbox.js',
 	'styles' => 'ext.apiSandbox.css',
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'ApiSandbox',
+	'localBasePath' => $dir . '/modules',
+	'remoteExtPath' => 'ApiSandbox/modules',
 	'messages' => array(
 		'apisb-loading',
 		'apisb-load-error',
