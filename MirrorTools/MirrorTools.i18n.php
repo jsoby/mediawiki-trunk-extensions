@@ -97,6 +97,7 @@ $messages['dsb'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  */
 $messages['es'] = array(
@@ -104,7 +105,7 @@ $messages['es'] = array(
 	'mirrortools-desc' => 'Permite editar a través de API a ser hechas bajo cualquier nombre de usuario',
 	'right-mirroredit' => 'Editar a través de API bajo cualquier nombre de usuario',
 	'group-MirrorTools' => 'Usuario de Mirror tool',
-	'group-MirrorTools-member' => 'usuario de mirror tool',
+	'group-MirrorTools-member' => '{{GENDER:$1|usuario|usuaria}} de la herramienta de espejo (Mirror Tool)',
 	'grouppage-MirrorTools' => '{{ns:project}}:Usuario de Mirror tool',
 );
 

@@ -83,9 +83,11 @@ $messages['az'] = array(
 
 /** Bavarian (Boarisch)
  * @author Man77
+ * @author Mucalexx
  */
 $messages['bar'] = array(
-	'seealso' => 'Schau aa',
+	'seealso' => 'Schaug aa',
+	'seealso-desc' => "Daméglicht d' Lókaalisiarung vah Schaug-aa-Ywerschriftner mid da Hijf vam Auszeichnungselemént <code>&lt;seealso&gt;</code>",
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)

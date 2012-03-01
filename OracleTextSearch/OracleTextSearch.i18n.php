@@ -173,6 +173,14 @@ $messages['pt'] = array(
 	'oracletextsearch-desc' => 'Pesquisar o conteúdo e os metadados dos ficheiros usando a indexação Oracle Text',
 );
 
+/** Russian (Русский)
+ * @author Express2000
+ */
+$messages['ru'] = array(
+	'oracletextsearch' => 'Текстовый поиск OracleTextSearch',
+	'oracletextsearch-desc' => 'Поиск содержимого/метаданных загруженных файлов с использованием индексирования Oracle Text',
+);
+
 /** Swedish (Svenska)
  * @author WikiPhoenix
  */

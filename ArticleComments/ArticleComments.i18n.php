@@ -743,7 +743,7 @@ Saatavilla ovat "plain", "normal" ja "wiki".',
 	'article-comments-comment-missing-name-parameter' => 'Puuttuva nimi',
 	'article-comments-comment-missing-date-parameter' => 'Puuttuva kommentointipäivä',
 	'article-comments-no-spam' => 'Vähintään yksi lähetetyistä kentistä merkittiin roskapostiksi.',
-	'processcomment' => 'Käsittele sivun kommenttia',
+	'processcomment' => 'Käsittele sivun kommentti',
 );
 
 /** French (Français)

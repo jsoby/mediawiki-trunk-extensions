@@ -61,7 +61,7 @@ $messages['fr'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
-	'namespacepaths-desc' => 'Permite poñer en correspondencia rutas de artigo personalizadas cos espazos de nomes do wiki. Por exemplo: páxinas como "Axuda:Páxina" en "/axuda/Páxina" no canto de "/wiki/Axuda:Páxina".',
+	'namespacepaths-desc' => 'Permite poñer en correspondencia rutas de artigo personalizadas cos espazos de nomes do wiki. Por exemplo, páxinas como "Axuda:Páxina" en "/axuda/Páxina" no canto de "/wiki/Axuda:Páxina"',
 );
 
 /** Hebrew (עברית)

@@ -341,20 +341,21 @@ $messages['es'] = array(
 /** French (Français)
  * @author Balzac 40
  * @author Thomas FAURÉ
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'wikitweet-desc' => 'Créer un flux du genre Twitter dans MediaWiki',
 	'wikitweet-pleaselogin' => 'Veuillez vous connecter pour tweeter.',
 	'wikitweet-moretweets' => 'Plus de tweets...',
-	'wikitweet-infoajax' => 'utilise la technologie ajax et se rafraîchit automatiquement toutes les 5 secondes sans recharger la page.',
+	'wikitweet-infoajax' => 'utilise la technologie AJAX et se rafraîchit automatiquement toutes les 5 secondes sans recharger la page.',
 	'wikitweet-submit' => 'Tweeter',
 	'wikitweet-submitandmail' => 'Tweeter et prévenir',
 	'wikitweet-intheroom' => 'Vous êtes dans la salle',
-	'wikitweet-subscribe' => "s'abonner",
+	'wikitweet-subscribe' => 's’abonner',
 	'wikitweet-subscribed' => 'abonné',
 	'wikitweet-unsubscribe' => 'se désabonner',
 	'wikitweet-delete' => 'supprimer',
-	'wikitweet-inform' => "via l'Informateur",
+	'wikitweet-inform' => 'via l’informateur',
 	'wikitweet-private' => 'privé',
 	'wikitweet-answer' => 'Répondre à',
 	'wikitweet-anonymous' => 'anonyme',
@@ -366,7 +367,7 @@ $messages['fr'] = array(
 	'wikitweet-fewsecondsago' => 'Il y a quelques secondes',
 	'wikitweet-status' => 'Statut :',
 	'wikitweet-status0' => 'Discussion',
-	'wikitweet-status1' => 'Événement',
+	'wikitweet-status1' => 'Évènement',
 	'wikitweet-status2' => 'Attention',
 	'wikitweet-status3' => 'Alerte',
 	'wikitweet-resolve' => 'résoudre',
@@ -379,10 +380,10 @@ $messages['fr'] = array(
 	'wikitweet-from' => 'de',
 	'wikitweet-in' => 'dans',
 	'wikitweet-directlink' => 'Lien direct :',
-	'wikitweet-mailsent' => 'mail envoyé',
+	'wikitweet-mailsent' => 'courriel envoyé',
 	'wikitweet-viaroom' => 'via room',
 	'wikitweet-alertsolved' => 'Une de vos alertes a été résolue dans la salle',
-	'wikitweet-cannotparse' => 'Ne peux pas être parsé',
+	'wikitweet-cannotparse' => 'Ne peut pas analyser',
 );
 
 /** Franco-Provençal (Arpetan)

@@ -100,10 +100,11 @@ $messages['es'] = array(
  * @author IAlex
  * @author Peter17
  * @author Urhixidur
+ * @author Verdy p
  */
 $messages['fr'] = array(
-	'ukgeocoding_name' => 'Géocodage du Royaume-Uni pour les cartes',
-	'ukgeocoding-desc' => 'Étend les cartes avec une fonction du parseur display_uk_point avec l’implémentation Google Maps',
+	'ukgeocoding-desc' => 'Extension cartographique comprenant une fonction de l’analyseur <code>display_uk_point</code> avec une implémentation de Google Maps',
+	'ukgeocoding_name' => 'Géocodage du Royaume-Uni pour la cartographie',
 	'ukgeocoding_couldNotGeocode' => 'Un ou plusieurs codes postaux n’ont pas pu être géolocalisés et ont été omis de la carte.',
 );
 

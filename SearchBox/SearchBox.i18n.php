@@ -114,12 +114,13 @@ $messages['az'] = array(
 
 /** Bavarian (Boarisch)
  * @author Man77
+ * @author Mucalexx
  */
 $messages['bar'] = array(
-	'searchbox-desc' => "Ealaubt s'Eibindn vu am Suachfoamular",
-	'searchbox-search' => 'Suacha',
-	'searchbox-go' => 'Passd',
-	'searchbox-namespaces' => 'Nãmensräim:',
+	'searchbox-desc' => 'Daméglichts Eihbinden vahram Suachformular',
+	'searchbox-search' => 'Suacher',
+	'searchbox-go' => 'Passt',
+	'searchbox-namespaces' => 'Naumensraim:',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)

@@ -2800,6 +2800,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Feten7
  * @author Imre
@@ -2813,6 +2814,7 @@ $messages['eo'] = array(
  */
 $messages['es'] = array(
 	'mv-desc' => '[http://metavid.org/wiki/MetaVidWiki_Software Editor de metadatos de video y búsqueda de contenidos multimedia]',
+	'mvadmin' => 'Funciones de administración de MetavidWiki',
 	'metavid' => 'Página MetaVid',
 	'mv_missing_stream' => 'Flujo faltante: $1',
 	'specialpages-group-mv_group' => 'Páginas especiales MetaVidWiki',

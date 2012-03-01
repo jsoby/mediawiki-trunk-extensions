@@ -102,9 +102,11 @@ Nun puedes crear esta páxina, pero puedes [{{fullurl:{{FULLPAGENAME}}|action=ed
  * @author Mucalexx
  */
 $messages['bar'] = array(
-	'createbox-exists' => "„'''{{FULLPAGENAME}}'''“ existiard beraits.
+	'createbox-desc' => 'Daméglicht a speziejs Eihgowefejdel za da Seitenerstejung',
+	'createbox-create' => 'Erstejn',
+	'createbox-exists' => "„'''{{FULLPAGENAME}}'''“ existierd schoh.
 
-Du kååst de Saiten ned åleeng, ower du kååstas [{{fullurl:{{FULLPAGENAME}}|action=edit}} beorwaiten], [{{fullurl:{{FULLPAGENAME}}}} leesen] oder a åndre Seiten mid da Hüif vom untensteehaten Aigobföidl åleeng.
+Du kauhst d' Seiten ned auhléng, ower du kauhstas [{{fullurl:{{FULLPAGENAME}}|action=edit}} beorwaten], [{{fullurl:{{FULLPAGENAME}}}} leesen] óder a aundre Seiten mid da Hijf vam untensteeherden Eihgowefejdel auhléng.
 
 <createbox>break=no</createbox>",
 );

@@ -144,6 +144,15 @@ $messages['dsb'] = array(
 	'onlinestatusbar-status-hidden' => 'Schowany',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'onlinestatusbar-desc' => 'Barra de estado que muestra en la página de usuario si un usuario está conectado',
+	'onlinestatusbar-line' => '$1 está ahora $2 $3',
+	'onlinestatusbar-used' => 'Mostrar si está conectado en sus páginas de usuario',
+);
+
 /** French (Français)
  * @author Crochet.david
  * @author DavidL

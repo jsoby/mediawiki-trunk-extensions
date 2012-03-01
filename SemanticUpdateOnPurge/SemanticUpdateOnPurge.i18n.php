@@ -118,3 +118,10 @@ $messages['pms'] = array(
 	'suop-desc' => "A agiorna j'atribù semàntich ëd na pàgina wiki quand as purga la pàgina",
 );
 
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Linforest
+ */
+$messages['zh-hans'] = array(
+	'suop-desc' => '在清洗一个维基页面时更新该页面的语义特征属性',
+);
+

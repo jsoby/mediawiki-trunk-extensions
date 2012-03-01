@@ -161,6 +161,15 @@ $messages['pt'] = array(
 	'wom-desc' => 'Modelo de Objectos "Easy Page" para os utilizadores da wiki',
 );
 
+/** Russian (Русский)
+ * @author Express2000
+ */
+$messages['ru'] = array(
+	'objecteditor' => 'Редактор объектов',
+	'wom_editor' => 'Модель объекта',
+	'wom-desc' => 'Облегченная модель объекта страницы для вики-пользователя',
+);
+
 /** Swedish (Svenska)
  * @author Warrakkk
  */

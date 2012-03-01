@@ -246,6 +246,20 @@ $messages['pms'] = array(
 	'userdebuginfo-language' => 'Lenga',
 );
 
+/** Russian (Русский)
+ * @author Express2000
+ */
+$messages['ru'] = array(
+	'userdebuginfo' => 'Пользовательская отладочная информация',
+	'userdebuginfo-desc' => 'Отображает потенциально полезную отладочную информацию о текущем пользователе.',
+	'userdebuginfo-useragent' => 'User-Agent HTTP',
+	'userdebuginfo-remotehost' => 'Удаленный HTTP-узел',
+	'userdebuginfo-remoteaddr' => 'Удаленный HTTP-адрес',
+	'userdebuginfo-key' => 'Ключ',
+	'userdebuginfo-value' => 'Значение',
+	'userdebuginfo-language' => 'Язык',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */

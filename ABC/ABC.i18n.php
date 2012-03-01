@@ -186,10 +186,12 @@ $messages['bjn'] = array(
 
 /** Bengali (বাংলা)
  * @author Bellayet
+ * @author Jayantanth
  */
 $messages['bn'] = array(
 	'abc-desc' => 'ABC music এর জন্য <code>&lt;abc&gt;</code> ফলক যোগ করুন',
 	'abcdownload' => 'ডাউনলোড:',
+	'abcpdf' => 'পিডিএফ',
 );
 
 /** Tibetan (བོད་ཡིག)

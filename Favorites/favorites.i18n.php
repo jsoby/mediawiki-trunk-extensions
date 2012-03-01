@@ -1009,10 +1009,59 @@ Também pode [[Special:Favoritelist/edit|editar a lista da maneira convencional]
 /** Russian (Русский)
  * @author Alexandr Efremov
  * @author Eleferen
+ * @author Express2000
  */
 $messages['ru'] = array(
 	'favorites-desc' => 'Создание списка «Избранное»',
+	'favoritethis' => 'Добавить эту страницу в список наблюдения',
+	'prefs-favoritelist' => 'Список наблюдения',
+	'prefs-favoritelist-token' => 'Маркер списка наблюдения',
+	'prefs-advancedfavoritelist' => 'Дополнительные настройки',
 	'favoritelist' => 'Мое избранное',
+	'myfavoritelist' => 'Мой список наблюдения',
+	'favoritelistfor' => "(для '''$1''')",
+	'nofavoritelist' => 'Ваш список наблюдения пуст',
+	'favoritelistanontext' => 'Вы должны $1, чтобы просмотреть или отредактировать список наблюдения.',
+	'favoritenologin' => 'Вы не представились системе',
+	'favoritenologintext' => 'Вы должны [[Special:UserLogin|представиться системе]] для изменения списка наблюдения.',
+	'addedfavorite' => 'Добавлено в список наблюдения',
+	'addedfavoritetext' => 'Страница "[[:$1]]" была добавлена в Ваш [[Special:Favoritelist|список наблюдения]].',
+	'removedfavorite' => 'Удалено из списка наблюдения',
+	'removedfavoritetext' => 'Страница "[[:$1]]" была удалена из Вашего [[Special:Favoritelist|списка наблюдения]].',
+	'favorite' => 'Наблюдать',
+	'favoritethispage' => 'Добавить эту страницу в список наблюдения',
+	'unfavorite' => 'Убрать из списка наблюдения',
+	'unfavoritethispage' => 'Остановить добавление в список наблюдения',
+	'favoritelist-options' => 'Настройки списка наблюдения',
+	'favoriteing' => 'Добавление в список наблюдения...',
+	'unfavoriteing' => 'Удаление из списка наблюдения...',
+	'tooltip-pt-favoritelist' => 'Список страниц, изменения в которых вы отслеживаете',
+	'tooltip-ca-favorite' => 'Добавить эту страницу в список наблюдения',
+	'tooltip-ca-unfavorite' => 'Удалить эту страницу из списка наблюдения',
+	'tooltip-favorite' => 'Добавить эту страницу в список наблюдения',
+	'favoritelistall2' => 'все',
+	'favoritelistedit-numitems' => 'Ваш список наблюдения содержит {{PLURAL:$1|1 страницу|$1 страниц(ы)}}.',
+	'favoritelistedit-noitems' => 'Ваш список наблюдения пуст.',
+	'favoritelistedit-normal-title' => 'Редактировать список наблюдения',
+	'favoritelistedit-normal-legend' => 'Удалить заголовки из списка наблюдения',
+	'favoritelistedit-normal-explain' => 'Ниже перечислены страницы, находящиеся в списке наблюдения.
+Для удаления записей отметьте галочкой соответствующие позиции и нажмите кнопку "{{int:Favoritelistedit-normal-submit}}".
+Вы также можете [[Special:Favoritelist/raw|править список как текст]].',
+	'favoritelistedit-normal-submit' => 'Удалить записи',
+	'favoritelistedit-normal-done' => '{{PLURAL:$1|1 запись была удалена|$1 записи были удалены|$1 записей были удалены}} из списка наблюдения:',
+	'favoritelistedit-raw-title' => 'Редактировать список наблюдения как текст',
+	'favoritelistedit-raw-legend' => 'Редактировать список наблюдения как текст',
+	'favoritelistedit-raw-explain' => 'Ниже перечислены страницы, находящиеся в вашем списке наблюдения. Вы можете изменять этот список, добавляя и удаляя из него строки с названиями, по одному названию на строку.
+После завершения правок нажмите кнопку "{{int:Favoritelistedit-raw-submit}}".
+Вы также можете [[Special:Favoritelist/edit|использовать стандартный редактор]].',
+	'favoritelistedit-raw-titles' => 'Записи:',
+	'favoritelistedit-raw-submit' => 'Обновить список наблюдения',
+	'favoritelistedit-raw-done' => 'Список наблюдения обновлен',
+	'favoritelistedit-raw-added' => '{{PLURAL:$1|Была добавлена|Были добавлены|Было добавлено}} $1 {{PLURAL:$1|запись|записи|записей}}:',
+	'favoritelistedit-raw-removed' => '{{PLURAL:$1|Была удалена|Были удалены|Было удалено}} $1 {{PLURAL:$1|запись|записи|записей}}:',
+	'favoritelisttools-view' => 'Просмотр списка наблюдения',
+	'favoritelisttools-edit' => 'Посмотреть и изменить список наблюдения',
+	'favoritelisttools-raw' => 'Редактирование текста списка наблюдения',
 );
 
 /** Swedish (Svenska)

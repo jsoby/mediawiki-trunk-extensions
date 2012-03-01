@@ -4222,24 +4222,25 @@ $messages['pdc'] = array(
  * @author Leinad
  * @author Masti
  * @author Olgak85
+ * @author Saper
  * @author Sp5uhe
  */
 $messages['pl'] = array(
 	'moodbar-desc' => 'Pozwala określonym użytkownikom na wyrażenie opinii o posiadanym doświadczeniu w edytowaniu',
-	'moodbar-trigger-feedback' => 'Opinia na temat edytowania',
+	'moodbar-trigger-feedback' => 'Jak Ci się tu podoba?',
 	'moodbar-trigger-share' => 'Podziel się swoimi wrażeniami',
-	'moodbar-trigger-editing' => 'Edytowanie {{GRAMMAR:D.lp|$1}}...',
+	'moodbar-trigger-editing' => 'Praca na tej wiki...',
 	'moodbar-weeks' => '{{PLURAL:$1|tydzień|tygodnie|tygodni}}',
 	'moodbar-months' => '{{PLURAL:$1|$1 miesiąc|$1 miesiące|$1 miesięcy}}',
 	'moodbar-years' => '{{PLURAL:$1|$1 rok|$1 lata|$1 lat}}',
 	'moodbar-seconds' => 'mniej niż 1 minuta',
 	'moodbar-close' => '(zamknij)',
-	'moodbar-intro-feedback' => 'Edytowanie {{GRAMMAR:D.lp|$1}} przyniosło mi...',
+	'moodbar-intro-feedback' => 'Praca na tej wiki...',
 	'moodbar-intro-share' => 'Moje doświadczenie w {{GRAMMAR:MS.lp|$1}} przyniosło mi...',
-	'moodbar-intro-editing' => 'Edytowanie {{GRAMMAR:D.lp|$1}} przyniosło mi...',
-	'moodbar-type-happy-title' => 'bez problemu',
+	'moodbar-intro-editing' => 'Praca na tej wiki...',
+	'moodbar-type-happy-title' => 'to przyjemność',
 	'moodbar-type-sad-title' => 'koszmar',
-	'moodbar-type-confused-title' => 'z kłopotami',
+	'moodbar-type-confused-title' => 'nie była łatwa',
 	'tooltip-moodbar-what' => 'Więcej informacji na temat tej funkcji',
 	'moodbar-what-label' => 'O co tu chodzi?',
 	'moodbar-respond-text' => 'Odpowiedz na to',
@@ -4350,7 +4351,7 @@ Więcej informacji uzyskasz na $1.',
 	'moodbar-log-name' => 'Dziennik opinii',
 	'moodbar-log-header' => 'To jest dziennik akcji podjętych w związku z opiniami, zdarzenie są wypisane w [[Special:FeedbackDashboard|Panelu Opinii]].',
 	'moodbar-log-hide' => 'Ukryj [[$1]]',
-	'moodbar-log-feedback' => 'Opinie MoodBar [[$1]]',
+	'moodbar-log-feedback' => 'Przesłano nową [[$1|opinię o pracy na wiki]]',
 	'moodbar-log-restore' => 'Przywróć widzialność dla [[$1]]',
 	'moodbar-response-terms' => 'Klikając przycisk "Wyślij", zgadzasz się na opublikowanie Twojej opinii pod adresem $1.',
 	'moodbar-response-link' => 'warunki',

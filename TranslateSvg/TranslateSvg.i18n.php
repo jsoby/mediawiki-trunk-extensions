@@ -397,6 +397,16 @@ $messages['nl'] = array(
 	'translatesvg-toggle-hide' => 'Vertalen in deze taal verbergen',
 );
 
+/** Russian (Русский)
+ * @author Express2000
+ */
+$messages['ru'] = array(
+	'translatesvg-desc' => 'Предоставляет перевод файлов SVG в соответствии со спецификацией SVG1.1',
+	'translatesvg-legend' => 'Путь к файлу',
+	'translatesvg-page' => 'Файл:',
+	'translatesvg-submit' => 'Перейти',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
