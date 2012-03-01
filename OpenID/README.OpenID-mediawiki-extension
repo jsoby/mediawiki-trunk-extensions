@@ -64,21 +64,18 @@ Thomas Gries
 
 This software has been tested with MediaWiki 1.19 rev. 88135
 
-The software depends on the OpenIDEnabled.com PHP library for OpenID, which in
-turn depends on the OpenIDEnabled.com PHP library for YADIS. At the time of this
-writing, info on installing these libraries was available here:
+The software depends on the OpenIDEnabled.com PHP library for OpenID
+https://github.com/Wikinaut/php-openid/tree/mw-extension-openid which in turn
+depends on the OpenIDEnabled.com PHP library for YADIS. This package is called 
+"php-openid library". Information: the original homepage for it was 
+http://www.openidenabled.com/php-openid/ but this is not maintained any more.
 
-   http://www.openidenabled.com/php-openid/
-
-Unfortunately, tt requires patches when running with PHP 5.3.x and later.
-The download from the above Url and the patch will be automatically done
-when you run "make" (see next section).
-
-The version tested with is 2.2.2; '''versions below 2.0 will not work'''.
+The step of downloading and installing is automated by running "make" 
+in your extensions folder.
 
 There are also some required PHP extensions; see the OpenIDEnabled documentation
-for details. This software has been tested with the gmp and curl PHP extensions
-installed, and it's recommended that you install them, too.
+for details. This software has been tested with the gmp, curl, and xml PHP 
+extensions installed, and it's recommended that you install them, too.
 
 /* FIXME: */
 Note that some versions of MediaWiki overwrite the PHP library path in
@@ -132,8 +129,8 @@ the bottom of the file:
 
 	require_once( "$IP/extensions/OpenID/OpenID.setup.php" );
 
-Run update.php script in in your MediaWiki maintenance folder to conditionally create
-a new table in MediaWiki database as required by the OpenID extension:
+Run update.php script in in your MediaWiki maintenance folder to conditionally 
+create a new table in MediaWiki database as required by the OpenID extension:
 
 	cd $IP/maintenance
 	php update.php
