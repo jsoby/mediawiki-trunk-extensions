@@ -5,7 +5,7 @@
  *
  * @ingroup SolrStore
  * @file
- * @author Simon Bachenberg
+ * @author Simon Bachenberg, Sascha Schueller
  */
 
 /**
@@ -91,13 +91,13 @@ class SolrTalker {
 		$stop = false;
 
 		foreach ( $xml->lst as $item ) {
-			if ( $item['name'] == 'fields' ) {
+			if ( $item[ 'name' ] == 'fields' ) {
 				foreach ( $item->lst as $field ) {
 					if ( count( $field ) > 2 ) {
-						$dynamicBase = substr( $field->str[2], 1 ); // Get the dynamic base of the field eg. "*_dtmax"
-						$newField = str_replace( $dynamicBase, '', $field['name'] ); // Get the field name without the dynamicbase
+						$dynamicBase = substr( $field->str[ 2 ], 1 ); // Get the dynamic base of the field eg. "*_dtmax"
+						$newField = str_replace( $dynamicBase, '', $field[ 'name' ] ); // Get the field name without the dynamicbase
 						if ( strcasecmp( str_replace( ' ', '_', $newField ), $searchField ) == 0 ) { // Replace all spaces with underscore for better matching
-							$result = trim( $field['name'] );
+							$result = trim( $field[ 'name' ] );
 							if ( stripos( $dynamicBase, 'max' ) && stripos( $sort, 'desc' ) ) {
 								// For descending sorting use the MaX value field
 								continue 2; // we got the right field, stop it!
@@ -107,12 +107,12 @@ class SolrTalker {
 							} elseif ( !stripos( $dynamicBase, 'min' ) && !stripos( $dynamicBase, 'max' ) ) {
 								continue 2; // we got the right field, stop it!
 							}
-						} elseif ( strcasecmp( str_replace( ' ', '_', $field['name'] ), $searchField ) == 0 ) { // Replace all spaces with underscore for better matching
+						} elseif ( strcasecmp( str_replace( ' ', '_', $field[ 'name' ] ), $searchField ) == 0 ) { // Replace all spaces with underscore for better matching
 							$result = trim( $searchField );
 						}
 					} else {
-						if ( strcasecmp( trim( $field['name'] ), trim( $searchField ) ) == 0 ) {
-							$result = trim( $field['name'] );
+						if ( strcasecmp( trim( $field[ 'name' ] ), trim( $searchField ) ) == 0 ) {
+							$result = trim( $field[ 'name' ] );
 						}
 					}
 				}
@@ -135,19 +135,22 @@ class SolrTalker {
 			foreach ( $queryParts as $value ) {
 				if ( strpos( $value, ':' ) !== false ) { // Value conatins a  ":" ?
 					$parts = explode( ':', $value ); // Split the query part in key (parts[0]) and value (parts[1])
-					$solrField = $this->findField( $parts[0] ); // Search for a Solr field for the key
+					$solrField = $this->findField( $parts[ 0 ] ); // Search for a Solr field for the key
 					//If we have a Wildcard Search transform Query to Lowercase for a Better Matching.
 					//Because on wildcard and fuzzy searches, no text analysis is performed on the search word
 					//and no Analyseres get used
-					if ( strpos( $parts[1], '*' ) !== false ) {
-						$parts[1] = strtolower( $parts[1] );
+					if ( strpos( $parts[ 1 ], '*' ) !== false ) {
+						$parts[ 1 ] = strtolower( $parts[ 1 ] );
+						//If we got an "AND" or an "OR" we have to write them uppercase
+						$parts[ 1 ] = str_replace( ' and ', ' AND ', $parts[ 1 ] );
+						$parts[ 1 ] = str_replace( ' or ', ' OR ', $parts[ 1 ] );
 					}
 
 					//If we have a solrField Match add a ':' (its the Lucene equivalent of '=' )
 					if ( $solrField ) {
-						$queryStr = $queryStr . ' ' . $solrField . ':' . $parts[1];
+						$queryStr = $queryStr . ' ' . $solrField . ':' . $parts[ 1 ];
 					} else {
-						$queryStr = $queryStr . ' ' . $parts[0] . ' ' . $parts[1];
+						$queryStr = $queryStr . ' ' . $parts[ 0 ] . ' ' . $parts[ 1 ];
 					}
 				} else {
 					$queryStr = $queryStr . ' ' . $value;
@@ -174,8 +177,8 @@ class SolrTalker {
 		foreach ( $queryParts as $part ) {
 			if ( stripos( $part, '::' ) ) {
 				$parts = explode( '::', $part ); // Split the query part in key (parts[0]) and value (parts[1])
-				$parts[0] = $this->findField( $parts[0] ); // Search for a Solr field for the key
-				$queryStr = $queryStr . ' ' . $parts[0] . ':' . $parts[1]; // Build query string
+				$parts[ 0 ] = $this->findField( $parts[ 0 ] ); // Search for a Solr field for the key
+				$queryStr = $queryStr . ' ' . $parts[ 0 ] . ':' . $parts[ 1 ]; // Build query string
 			} elseif ( stripos( $part, ':' ) ) {
 				$queryStr = $queryStr . ' category' . substr( $part, stripos( $part, ':' ) );
 			} else {
@@ -218,7 +221,7 @@ class SolrTalker {
 		$ch = curl_init();
 
 		$url = str_replace( ' ', '+', $url );
-		if ($wgSolrDebug){
+		if ( $wgSolrDebug ) {
 			echo $url;
 		}
 		curl_setopt( $ch, CURLOPT_URL, $url );

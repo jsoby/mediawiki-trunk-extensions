@@ -6,7 +6,7 @@
  * This is the SpecialPage, displaying the SearchSets and Results
  * 
  * @defgroup SolrStore
- * @author Simon Bachenberg
+ * @author Simon Bachenberg, Sascha Schueller
  */
 class SpecialSolrSearch extends SpecialPage {
 
@@ -143,7 +143,7 @@ class SpecialSolrSearch extends SpecialPage {
 
 		if ( !empty( $query ) ) {
 			//Add the Extra query string plus a space to the end of the query
-			$query .=' '.trim($fieldSet->getQuery());
+			$query .=' ' . trim( $fieldSet->getQuery() );
 		}
 		// TODO: More Exception Handling for Format Exceptions
 		try {
@@ -447,7 +447,7 @@ class SpecialSolrSearch extends SpecialPage {
 			// Search engine doesn't report scoring info
 			$score = '';
 		} else {
-			$percent = sprintf( '%2.1f', $result->getScore() * 100 );
+			$percent = sprintf( '%2.1f', $result->getScore() * 10 ); // * 100
 			$score = wfMsg( 'search-result-score', $wgLang->formatNum( $percent ) ) . ' - ';
 		}
 
