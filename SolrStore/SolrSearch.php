@@ -4,7 +4,7 @@
  *
  * @ingroup SolrStore
  * @file
- * @author Simon Bachenberg
+ * @author Sascha Schueller, Simon Bachenberg
  */
 
 /**
@@ -17,7 +17,7 @@ class SolrSearch extends SearchEngine {
 	var $limit = 10;
 	var $offset = 0;
 	var $prefix = '';
-	var $searchTerms = array();
+	var $searchTerms = array( );
 	var $namespaces = array( NS_MAIN );
 	var $showRedirects = false;
 	var $solrTalker;
@@ -60,10 +60,10 @@ class SolrSearch extends SearchEngine {
 	static function prefixSearch( $ns, $search, $limit, &$results ) {
 		echo 'Prefix Search!<br />'; // @todo Is this a debug line? Certainly looks like one...if so, comment out/remove!
 		$it = SolrSearchSet::newFromQuery( 'prefix', $search, $ns, $limit, 0 );
-		$results = array();
+		$results = array( );
 		if ( $it ) { // $it can be null
 			while ( $res = $it->next() ) {
-				$results[] = $res->getTitle()->getPrefixedText();
+				$results[ ] = $res->getTitle()->getPrefixedText();
 			}
 		}
 		return false;
@@ -101,18 +101,18 @@ class SolrSearch extends SearchEngine {
 		$rindex = 0; // point to last rewritten character
 		$inquotes = false;
 
-		// "search everything" keyword
+// "search everything" keyword
 		$allkeyword = wfMsgForContent( 'searchall' );
 
 		$qlen = strlen( $query );
 
-		// quick check, most of the time we don't need any rewriting
+// quick check, most of the time we don't need any rewriting
 		if ( strpos( $query, ':' ) === false ) {
 			wfProfileOut( __METHOD__ );
 			return $query;
 		}
 
-		// check if this is query for related articles
+// check if this is query for related articles
 		$relatedkey = wfMsgForContent( 'searchrelated' ) . ':';
 		if ( $wgSolrUseRelated && strncmp( $query, $relatedkey, strlen( $relatedkey ) ) == 0 ) {
 			$this->related = true;
@@ -128,18 +128,18 @@ class SolrSearch extends SearchEngine {
 			array_keys( array_merge( $wgNamespaceAliases, $wgContLang->getNamespaceAliases() ) )
 		);
 
-		# add all namespace names w/o spaces
-		$nsNames = array();
+# add all namespace names w/o spaces
+		$nsNames = array( );
 		foreach ( $nsNamesRaw as $ns ) {
 			if ( $ns != '' ) {
-				$nsNames[] = $ns;
-				$nsNames[] = str_replace( '_', ' ', $ns );
+				$nsNames[ ] = $ns;
+				$nsNames[ ] = str_replace( '_', ' ', $ns );
 			}
 		}
 
 		$regexp = implode( '|', array_unique( $nsNames ) );
 
-		# rewrite the query by replacing valid namespace names
+# rewrite the query by replacing valid namespace names
 		$parts = preg_split( '/(")/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
 		$inquotes = false;
 		$rewritten = '';
@@ -150,9 +150,9 @@ class SolrSearch extends SearchEngine {
 			} elseif ( $inquotes ) {
 				$rewritten .= $part;
 			} else {
-				# replace namespaces
+# replace namespaces
 				$r = preg_replace_callback( '/(^|[| :])(' . $regexp . '):/i', array( $this, 'replaceNamespace' ), $part );
-				# replace to backend all: notation
+# replace to backend all: notation
 				$rewritten .= str_replace( $allkeyword . ':', 'all:', $r );
 			}
 		}
@@ -164,11 +164,11 @@ class SolrSearch extends SearchEngine {
 	/** callback to replace namespace names to internal notation, e.g. User: -> [2]: */
 	function replaceNamespace( $matches ) {
 		global $wgContLang;
-		$inx = $wgContLang->getNsIndex( str_replace( ' ', '_', $matches[2] ) );
+		$inx = $wgContLang->getNsIndex( str_replace( ' ', '_', $matches[ 2 ] ) );
 		if ( $inx === false ) {
-			return $matches[0];
+			return $matches[ 0 ];
 		} else {
-			return $matches[1] . "[$inx]:";
+			return $matches[ 1 ] . "[$inx]:";
 		}
 	}
 
@@ -181,7 +181,7 @@ class SolrSearch extends SearchEngine {
 		global $wgSolrSearchVersion;
 
 		if ( $wgSolrSearchVersion >= 2.1 && $this->prefix != '' ) {
-			# convert to internal backend prefix notation
+# convert to internal backend prefix notation
 			$term = $term . ' prefix:' . $this->prefix;
 		}
 
@@ -204,221 +204,21 @@ class SolrResult extends SearchResult {
 		return false;
 	}
 
-	function SolrResult( $result, $method ) {
-		global $wgContLang;
+	function SolrResult( $xml ) {
+		global $SolrSearchTemplateLoader;
+		wfDebug( "Solr line: '$xml'\n" );
 
-		$score = null;
-		$interwiki = null;
-		$namespace = null;
-		$title = null;
-
-		$xml = $result;
-		wfDebug( "Solr line: '$result'\n" );
-
-		// Defining results
-
-		$this->mDate = null;
-		$score = $xml->float;
-		$this->mScore = $score;
-
-		// -------------------------------------
-		// Get the shit out of the XML
-		// -------------------------------------
-		foreach ( $xml->arr as $doc ) {
-			switch ( $doc['name'] ) {
-				case 'text':
-					$nsText = $doc->str;
-
-					$this->mSize = '';
-					$this->mWordCount = count( $doc->str );
-					$snipmax = 10;
-					$textsnip = '';
-					$textsnipvar = 0;
-					foreach ( $doc->str as $inner ) {
-						$textsnipvar++;
-						if ( $textsnipvar >= 4 && $textsnipvar <= $snipmax ) {
-							$textsnip .= ' ' . $inner;
-						}
-						$this->mSize = $this->mSize + strlen( $inner );
-					}
-					$textsnip .= '...';
-					$this->mSize = ( $this->mSize / 3 );
-					// $this->mSize=$size;
-					break;
-				case 'Zuletzt geändert_dt':
-					$this->mDate = $doc->date;
-					break;
-			}
-		}
-
-		foreach ( $xml->str as $docs ) {
-			switch ( $docs['name'] ) {
-				case 'pagetitle':
-					$this->mTitle = $doc->str;
-					break;
-				case 'dbkey':
-					$title = $doc->str;
-					break;
-				case 'interwiki':
-					$this->mInterwiki = $doc->str;
-					break;
-			}
-		}
-
-		foreach ( $xml->int as $doci ) {
-			switch ( $doci['name'] ) {
-				case 'namespace':
-					$namespace = $doc->str;
-					break;
-			}
-		}
-
-		$title = urldecode( $title );
-		if ( !isset( $nsText ) ) {
-			$nsText = $wgContLang->getNsText( $namespace );
-		} else {
-			$nsText = urldecode( $nsText );
-		}
-
-		// make title
-		$this->mTitle = Title::makeTitle( $namespace, $title );
-
-		// HIGHLIGHT
-		// <em> & </em> Fix to <b> // if not, no highlighting!
-		// TITLE (LINK)
-		if ( $xml->highlight->title != '' ) {
-			$this->mHighlightTitle = str_replace( '<em>', '<b>', $xml->highlight->title );
-			$this->mHighlightTitle = str_replace( '</em>', '</b>', $this->mHighlightTitle );
-		} else {
-			$this->mHighlightTitle = '';
-		}
-		// TEXT (under link)
-		// $this->mHighlightText=$xml->highlight->title;
-		if ( $xml->highlight->Inhalt != '' ) {
-			$this->mHighlightText = str_replace( '<em>', '<b>', $xml->highlight->Inhalt );
-			$this->mHighlightText = str_replace( '</em>', '</b>', $this->mHighlightText );
-			$this->mHighlightText .= '...';
-		} else {// $this->mHighlightText=textsnip;
-			if ( isset( $_REQUEST['search'] ) != '' && isset( $textsnip ) != '' ) {
-				if ( strpos( strtolower( $textsnip ), strtolower( $_REQUEST['search'] ) ) ) {
-					$tempc = strlen( $_REQUEST['search'] );
-					$pos1 = strpos( strtolower( $textsnip ), strtolower( $_REQUEST['search'] ) );
-					$tmpa = substr( $textsnip, 0, $pos1 );
-					$tmpb = substr( $textsnip, ( $pos1 + $tempc ) );
-					$this->mHighlightText = $tmpa . '<b>' . substr( $textsnip, $pos1, $tempc ) . '</b>' . $tmpb;
-					// str_replace($_REQUEST['search'],"<b>".$_REQUEST['search']."</b>",$textsnip);
-				} else {
-					$this->mHighlightText = $textsnip;
-				}
-			} else {
-				$this->mHighlightText = $textsnip;
-			}
-		}
-		$this->mRedirectTitle = null;
-		$this->mHighlightSection = null;
-		$this->mSectionTitle = null;
-	}
-
-	/**
-	 * Get the pair [highlighted snippet, unmodified text] for highlighted text
-	 *
-	 * @param string $lines
-	 * @param string $nsText textual form of namespace
-	 * @param string $type
-	 * @param boolean $useFinalSeparator
-	 * @return array (highlighted, unmodified text)
-	 */
-	function extractSnippet( $lines, $nsText, $type, $useFinalSeparator = false ) {
-		if ( !array_key_exists( $type, $lines ) ) {
-			return array( null, null );
-		}
-		$ret = '';
-		$original = null;
-		foreach ( $lines[$type] as $h ) {
-			list( $s, $o ) = $this->extractSnippetLine( $h, $useFinalSeparator );
-			$ret .= $s;
-			$original = $o;
-		}
-		if ( $nsText != '' ) {
-			$ret = $nsText . ':' . $ret;
-		}
-		return array( $ret, $original );
-	}
-
-	/**
-	 * Parse one line of a snippet
-	 *
-	 * @param string $line
-	 * @param boolean $useFinalSeparator if "..." is to be appended to the end of snippet
-	 * @access protected
-	 * @return array(snippet,unmodified text)
-	 */
-	function extractSnippetLine( $line, $useFinalSeparator ) {
-		$parts = explode( ' ', $line );
-		if ( count( $parts ) != 4 && count( $parts ) != 5 ) {
-			wfDebug( "Bad result line:" . $line . "\n" );
-			return '';
-		}
-		$splits = $this->stripBracketsSplit( $parts[0] );
-		$highlight = $this->stripBracketsSplit( $parts[1] );
-		$suffix = urldecode( $this->stripBrackets( $parts[2] ) );
-		$text = urldecode( $parts[3] );
-		$original = null;
-		if ( count( $parts ) > 4 ) {
-			$original = urldecode( $parts[4] );
-		}
-
-		$splits[] = strlen( $text );
-		$start = 0;
-		$snippet = '';
-		$hi = 0;
-		$ellipsis = wfMsgForContent( 'ellipsis' );
-
-		foreach ( $splits as $sp ) {
-			$sp = intval( $sp );
-			// highlight words!
-			while ( $hi < count( $highlight ) && intval( $highlight[$hi] ) < $sp ) {
-				$s = intval( $highlight[$hi] );
-				$e = intval( $highlight[$hi + 1] );
-				$snippet .= substr( $text, $start, $s - $start ) .
-					'<span class="searchmatch">' . substr( $text, $s, $e - $s ) . '</span>';
-				$start = $e;
-				$hi += 2;
-			}
-			// copy till split point
-			$snippet .= substr( $text, $start, $sp - $start );
-			if ( $sp == strlen( $text ) && $suffix != '' ) {
-				$snippet .= $suffix;
-			} elseif ( $useFinalSeparator ) {
-				$snippet .= ' <b>' . $ellipsis . '</b> ';
-			}
-
-			$start = $sp;
-		}
-		return array( $snippet, $original );
-	}
-
-	/**
-	 * @access private
-	 */
-	function stripBrackets( $str ) {
-		if ( $str == '[]' ) {
-			return '';
-		}
-		return substr( $str, 1, strlen( $str ) - 2 );
-	}
-
-	/**
-	 * @access private
-	 * @return array
-	 */
-	function stripBracketsSplit( $str ) {
-		$strip = $this->stripBrackets( $str );
-		if ( $strip == '' ) {
-			return array();
-		} else {
-			return explode( ',', $strip );
-		}
+		$newtemplate = $SolrSearchTemplateLoader->applyTemplate( $xml ); // define Template in SolsStore
+		$this->mTitle = $newtemplate->mTitle;
+		$this->mRedirectTitle = $newtemplate->mRedirectTitle;
+		$this->mHighlightSection = $newtemplate->mHighlightSection;
+		$this->mSectionTitle = $newtemplate->mSectionTitle;
+		$this->mDate = $newtemplate->mDate;
+		$this->mScore = $newtemplate->mScore;
+		$this->mHighlightTitle = $newtemplate->mHighlightTitle;
+		$this->mHighlightText = $newtemplate->mHighlightText;
+		$this->mSize = $newtemplate->mSize;
+		$this->mWordCount = $newtemplate->mWordCount;
 	}
 
 	function getTitle() {
@@ -523,38 +323,38 @@ class SolrSearchSet extends SearchResultSet {
 	 * @param $searchAll Boolean
 	 * @return array
 	 */
-	public static function newFromQuery( $method, $query, $namespaces = array(), $limit = 20, $offset = 0, $searchAll = false ) {
+	public static function newFromQuery( $method, $query, $namespaces = array( ), $limit = 20, $offset = 0, $searchAll = false ) {
 		wfProfileIn( __METHOD__ );
 
 		$wgSolrTalker = new SolrTalker();
 
 		$query = $wgSolrTalker->queryChecker( $query );
 		$xml = $wgSolrTalker->solrQuery( $query, $offset, $limit, true, true ); // Abfrage ok, ergebniss in XML
-		$totalHits = $xml->result['numFound'];
+		$totalHits = $xml->result[ 'numFound' ];
 
-		$resultLines = array(); ;
+		$resultLines = array( );
 
 		$highl = $xml->xpath( '//lst[@name="highlighting"]/lst' );
 
 		$hli = 0;
 
 		foreach ( $xml->result->doc as $doc ) {
-			if ( isset( $highl[$hli]->arr ) ) {
-				foreach ( $highl[$hli]->arr as $feld ) {
-					if ( isset( $feld['name'] ) ) {
-						switch ( $feld['name'] ) {
+			if ( isset( $highl[ $hli ]->arr ) ) {
+				foreach ( $highl[ $hli ]->arr as $feld ) {
+					if ( isset( $feld[ 'name' ] ) ) {
+						switch ( $feld[ 'name' ] ) {
 							case 'title':
-								$doc[]->highlight->title = $feld->str;
+								$doc[ ]->highlight->title = $feld->str;
 								break;
-							case 'Inhalt de_t':
-								$doc[]->highlight->Inhalt = $feld->str;
+							case 'Inhalt de_t': // TODO: is style ?
+								$doc[ ]->highlight->Inhalt = $feld->str;
 								break;
 						}
 					}
 				}
 			}
 			$hli++;
-			$resultLines[] = $doc;
+			$resultLines[ ] = $doc;
 		}
 
 		$suggestion = null;
@@ -562,8 +362,8 @@ class SolrSearchSet extends SearchResultSet {
 		$interwiki = null;
 
 		$resultSet = new SolrSearchSet(
-			$method, $query, $resultLines, count( $resultLines ), $totalHits,
-			$suggestion, $info, $interwiki
+						$method, $query, $resultLines, count( $resultLines ), $totalHits,
+						$suggestion, $info, $interwiki
 		);
 
 		wfProfileOut( __METHOD__ );
@@ -606,15 +406,15 @@ class SolrSearchSet extends SearchResultSet {
 			return;
 		}
 
-		// parse split points and highlight changes
+// parse split points and highlight changes
 		list( $dummy, $points, $sug ) = explode( ' ', $suggestion );
 		$sug = urldecode( $sug );
 		$points = explode( ',', substr( $points, 1, -1 ) );
 		array_unshift( $points, 0 );
 		$suggestText = '';
 		for ( $i = 1; $i < count( $points ); $i += 2 ) {
-			$suggestText .= htmlspecialchars( substr( $sug, $points[$i - 1], $points[$i] - $points[$i - 1] ) );
-			$suggestText .= '<em>' . htmlspecialchars( substr( $sug, $points[$i], $points[$i + 1] - $points[$i] ) ) . '</em>';
+			$suggestText .= htmlspecialchars( substr( $sug, $points[ $i - 1 ], $points[ $i ] - $points[ $i - 1 ] ) );
+			$suggestText .= '<em>' . htmlspecialchars( substr( $sug, $points[ $i ], $points[ $i + 1 ] - $points[ $i ] ) ) . '</em>';
 		}
 		$suggestText .= htmlspecialchars( substr( $sug, end( $points ) ) );
 
@@ -633,7 +433,7 @@ class SolrSearchSet extends SearchResultSet {
 				$phrases[$i]
 			);
 			if ( $i + 1 < count( $phrases ) ) {
-				$out .= '"' . $phrases[$i + 1] . '"'; // phrase text
+				$out .= '"' . $phrases[ $i + 1 ] . '"'; // phrase text
 			}
 		}
 		return $out;
@@ -641,7 +441,7 @@ class SolrSearchSet extends SearchResultSet {
 
 	function genericPrefixCallback( $matches ) {
 		global $wgContLang;
-		return $wgContLang->getFormattedNsText( $matches[1] ) . ':';
+		return $wgContLang->getFormattedNsText( $matches[ 1 ] ) . ':';
 	}
 
 	function numRows() {
@@ -652,26 +452,26 @@ class SolrSearchSet extends SearchResultSet {
 		$resq = preg_replace( "/\\[.*?\\]:/", ' ', $this->mQuery ); # generic prefixes
 		$resq = preg_replace( '/all:/', ' ', $resq );
 
-		// @todo FIXME: this is ripped from SearchMySQL and probably kind of sucks,
-		// but it handles quoted phrase searches more or less correctly.
-		// Should encapsulate this stuff better.
-		// @todo FIXME: This doesn't handle parenthetical expressions.
-		$regexes = array();
-		$m = array();
+// @todo FIXME: this is ripped from SearchMySQL and probably kind of sucks,
+// but it handles quoted phrase searches more or less correctly.
+// Should encapsulate this stuff better.
+// @todo FIXME: This doesn't handle parenthetical expressions.
+		$regexes = array( );
+		$m = array( );
 		$lc = SearchEngine::legalSearchChars();
 		if ( preg_match_all( '/([-+<>~]?)(([' . $lc . ']+)(\*?)|"[^"]*")/', $resq, $m, PREG_SET_ORDER ) ) {
 			foreach ( $m as $terms ) {
-				if ( !empty( $terms[3] ) ) {
-					// Match individual terms in result highlighting...
-					$regexp = preg_quote( $terms[3], '/' );
-					if ( $terms[4] ) {
+				if ( !empty( $terms[ 3 ] ) ) {
+// Match individual terms in result highlighting...
+					$regexp = preg_quote( $terms[ 3 ], '/' );
+					if ( $terms[ 4 ] ) {
 						$regexp .= '[0-9A-Za-z_]+';
 					}
 				} else {
-					// Match the quoted term in result highlighting...
-					$regexp = preg_quote( str_replace( '"', '', $terms[2] ), '/' );
+// Match the quoted term in result highlighting...
+					$regexp = preg_quote( str_replace( '"', '', $terms[ 2 ] ), '/' );
 				}
-				$regexes[] = $regexp;
+				$regexes[ ] = $regexp;
 			}
 			wfDebug( __METHOD__ . ': Match with /' . implode( '|', $regexes ) . "/\n" );
 		} else {
@@ -752,7 +552,7 @@ class SolrSearchSet extends SearchResultSet {
 	public function next() {
 		if ( $this->mPos < $this->mResultCount ) {
 			$this->mPos++;
-			return new SolrResult( $this->mResults[$this->mPos - 1], $this->mMethod );
+			return new SolrResult( $this->mResults[ $this->mPos - 1 ] );
 		} else {
 			return null;
 		}

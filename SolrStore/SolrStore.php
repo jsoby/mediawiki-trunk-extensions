@@ -5,10 +5,9 @@
  * Apache Solr.
  *
  * @defgroup SolrStore
- * @author Stephan Gambke, Simon Bachenberg
- * @version 0.5 Beta
+ * @author Stephan Gambke, Simon Bachenberg, Sascha Schueller
+ * @version 0.6 Beta
  */
-
 /**
  * The main file of the SolrConnector extension
  *
@@ -26,17 +25,17 @@ if ( !defined( 'SMW_VERSION' ) ) {
 /**
  * The Solr Connector version
  */
-define( 'SC_VERSION', '0.5 Beta' );
+define( 'SC_VERSION', '0.6 Beta' );
 
 // register the extension
 // TODO: Add other authors here and in the file header
 $wgExtensionCredits[ defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'other' ][ ] = array(
-	'path'			=>__FILE__,
-	'name'			=>'SolrStore',
-	'author'		=>array( '[https://www.mediawiki.org/wiki/User:F.trott Stephan Gambke]', '[https://www.mediawiki.org/wiki/User:SBachenberg Simon Bachenberg]', 'Sascha Schüller' ),
-	'url'			=>'https://www.mediawiki.org/wiki/Extension:SolrStore',
+	'path'=>__FILE__,
+	'name'=>'SolrStore',
+	'author'=>array( '[https://www.mediawiki.org/wiki/User:F.trott Stephan Gambke]', '[https://www.mediawiki.org/wiki/User:SBachenberg Simon Bachenberg]', 'Sascha Schüller' ),
+	'url'=>'https://www.mediawiki.org/wiki/Extension:SolrStore',
 	'descriptionmsg'=>'solrstore-desc',
-	'version'		=>SC_VERSION,
+	'version'=>SC_VERSION,
 );
 
 
@@ -48,15 +47,15 @@ $wgExtensionMessagesFiles[ 'SolrStore' ]		= $dir . '/SolrStore.i18n.php';
 $wgExtensionMessagesFiles[ 'SolrStoreAlias' ]	= $dir . '/SolrStore.alias.php';
 
 // register class files with the Autoloader
-$wgAutoloadClasses[ 'SolrConnectorStore' ]		= $dir . '/SolrConnectorStore.php';
-$wgAutoloadClasses[ 'SolrDoc' ]					= $dir . '/SolrDoc.php';
-$wgAutoloadClasses[ 'SolrTalker' ]				= $dir . '/SolrTalker.php';
-$wgAutoloadClasses[ 'SolrSearch' ]				= $dir . '/SolrSearch.php';
-$wgAutoloadClasses[ 'SolrResult' ]				= $dir . '/SolrSearch.php';
-$wgAutoloadClasses[ 'SolrSearchSet' ]			= $dir . '/SolrSearch.php';
-$wgAutoloadClasses[ 'SpecialSolrSearch' ]		= $dir . '/SpecialSolrSearch.php';
-$wgAutoloadClasses[ 'SolrSearchFieldSet' ]		= $dir . '/SolrSearchFieldSet.php';
-
+$wgAutoloadClasses[ 'SolrConnectorStore' ]			= $dir . '/SolrConnectorStore.php';
+$wgAutoloadClasses[ 'SolrDoc' ]						= $dir . '/SolrDoc.php';
+$wgAutoloadClasses[ 'SolrTalker' ]					= $dir . '/SolrTalker.php';
+$wgAutoloadClasses[ 'SolrSearch' ]					= $dir . '/SolrSearch.php';
+$wgAutoloadClasses[ 'SolrResult' ]					= $dir . '/SolrSearch.php';
+$wgAutoloadClasses[ 'SolrSearchSet' ]				= $dir . '/SolrSearch.php';
+$wgAutoloadClasses[ 'SpecialSolrSearch' ]			= $dir . '/SpecialSolrSearch.php';
+$wgAutoloadClasses[ 'SolrSearchFieldSet' ]			= $dir . '/SolrSearchFieldSet.php';
+$wgAutoloadClasses[ 'SolrSearchTemplateLoader' ]	= $dir . '/SolrSearchTemplateLoader.php';
 
 // Specialpage
 $wgSpecialPages[ 'SolrSearch' ]			= 'SpecialSolrSearch'; # Tell MediaWiki about the new special page and its class name
@@ -66,12 +65,14 @@ $wgSpecialPageGroups[ 'SolrSearch' ]	= 'smw_group';
 // original store
 $wgscBaseStore				= $smwgDefaultStore;
 $smwgDefaultStore			= "SolrConnectorStore";
-$smwgQuerySources[ "solr" ] = "SolrConnectorStore";
+$smwgQuerySources[ "solr" ]	= "SolrConnectorStore";
 $wgSearchType				= 'SolrSearch';
 
 // Solr Configuration
-$wgSolrTalker		= new SolrTalker();
-$wgSolrShowRelated	= true;
-$wgSolrDebug		= false;
-$wgSolrUrl			= 'http://127.0.0.1:8080/solr';
-$wgSolrFields		= array( );
+$wgSolrTalker				= new SolrTalker();
+$SolrSearchTemplateLoader	= new SolrSearchTemplateLoader();
+$wgSolrUrl					= 'http://127.0.0.1:8080/solr';
+$wgSolrTemplate				= "_Standart";
+$wgSolrFields				= array( );
+$wgSolrShowRelated			= true;
+$wgSolrDebug				= false;
