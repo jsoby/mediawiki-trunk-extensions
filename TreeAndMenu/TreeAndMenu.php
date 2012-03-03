@@ -14,7 +14,7 @@
 
 if( !defined( 'MEDIAWIKI' ) ) die( 'Not an entry point.' );
 
-define( 'TREEANDMENU_VERSION','2.0.3, 2012-02-15' );
+define( 'TREEANDMENU_VERSION','2.0.4, 2012-03-03' );
 
 // Set any unset images to default titles
 if( !isset( $wgTreeViewImages ) || !is_array( $wgTreeViewImages ) ) $wgTreeViewImages = array();
@@ -254,7 +254,7 @@ class TreeAndMenu {
 							document.getElementById('$id').innerHTML = $objid.toString();
 							$opennodesjs
 							for(i in window.tamOnload_$objid) { window.tamOnload_{$objid}[i](); }";
-						$wgOut->addScript( "<script type=\"$wgJsMimeType\">$(function(){\n$script\n});</script>" );
+						$wgOut->addScript( "<script type=\"$wgJsMimeType\">$script</script>" );
 						$html = "$top<div class='$class' id='$id'></div>$bottom";
 						$html .= "<script type=\"$wgJsMimeType\">window.tamOnload_$objid=[]</script>";
 					} else {
