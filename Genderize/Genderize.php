@@ -49,7 +49,7 @@ $wgExtensionCredits[ 'other' ][] = array(
 	'license' => 'AGPL-3.0+',
 	'version' => '0.0.1',
 	'author'  => array( '[http://www.mediawiki.org/wiki/User:Van_de_Bugger Van de Bugger]' ),
-	//~ 'url' => 'http://example.org/',
+	'url'     => 'http://www.mediawiki.org/wiki/Extension:Genderize',
 	'descriptionmsg'  => 'genderize-description',
 );
 

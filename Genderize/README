@@ -6,18 +6,29 @@ Let user page titles and links to user pages be gender-specific.
 
 == Why? ==
 
-MediaWiki 1.18.0 introduced $wgExtraGenderNamespaces for it. Yes, but it does only 1/4 of the job.
-If you set up $wgExtraGenderNamespaces properly, tooltips of links to user pages are genderized.
-But link text, user page title and namespace tab are not. This extension let
-$wgExtraGenderNamespaces do its part of the job and does the rest.
+MediaWiki 1.18.0 introduced $wgExtraGenderNamespaces, but it does only part of the job. If you set
+up $wgExtraGenderNamespaces properly, tooltips of links to user pages and user page titles are
+genderized, but link text and namespace tab are not. This extension let $wgExtraGenderNamespaces do
+its part of the job and does the rest.
+
+I believe some day all the functionality will be implemented in MediaWiki core and the Genderize
+extension will be obsolete. But for MediaWiki 1.18.x the Genderize fills the gap.
+
+== Download ==
+
+ svn checkout http://svn.wikimedia.org/svnroot/mediawiki/trunk/extensions/Genderize
 
 == Usage ==
 
+Add to your LocalSettings.php:
+
  // $egGenderize should be set *before* including `Genderize.php'.
- $egGenderize[ 'male'    ] = 'Male';
- $egGenderize[ 'female'  ] = 'Female';
- $egGenderize[ 'unknown' ] = 'Unknown';
- require_once( '.../Genderize.php' );
+ $egGenderize[ 'male'    ] = 'Male';     // Replace Male, Female,
+ $egGenderize[ 'female'  ] = 'Female';   // and Unknown with  proper words
+ $egGenderize[ 'unknown' ] = 'Unknown';  // in wiki content language.
+ // Do *not* change $wgExtraGenderNamespaces[ NS_USER ].
+ // Include extension file:
+ require_once( 'path-to-extension/Genderize.php' );
 
 If $egGender is not set, English `User' is used instead.
 
@@ -25,12 +36,12 @@ If $egGender is not set, English `User' is used instead.
 
 (Let us assume $egGenderize is set as in the example above.)
 
-Liтks to a user page can be specified as [[Male:Name]], [[Female:Name]], or [[Unknown:Name]], or as
+Links to a user page can be specified as [[Male:Name]], [[Female:Name]], or [[Unknown:Name]], or as
 canonical [[User:Name]]. Regardless of the used prefix, link will be rendered with proper prefix.
 
-User page title will be genderized, e. g. `Female:Name'. Namespace tab (in case of Vector skin it
-is above the left-upper corner of the page) will be `Female', not `User'.  
- 
+User page title will be genderized, e. g. `Female:Name'. Namespace tab (in case of Vector skin it is
+above the left-upper corner of the page) will be `Female', not `User'.
+
 == Known issues ==
 
 Some messages are not translated yet. For example, namespace's tab tooltip.
@@ -39,5 +50,11 @@ Some messages are not translated yet. For example, namespace's tab tooltip.
 
 GNU Affero General Public License, version 3 or any later version. See `AGPL-3.0.txt' file for the
 full license text.
+
+== Links ==
+
+* Extension page: http://www.mediawiki.org/wiki/Extension:Genderize
+* Author page:    http://www.mediawiki.org/wiki/User:Van_de_Bugger
+* License page:   http://www.gnu.org/licenses/agpl.html
 
 <!-- end of file -->
