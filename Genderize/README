@@ -16,7 +16,7 @@ extension will be obsolete. But for MediaWiki 1.18.x the Genderize fills the gap
 
 == Download ==
 
- svn checkout http://svn.wikimedia.org/svnroot/mediawiki/trunk/extensions/Genderize
+ svn checkout https://svn.wikimedia.org/svnroot/mediawiki/trunk/extensions/Genderize
 
 == Usage ==
 
@@ -53,8 +53,8 @@ full license text.
 
 == Links ==
 
-* Extension page: http://www.mediawiki.org/wiki/Extension:Genderize
-* Author page:    http://www.mediawiki.org/wiki/User:Van_de_Bugger
-* License page:   http://www.gnu.org/licenses/agpl.html
+* Extension page: https://www.mediawiki.org/wiki/Extension:Genderize
+* Author page:    https://www.mediawiki.org/wiki/User:Van_de_Bugger
+* License page:   https://www.gnu.org/licenses/agpl.html
 
 <!-- end of file -->
