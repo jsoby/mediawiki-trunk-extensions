@@ -244,6 +244,9 @@ Kit da deuler ur sell war [//www.mediawiki.org/wiki/API:Main_page titouroù an A
 	'apisb-legend-generator-parameters' => 'Ganer',
 	'apisb-result-request-url' => 'Goulenn URL :',
 	'apisb-result-request-post' => 'roadennoù POST :',
+	'apisb-label-format' => 'Furmad',
+	'apisb-label-action' => 'Ober',
+	'apisb-label-doc' => 'Teuliadur',
 	'apisb-select-action' => 'Dibab un ober',
 	'apisb-select-query' => '(dibab ar reked)',
 	'apisb-select-value' => '(dibab an talvoud)',
@@ -739,13 +742,13 @@ $messages['he'] = array(
 	'apisandbox' => 'ארגז חול של API',
 	'apisb-no-js' => "'''שגיאה''': היכולת הזאת דורשת JavaScript",
 	'apisb-intro' => "השתמשו בדף הזה כדי להתנסות עם '''API של מדיה־ויקי'''.
-פנו ל־[//www.mediawiki.org/wiki/API:Main_page תיעוד של ה־API] למידע נוסף של שימוש ב־API (באנגלית). למשל: [//www.mediawiki.org/wiki/API#A_simple_example איך לקבל את התוכן של הדף הראשי]. בחרו בפעולה (action) לדוגמאות נוספות.",
+פנו ל[//www.mediawiki.org/wiki/API:Main_page תיעוד של ה־API] למידע נוסף של שימוש ב־API (באנגלית). למשל: [//www.mediawiki.org/wiki/API#A_simple_example איך לקבל את התוכן של הדף הראשי]. בחרו בפעולה (action) לדוגמאות נוספות.",
 	'apisb-api-disabled' => 'API אינו פעיל באתר הזה.',
 	'apisb-legend-parameters' => 'פרמטרים',
 	'apisb-legend-result' => 'תוצאה',
 	'apisb-legend-generic-parameters' => 'פרמטרים כלליים',
 	'apisb-legend-generator-parameters' => 'מחולל',
-	'apisb-result-request-url' => 'כתובת ה-URL של הבקשה:',
+	'apisb-result-request-url' => 'כתובת ה־URL של הבקשה:',
 	'apisb-result-request-post' => 'נתוני POST:',
 	'apisb-label-format' => 'תסדיר',
 	'apisb-label-action' => 'פעולה',
@@ -759,8 +762,8 @@ $messages['he'] = array(
 	'apisb-params-desc' => 'תיאור',
 	'apisb-loading' => 'בטעינה...',
 	'apisb-load-error' => 'שגיאה בטעינת תיאור API',
-	'apisb-request-error' => 'שגיעה בביצוע בקשת API',
-	'apisb-namespaces-error' => 'שגיעה בטעינת שם מתחם',
+	'apisb-request-error' => 'שגיאה בביצוע בקשת API',
+	'apisb-namespaces-error' => 'שגיאה בטעינת שם מתחם',
 	'apisb-ns-main' => '(ראשי)',
 	'apisb-submit' => 'ביצוע שאילתה',
 	'apisb-query-prop' => 'מאפיינים',
@@ -768,7 +771,7 @@ $messages['he'] = array(
 	'apisb-query-meta' => 'מידע נוסף',
 	'apisb-example' => 'דוגמה',
 	'apisb-examples' => 'דוגמאות',
-	'apisb-clear' => 'ריקון',
+	'apisb-clear' => 'ניקוי',
 	'apisb-request-time' => 'זמן בקשה: $1',
 );
 
@@ -1736,6 +1739,9 @@ $messages['sl'] = array(
 	'apisb-legend-generator-parameters' => 'Generator',
 	'apisb-result-request-url' => 'URL zahteve:',
 	'apisb-result-request-post' => 'Podatki POST:',
+	'apisb-label-format' => 'Oblika',
+	'apisb-label-action' => 'Dejanje',
+	'apisb-label-doc' => 'Dokumentacija',
 	'apisb-select-action' => 'Izberite dejanje',
 	'apisb-select-query' => '(izberite poizvedbo)',
 	'apisb-select-value' => '(izberite vrednost)',
@@ -1755,6 +1761,7 @@ $messages['sl'] = array(
 	'apisb-example' => 'Primer',
 	'apisb-examples' => 'Primeri',
 	'apisb-clear' => 'Počisti',
+	'apisb-request-time' => 'Trajanje zahteve: $1',
 );
 
 /** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
@@ -1948,6 +1955,9 @@ $messages['vi'] = array(
 	'apisb-legend-generator-parameters' => 'Bộ xuất phát',
 	'apisb-result-request-url' => 'URL của yêu cầu:',
 	'apisb-result-request-post' => 'Dữ liệu POST:',
+	'apisb-label-format' => 'Định dạng',
+	'apisb-label-action' => 'Tác vụ',
+	'apisb-label-doc' => 'Tài liệu',
 	'apisb-select-action' => 'Chọn tác vụ',
 	'apisb-select-query' => '(chọn truy vấn)',
 	'apisb-select-value' => '(chọn giá trị)',
@@ -1967,6 +1977,7 @@ $messages['vi'] = array(
 	'apisb-example' => 'Ví dụ',
 	'apisb-examples' => 'Ví dụ',
 	'apisb-clear' => 'Tẩy trống',
+	'apisb-request-time' => 'Thời gian xử lý: $1',
 );
 
 /** Yiddish (ייִדיש)

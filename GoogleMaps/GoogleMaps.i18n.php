@@ -3405,19 +3405,28 @@ $wgGoogleMapsMessages['kn'] = array(
 );
 
 /** Korean (한국어)
+ * @author Freebiekr
  * @author Klutzy
  * @author Kwj2772
  * @author ToePeu
  * @author Yknok29
  */
 $wgGoogleMapsMessages['ko'] = array(
-	'gm-remove' => '제거',
+	'gm-balloon-title' => '제목:',
+	'gm-balloon-link-article' => '이 문서로 링크(선택 사항):',
+	'gm-make-marker' => '설명(위키 마크업 사용 가능):',
+	'gm-remove' => '삭제',
+	'gm-caption' => '설명',
+	'gm-tab-title' => '탭 제목',
+	'gm-tab' => '탭',
+	'gm-save-point' => '저장하고 닫기',
 	'gm-no-results' => '죄송합니다. 결과가 없습니다.',
 	'gm-map' => '지도',
 	'gm-scale-control' => '축척',
 	'gm-yes' => '예',
 	'gm-no' => '아니오',
 	'gm-search' => '찾기',
+	'gm-clear-search' => '검색 결과 지우기',
 	'gm-meters' => '미터',
 	'gm-miles' => '마일',
 	'gm-earth' => '지구',

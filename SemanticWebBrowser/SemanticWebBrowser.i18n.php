@@ -176,6 +176,22 @@ $messages['nl'] = array(
 	'swb_inverse_label_default' => '$1 van',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'browsewiki' => 'Przeglądaj wiki & sieć semantyczną',
+	'swb_desc' => 'Dodaje specjalną stronę [[Special:BrowseWiki|Przeglądaj wiki & sieć semantyczną]]',
+	'swb_browse_article' => 'Wpisz nazwę artykułu, od którego chcesz rozpocząć przeglądanie semantyczne.',
+	'swb_browse_go' => 'Przejdź',
+	'swb_browse_show_incoming' => 'pokaż właściwości przychodzące łączące tutaj',
+	'swb_browse_hide_incoming' => 'ukryj właściwości przychodzące łączące tutaj',
+	'swb_browse_no_outgoing' => 'Ta strona nie ma właściwości.',
+	'swb_browse_no_incoming' => 'Żadne własności nie linkują do tej strony.',
+	'swb_inverse_label_property' => 'Etykieta odwrotnej własności',
+	'swb_inverse_label_default' => '$1 z',
+);
+
 /** Pashto (پښتو)
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */

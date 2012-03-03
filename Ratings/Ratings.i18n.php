@@ -89,6 +89,23 @@ Die aktuelle Bewertung eines Benutzers wird angezeigt, sofern er bereits eine vo
 	'ratings-no-votes-yet' => 'Bislang wurde dies von niemanden bewertet.',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'ratings-desc' => 'Permite a los usuarios valorar las diferentes "propiedades" de las páginas',
+	'right-rate' => 'Valora cierta propiedad de una página',
+	'ratings-starsratings-desc' => 'Muestra un simple control de evaluación mediante estrellas que permite al usuario valorar una determinada propiedad de una página.
+El voto actual del usuario aparecerá inicialmente una vez que haya votado.',
+	'ratings-par-page' => 'La página a la que se aplican las valoraciones.',
+	'ratings-par-tag' => 'La etiqueta de valoración. Indica la "propiedad" de la página que recibe las valoraciones.',
+	'ratings-par-showdisabled' => 'Mostrar las valoraciones cuando un usuario no pueda votar (en modo de sólo lectura).',
+	'ratings-par-incsummary' => 'Mostrar un resumen de los votos actuales encima del elemento de valoración?',
+	'ratings-votesummary-desc' => 'Muestra un breve resumen de los votos para la página y la pareja de propiedades especificadas.',
+	'ratings-current-score' => 'Valoración actual de usuarios: $1 ($2 {{PLURAL:$2|valoración|valoraciones}})',
+	'ratings-no-votes-yet' => 'Nadie ha valorado esto todavía',
+);
+
 /** French (Français)
  * @author IAlex
  * @author Sherbrooke

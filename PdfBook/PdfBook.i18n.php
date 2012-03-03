@@ -135,6 +135,15 @@ $messages['dsb'] = array(
 	'pdfbook-desc' => 'Staja knigły z bokow w kategoriji gromadu a eksportěrujo je ako PDF-knigły',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'pdfbook-action' => 'Imprimir en formato PDF',
+	'pdfbook-log' => '$1 exportado como libro en PDF',
+	'pdfbook-desc' => 'Compone un libro a partir de las páginas presentes en una categoría y lo exporta como libro en PDF',
+);
+
 /** Basque (Euskara)
  * @author An13sa
  */

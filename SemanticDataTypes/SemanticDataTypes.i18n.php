@@ -147,6 +147,14 @@ $messages['nl'] = array(
 	'sdt-duration' => 'Duur',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'sdt-desc' => 'Dodatkowe typy danych dla Semantycznych MediaWiki i rozszerzeń',
+	'sdt-duration' => 'Czas trwania',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */

@@ -98,6 +98,13 @@ $messages['ms'] = array(
 	'suhosin-desc' => 'Menyesuaikan tetapan MediaWiki dalam batasan sambungan "Suhosin" yang diaktifkan (Hardened-PHP Project)',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'suhosin-desc' => 'Past MediaWiki-instellingen aan tot binnen de beperkingen van een actieve "Suhosin"-extensie (Hardened-PHP Project)',
+);
+
 /** Polish (Polski)
  * @author BeginaFelicysym
  */

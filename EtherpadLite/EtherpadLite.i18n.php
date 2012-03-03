@@ -19,11 +19,19 @@ $messages['en'] = array(
 	'etherpadlite-pad-used-more-than-once' => 'The pad "$1" has already been used before on this page; you can have many pads on a page, but only if they are different pads.',
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ * @author Siebrand
+ */
 $messages['qqq'] = array(
 	'etherpadlite-invalid-pad-url' => "Error if the url did not meet validation (for example, if it didn't start with an allowed protocol). $1 is the invalid url",
-	'etherpadlite-url-is-not-whitelisted' => "Error if url isn't in list of allowed urls. $1 is name of url specified by user, $2 is a comma separated list of allowed urls, $3 is the number of urls in the allowed list",
-	'etherpadlite-pad-used-more-than-once' => 'Error if users try to show multiple frames of the very same pad, identified by the full pad url $1 (server/padid). Each pad must be unique on a wiki page.',
+	'etherpadlite-url-is-not-whitelisted' => "Error if URL isn't in list of allowed URLs. Parameters:
+* $1 is name of url specified by user
+* $2 is a comma separated list of allowed URLs
+* $3 is the number of URLs in the allowed list",
+	'etherpadlite-empty-whitelist' => 'Parameters:
+* $1 is a URL not in the whitelist for Etherpad Lite servers.',
+	'etherpadlite-pad-used-more-than-once' => 'Error if users try to show multiple frames of the very same pad. Each pad must be unique on a wiki page. Parameters:
+* $1 is a full pad URL (server/padid).',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
@@ -132,6 +140,17 @@ $messages['mk'] = array(
 	'etherpadlite-url-is-not-whitelisted' => '„$1“ не е на белиот список на дозволени опслужувачи за Etherpad Lite. {{PLURAL:$3|Единствениот дозволен е $2|Дозволени се следниве: $2}}.',
 	'etherpadlite-empty-whitelist' => '„$1“ не е на белиот список на дозволени опслужувачи за Etherpad Lite. На списокот нема ниеден дозволен осплужувач.',
 	'etherpadlite-pad-used-more-than-once' => 'Плочката „$1“ е веќе користена на оваа страница. На страницава може да имате повеќе плочки, но само ако се различни.',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'etherpadlite-desc' => "Voegt de parsertag &lt;eplite&gt; toe om één of meer pagina's uit Etherpad Lite toe te voegen aan een pagina die lokaal of extern gehost worden op één of meerdere servers",
+	'etherpadlite-invalid-pad-url' => '"$1" is geen geldige URL voor Etherpad Lite of een padnaam.',
+	'etherpadlite-url-is-not-whitelisted' => '"$1" staat niet in de witte lijst voor Etherpad Lite-servers. {{PLURAL:$3|$2 is de enige server die gebruikt kan worden|De volgende servers kunnen gebruikt worden: $2}}.',
+	'etherpadlite-empty-whitelist' => '"$1" staat niet in de witte lijst voor Etherpad Lite-servers. Er zijn op het moment geen servers die gebruikt kunnen worden.',
+	'etherpadlite-pad-used-more-than-once' => 'De pad "$1" wordt al gebruikt op deze pagina. U kunt meerdere pads op een pagina toevoegen, maar elke pad slechts één keer.',
 );
 
 /** Polish (Polski)

@@ -450,7 +450,7 @@ $messages['mk'] = array(
 	'commentspammer-desc' => 'Одбива уредувања од осомничени спамери на коментари кои се на DNS-црниот список',
 	'commentspammer-log-msg' => 'уредување од [[Special:Contributions/$1|$1]] на [[:$2]].',
 	'commentspammer-log-msg-info' => 'Последен пат спамирано пред $1 {{PLURAL:$1|ден|дена}}, нивото на загрозеност е $2, а кодот на прекршокот е $3.
-[http://www.projecthoneypot.org/search_ip.php?ip=$4 Погледајте детали], или [[Special:Blockip/$4|блокирајте]].',
+[http://www.projecthoneypot.org/search_ip.php?ip=$4 Погледајте подробности], или [[Special:Blockip/$4|блокирајте]].',
 	'cspammerlogpagetext' => 'Евиденција на уредувања кои биле дозволени или одбиени зависно од тоа дали нивниот избвор бил познат како спамер на коментари.',
 	'cspammer-log-page' => 'Дневник на спамери на коментари',
 );

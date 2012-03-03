@@ -60,6 +60,14 @@ $messages['dsb'] = array(
 	'parserfun-invalid-caller-mode' => 'Žeden płaśiwy modus abo numeriski indeks njepódany.',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'parserfun-desc' => 'Añade una función del analizador <code>#parse</code> para analizar texto wiki e introduce el prefijo <code>THIS:</code> para las páginas de información relacionadas con las variables mágicas',
+	'parserfun-invalid-caller-mode' => 'No se especificó ningún modo de operación ni índice numérico válido.',
+);
+
 /** French (Français)
  * @author Gomoko
  */

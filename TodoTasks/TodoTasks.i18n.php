@@ -998,7 +998,7 @@ $messages['mk'] = array(
 	'tasklistprojdisp' => 'Прикажи',
 	'tasklistbyname' => '== Список на задачи за %s ==',
 	'tasklistnowguseprojects' => 'Го имате наместено $wgUseProjects на „false“ и затоа не можете да ја користите оваа страница.',
-	'tasklistnoprojects' => "Грешка: Изгледа сте овозможиле '''\$wgUseProjects''', но не сте создале [[MediaWiki:TodoTasksValidProjects]]. Видете [http://www.mediawiki.org/wiki/Extension:Todo_Tasks#Step_8 Напатствија за инсталирање] за повеќе детали.",
+	'tasklistnoprojects' => "Грешка: Изгледа сте овозможиле '''\$wgUseProjects''', но не сте создале [[MediaWiki:TodoTasksValidProjects]]. Видете [http://www.mediawiki.org/wiki/Extension:Todo_Tasks#Step_8 Напатствија за инсталирање] за повеќе подробности.",
 	'tasklistemailbody' => 'Некој ви доделил нова Задача на %s.
 
 За да ја видите вашиот полн Список на задачи, одете на %s.

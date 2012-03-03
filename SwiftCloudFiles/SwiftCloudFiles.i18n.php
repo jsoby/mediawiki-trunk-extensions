@@ -92,6 +92,20 @@ $messages['ms'] = array(
 	'swiftcloudfiles-desc' => "Menyertakan dan mendaftarkan API ''php-cloudfiles'' (https://github.com/rackspace/php-cloudfiles), untuk membolehkan MediaWiki berantara muka dengan backend storan OpenStack Swift.",
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'swiftcloudfiles-desc' => "Maakt de API voor ''php-cloudfiles'' beschikbaar (https://github.com/rackspace/php-cloudfiles), zodat MediaWiki kan samenwerken met een OpenStack Swift opslagbackend.",
+);
+
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'swiftcloudfiles-desc' => "Dołacza i rejestruje API ''php-cloudfiles'' (https://github.com/rackspace/php-cloudfiles), umożliwiając MediaWiki łączenie się z backendem OpenStack Swift.",
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

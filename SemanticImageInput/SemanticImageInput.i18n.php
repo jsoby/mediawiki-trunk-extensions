@@ -152,6 +152,14 @@ $messages['nl'] = array(
 	'sii-imageinput-loading' => 'Bezig met het laden van de afbeelding...',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'sii-desc' => 'Dodaje pole wprowadzenia obrazka, pobierające obrazki z Wikipedii do [https://www.mediawiki.org/wiki/Extension:Semantic_Forms formularzy semantycznych]',
+	'sii-imageinput-loading' => 'Ładowanie obrazka...',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

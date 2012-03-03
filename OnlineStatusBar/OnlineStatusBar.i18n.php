@@ -151,6 +151,18 @@ $messages['es'] = array(
 	'onlinestatusbar-desc' => 'Barra de estado que muestra en la página de usuario si un usuario está conectado',
 	'onlinestatusbar-line' => '$1 está ahora $2 $3',
 	'onlinestatusbar-used' => 'Mostrar si está conectado en sus páginas de usuario',
+	'onlinestatusbar-away-time' => 'Cuántos minutos deben pasar antes de considerarle "ausente":',
+	'onlinestatusbar-status' => 'Cuál es el estado por defecto que desea usar:',
+	'onlinestatusbar-away' => 'Considerarle automáticamente como ausente después de un intervalo definido',
+	'onlinestatusbar-purge' => 'Vaciar la página de usuario cada vez que ingrese o salga del sistema',
+	'prefs-onlinestatus' => 'Estado conectado',
+	'onlinestatusbar-hide' => 'Ocultar la barra de estado en las páginas de usuario para usar únicamente la palabra mágica (para usuarios avanzados)',
+	'onlinestatusbar-status-online' => 'Conectado',
+	'onlinestatusbar-status-busy' => 'Ocupado',
+	'onlinestatusbar-status-away' => 'No disponible',
+	'onlinestatusbar-status-offline' => 'Desconectado',
+	'onlinestatusbar-status-uknown' => 'el estado es desconocido',
+	'onlinestatusbar-status-hidden' => 'Oculto',
 );
 
 /** French (Français)

@@ -137,11 +137,12 @@ $messages['dsb'] = array(
  * @author Gomoko
  * @author Hashar
  * @author Sherbrooke
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'usersignup' => "Inscription de l'utilisateur",
 	'signupapi-desc' => 'Nettoie la page [[Special:UserLogin|page de connexion]] des informations utilisées à la création de compte et insère un API pour la création de compte',
-	'signupapi-ok' => 'OK',
+	'signupapi-ok' => 'Valider',
 	'signupapi-noname' => "Aucun nom d'utilisateur n'a été spécifié",
 	'signupapi-userexists' => "L'utilisateur existe déjà",
 	'signupapi-enterpassword' => 'Vous devez entrer un mot de passe',

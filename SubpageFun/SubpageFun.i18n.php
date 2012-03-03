@@ -98,6 +98,13 @@ $messages['nl'] = array(
 	'subpagefun-desc' => "Voegt parserfuncties toe die het mogelijk maken informatie over [http://www.mediawiki.org/wiki/Help:Subpages subpagina's] weer te geven",
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'subpagefun-desc' => 'Dodaje funkcje analizatora umożliwiające uzyskanie wyczerpujących informacji o [http://www.mediawiki.org/wiki/Help:Subpages podstronach]',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

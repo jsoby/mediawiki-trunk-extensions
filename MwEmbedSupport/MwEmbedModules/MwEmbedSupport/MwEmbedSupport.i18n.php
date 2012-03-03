@@ -369,13 +369,14 @@ $messages['fi'] = array(
  * @author IAlex
  * @author Jean-Frédéric
  * @author PieRRoMaN
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'mwe-loading' => 'chargement ...',
 	'mwe-error_load_lib' => "Erreur : JavaScript $1 n'a pas pu être trouvé ou ne définit pas $2",
 	'mwe-apiproxy-setup' => 'Configuration du proxy API',
 	'mwe-load-drag-item' => 'Chargement de l’élément dépose',
-	'mwe-ok' => 'OK',
+	'mwe-ok' => 'Valider',
 	'mwe-cancel' => 'Annuler',
 	'mwe-enable-gadget' => 'Activer beta multimédia (mwEmbed) sur toutes les pages',
 	'mwe-enable-gadget-done' => 'Le gadget multimédia beta a été activé',

@@ -785,6 +785,7 @@ My t'ou uss loggalt stiagh, foddee oo lhiettal y raaue shoh 'sy tosheeaghtyn ayd
 
 /** Hebrew (עברית)
  * @author Amire80
+ * @author Ofekalef
  * @author Rotemliss
  * @author YaronSh
  * @author Yonidebest
@@ -796,7 +797,7 @@ $messages['he'] = array(
 	'vector-collapsiblenav-more' => 'דף זה בשפות אחרות',
 	'vector-editwarning-warning' => 'עזיבת דף זה עשויה לגרום לאובדן כל השינויים שביצעתם.
 אם אתם מחוברים לחשבון, תוכלו לבטל אזהרה זו בחלק "עריכה" שבהעדפות שלכם.',
-	'vector-editwarning-preference' => 'הצגת אזהרה אם אני עומד לעזוב דף עריכה עם שינויים שטרם נשמרו',
+	'vector-editwarning-preference' => 'הצגת אזהרה בעת עזיבת דף עריכה עם שינויים שטרם נשמרו',
 	'vector-simplesearch-search' => 'חיפוש',
 	'vector-simplesearch-containing' => 'כולל...',
 	'vector-noexperiments-preference' => 'אל תכללו אותי בניסויים בעתיד',

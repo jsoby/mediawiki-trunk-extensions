@@ -61,6 +61,13 @@ $messages['dsb'] = array(
 	'proxyconnect-desc' => 'Implementěrujo serwerowu funkcionalnosć Proxy Connect',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'proxyconnect-desc' => 'Introduce la funcionalidad adicional de Proxy Connect del servidor',
+);
+
 /** French (Français)
  * @author Peter17
  */

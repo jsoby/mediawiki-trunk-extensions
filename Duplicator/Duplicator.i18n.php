@@ -239,12 +239,13 @@ $messages['bg'] = array(
 );
 
 /** Bengali (বাংলা)
+ * @author Bellayet
  * @author Wikitanvir
  */
 $messages['bn'] = array(
 	'duplicator' => 'একটি পাতার প্রতিলিপি',
 	'duplicator-toolbox' => 'এই পাতার প্রতিলিপি',
-	'duplicator-options' => 'অপশনসমূহ',
+	'duplicator-options' => 'অপশন',
 	'duplicator-source' => 'উৎস:',
 	'duplicator-dest' => 'লক্ষ্য:',
 	'duplicator-dotalk' => 'প্রতিলিপিকৃত আলোচনা পাতা (যদি প্রযোজ্য হয়)',

@@ -697,7 +697,7 @@ Elle réalise ceci en appelant les étages successifs appropriés du parseur de 
 	'expand_templates_input' => 'Texte wiki source :',
 	'expand_templates_output' => 'Texte wiki obtenu après expansion',
 	'expand_templates_xml_output' => 'Résultat intermédiaire de l’analyse, au format XML',
-	'expand_templates_ok' => 'OK',
+	'expand_templates_ok' => 'Valider',
 	'expand_templates_remove_comments' => 'Supprimer les commentaires',
 	'expand_templates_remove_nowiki' => 'Supprime les marqueurs <nowiki> dans le résultat',
 	'expand_templates_generate_xml' => 'Voir l’arborescence d’analyse XML',

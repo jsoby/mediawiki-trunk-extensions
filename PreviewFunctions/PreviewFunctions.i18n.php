@@ -52,6 +52,13 @@ $messages['dsb'] = array(
 	'previewfunctions-desc' => 'Sajźba parserowych funkcijow, aby manipulěrowała bok w pśeglěźe',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'previewfunctions-desc' => 'Un conjunto de funciones del analizador (parser) para manipular la página durante la vista previa',
+);
+
 /** French (Français)
  * @author Gomoko
  */

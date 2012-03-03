@@ -405,6 +405,18 @@ $messages['ru'] = array(
 	'translatesvg-legend' => 'Путь к файлу',
 	'translatesvg-page' => 'Файл:',
 	'translatesvg-submit' => 'Перейти',
+	'translatesvg-summary' => 'Эта страница позволяет Вам добавить, удалить или изменить встроенные в SVG-файл переводы.',
+	'translatesvg-add' => 'Если Ваш язык не входит в список, указанный ниже, Вы можете [[#addlanguage|добавить его]].',
+	'translatesvg-xcoordinate-pre' => 'Координаты по оси X(по горизонтали):',
+	'translatesvg-ycoordinate-pre' => 'Координаты по оси Y (по вертикали):',
+	'translatesvg-specify' => 'Укажите код языка (напр. en, fr, ru, uz, ...)',
+	'translatesvg-fallbackdesc' => 'По умолчанию (язык не указан)',
+	'translatesvg-qqqdesc' => 'Совет переводчикам',
+	'translatesvg-nodesc' => '(без описания)',
+	'translatesvg-remove' => 'Удалить все переводы на этом языке',
+	'translatesvg-unsuccessful' => "Этот файл '''не может быть переведен''', извините.",
+	'translatesvg-toggle-view' => 'Просмотр переводов на этом языке',
+	'translatesvg-toggle-hide' => 'Скрыть переводы на этом языке',
 );
 
 /** Telugu (తెలుగు)

@@ -244,12 +244,13 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author Grondin
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'externalpages' => 'Pages externes',
 	'externalpages-desc' => 'Recouvre et affiche les pages depuis des sites distants de la WMF',
 	'externalpages-bad-page' => 'Page indiquée incorrecte',
-	'externalpages-no-page' => 'Aucune page indiquée',
+	'externalpages-no-page' => 'Aucune page n’a été spécifiée',
 );
 
 /** Franco-Provençal (Arpetan)

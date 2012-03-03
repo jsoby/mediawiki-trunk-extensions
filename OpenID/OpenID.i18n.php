@@ -1738,6 +1738,7 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Ascánder
  * @author Crazymadlover
  * @author Drini
@@ -1770,7 +1771,8 @@ Consulta a un [[Special:ListUsers/sysop|administrador]].',
 
 Tu OpenID es $2 .
 
-Ésta y otras OpenID, y una contraseña de cuenta opcional, pueden administrarse en tus [[Special:Preferences|preferencias]].",
+Ésta y otras OpenID opcionales pueden administrarse en la [[Special:Preferences#prefsection-openid|pestaña OpenID]] de sus preferencias.<br />
+Una contraseña de cuenta opcional puede ser añadida en su [[Special:Preferences#prefsection-personal|perfil de usuario]].",
 	'openidusernameprefix' => 'OpenIDUser',
 	'openidserverlogininstructions' => '$3 solicita que introduzcas tu contraseña para tu página de usuario $2 $1 (ésta es tu URL de OpenID)',
 	'openidtrustinstructions' => 'Comprueba si quieres compartir datos con $1.',
@@ -1802,9 +1804,9 @@ puedes escoger uno de las opciones debajo.',
 	'openidconvertyourstext' => 'Ya es tu OpenID.',
 	'openidconvertothertext' => 'Esto es el OpenID de alguien más.',
 	'openidalreadyloggedin' => 'Ya has iniciado sesión.',
-	'openidalreadyloggedintext' => "'''¡Ya has iniciado sesión, $1!'''
+	'openidalreadyloggedintext' => "'''¡Ya ha iniciado sesión, $1!'''
 
-Puedes gestionar (ver, eliminar, añadir) OpenID en la pestaña OpenID de tus [[Special:Preferences|preferencias]].",
+Puede gestionar (ver, eliminar, añadir) identificadores OpenID en la [[Special:Preferences#prefsection-openid|pestaña OpenID]] de sus  preferencias.",
 	'openidnousername' => 'No se especificó ningún nombre de usuario.',
 	'openidbadusername' => 'Nombre de usuario mal especificado.',
 	'openidautosubmit' => 'Esta página incluye un formulario que será enviado automáticamnte si dispones de JavaScript.
@@ -1835,6 +1837,7 @@ No podrás iniciar sesión sin un OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Actualizar la siguiente información desde mi perfil OpenID cada vez que inicie sesión:',
 	'openid-urls-desc' => 'Los OpenID asociados a tu cuenta:',
 	'openid-urls-action' => 'Acción',
+	'openid-urls-registration' => 'Fecha y hora de registro',
 	'openid-urls-delete' => 'Eliminar',
 	'openid-add-url' => 'Añadir un OpenID nuevo',
 	'openid-login-or-create-account' => 'Iniciar sesión o crear una cuenta nueva',

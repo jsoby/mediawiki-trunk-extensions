@@ -110,6 +110,13 @@ $messages['nl'] = array(
 	'suop-desc' => 'Werkt semantische eigenschappen van een wikipagina bij als de pagina uit de cache wordt verwijderd',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'suop-desc' => 'Aktualizuje semantyczne atrybuty strony wiki podczas czyszczenia strony',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

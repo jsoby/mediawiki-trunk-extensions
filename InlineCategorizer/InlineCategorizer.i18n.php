@@ -849,6 +849,7 @@ Yleensä näin käy, kun luokka on lisätty sivulle mallineen avulla.',
  * @author Od1n
  * @author PieRRoMaN
  * @author Seb35
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'inlinecategorizer-desc' => 'Module JavaScript qui permet de modifier, ajouter et supprimer des liens de catégorie directement depuis une page',
@@ -862,7 +863,7 @@ $messages['fr'] = array(
 	'inlinecategorizer-category-already-present' => 'Cette page appartient déjà à la catégorie $1',
 	'inlinecategorizer-category-hook-error' => 'Une fonction locale a empêché d’enregistrer les changements',
 	'inlinecategorizer-category-question' => 'Pourquoi voulez-vous faire les changements suivants :',
-	'inlinecategorizer-confirm-ok' => 'OK',
+	'inlinecategorizer-confirm-ok' => 'Valider',
 	'inlinecategorizer-confirm-save' => 'Publier',
 	'inlinecategorizer-confirm-save-all' => 'Enregistrer toutes les modifications',
 	'inlinecategorizer-confirm-title' => 'Confirmer l’action',

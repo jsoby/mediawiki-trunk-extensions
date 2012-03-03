@@ -102,6 +102,23 @@ $messages['de'] = array(
 	'right-reassignedits' => 'Übertragen von Bearbeitungen eines alten Benutzers zu einem neuen Benutzer',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'reassignedits' => 'Reasignar ediciones de usuario',
+	'reassignedits-desc' => 'Permite reasignar las ediciones de un usuario antiguo a otro nuevo',
+	'reassignedits-error-invalid' => 'El nombre de usuario «<nowiki>$1</nowiki>» no es válido',
+	'reassignedits-new' => 'Nuevo nombre de usuario:',
+	'reassignedits-old' => 'Nombre de usuario antiguo',
+	'reassignedits-submit' => 'Enviar',
+	'reassignedits-success' => 'Las ediciones de «<nowiki>$1</nowiki>» han sido añadidas a «<nowiki>$2</nowiki>»',
+	'reassignedits-summary' => 'Reasignar las ediciones de un usuario antiguo a otro nuevo.',
+	'reassignedits-updatelog-title' => 'Actualizar el nombre de usuario en los títulos de los registros (log)',
+	'reassignedits-updatelog-user' => 'Actualizar el usuario de ejecución en los registros (log)',
+	'right-reassignedits' => 'Reasignar las ediciones de un usuario antiguo a otro nuevo.',
+);
+
 /** French (Français)
  * @author Gomoko
  */

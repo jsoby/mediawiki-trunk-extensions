@@ -271,10 +271,12 @@ $messages['oc'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Sp5uhe
  */
 $messages['pl'] = array(
 	'semanticinternalobjects-desc' => 'Ustawianie wewnętrznych obiektów Semantic MediaWiki.',
+	'semanticinternalobjects-internalproperty' => 'Atrybut wewnętrzny',
 );
 
 /** Piedmontese (Piemontèis)

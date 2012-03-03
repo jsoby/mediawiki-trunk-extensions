@@ -683,6 +683,7 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Antur
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Imre
  * @author Peter17
@@ -727,7 +728,7 @@ $messages['es'] = array(
 	'recordadmin-export-csv' => 'CSV',
 	'recordadmin-export-pdf' => 'PDF',
 	'recordadmin-notset' => 'No existe ningún "$1"',
-	'recordadmin-edit-info' => 'Esta página contiene plantillas que tienen formularios propios, los cuales puedes completar a partir de este grupo de pestañas.',
+	'recordadmin-edit-info' => 'Esta página contiene plantillas que tienen formularios propios, los cuales se pueden completar a partir de este grupo de pestañas.<br />Como alternativa, [$1 utilice la funcionalidad habitual de edición de MediaWiki sin los formularios de plantilla].',
 	'recordadmin-properties' => 'Propiedades',
 );
 
