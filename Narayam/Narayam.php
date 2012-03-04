@@ -1,25 +1,17 @@
 <?php
 /**
- * NAME
- * 	Narayam
- *
- * SYNOPSIS
- *
- * INSTALL
- * 	Put this whole directory under your Mediawiki extensions directory
- * 	Then add this line to LocalSettings.php to load the extension
- *
- * 		require_once("$IP/extensions/Narayam.php");
- *
- *      Currently Vector and Monobook skins are supported
- *
- * AUTHOR
- * 	Junaid P V <http://junaidpv.in>
+ * A Mediawiki extension to provide input methods in various languages.
  *
  * @file
  * @ingroup extensions
  * @version 0.2
- * @copyright Copyright 2010 Junaid P V
+ *
+ * @author Junaid P V
+ * @author Niklas Laxström
+ * @author Roan Kattouw
+ * @author Santhosh Thottingal
+ * @author Amir Aharoni
+ * @copyright Copyright 2010-2012 Junaid P V, Niklas Laxström, Roan Kattouw, Santhosh Thottingal, Amir Aharoni
  * @license GPLv3
  */
 
@@ -31,7 +23,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'Narayam',
 	'version' => 0.2,
-	'author' => array( '[http://junaidpv.in Junaid P V]', 'Roan Kattouw' ),
+	'author' => array( '[http://junaidpv.in Junaid P V]', 'Roan Kattouw', 'Santhosh Thottingal', 'Niklas Laxström', 'Amir Aharoni' ),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Narayam',
 	'descriptionmsg' => 'narayam-desc'
 );
