@@ -1350,7 +1350,7 @@ Zie de [//www.mediawiki.org/wiki/API:Main_page API-documentatie] voor verdere de
 	'apisb-example' => 'Voorbeeld',
 	'apisb-examples' => 'Voorbeelden',
 	'apisb-clear' => 'Wissen',
-	'apisb-request-time' => 'Verzoektijd: $1',
+	'apisb-request-time' => 'Doorlooptijd verzoek: $1',
 );
 
 /** Oriya (ଓଡ଼ିଆ)

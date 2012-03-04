@@ -102,6 +102,7 @@ $messages['be-tarask'] = array(
 );
 
 /** Breton (Brezhoneg)
+ * @author Fulup
  * @author Y-M D
  */
 $messages['br'] = array(
@@ -116,6 +117,8 @@ $messages['br'] = array(
 	'translatesvg-qqqdesc' => "Kuzul d'an droerien",
 	'translatesvg-nodesc' => '(deskrivadur ebet)',
 	'translatesvg-remove' => 'Dilemel an holl droidigezhioù er yezh-se.',
+	'translatesvg-toggle-view' => 'Gwelet an troidigezhioù evit ar yezh-mañ',
+	'translatesvg-toggle-hide' => 'Kuzhat an troidigezhioù evit ar yezh-mañ',
 );
 
 /** German (Deutsch)

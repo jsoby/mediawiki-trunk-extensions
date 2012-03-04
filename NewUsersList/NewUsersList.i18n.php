@@ -158,3 +158,10 @@ $messages['ru'] = array(
 	'newuserslist-desc' => 'Добавляет тег <tt><newusers></tt> для получения списка новых участников и их аватаров',
 );
 
+/** Ukrainian (Українська)
+ * @author Vox
+ */
+$messages['uk'] = array(
+	'newuserslist-desc' => 'Додає <tt>&lt;newusers&gt;</tt> тег, щоб отримати список нових користувачів і їхніх аватарів',
+);
+

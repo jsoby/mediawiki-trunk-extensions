@@ -128,3 +128,10 @@ $messages['ru'] = array(
 	'namespacepaths-desc' => 'Позволяет настраивать пути к статьям для сопоставления пространствам имен вики. Пример: странице Help:Page сопоставляется /help/Page, а не/wiki/Help:Page.',
 );
 
+/** Ukrainian (Українська)
+ * @author Vox
+ */
+$messages['uk'] = array(
+	'namespacepaths-desc' => 'Дозволяє налаштовувати шляхи до статей для зіставлення до просторів назв; приклад: сторінка Help:Page зіставляєтся до /help/Page, а не /wiki/Help:Page.',
+);
+

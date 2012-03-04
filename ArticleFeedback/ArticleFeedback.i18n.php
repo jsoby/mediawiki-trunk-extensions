@@ -5010,8 +5010,8 @@ $messages['mg'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'articlefeedback' => 'Табла за оценување на статија',
-	'articlefeedback-desc' => 'Пилотна верзија на Оценување на статија',
+	'articlefeedback' => 'Табла на мислења за статии',
+	'articlefeedback-desc' => 'Пилотна верзија на „Мислења за статии“',
 	'articlefeedback-survey-question-origin' => 'На која страница бевте кога ја започнавте анкетава?',
 	'articlefeedback-survey-question-whyrated' => 'Кажете ни зошто ја оценивте страницава денес (штиклирајте ги сите релевантни одговори)',
 	'articlefeedback-survey-answer-whyrated-contribute-rating' => 'Сакав да придонесам кон севкупната оцена на страницата',
@@ -5095,7 +5095,7 @@ $messages['mk'] = array(
 	'articlefeedback-survey-message-success' => 'Ви благодариме што ја пополнивте анкетата.',
 	'articlefeedback-survey-message-error' => 'Се појави грешка.
 Обидете се подоцна.',
-	'articlefeedback-privacyurl' => 'http://wikimediafoundation.org/wiki/Feedback_privacy_statement?uselang=mk',
+	'articlefeedback-privacyurl' => 'http://wikimediafoundation.org/wiki/Feedback_privacy_statement/mk?uselang=mk',
 	'articleFeedback-table-caption-dailyhighsandlows' => 'Издигања и падови за денес',
 	'articleFeedback-table-caption-dailyhighs' => 'Статии со највисоки оценки: $1',
 	'articleFeedback-table-caption-dailylows' => 'Статии со најниски оценки: $1',

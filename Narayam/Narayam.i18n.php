@@ -2677,13 +2677,14 @@ $messages['scn'] = array(
 );
 
 /** Sinhala (සිංහල)
+ * @author Singhalawap
  * @author පසිඳු කාවින්ද
  * @author බිඟුවා
  */
 $messages['si'] = array(
 	'narayam-desc' => 'යෙදවුම් ක්ෂේත්‍රයන් සඳහා ව්‍යවහාර යෙදවුම් ක්‍රමයන් එක් කිරීමට ඉඩ දෙයි',
 	'narayam-toggle-ime' => 'සක්‍රිය කරන්න ($1)',
-	'narayam-menu' => 'යෙදවුම් ක්‍රමය',
+	'narayam-menu' => 'විකල්ප යතුරුපුවරු',
 	'narayam-menu-tooltip' => 'නරයම් යෙදවුම් ක්‍රම සංස්කාරකය (IME) පාලනය කරන්න',
 	'narayam-help' => 'උදව්',
 	'narayam-help-page' => '//si.wikipedia.org/wiki/Help:මූලිකාදර්ශය',
@@ -2715,8 +2716,8 @@ $messages['si'] = array(
 	'narayam-pa-inscript' => 'ගුර්මුකි පන්ජාබි අන්තර්ලේඛනය',
 	'narayam-sa' => 'සංස්කෘත අක්ෂර පරිවර්තනය',
 	'narayam-sa-inscript' => 'සංස්කෘත  අන්තර්ලේඛනය',
-	'narayam-si-singlish' => 'සිංහල සින්ග්ලිෂ්',
-	'narayam-si-wijesekara' => 'සිංහල විජේසේකර',
+	'narayam-si-singlish' => 'ඉංග්‍රීසි යතුරුපුවරුවෙන් සිංහල',
+	'narayam-si-wijesekara' => 'සිංහල සම්මත (විජේසේකර)',
 	'narayam-ta-99' => 'දෙමළ99',
 	'narayam-ta-inscript' => 'දෙමළ අන්තර්ලේඛනය',
 	'narayam-ta' => 'දෙමළ අක්ෂර පරිවර්තනය',

@@ -65,6 +65,14 @@ $messages['qqq'] = array(
 	'spserror-count-digitsvaluemalformed' => 'An error message',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
+$messages['br'] = array(
+	'spssuccess-returntoorigin' => 'Distreiñ da $1',
+	'spserror' => 'Ur fazi zo bet',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author Metalhead64
