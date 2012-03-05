@@ -46,7 +46,7 @@ $wgExtensionCredits[ 'semantic' ][] = array(
 	'version' => '0.0.1',
 	'author'  => array( '[https://www.mediawiki.org/wiki/User:Van_de_Bugger Van de Bugger]' ),
 	'url'     => 'https://www.mediawiki.org/wiki/Extension:SemanticTitle',
-	'descriptionmsg'  => 'semantic-title-description',
+	'descriptionmsg'  => 'semantictitle-desc',
 );
 
 // end of file //
