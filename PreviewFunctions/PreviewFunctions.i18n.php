@@ -59,6 +59,13 @@ $messages['es'] = array(
 	'previewfunctions-desc' => 'Un conjunto de funciones del analizador (parser) para manipular la página durante la vista previa',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'previewfunctions-desc' => 'مجموعه‌ای از توابع تجزیه‌گر برای ادارهٔ این صفحه در حالت پیش‌نمایش',
+);
+
 /** French (Français)
  * @author Gomoko
  */

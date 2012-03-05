@@ -63,6 +63,13 @@ $messages['es'] = array(
 	'globalusergroups-desc' => 'Permite el uso de grupos de usuarios locales definidos como grupos globales',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'globalusergroups-desc' => 'امکان استفاده از گروه‌های کاربری تعریف‌شدهٔ محلی را به عنوان گروه‌های سراسری می‌دهد',
+);
+
 /** French (Français)
  * @author Gomoko
  */

@@ -2327,6 +2327,7 @@ $messages['fa'] = array(
 	'articlefeedback-survey-message-success' => 'سپاس از شما بابت پر کردن فرم نظرسنجی.',
 	'articlefeedback-survey-message-error' => 'خطایی رخ داده است.
 لطفاً بعداً دوباره سعی کنید.',
+	'articlefeedback-privacyurl' => 'http://wikimediafoundation.org/wiki/Feedback_privacy_statement/fa',
 	'articleFeedback-table-caption-dailyhighsandlows' => 'بالاترین‌ها و پایین‌ترین‌های امروز',
 	'articleFeedback-table-caption-dailyhighs' => 'صفحه‌های دارای بالاترین رتبه: $1',
 	'articleFeedback-table-caption-dailylows' => 'صفحه‌های دارای پایین‌ترین رتبه: $1',

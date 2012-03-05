@@ -40,6 +40,13 @@ $messages['dsb'] = array(
 	'suop-desc' => 'Aktualizěrujo semantiske atributy wikiboka, gaž se cache boka prozni',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'suop-desc' => 'Actualiza los atributos semánticos de una página wiki al purgar la página',
+);
+
 /** French (Français)
  * @author Sherbrooke
  */

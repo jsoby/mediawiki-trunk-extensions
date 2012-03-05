@@ -550,6 +550,8 @@ $messages['fa'] = array(
 	'apisb-desc' => 'اشکال‌یابی فراخوانی‌های [//www.mediawiki.org/wiki/API رابط برنامه‌نویسی مدیاویکی] را از طریق مرورگر اجازه می‌دهد',
 	'apisandbox' => 'گودال ماسه‌بازی رابط برنامه‌نویسی',
 	'apisb-no-js' => "'''خطا''': این قابلیت نیازمند جاوااسکریپت است.",
+	'apisb-intro' => "از این صفحه برای آزمایش '''خدمات وب API مدیاویکی''' استفاده کنید.
+برای جزئیات بیشتر دربارهٔ نحوهٔ استفاده از API به [//www.mediawiki.org/wiki/API:Main_page مستندات API] رجوع کنید. مثال: [//www.mediawiki.org/wiki/API#A_simple_example دریافت محتوای صفحهٔ اصلی]. برای دیدن مثال‌های بیشتر عملکردی را انتخاب کنید.",
 	'apisb-api-disabled' => 'رابط برنامه‌نویسی در این تارنما غیرفعال شده‌است.',
 	'apisb-legend-parameters' => 'پارامترها',
 	'apisb-legend-result' => 'نتیجه',
@@ -557,6 +559,9 @@ $messages['fa'] = array(
 	'apisb-legend-generator-parameters' => 'تولیدکننده',
 	'apisb-result-request-url' => 'درخواست آدرس:',
 	'apisb-result-request-post' => 'فرستادن داده‌ها:',
+	'apisb-label-format' => 'قالب',
+	'apisb-label-action' => 'عمل',
+	'apisb-label-doc' => 'مستندات',
 	'apisb-select-action' => 'انتخاب اقدامات',
 	'apisb-select-query' => '(درخواست را انتخاب کنید)',
 	'apisb-select-value' => '(مقدار راانتخاب کنید)',
@@ -575,7 +580,8 @@ $messages['fa'] = array(
 	'apisb-query-meta' => 'اطلاعات متا',
 	'apisb-example' => 'مثال',
 	'apisb-examples' => 'مثال‌ها',
-	'apisb-clear' => 'پاک کردن',
+	'apisb-clear' => 'پاک‌کردن',
+	'apisb-request-time' => 'زمان درخواست: $1',
 );
 
 /** Finnish (Suomi)

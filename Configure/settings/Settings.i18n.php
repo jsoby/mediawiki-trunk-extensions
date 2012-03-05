@@ -12282,9 +12282,13 @@ $messages['km'] = array(
 
 /** Kannada (ಕನ್ನಡ)
  * @author Nayvik
+ * @author VASANTH S.N.
  */
 $messages['kn'] = array(
+	'configure-setting-wgActionPaths-key' => 'ಕ್ರಿಯೆಗಳು',
+	'configure-setting-wgExtraLanguageNames-key' => 'ಭಾಷಾ ಸಂಕೇತ',
 	'configure-setting-wgExtraLanguageNames-value' => 'ಹೆಸರು',
+	'configure-setting-wgSpecialPageGroups-key' => 'ಗುಂಪು',
 	'configure-setting-wgXhtmlNamespaces-key' => 'ನಾಮವರ್ಗ',
 );
 

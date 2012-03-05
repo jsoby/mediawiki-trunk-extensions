@@ -104,10 +104,12 @@ $messages['el'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  */
 $messages['es'] = array(
 	'semanticinternalobjects-desc' => 'Configuración de objetos internos en Semantic MediaWiki',
+	'semanticinternalobjects-internalproperty' => 'Propiedad interna',
 );
 
 /** Finnish (Suomi)

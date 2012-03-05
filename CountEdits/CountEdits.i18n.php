@@ -462,10 +462,20 @@ $messages['ext'] = array(
 
 /** Persian (فارسی)
  * @author Mjbmr
+ * @author ZxxZxxZ
  */
 $messages['fa'] = array(
+	'countedits' => 'شمارش ویرایش‌ها',
+	'countedits-desc' => '[[Special:CountEdits|صفحهٔ ویژه‌ای]] که ویرایش‌های کاربر را می‌شمارد و فهرستی از ده کاربر فعال‌تر می‌سازد',
+	'countedits-warning' => "'''توجه:''' برای یک کتاب از روی جلدش قضاوت نکنید.
+برای مشارکت‌کنندگان هم از روی تعداد ویرایش‌هایشان قضاوت نکنید.",
 	'countedits-username' => 'نام کاربری:',
 	'countedits-ok' => 'تأیید',
+	'countedits-nosuchuser' => 'هیچ کاربری با نام $1 وجود ندارد.',
+	'countedits-resultheader' => 'نتایج برای $1',
+	'countedits-resulttext' => '$1 $2 {{PLURAL:$2|ویرایش|ویرایش}} انجام داده‌است',
+	'countedits-mostactive' => 'فعال‌ترین مشارکت‌کنندگان',
+	'countedits-nocontribs' => 'هیچ مشارکتی در این ویکی وجود ندارد.',
 );
 
 /** Finnish (Suomi)
@@ -895,6 +905,14 @@ $messages['km'] = array(
 	'countedits-resulttext' => "'''$1'''បានចូលរួមចំណែកកែប្រែ'''$2''' {{PLURAL:$2|កំណែប្រែ|កំណែប្រែ}}",
 	'countedits-mostactive' => 'អ្នករួមចំណែកដែលសកម្មបំផុត',
 	'countedits-nocontribs' => 'មិនមានការរួមចំណែកនៅក្នុងវិគីនេះទេ។',
+);
+
+/** Kannada (ಕನ್ನಡ)
+ * @author VASANTH S.N.
+ */
+$messages['kn'] = array(
+	'countedits-username' => 'ಬಳಕೆದಾರ ಹೆಸರು:',
+	'countedits-ok' => 'ಸರಿ',
 );
 
 /** Korean (한국어)

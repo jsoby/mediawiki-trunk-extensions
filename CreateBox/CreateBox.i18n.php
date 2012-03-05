@@ -524,6 +524,13 @@ $messages['km'] = array(
 <createbox>break=no</createbox>",
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author VASANTH S.N.
+ */
+$messages['kn'] = array(
+	'createbox-create' => 'ಸೃಷ್ಟಿಸು',
+);
+
 /** Korean (한국어)
  * @author Klutzy
  * @author Yknok29

@@ -4080,9 +4080,12 @@ $messages['km'] = array(
 
 /** Kannada (ಕನ್ನಡ)
  * @author Nayvik
+ * @author VASANTH S.N.
  */
 $messages['kn'] = array(
 	'deletequeue-delnom-otherreason' => 'ಇತರ ಕಾರಣ',
+	'deletequeue-review-delete' => 'ಈ ಪುಟವನ್ನು ಅಳಿಸಿ',
+	'deletequeue-review-reason' => 'ಟಿಪ್ಪಣಿ',
 	'deletequeue-list-status' => 'ಸ್ಥಾನಮಾನ:',
 	'deletequeue-list-search' => 'ಹುಡುಕು',
 	'deletequeue-case-reason' => 'ಕಾರಣ:',

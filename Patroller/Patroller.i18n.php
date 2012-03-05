@@ -2282,17 +2282,33 @@ $messages['ug-arab'] = array(
 /** Ukrainian (Українська)
  * @author AS
  * @author Ahonc
+ * @author Vox
  * @author Тест
  */
 $messages['uk'] = array(
 	'patrol' => 'Патрулювання',
+	'patrol-desc' => 'Вдосконалений інтерфейс патрулювання з розподіленням робочого навантаження',
 	'patrol-endorse' => 'Підтвердити',
 	'patrol-revert' => 'Відкотити',
 	'patrol-revert-reason' => 'Причина:',
 	'patrol-skip' => 'Відкласти',
 	'patrol-reverting' => 'Відкіт: $1',
+	'patrol-nonefound' => 'Не вдалося знати відповідні редагування для патрулювання.',
+	'patrol-endorsed-ok' => 'Редагування було позначено патрульованим.',
+	'patrol-endorsed-failed' => 'Не вдалося затвердити редагування.',
+	'patrol-reverted-ok' => 'Редагування було відкинуто.',
+	'patrol-reverted-failed' => 'Не вдалося відкинути редагування.',
+	'patrol-skipped-ok' => 'Ігнорування редагування.',
+	'patrol-reasons' => '* Просто вандалізм
+* Тест новачка
+* Див. сторінку обговорення',
+	'patrol-another' => 'Показати інше редагування, якщо доступно.',
+	'patrol-stopped' => 'Ви вирішили не патрулювати інше редагування. $1',
+	'patrol-resume' => 'Натисніть тут, щоб продовжити.',
 	'group-patroller' => 'Патрульні',
 	'group-patroller-member' => '{{GENDER:$1|патрульний|патрульна}}',
+	'grouppage-patroller' => '{{ns:project}}:Патрульні',
+	'right-patroller' => 'Патрулювання сторінок',
 );
 
 /** Urdu (اردو) */

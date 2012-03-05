@@ -446,10 +446,26 @@ $messages['es'] = array(
 
 /** Persian (فارسی)
  * @author Mjbmr
+ * @author ZxxZxxZ
  */
 $messages['fa'] = array(
+	'e-mailpage' => 'صفحهٔ پست الکترونیکی',
+	'ea-desc' => 'با [http://phpmailer.sourceforge.net phpmailer] صفحهٔ اچ‌تی‌ام‌ال پردازش‌شده را به نشانی پست الکترونیکی یا فهرستی از نشانی‌ها می‌فرستد',
+	'ea-heading' => 'فرستادن صفحهٔ «[[$1]]»',
+	'ea-group-info' => 'افزون بر این می‌توانید صفحه را به اعضای یک گروه بفرستید',
+	'ea-pagesend' => 'صفحهٔ «$1» فرستاده‌شده از «$2»',
+	'ea-compose' => 'نوشتن مطالب',
+	'ea-show' => 'مشاهده فهرست گیرندگان',
 	'ea-from' => 'از:',
 	'ea-to' => 'به:',
+	'ea-cc' => 'رونوشت برای:',
+	'ea-send' => 'بفرست',
+	'ea-subject' => 'عنوان:',
+	'ea-message' => 'پیغام:',
+	'ea-style' => 'سبک:',
+	'ea-data' => 'داده',
+	'ea-selectrecord' => 'این الگوها می‌توانند برای پرکردن فیلدها در محتوای پیغام استفاده شوند',
+	'ea-allusers' => 'همهٔ کاربران',
 );
 
 /** French (Français)

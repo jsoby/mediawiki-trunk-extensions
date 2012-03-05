@@ -100,6 +100,14 @@ $messages['es'] = array(
 	'categorize-advice' => 'Pulse en las etiquetas que quiere atribuir a esta página:',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'categorize-desc' => 'جعبه‌ای ورودی برای ویرایش و بارگذاری صفحه‌ها می‌افزاید که به کاربران امکان اختصاص‌دادن رده‌ها را می‌دهد',
+	'categorize-footer' => 'اگر می‌خواهید برچسبی بیفزایید لطفاً با یک [[Special:ListUsers/sysop|مدیر]] تماس بگیرید.',
+);
+
 /** French (Français)
  * @author Crochet.david
  * @author Thomas Fauré

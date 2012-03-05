@@ -1051,6 +1051,15 @@ $messages['ja'] = array(
 	'wikisync_js_sync_end_rtl' => '$1でリモートのウィキから、ローカルのウィキへの同期を完了',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author VASANTH S.N.
+ */
+$messages['kn'] = array(
+	'wikisync_remote_login_button' => 'ಲಾಗ್ ಇನ್',
+	'wikisync_api_result_Blocked' => 'ಈ ಸದಸ್ಯರನ್ನು ತಡೆ ಹಿಡಿಯಲಾಗಿದೆ.',
+	'wikisync_js_revision' => 'ಆವೃತ್ತಿ ೧',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */

@@ -103,6 +103,35 @@ $1',
 	'spserror-count-digitsvaluemalformed' => 'Der Ziffernwert ist keine Zahl.',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'semanticpageseries-desc' => 'Crear una serie de páginas a partir de un [https://www.mediawiki.org/wiki/Extension:Semantic_Forms formulario semántico]',
+	'spssuccesstitle' => 'Creando $1 páginas',
+	'spssuccess' => '{{PLURAL:$1|Se va a crear una página.|Se van a crear $1 páginas.}}',
+	'spssuccess-returntoorigin' => 'Volver a $1.',
+	'spserror' => 'Ha ocurrido un error',
+	'spserror-diffnotsupported' => 'La acción "diff" no está soportada para las series de páginas.',
+	'spserror-previewnotsupported' => 'La acción de previsualización no está soportada para las series de páginas.',
+	'spserror-noiteratorname' => 'No se ha especificado ningún iterador. Tiene que definir el parámetro "iterator" en la llamada a la función #serieslink del analizador (parser).',
+	'spserror-iteratorunknown' => 'No existe el iterador "$1". Tiene que corregir el parámetro "iterator" en la llamada a la función #serieslink del analizador (parser).',
+	'spserror-noformname' => 'No se ha dado ningún formulario. Tiene que definir el parámetro "form" en la llamada a la función #serieslink del analizador (parser).',
+	'spserror-formunknown' => 'El formulario "$1" no existe.',
+	'spserror-notargetformname' => 'No se ha dado ningún formulario de destino. Tiene que definir el parámetro "target form" en la llamada a la función #serieslink del analizador (parser).',
+	'spserror-notargetfieldname' => 'No se ha dado ningún campo de destino. Tiene que definir el parámetro "target field" en la llamada a la función #serieslink del analizador (parser).',
+	'spserror-iteratorparammissing' => 'Faltan los siguientes parámetros del iterador en la llamada a #serieslink:
+$1',
+	'spserror-noiteratordata' => 'No se encontraron los parámetros del iterador en los datos enviados.',
+	'spserror-pagegenerationlimitexeeded' => 'Intentó generar {{PLURAL:$1|una página|$1 páginas}}. Esto supera el límite {{PLURAL:$2|de una página|de $2 páginas}}.',
+	'spserror-date-startdatemissing' => 'Falta la fecha de inicio.',
+	'spserror-date-internalerror' => 'Ocurrió un error al crear las fechas. Podría ser debido a un formato incorrecto en las fechas de inicio o fin.',
+	'spserror-count-startvaluemalformed' => 'El valor de inicio no es un número.',
+	'spserror-count-endvaluemalformed' => 'El valor de fin no es un número.',
+	'spserror-count-stepvaluemalformed' => 'El valor de incremento no es un número.',
+	'spserror-count-digitsvaluemalformed' => 'El valor de los dígitos no es un número.',
+);
+
 /** French (Français)
  * @author Gomoko
  */

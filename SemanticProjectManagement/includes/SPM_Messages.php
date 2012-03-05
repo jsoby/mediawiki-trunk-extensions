@@ -89,6 +89,17 @@ $messages['dsb'] = array(
 	'right-SPMsetup' => 'Zakładne nastajenja semantiskego projektowego zastojanja wobźěłaś',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'spm_wbs_link' => 'Exportación XML de MS Project',
+	'spm_printername_wbs' => 'Exportación de MS Project',
+	'spm-name' => 'Gestión del proyecto semántico',
+	'semanticprojectmanagement-desc' => 'Formatos de gestión de proyecto para las consultas en línea de Semantic MediaWiki',
+	'semanticprojectmanagement' => 'Configuración de la gestión del proxecto semántico',
+);
+
 /** French (Français)
  * @author Peter17
  * @author Sherbrooke

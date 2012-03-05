@@ -172,6 +172,28 @@ $messages['dsb'] = array(
 	'translatesvg-toggle-hide' => 'Pśełožki  w toś tej rěcy schowaś',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'translatesvg-desc' => 'رابطی بومی برای ترجمهٔ اس‌وی‌جی‌ها با مشخصات SVG1.1 فراهم می‌کند',
+	'translatesvg-legend' => 'مسیر پرونده',
+	'translatesvg-page' => 'پرونده:',
+	'translatesvg-submit' => 'برو',
+	'translatesvg-summary' => 'این صفحهٔ ویژه به شما امکان افزودن، حذف و ویرایش ترجمه‌های جاسازی‌شده در پروندهٔ تصویری اس‌وی‌جی را می‌دهد.',
+	'translatesvg-add' => 'اگر زبان شما از قبل فهرست نشده‌است می‌توانید آن را [[#addlanguage|بیفزایید]].',
+	'translatesvg-xcoordinate-pre' => 'مختصات X (افقی):',
+	'translatesvg-ycoordinate-pre' => 'مختصات Y (عمودی):',
+	'translatesvg-specify' => 'مشخص‌کردن کد جدید زبان (مثلاً en, fr, de, fa, ...)',
+	'translatesvg-fallbackdesc' => 'پیش‌فرض (هیچ زبانی مشخص نشده‌است)',
+	'translatesvg-qqqdesc' => 'توصیه برای ترجمه‌کنندگان',
+	'translatesvg-nodesc' => '(بدون توضیح)',
+	'translatesvg-remove' => 'حذف همهٔ ترجمه‌ها به این زبان',
+	'translatesvg-unsuccessful' => "ترجمهٔ این پرونده '''ممکن نیست'''، پوزش می‌طلبیم.",
+	'translatesvg-toggle-view' => 'نمایش ترجمه‌ها به این زبان',
+	'translatesvg-toggle-hide' => 'نهفتن ترجمه‌ها به این زبان',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  */

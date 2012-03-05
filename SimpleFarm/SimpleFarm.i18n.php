@@ -119,3 +119,10 @@ $messages['pms'] = array(
 	'simplefarm-desc' => 'Sempia ma potenta estension ëd fatorìa wiki sensa gnun-a pàgina sbërlusenta ëd configurassion',
 );
 
+/** Ukrainian (Українська)
+ * @author Vox
+ */
+$messages['uk'] = array(
+	'simplefarm-desc' => 'Простие, але потужне wiki farm розширення без будь-яких сторінок кофігурації',
+);
+

@@ -60,6 +60,14 @@ $messages['de'] = array(
 	'sdt-duration' => 'Dauer',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'sdt-desc' => 'Tipos de datos adicionales para Semantic MediaWiki y sus extensiones',
+	'sdt-duration' => 'Duración',
+);
+
 /** French (Français)
  * @author Gomoko
  */

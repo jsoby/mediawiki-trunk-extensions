@@ -71,6 +71,14 @@ $messages['dsb'] = array(
 	'sii-imageinput-loading' => 'Wobraz se zacytujo...',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'sii-desc' => 'Añade una entrada de imágenes que transfiere las imágenes de Wikipedia a [https://www.mediawiki.org/wiki/Extension:Semantic_Forms Semantic Forms]',
+	'sii-imageinput-loading' => 'Cargando la imagen...',
+);
+
 /** French (Français)
  * @author Gomoko
  */

@@ -395,6 +395,7 @@ $messages['bho'] = array(
 	'narayam-checkbox-tooltip' => 'इन्पुट विधि के चालु या बन्द करल जाय',
 	'narayam-enable-preference' => 'इन्पुट विधि के सक्षम करीं',
 	'narayam-more-imes' => 'अधिक इन्पुट विधि',
+	'narayam-ahr' => 'अहिराणि लिप्यान्तरण्',
 	'narayam-bho' => 'भोजपुरी लिप्यंतरण',
 	'narayam-bho-inscript' => 'भोजपुरी इंस्क्रिप्ट',
 );

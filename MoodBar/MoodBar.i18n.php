@@ -1837,7 +1837,7 @@ Terveisin,
  * @author Wyz
  */
 $messages['fr'] = array(
-	'moodbar-desc' => "Permet aux utilisateurs spécifiés de fournir leur ressenti sur leur expérience d'édition",
+	'moodbar-desc' => "Permet aux utilisateurs de fournir leur ressenti sur leur expérience d'édition",
 	'moodbar-trigger-feedback' => 'Vos commentaires sur la modification',
 	'moodbar-trigger-share' => 'Partagez votre expérience',
 	'moodbar-trigger-editing' => 'Modifier $1 ...',
@@ -1861,7 +1861,7 @@ $messages['fr'] = array(
 	'moodbar-what-content' => "Cette fonctionnalité est conçue pour aider la communauté à comprendre le ressenti des personnes éditant le site.
 Pour plus d'information, consultez la $1.",
 	'moodbar-what-link' => 'page décrivant la fonction',
-	'moodbar-privacy' => 'En soumettant, vous acceptez la transparence en accord avec ces $1.',
+	'moodbar-privacy' => 'En soumettant ce formulaire, vous acceptez la politique de confidentialité définie par ces $1.',
 	'moodbar-privacy-link' => 'conditions',
 	'moodbar-privacy-link-title' => "Conditions d'utilisation",
 	'moodbar-fbd-link-title' => 'avis',

@@ -175,7 +175,7 @@ $messages['eu'] = array(
 $messages['fa'] = array(
 	'variablepage' => 'صفحه متغیر',
 	'variablepage-navlink_text' => 'اهدا کنید',
-	'variablepage-desc' => 'تغییر مسیر سبک صفحه متغیر',
+	'variablepage-desc' => 'تغییرمسیر سبک صفحه متغیر',
 );
 
 /** Finnish (Suomi)

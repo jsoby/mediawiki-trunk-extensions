@@ -1606,9 +1606,14 @@ $messages['km'] = array(
 
 /** Kannada (ಕನ್ನಡ)
  * @author Nayvik
+ * @author VASANTH S.N.
  */
 $messages['kn'] = array(
+	'crosswikiblock-expiry' => 'ಅಂತ್ಯ:',
 	'crosswikiblock-reason' => 'ಕಾರಣ:',
+	'crosswikiblock-submit' => 'ಈ ಸದಸ್ಯರನ್ನು ತಡೆಹಿಡಿಯಿರಿ',
+	'crosswikiblock-nocreate' => 'ಖಾತೆ ಸೃಷ್ಟಿಯನ್ನು ನಿರ್ಬಂಧಿಸು',
+	'crosswikiblock-noemail' => 'ಬಳಕೆದಾರನು ಇ-ಅಂಚೆ ಕಳುಹಿಸುವುದನ್ನು ತಡೆಗಟ್ಟು',
 	'crosswikiunblock-reason' => 'ಕಾರಣ:',
 );
 
