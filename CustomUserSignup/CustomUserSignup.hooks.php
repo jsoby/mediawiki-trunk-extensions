@@ -114,6 +114,12 @@ class CustomUserSignupHooks {
 		$out->addModules( 'ext.UserBuckets' );
 		return true;
 	}
+	
+	public static function makeGlobalVariablesScript( &$vars ) {
+		global $wgCustomUserSignupTrackAccountCreations;
+		$vars['wgCustomUserSignupTrackAccountCreations'] = $wgCustomUserSignupTrackAccountCreations;
+		return true;
+	}
 
 	public static function addNewAccount( $user, $byEmail ){
 		global $wgRequest, $wgTitle, $wgCustomUserSignupTrackAccountCreations;

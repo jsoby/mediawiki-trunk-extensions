@@ -60,6 +60,7 @@ mw.activeCampaigns.AccountCreation =
   // "allActive" is reserved.
   // If this function exists, it will be apply to every user not in the "none" bucket
   "allActive": function(){
+	if ( !mw.config.get( 'wgCustomUserSignupTrackAccountCreations' ) ) { return; }
 		   
 		  //track account creation attempts
 		  $j("#wpCreateaccount").click(function(){ $j.trackAction('submit-signup-data'); });
