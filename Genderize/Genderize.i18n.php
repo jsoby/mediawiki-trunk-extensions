@@ -1,24 +1,21 @@
 <?php
+/**
+ * Internationalisation for Genderize extension
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
-/*
-	------------------------------------------------------------------------------------------------
-	Genderize, a MediaWiki extension for use gender-specific user page titles and links.
-	Copyright (C) 2012 Van de Bugger.
+$messages = array();
 
-	This program is free software: you can redistribute it and/or modify it under the terms
-	of the GNU Affero General Public License as published by the Free Software Foundation,
-	either version 3 of the License, or (at your option) any later version.
+/** English
+ * @author Van de Bugger
+ */
+$messages['en'] = array(
+	'genderize-desc' => 'Genderized user links to user pages, user page titles, and user namespace tabs',
+);
 
-	This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-	See the GNU Affero General Public License for more details.
-
-	You should have received a copy of the GNU Affero General Public License along with this
-	program.  If not, see <https://www.gnu.org/licenses/>.
-	------------------------------------------------------------------------------------------------
-*/
-
-$messages = array();/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
