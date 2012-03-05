@@ -50,7 +50,7 @@ $wgExtensionCredits[ 'other' ][] = array(
 	'version' => '0.0.1',
 	'author'  => array( '[https://www.mediawiki.org/wiki/User:Van_de_Bugger Van de Bugger]' ),
 	'url'     => 'https://www.mediawiki.org/wiki/Extension:Genderize',
-	'descriptionmsg'  => 'genderize-description',
+	'descriptionmsg'  => 'genderize-desc',
 );
 
 // end of file //
