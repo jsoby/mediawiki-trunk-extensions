@@ -7,8 +7,8 @@ window.star_config = {
 	easing: 'swing',
 	out_spin: 2,
 	in_spin: 2,
-	width: '400px',
-	height: '400px'
+	width: '500px',
+	height: '500px'
 }
 
 /**
@@ -113,20 +113,22 @@ function animateNode(node) {
 
 			// If closing, change icon to "plus", flip t, and hide items at end
 			if( data.open ) {
-				$('img', e).attr('src', window.tamBaseUrl + window.star_config.img_node);
+				if( fx.pos == 0 ) $('img', e).attr('src', window.tamBaseUrl + window.star_config.img_node);
 				if( t > 0.9 ) display = 'none';
 				o = window.star_config.out_spin + t * window.star_config.in_spin;
 				t = 1 - t;
 			}
 
 			// If opening, change icon to "minus" and check siblings to see if one needs to be closed
-			else if( d > 1 && fx.pos == 0 ) {
+			else if( fx.pos == 0 ) {
 				$('img', e).attr('src', window.tamBaseUrl + window.star_config.img_open);
-				var pdata = getData(data.parent);
-				for( var i in pdata.children ) {
-					var sibling = pdata.children[i];
-					var sdata = getData(sibling);
-					if( sdata.open ) animateNode(sibling);
+				if( d > 1 ) {
+					var pdata = getData(data.parent);
+					for( var i in pdata.children ) {
+						var sibling = pdata.children[i];
+						var sdata = getData(sibling);
+						if( sdata.open ) animateNode(sibling);
+					}
 				}
 			}
 
