@@ -874,11 +874,11 @@ class ExtZeroRatedMobileAccess {
 		$formHtml = <<<HTML
 		<form id="zero-language-search" action="//{$langCode}.wikipedia.org/w/index.php" class="search_bar" method="get">
 			<input type="hidden" value="Special:Search" name="title">
-			<div id="sq" class="divclearable">
-        		<input type="text" name="search" id="search" size="22" value="" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024">
-				<div class="clearlink" id="clearsearch" title="Clear"></div>
+			<div class="sq">
+        		<input type="text" name="search" class="search" size="22" value="" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024">
+				<div class="clearlink" class="clearsearch" title="Clear"></div>
 			</div>
-		<button id="goButton" type="submit">{$searchValue}</button>
+		<button class="goButton" type="submit">{$searchValue}</button>
 		</form>
 HTML;
 		wfProfileOut( __METHOD__ );
