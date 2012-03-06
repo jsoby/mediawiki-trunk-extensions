@@ -1,7 +1,7 @@
 window.star_config = {
-	img_node: '/img/star-node-sml-gold.png',
-	img_leaf: '/img/star-node-sml.png',
-	img_disabled: '/img/star-node-sml-gold.png',
+	img_node: '/img/star-node-plus.gif',
+	img_leaf: '/img/star-node-empty.gif',
+	img_open: '/img/star-node-minus.gif',
 	radii: [120,90,40,20],
 	duration: 500,
 	easing: 'swing',
@@ -91,7 +91,9 @@ $( function() {
 
 // Animate the passed node and its children from it's current state to the opposite state
 function animateNode(node) {
-	$(node).animate( { t: 100 }, {
+	var e = $(node);
+	var data = getData(e);
+	if( data.children.length > 0 ) e.animate( { t: 100 }, {
 		duration: window.star_config.duration,
 		easing: window.star_config.easing,
 		step: function(now, fx) {
@@ -109,15 +111,17 @@ function animateNode(node) {
 			// Hide the labels during animation
 			var col = t < 0.9 ? 'white' : 'black';
 
-			// If closing flip t, and hide items at end
+			// If closing, change icon to "plus", flip t, and hide items at end
 			if( data.open ) {
+				$('img', e).attr('src', window.tamBaseUrl + window.star_config.img_node);
 				if( t > 0.9 ) display = 'none';
 				o = window.star_config.out_spin + t * window.star_config.in_spin;
 				t = 1 - t;
 			}
 
-			// If opening, check siblings to see if one needs to be closed
+			// If opening, change icon to "minus" and check siblings to see if one needs to be closed
 			else if( d > 1 && fx.pos == 0 ) {
+				$('img', e).attr('src', window.tamBaseUrl + window.star_config.img_open);
 				var pdata = getData(data.parent);
 				for( var i in pdata.children ) {
 					var sibling = pdata.children[i];
