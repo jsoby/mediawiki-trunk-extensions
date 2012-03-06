@@ -7,8 +7,8 @@ window.star_config = {
 	easing: 'swing',
 	out_spin: 2,
 	in_spin: 2,
-	width: '500px',
-	height: '500px'
+	width: 500,
+	height: 500
 }
 
 /**
@@ -59,12 +59,16 @@ $( function() {
 				p = p.children().first();
 				$('img', p).attr('src', window.tamBaseUrl + window.star_config.img_node);
 				getData(p).children.push(e);
+
+				// Set initial position to parent
+				var ox = p.position().left + p.width() / 2;
+				var oy = p.position().top + p.height() / 2;
+				e.css('left', ox - e.width() / 2).css('top', oy - e.height() / 2);
 			}
 
-			// Set initial position to parent
-			var ox = p.position().left + p.width() / 2;
-			var oy = p.position().top + p.height() / 2;
-			e.css('left', ox - e.width() / 2).css('top', oy - e.height() / 2);
+			// If root, set position to half width/height
+			else e.css('left', window.star_config.width / 2).css('top', window.star_config.height / 2);
+
 
 			// Create a unique ID and persistent data for this element
 			e.attr('id', 'starnode' + window.stars.length);
