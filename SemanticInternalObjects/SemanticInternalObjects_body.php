@@ -289,11 +289,11 @@ class SIOHandler {
 		$internalObject->addPropertyAndValue( $objToPagePropName, self::$mCurPageFullName );
 		
 		foreach ( $params as $param ) {
-			$parts = explode( '=', trim( $param ), 2 );
+			$parts = explode( '=', $param, 2 );
 			
 			if ( count( $parts ) == 2 ) {
-				$key = $parts[0];
-				$value = $parts[1];
+				$key = trim( $parts[0] );
+				$value = trim( $parts[1] );
 				// if the property name ends with '#list', it's
 				// a comma-delimited group of values
 				if ( substr( $key, - 5 ) == '#list' ) {
