@@ -142,6 +142,15 @@ $messages['nl'] = array(
 	'wom-desc' => 'Gemakkelijk paginaobjectmodel',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'objecteditor' => 'Edytor obiektów',
+	'wom_editor' => 'Model obiektowy',
+	'wom-desc' => 'Prosty model obiektowy strony dla użytkownika wiki',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt

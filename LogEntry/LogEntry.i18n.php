@@ -687,6 +687,15 @@ $messages['vo'] = array(
 	'logentry-invalidpage' => 'Pad no lonöföl',
 );
 
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'logentry-append' => 'צולייגן',
+	'logentry-invalidpage' => 'אומגילטיקער בלאט: $1',
+	'logentry-invalidtoken' => 'אומגילטיקער טאקן',
+);
+
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Bencmq
  * @author Hydra

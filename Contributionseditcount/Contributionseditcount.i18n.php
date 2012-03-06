@@ -215,9 +215,11 @@ $messages['ext'] = array(
 
 /** Persian (فارسی)
  * @author Mjbmr
+ * @author ZxxZxxZ
  */
 $messages['fa'] = array(
 	'contributionseditcount' => 'این کاربر {{PLURAL:$1|یک ویرایش|$1 ویرایش}} انجام داده است.',
+	'contributionseditcount-desc' => 'شمارشگر ویرایشی را در [[Special:Contributions|صفحهٔ مشارکت‌های کاربری]] نمایش می‌دهد',
 );
 
 /** Finnish (Suomi)
@@ -481,6 +483,15 @@ $messages['nah'] = array(
 	'contributionseditcount-desc' => 'Tiquittāz tlapatlaliztli tlapōhualli [[Special:Contributions|ītlahcuilōlpan]]',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'contributionseditcount' => 'Denne brukeren har gjort {{PLURAL:$1|én redigering|$1 redigeringer}}.',
+	'contributionseditcount-desc' => 'Viser en redigeringsteller på [[Special:Contributions|bidragsoversikten]]',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -511,15 +522,6 @@ $messages['nl'] = array(
 $messages['nn'] = array(
 	'contributionseditcount' => 'Denne brukaren har gjort $1 endringar.',
 	'contributionseditcount-desc' => 'Viser ein endringsteljar på [[Special:Contributions|bidragsoversikta]]',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'contributionseditcount' => 'Denne brukeren har gjort {{PLURAL:$1|én redigering|$1 redigeringer}}.',
-	'contributionseditcount-desc' => 'Viser en redigeringsteller på [[Special:Contributions|bidragsoversikten]]',
 );
 
 /** Northern Sotho (Sesotho sa Leboa)

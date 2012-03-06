@@ -363,6 +363,7 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Antur
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Dferg
  */
@@ -383,6 +384,7 @@ $messages['es'] = array(
 	'security-type-category' => 'categoría',
 	'security-type-namespace' => 'espacio de nombre',
 	'security-restricttogroup' => 'Acceso a contenidos restringido a miembros de "$1"',
+	'restriction-read' => 'Leer',
 );
 
 /** Basque (Euskara)

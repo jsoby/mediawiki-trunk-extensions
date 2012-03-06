@@ -89,9 +89,10 @@ $messages['mk'] = array(
 
 /** Dutch (Nederlands)
  * @author SPQRobin
+ * @author Siebrand
  */
 $messages['nl'] = array(
-	'skinpernamespace-desc' => 'Laat een vormgeving per naamruimte toe',
+	'skinpernamespace-desc' => 'Maakt een vormgeving per naamruimte mogelijk',
 );
 
 /** Polish (Polski)

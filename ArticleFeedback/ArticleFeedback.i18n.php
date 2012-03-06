@@ -4274,6 +4274,8 @@ $messages['ka'] = array(
 	'articlefeedback-survey-message-error' => 'წარმოიშვა რაღაც შეცდომა.
 გთხოვთ სცადეთ მოგვიანებით.',
 	'articlefeedback-privacyurl' => 'http://wikimediafoundation.org/wiki/Feedback_privacy_statement',
+	'articleFeedback-table-heading-page' => 'გვერდი',
+	'articleFeedback-table-heading-average' => 'საშუალო',
 );
 
 /** Kirmanjki (Kırmancki)

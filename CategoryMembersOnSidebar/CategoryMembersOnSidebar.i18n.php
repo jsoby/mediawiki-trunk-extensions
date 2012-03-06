@@ -99,6 +99,13 @@ $messages['es'] = array(
 	'categorymembersonsidebar-desc' => 'Añade miembros de la categoría a la barra lateral',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'categorymembersonsidebar-desc' => 'اعضای رده را به نوار کناری می‌افزاید',
+);
+
 /** French (Français)
  * @author Sherbrooke
  */

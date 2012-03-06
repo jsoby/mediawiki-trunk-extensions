@@ -66,6 +66,13 @@ $messages['es'] = array(
 	'automaticboardwelcome-desc' => 'Publica automáticamente [[MediaWiki:User-board-welcome-message| un mensaje de bienvenida]] en las páginas de usuario de los nuevos usuarios después de la creación de la cuenta',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'automaticboardwelcome-desc' => '[[MediaWiki:User-board-welcome-message|پیغام خوشامدی]] را به طور خودکار به تابلوی اعلانات کاربری کاربران تازه‌ثبت‌نام‌کرده پس از ایجاد حساب می‌افزاید',
+);
+
 /** French (Français)
  * @author Gomoko
  */

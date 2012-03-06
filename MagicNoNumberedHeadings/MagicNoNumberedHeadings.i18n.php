@@ -132,6 +132,13 @@ $messages['eu'] = array(
 	'magicnonumberedheadings-desc' => '"<nowiki>__NONUMBEREDHEADINGS__</nowiki>" hitz magikoa gehitzen du',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'magicnonumberedheadings-desc' => 'عبارت جادویی «<nowiki>__NONUMBEREDHEADINGS__</nowiki>» را می‌افزاید',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  */
@@ -258,6 +265,13 @@ $messages['ms'] = array(
 	'magicnonumberedheadings-desc' => 'Membubuh kata sakti "<nowiki>__NONUMBEREDHEADINGS__</nowiki>"',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'magicnonumberedheadings-desc' => 'Legger til det magiske ordet «<nowiki>__NONUMBEREDHEADINGS__</nowiki>»',
+);
+
 /** Nedersaksisch (Nedersaksisch)
  * @author Servien
  */
@@ -270,13 +284,6 @@ $messages['nds-nl'] = array(
  */
 $messages['nl'] = array(
 	'magicnonumberedheadings-desc' => 'Voegt het magische woord "<nowiki>__NONUMBEREDHEADINGS__</nowiki>" toe',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'magicnonumberedheadings-desc' => 'Legger til det magiske ordet «<nowiki>__NONUMBEREDHEADINGS__</nowiki>»',
 );
 
 /** Occitan (Occitan)

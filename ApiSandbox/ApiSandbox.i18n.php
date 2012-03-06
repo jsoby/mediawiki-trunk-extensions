@@ -1029,6 +1029,32 @@ Per ulteriori dettagli di utilizzo delle API, fai riferimento alla [//www.mediaw
 	'apisb-query-meta' => 'Informazioni meta',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'apisb-legend-parameters' => 'პარამეტრები',
+	'apisb-legend-result' => 'შედეგი',
+	'apisb-legend-generator-parameters' => 'გენერატორი',
+	'apisb-label-format' => 'ფორმატი',
+	'apisb-label-action' => 'მოქმედება',
+	'apisb-label-doc' => 'დოკუმენტაცია',
+	'apisb-select-action' => '(აირჩიეთ მოქმედება)',
+	'apisb-select-query' => '(აირჩიეთ მოთხოვნა)',
+	'apisb-select-value' => '(აირჩიეთ მნიშვნელობა)',
+	'apisb-docs-more' => 'მეტი',
+	'apisb-params-desc' => 'აღწერა',
+	'apisb-loading' => 'იტვირთება...',
+	'apisb-ns-main' => '(მთავარი)',
+	'apisb-submit' => 'მოთხოვნის გაკეთება',
+	'apisb-query-list' => 'სიები',
+	'apisb-query-meta' => 'მეტა-ინფორმაცია',
+	'apisb-example' => 'მაგალითი',
+	'apisb-examples' => 'მაგალითები',
+	'apisb-clear' => 'წაშლა',
+	'apisb-request-time' => 'თხოვნის დრო: $1',
+);
+
 /** Korean (한국어)
  * @author Freebiekr
  * @author Kwj2772
@@ -1100,6 +1126,8 @@ $messages['lb'] = array(
 	'apisb-legend-parameters' => 'Parameteren',
 	'apisb-legend-result' => 'Resultat',
 	'apisb-result-request-url' => 'URL fir Ufroen:',
+	'apisb-label-format' => 'Format',
+	'apisb-label-doc' => 'Dokumentatioun',
 	'apisb-select-action' => 'Aktioun eraussichen',
 	'apisb-select-value' => '(Wäert eraussichen)',
 	'apisb-docs-more' => 'liest méi',
@@ -1625,6 +1653,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author DCamer
+ * @author DR
  * @author Eleferen
  * @author Kaganer
  * @author KorneySan
@@ -1643,6 +1672,9 @@ $messages['ru'] = array(
 	'apisb-legend-generator-parameters' => 'Генератор',
 	'apisb-result-request-url' => 'URL-адрес запроса:',
 	'apisb-result-request-post' => 'POST данные:',
+	'apisb-label-format' => 'Формат',
+	'apisb-label-action' => 'Действие',
+	'apisb-label-doc' => 'Документация',
 	'apisb-select-action' => 'Выберите действие',
 	'apisb-select-query' => '(выберите запрос)',
 	'apisb-select-value' => '(выберите значение)',

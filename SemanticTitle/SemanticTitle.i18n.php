@@ -29,6 +29,13 @@ $messages['dsb'] = array(
 	'semantictitle-desc' => 'Staja widobny titel boka na gódnotu semantiskeje kakosći',
 );
 
+/** Spanish (Español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'semantictitle-desc' => 'Define el título visible de la página con el valor de una propiedad semántica',
+);
+
 /** French (Français)
  * @author DavidL
  */
@@ -71,8 +78,22 @@ $messages['nl'] = array(
 	'semantictitle-desc' => 'Stel de zichtbare paginanaam in op de waarde van een semantische eigenschap',
 );
 
+/** Polish (Polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'semantictitle-desc' => 'Ustawia widoczny tytuł strony jako wartość właściwości semantycznej',
+);
+
 /** Russian (Русский) */
 $messages['ru'] = array(
 	'semantictitle-desc' => 'Изменяет видимое имя страницы на значение семантического свойства.',
+);
+
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author Linforest
+ */
+$messages['zh-hans'] = array(
+	'semantictitle-desc' => '将可见的页面标题设置为语义属性的取值',
 );
 

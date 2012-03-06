@@ -382,6 +382,18 @@ $messages['ps'] = array(
 	'zero-rated-mobile-access-banner-text-data-charges-no' => 'نه',
 );
 
+/** Russian (Русский)
+ * @author DR
+ */
+$messages['ru'] = array(
+	'zero-rated-mobile-access-desc' => 'Предоставляет функции для провайдеров мобильной связи, обеспечивающих бесплатный доступ',
+	'zero-rated-mobile-access-search' => 'Поиск',
+	'zero-rated-mobile-access-language-selection' => 'Все языки',
+	'zero-rated-mobile-access-banner-text-data-charges-yes' => 'Да',
+	'zero-rated-mobile-access-banner-text-data-charges-no' => 'Нет',
+	'zero-rated-mobile-access-click-to-view-image' => 'Щелкните, чтобы просмотреть изображение "$1 "...',
+);
+
 /** Slovenian (Slovenščina)
  * @author Dbc334
  */

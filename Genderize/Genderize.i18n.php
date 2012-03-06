@@ -29,11 +29,39 @@ $messages['de'] = array(
 	'genderize-desc' => 'Ermöglicht geschlechtsspezifische Benutzerseiten, Benutzerseitennamen und Benutzernamensraumreiter',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'genderize-desc' => 'Specifiske wužywarske wótkaze pó roźe do wužywarskich bokow, titelow wužywarskich bokow a rejtarkow wužywarskego mjenjowego ruma',
+);
+
 /** Spanish (Español)
  * @author Armando-Martin
  */
 $messages['es'] = array(
 	'genderize-desc' => 'Enlaces ajustados al género del usuario hacia páginas de usuario, títulos de página de usuario, y pestañas del espacio de nombres de usuarios',
+);
+
+/** French (Français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'genderize-desc' => "Liens d'utilisateur par genre vers les pages d'utilisateur, les titres de page d'utilisateur, et les onglets de l'espace de nom utilisateur",
+);
+
+/** Galician (Galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'genderize-desc' => 'Adapta, segundo o sexo do usuario, as ligazóns ás páxinas de usuario, aos títulos de páxinas de usuario e ás lapelas do espazo de nomes de usuario',
+);
+
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'genderize-desc' => 'Specifiske wužiwarske wotkazy po splahu do wužiwarskich stronow, titulow wužiwarskich stronow a rajtarkow wužiwarkseho mjenoweho ruma',
 );
 
 /** Interlingua (Interlingua)

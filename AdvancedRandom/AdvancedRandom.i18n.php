@@ -217,6 +217,13 @@ $messages['eu'] = array(
 	'advancedrandom' => 'Ausazko aurreratua',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'advancedrandom' => 'تصادفی پیشرفته',
+);
+
 /** Finnish (Suomi)
  * @author Nike
  */

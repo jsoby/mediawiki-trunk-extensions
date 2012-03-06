@@ -221,6 +221,13 @@ $messages['sv'] = array(
 	'creativecommonsrdf-desc' => 'CreativeCommons RDF-metadata',
 );
 
+/** Tamil (தமிழ்)
+ * @author செல்வா
+ */
+$messages['ta'] = array(
+	'creativecommonsrdf-desc' => 'கிரியேட்டிவ் காமன்சு ஆர்.டி.எப் மேல்தரவு',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */

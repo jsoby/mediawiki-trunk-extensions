@@ -141,6 +141,13 @@ $messages['eu'] = array(
 	'emailaddressimage-desc' => '<code>&lt;email&gt;</code> e-mail helbide bat irudi baten gisan agertzeko etiketa gehitzen du',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'emailaddressimage-desc' => '<code>&lt;email&gt;</code> را برای نمایش نشانی پست الکترونیکی در قالب تصویر، می‌افزاید',
+);
+
 /** Finnish (Suomi)
  * @author Nike
  */
@@ -318,6 +325,13 @@ $messages['ms'] = array(
 	'emailaddressimage-desc' => 'Membubuh <code>&lt;email&gt;</code> untuk memaparkan alamat e-mel dalam bentuk imej',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'emailaddressimage-desc' => 'Legger til <code>&lt;email&gt;</code> for å vise en e-postadresse som bilde',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -344,13 +358,6 @@ $messages['nl'] = array(
  */
 $messages['nn'] = array(
 	'emailaddressimage-desc' => 'Legg til <code>&lt;email&gt;</code> for å visa ei e-postadressa som bilete',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'emailaddressimage-desc' => 'Legger til <code>&lt;email&gt;</code> for å vise en e-postadresse som bilde',
 );
 
 /** Occitan (Occitan)

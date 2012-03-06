@@ -153,10 +153,29 @@ $messages['ast'] = array(
 
 /** Azerbaijani (Azərbaycanca)
  * @author Cekli829
+ * @author Vugar 1981
  */
 $messages['az'] = array(
+	'wikitweet-moretweets' => 'Daha çox tvitlər...',
+	'wikitweet-submit' => 'Tvit',
+	'wikitweet-submitandmail' => 'Tvit və e-poçt',
+	'wikitweet-delete' => 'sil',
+	'wikitweet-private' => 'xüsusi',
+	'wikitweet-answer' => '-a cavab ver',
+	'wikitweet-anonymous' => 'anonim',
+	'wikitweet-timeago' => '$1 əvvəl',
+	'wikitweet-inthefuture' => 'Gələcəkdə !!',
+	'wikitweet-fewsecondsago' => 'Bir neçə saniyə əvvəl',
 	'wikitweet-status' => 'Status:',
 	'wikitweet-status0' => 'Müzakirə',
+	'wikitweet-status1' => 'Hadisə',
+	'wikitweet-status2' => 'Xəbərdarlıq',
+	'wikitweet-status3' => 'Həyəcan',
+	'wikitweet-resolve' => 'qərar',
+	'wikitweet-comment' => 'Şərh',
+	'wikitweet-hourly' => 'Hər saat',
+	'wikitweet-from' => 'Kimdən',
+	'wikitweet-mailsent' => 'E-məktub göndərildi',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)

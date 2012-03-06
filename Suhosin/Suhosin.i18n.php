@@ -112,3 +112,10 @@ $messages['pl'] = array(
 	'suhosin-desc' => 'Dostosowuje ustawienia MediaWiki w granicach aktywowanego rozszerzenia "Suhosin" (projekt Hardened-PHP)',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'suhosin-desc' => 'A adata j\'ampostassion ëd MediaWiki an drinta ai lìmit ëd n\'estension ativà "Suhosin" (Proget Hardened-PHP)',
+);
+

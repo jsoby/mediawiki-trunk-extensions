@@ -98,6 +98,7 @@ $messages['es'] = array(
 	'spm-name' => 'Gestión del proyecto semántico',
 	'semanticprojectmanagement-desc' => 'Formatos de gestión de proyecto para las consultas en línea de Semantic MediaWiki',
 	'semanticprojectmanagement' => 'Configuración de la gestión del proxecto semántico',
+	'right-SPMsetup' => 'Editar las configuraciones básicas de gestión del proyecto semántico',
 );
 
 /** French (Français)

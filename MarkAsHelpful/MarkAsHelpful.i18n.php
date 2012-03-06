@@ -134,6 +134,13 @@ $messages['es'] = array(
 	'mah-action-error' => 'Se produjo un error al realizar esta acción',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'mah-undo-mark-text' => 'خنثی‌سازی',
+);
+
 /** Finnish (Suomi)
  * @author Nedergard
  */
@@ -336,6 +343,16 @@ $messages['roa-tara'] = array(
 	'mah-someone-marked-text' => '{{GENDER:$1|$1 penze ca jè utile}}',
 	'mah-undo-mark-text' => 'annulle',
 	'mah-action-error' => "S'ha verificate 'n'errore facenne st'azione",
+);
+
+/** Russian (Русский)
+ * @author DR
+ */
+$messages['ru'] = array(
+	'mah-mark-text' => 'Отметить как полезное',
+	'mah-you-marked-text' => 'Вы считаете, что этот комментарий полезен',
+	'mah-undo-mark-text' => 'отменить',
+	'mah-action-error' => 'Произошла ошибка при выполнении этого действия',
 );
 
 /** Sinhala (සිංහල)

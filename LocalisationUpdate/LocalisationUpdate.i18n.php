@@ -171,6 +171,13 @@ $messages['eu'] = array(
 	'localisationupdate-desc' => 'Itzulitako mezuak ahalik eta eguneratuen mantentzen ditu',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'localisationupdate-desc' => 'پیغام‌های محلی‌سازی‌شده را تا جای ممکن به‌روز نگه می‌دارد',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  * @author Nike
@@ -312,6 +319,13 @@ $messages['ms'] = array(
 	'localisationupdate-desc' => 'Memastikan kekemaskinian mesej-mesej yang disetempatkan',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'localisationupdate-desc' => 'Holder de lokaliserte meldingene så oppdaterte som mulig',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -324,13 +338,6 @@ $messages['nl'] = array(
  */
 $messages['nn'] = array(
 	'localisationupdate-desc' => 'Held dei lokaliserte meldingane så oppdaterte som mogleg',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'localisationupdate-desc' => 'Holder de lokaliserte meldingene så oppdaterte som mulig',
 );
 
 /** Occitan (Occitan)

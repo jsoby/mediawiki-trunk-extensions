@@ -143,6 +143,13 @@ $messages['eu'] = array(
 	'gnuplot-desc' => '<code><nowiki><gnuplot></nowiki></code> etiketa erantsi Gnuplot erabiltzeko',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'gnuplot-desc' => 'برچسب <code><nowiki><gnuplot></nowiki></code> را برای استفاده از Gnuplot می‌افزاید',
+);
+
 /** Finnish (Suomi)
  * @author Nike
  */
@@ -311,6 +318,13 @@ $messages['ms'] = array(
 	'gnuplot-desc' => 'Membubuh tag <code><nowiki><gnuplot></nowiki></code> untuk menggunakan Gnuplot',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'gnuplot-desc' => 'Legger til taggen <code><nowiki><gnuplot></nowiki></code> for å bruke Gnuplot',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -323,13 +337,6 @@ $messages['nl'] = array(
  */
 $messages['nn'] = array(
 	'gnuplot-desc' => 'Legg til merket <code><nowiki><gnuplot></nowiki></code> for å nytta Gnuplot',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'gnuplot-desc' => 'Legger til taggen <code><nowiki><gnuplot></nowiki></code> for å bruke Gnuplot',
 );
 
 /** Occitan (Occitan)

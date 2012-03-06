@@ -114,3 +114,10 @@ $messages['pms'] = array(
 	'swiftcloudfiles-desc' => "A comprend e a registra l'API ëd ''php-coudfiles'' (https://github.com/rackspace/php-cloudfiles), an përmëttend a MediaWiki d'antërfacesse con un terminal ëd memorisassion OpenStack Swift.",
 );
 
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'swiftcloudfiles-desc' => "Cài và đăng ký API ''php-cloudfiles'' (https://github.com/rackspace/php-cloudfiles) cho phép MediaWiki tác động với phía sau lưu trữ OpenStack Swift.",
+);
+

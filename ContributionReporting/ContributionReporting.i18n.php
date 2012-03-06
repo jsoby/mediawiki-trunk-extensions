@@ -1896,6 +1896,7 @@ $messages['ext'] = array(
 $messages['fa'] = array(
 	'contributionreporting-desc' => 'گزارش زنده از جذب سرمایهٔ ویکی‌مدیا',
 	'contributiontotal' => 'جمع کمک‌ها',
+	'dailytotal' => 'مجموع روزانه',
 	'disablednotice' => 'گزارش مشارکت',
 	'disablednotice-disabled' => 'این صفحه موقتاً غیر فعال شده‌است. لطفاً بعداً امتحان کنید.',
 	'contributionhistory' => 'تاریخچه مشارکت',
