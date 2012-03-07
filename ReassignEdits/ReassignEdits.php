@@ -12,11 +12,6 @@
 *
 */
 
-if (!defined('MEDIAWIKI')) {
-	echo "THIS IS NOT VALID ENTRY POINT";
-	exit(1);
-}
-
 $wgExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'ReassignEdits',
@@ -28,6 +23,10 @@ $wgExtensionCredits['specialpage'][] = array(
 
 // Add permission required to use Special:ReassignEdits
 $wgAvailableRights[] = 'reassignedits';
+
+// Allow bureaucrats by default to access Special:ReassignEdits
+// needed if extension has been added by extensions selection at installation menu or by a management system
+$wgGroupPermissions['bureaucrat']['reassignedits'] = true;
 
 // Internationalization files
 $dir = dirname( __FILE__ ) . '/';
