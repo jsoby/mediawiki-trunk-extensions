@@ -19,9 +19,11 @@ $( function() {
 	$('div.tam-star').each( function() {
 		var tree = $(this);
 		var root = 'starnode' + window.stars.length;
-		tree.html( '<ul><li><a href="/">root</a>' + tree.html() + '</li></ul>' );
+		tree.html( '<ul><li><a href="/">root</a>' + tree.html() + '</li></ul>' ).css({
+			width: window.star_config.width,
+			height: window.star_config.height
+		});
 		$('ul', tree).css('list-style','none');
-		tree.css('width',window.star_config.width).css('height',window.star_config.height);
 
 		// Change all the bullet list li's content into star nodes (divs with an image and the li content)
 		$('a', this).each( function() {
@@ -63,11 +65,17 @@ $( function() {
 				// Set initial position to parent
 				var ox = p.position().left + p.width() / 2;
 				var oy = p.position().top + p.height() / 2;
-				e.css('left', ox - e.width() / 2).css('top', oy - e.height() / 2);
+				e.css({
+					left: ox - e.width() / 2,
+					top: oy - e.height() / 2
+				});
 			}
 
 			// If root, set position to half width/height
-			else e.css('left', window.star_config.width / 2).css('top', window.star_config.height / 2);
+			else e.css({
+				left: window.star_config.width / 2,
+				top: window.star_config.height / 2
+			});
 
 
 			// Create a unique ID and persistent data for this element
@@ -85,11 +93,11 @@ $( function() {
 
 		// Make the root node visible
 		var e = $('#'+root);
-		var data = window.stars[0];
-		var p = data.parent;
-		var ox = p.position().left + p.width() / 2;
-		var oy = p.position().top + p.height() / 2;
-		e.css('display','block').css('left',tree.left + tree.width()/2).css('top',tree.top + tree.height()/2);
+		e.css({
+			display: 'block',
+			left: tree.left + tree.width() / 2,
+			top: tree.top + tree.height() / 2
+		});
 	});
 });
 
@@ -149,12 +157,13 @@ function animateNode(node) {
 				var a = k * i + o;
 				var x = Math.cos(a) * r;
 				var y = Math.sin(a) * r;
-				child.css( 'display','block' )
-					.css('left', ox + x - child.width() / 2)
-					.css('top', oy + y - child.height() / 2)
-					.css('color', col)
-					.css('display', display);
-					
+				child.css({
+					display: display,
+					left: ox + x - child.width() / 2,
+					top: oy + y - child.height() / 2,
+					color: col
+				});
+
 				// If closing, and this is the first iteration, close this child too if open
 				if( data.open && fx.pos == 0 && cdata.open ) animateNode(child);
 			}
