@@ -8,8 +8,8 @@
  * @licence GNU General Public Licence 2.0 or later
  *
  */
-if ( !defined( 'MEDIAWIKI' ) ) die( 'Not an entry point.' );
-define( 'FILEATTCH_VERSION', '1.0.2, 2010-04-24' );
+if( !defined( 'MEDIAWIKI' ) ) die( 'Not an entry point.' );
+define( 'FILEATTACH_VERSION', '1.0.3, 2012-03-07' );
 
 $wgAttachmentHeading = 'Attachments';
 
@@ -21,7 +21,7 @@ $wgExtensionCredits['other'][] = array(
 	'author'      => '[http://www.mediawiki.org/wiki/User:Milan Milan Holzapfel]',
 	'descriptionmsg' => 'fileattach-desc',
 	'url'         => 'https://www.mediawiki.org/wiki/Extension:FileAttach',
-	'version'     => FILEATTCH_VERSION
+	'version'     => FILEATTACH_VERSION
 );
 
 class FileAttach {
@@ -36,10 +36,10 @@ class FileAttach {
 	public static function onBeforePageDisplay( $out, $skin ) {
 		global $wgParser, $wgAttachmentHeading;
 
-		# Bail if page inappropriate for attachments
-		if( !is_object( $wgParser ) || !is_object( $wgParser->mOutput )|| !isset( $wgParser->mOutput->mSections ) ) return true;
+		// Bail if page inappropriate for attachments
+		if( !is_object( $wgParser ) || !is_object( $wgParser->mOutput ) || !isset( $wgParser->mOutput->mSections ) ) return true;
 
-		# If the last section in the article is level 2 and "Attachments" then convert to file icons
+		// If the last section in the article is level 2 and "Attachments" then convert to file icons
 		$sections = $wgParser->mOutput->mSections;
 		if( is_array( $sections ) && count( $sections ) > 0 ) {
 			$last = $sections[count( $sections ) - 1];
@@ -67,7 +67,7 @@ class FileAttach {
 			}
 		}
 
-		# Modify the upload form
+		// Modify the upload form
 		if( self::$uploadForm ) {
 			global $wgRequest;
 			$attachto = $wgRequest->getText( 'attachto' );
@@ -104,8 +104,7 @@ class FileAttach {
 	}
 
 	/**
-	 * Change the redirection after upload to the page the file attached to,
-	 * and attach the file to the article
+	 * Change the redirection after upload to the page the file attached to, and attach the file to the article
 	 */
 	public static function onSpecialUploadComplete( $upload ) {
 		global $wgOut, $wgRequest, $wgAttachmentHeading;
@@ -130,17 +129,25 @@ class FileAttach {
 	}
 
 	public static function onSkinTemplateTabs( $skin, &$actions ) {
-		$attachto = $skin->getTitle()->getPrefixedText();
-		$url = SpecialPage::getTitleFor( 'Upload' )->getLocalURL( array( 'attachto' => $attachto ) );
+		$url = self::actionUrl( $skin );
 		$actions['attach'] = array( 'text' => wfMsg( 'fileattach-attachfile' ), 'class' => false, 'href' => $url );
 		return true;
 	}
 
 	public static function onSkinTemplateNavigation( $skin, &$actions ) {
-		$attachto = $skin->getTitle()->getPrefixedText();
-		$url = SpecialPage::getTitleFor( 'Upload' )->getLocalURL( array( 'attachto' => $attachto ) );
+		$url = self::actionUrl( $skin );
 		$actions['views']['attach'] = array( 'text' => wfMsg( 'fileattach-attachfile' ), 'class' => false, 'href' => $url );
 		return true;
+	}
+
+	/**
+	 * Get the name of the title to attach to, if it's a talk page, use the content page instead
+	 */
+	public static function actionUrl( $skin ) {
+		$title = $skin->getTitle();
+		if( $title->isTalkPage() ) $title = Title::newFromText( $title->getText(), $title->getNamespace() - 1 );
+		$url = SpecialPage::getTitleFor( 'Upload' )->getLocalURL( array( 'attachto' => $title->getPrefixedText() ) );
+		return $url;
 	}
 
 }
