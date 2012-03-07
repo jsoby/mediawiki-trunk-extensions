@@ -159,7 +159,7 @@ class FileAttach {
  * - this instance puts the original instance back and changes the redirect
  * - the upload hook and redirect are on line 434,435 of SpecialUpload.php
  */
-class FileAttachDummyOutput {
+class FileAttachDummyOutput extends OutputPage {
 	function redirect( $url ) {
 		global $wgOut;
 		$wgOut = FileAttach::$wgOut;
